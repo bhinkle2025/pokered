@@ -1492,12 +1492,12 @@ ButterfreeEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
-	db 12, CONFUSION
-	db 15, POISONPOWDER
-	db 16, STUN_SPORE
-	db 17, SLEEP_POWDER
+	db 11, CONFUSION
+	db 13, POISONPOWDER
+	db 13, STUN_SPORE
+	db 13, SLEEP_POWDER
 	db 21, SUPERSONIC
-	db 26, WHIRLWIND
+	db 26, GUST
 	db 32, PSYBEAM
 	db 0
 
