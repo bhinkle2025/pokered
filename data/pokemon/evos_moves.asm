@@ -595,7 +595,7 @@ FearowEvosMoves:
 
 PidgeyEvosMoves:
 ; Evolutions
-	db EVOLVE_LEVEL, 18, PIDGEOTTO
+	db EVOLVE_LEVEL, 9, PIDGEOTTO
 	db 0
 ; Learnset
 	db 5, SAND_ATTACK
@@ -621,7 +621,7 @@ SlowpokeEvosMoves:
 
 KadabraEvosMoves:
 ; Evolutions
-	db EVOLVE_TRADE, 1, ALAKAZAM
+	db EVOLVE_LEVEL, 42, ALAKAZAM
 	db 0
 ; Learnset
 	db 16, CONFUSION
@@ -634,7 +634,7 @@ KadabraEvosMoves:
 
 GravelerEvosMoves:
 ; Evolutions
-	db EVOLVE_TRADE, 1, GOLEM
+	db EVOLVE_LEVEL, 38, GOLEM
 	db 0
 ; Learnset
 	db 11, DEFENSE_CURL
@@ -659,7 +659,7 @@ ChanseyEvosMoves:
 
 MachokeEvosMoves:
 ; Evolutions
-	db EVOLVE_TRADE, 1, MACHAMP
+	db EVOLVE_LEVEL, 38, MACHAMP
 	db 0
 ; Learnset
 	db 20, LOW_KICK
@@ -959,7 +959,7 @@ DoduoEvosMoves:
 
 PoliwagEvosMoves:
 ; Evolutions
-	db EVOLVE_LEVEL, 25, POLIWHIRL
+	db EVOLVE_LEVEL, 18, POLIWHIRL
 	db 0
 ; Learnset
 	db 16, HYPNOSIS
@@ -1693,7 +1693,7 @@ MissingNo92EvosMoves:
 
 HaunterEvosMoves:
 ; Evolutions
-	db EVOLVE_TRADE, 1, GENGAR
+	db EVOLVE_LEVEL, 42, GENGAR
 	db 0
 ; Learnset
 	db 29, HYPNOSIS
@@ -1721,7 +1721,7 @@ AlakazamEvosMoves:
 
 PidgeottoEvosMoves:
 ; Evolutions
-	db EVOLVE_LEVEL, 36, PIDGEOT
+	db EVOLVE_LEVEL, 20, PIDGEOT
 	db 0
 ; Learnset
 	db 5, SAND_ATTACK
