@@ -8,6 +8,8 @@ PhysicalToSpecialMoves:
         db HYPER_BEAM
         db SWIFT
         db TRI_ATTACK
+; Steel
+        db FLASH
         db -1 ; end
 
 SpecialToPhysicalMoves:
@@ -26,6 +28,4 @@ SpecialToPhysicalMoves:
         db ICE_PUNCH
 ; Ghost
         db LICK
-; Steel
-        db FLASH
         db -1 ; end
