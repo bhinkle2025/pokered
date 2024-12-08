@@ -209,7 +209,7 @@ RhydonEvosMoves:
 	db 30, STOMP
 	db 35, TAIL_WHIP
 	db 40, FURY_ATTACK
-	db 48, HORN_DRILL
+	db 48, ROCK_SLIDE
 	db 55, LEER
 	db 64, TAKE_DOWN
 	db 0
@@ -405,7 +405,7 @@ RhyhornEvosMoves:
 	db 30, STOMP
 	db 35, TAIL_WHIP
 	db 40, FURY_ATTACK
-	db 45, HORN_DRILL
+	db 45, ROCK_SLIDE
 	db 50, LEER
 	db 55, TAKE_DOWN
 	db 0
@@ -442,9 +442,9 @@ GyaradosEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
-	db 20, BITE
+	db 20, GUST
 	db 25, DRAGON_RAGE
-	db 32, LEER
+	db 32, BITE
 	db 41, HYDRO_PUMP
 	db 52, HYPER_BEAM
 	db 0
@@ -544,7 +544,7 @@ TangelaEvosMoves:
 	db 36, STUN_SPORE
 	db 39, SLEEP_POWDER
 	db 45, SLAM
-	db 49, GROWTH
+	db 49, AMNESIA
 	db 0
 
 MissingNo1FEvosMoves:
@@ -576,7 +576,7 @@ OnixEvosMoves:
 	db 0
 ; Learnset
 	db 15, BIND
-	db 19, ROCK_THROW
+	db 19, ROCK_SLIDE
 	db 25, RAGE
 	db 33, SLAM
 	db 43, HARDEN
@@ -1136,7 +1136,7 @@ KabutoEvosMoves:
 ; Learnset
 	db 34, ABSORB
 	db 39, SLASH
-	db 44, LEER
+	db 44, ROCK_SLIDE
 	db 49, HYDRO_PUMP
 	db 0
 
@@ -1146,7 +1146,7 @@ KabutopsEvosMoves:
 ; Learnset
 	db 34, ABSORB
 	db 39, SLASH
-	db 46, LEER
+	db 46, ROCK_SLIDE
 	db 53, HYDRO_PUMP
 	db 0
 
@@ -1214,7 +1214,7 @@ OmanyteEvosMoves:
 	db 0
 ; Learnset
 	db 34, HORN_ATTACK
-	db 39, LEER
+	db 39, ROCK_SLIDE
 	db 46, SPIKE_CANNON
 	db 53, HYDRO_PUMP
 	db 0
@@ -1224,7 +1224,7 @@ OmastarEvosMoves:
 	db 0
 ; Learnset
 	db 34, HORN_ATTACK
-	db 39, LEER
+	db 39, ROCK_SLIDE
 	db 44, SPIKE_CANNON
 	db 49, HYDRO_PUMP
 	db 0
