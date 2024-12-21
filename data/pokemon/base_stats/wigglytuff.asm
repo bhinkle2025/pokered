@@ -20,7 +20,7 @@
 	     SOLARBEAM,    THUNDERBOLT,  THUNDER,      PSYCHIC_M,    TELEPORT,     \
 	     MIMIC,        DOUBLE_TEAM,  REFLECT,      BIDE,         FIRE_BLAST,   \
 	     SKULL_BASH,   REST,         THUNDER_WAVE, PSYWAVE,      TRI_ATTACK,   \
-	     SUBSTITUTE,   FIRE_PUNCH,   STRENGTH,     FLASH
+	     SUBSTITUTE,   FIRE_PUNCH,   FLAMETHROWER, STRENGTH,     FLASH
 	; end
 
 	db 0 ; padding

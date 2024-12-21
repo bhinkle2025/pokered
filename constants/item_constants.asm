@@ -158,12 +158,12 @@ ENDM
 
 DEF TM01 EQU const_value
 	add_tm MEGA_PUNCH   ; $C9
-	add_tm RAZOR_WIND   ; $CA
+	add_tm FLAMETHROWER ; $CA
 	add_tm SWORDS_DANCE ; $CB
 	add_tm FIRE_PUNCH   ; $CC
 	add_tm MEGA_KICK    ; $CD
 	add_tm TOXIC        ; $CE
-	add_tm HORN_DRILL   ; $CF
+	add_tm SLUDGE       ; $CF
 	add_tm BODY_SLAM    ; $D0
 	add_tm TAKE_DOWN    ; $D1
 	add_tm DOUBLE_EDGE  ; $D2

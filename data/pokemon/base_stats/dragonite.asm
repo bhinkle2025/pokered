@@ -14,7 +14,7 @@
 	db GROWTH_SLOW ; growth rate
 
 	; tm/hm learnset
-	tmhm TOXIC,        HORN_DRILL,   BODY_SLAM,    TAKE_DOWN,    THUNDERPUNCH, \
+	tmhm TOXIC,        FLAMETHROWER, BODY_SLAM,    TAKE_DOWN,    THUNDERPUNCH, \
 	     DOUBLE_EDGE,  BUBBLEBEAM,   WATER_GUN,    ICE_BEAM,     BLIZZARD,     \
 	     HYPER_BEAM,   DRAGON_RAGE,  THUNDERBOLT,  THUNDER,      ICE_PUNCH,    \
 	     MIMIC,        DOUBLE_TEAM,  REFLECT,      BIDE,         FIRE_BLAST,   \
