@@ -7,17 +7,17 @@ Route2WildMons:
 	db  5, PIDGEY
 IF DEF(_RED)
 	db  3, WEEDLE
-	db  2, RATTATA
-	db  5, RATTATA
-	db  4, WEEDLE
-	db  5, WEEDLE
+	db  2, CATERPIE
+	db  5, ODDISH
+	db  4, BELLSPROUT
+	db  5, MR_MIME
 ENDC
 IF DEF(_BLUE)
 	db  3, CATERPIE
-	db  2, RATTATA
-	db  5, RATTATA
-	db  4, CATERPIE
-	db  5, CATERPIE
+	db  2, WEEDLE
+	db  5, ODDISH
+	db  4, BELLSPROUT
+	db  5, MR_MIME
 ENDC
 	end_grass_wildmons
 

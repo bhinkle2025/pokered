@@ -4,24 +4,24 @@ Route22WildMons:
 IF DEF(_RED)
 	db  3, NIDORAN_M
 	db  4, RATTATA
-	db  4, NIDORAN_M
+	db  4, NIDORAN_F
 	db  2, RATTATA
 	db  2, NIDORAN_M
-	db  3, SPEAROW
-	db  5, SPEAROW
-	db  3, NIDORAN_F
-	db  4, NIDORAN_F
+	db  3, MANKEY
+	db  5, POLIWAG
+	db  3, PONYTA
+	db  4, FARFETCHD
 ENDC
 IF DEF(_BLUE)
-	db  3, NIDORAN_F
+	db  3, NIDORAN_M
 	db  4, RATTATA
 	db  4, NIDORAN_F
 	db  2, RATTATA
 	db  2, NIDORAN_F
-	db  3, SPEAROW
-	db  5, SPEAROW
-	db  3, NIDORAN_M
-	db  4, NIDORAN_M
+	db  3, MANKEY
+	db  5, POLIWAG
+	db  3, PONYTA
+	db  4, FARFETCHD
 ENDC
 	end_grass_wildmons
 
