@@ -19,7 +19,7 @@
 	     DIG,          PSYCHIC_M,    TELEPORT,     MIMIC,        DOUBLE_TEAM,  \
 	     REFLECT,      BIDE,         METRONOME,    SKULL_BASH,   REST,         \
 	     THUNDER_WAVE, PSYWAVE,      TRI_ATTACK,   SUBSTITUTE,   THUNDERPUNCH, \   
-		 FLASH
+		 ICE_PUNCH,    FLASH
 	; end
 
 	db 0 ; padding
