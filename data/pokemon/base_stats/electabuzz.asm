@@ -19,7 +19,7 @@
 	     FIRE_PUNCH,   THUNDERBOLT,  THUNDER,      PSYCHIC_M,    TELEPORT,     \
 	     MIMIC,        DOUBLE_TEAM,  REFLECT,      BIDE,         METRONOME,    \
 	     SWIFT,        SKULL_BASH,   REST,         THUNDER_WAVE, PSYWAVE,      \
-	     SUBSTITUTE,   STRENGTH,     FLASH
+	     SUBSTITUTE,   THUNDERPUNCH, STRENGTH,     FLASH
 	; end
 
 	db 0 ; padding
