@@ -19,7 +19,7 @@
 	     HYPER_BEAM,   SUBMISSION,   COUNTER,      SEISMIC_TOSS, ICE_PUNCH,    \
 	     PSYCHIC_M,    TELEPORT,     MIMIC,        DOUBLE_TEAM,  REFLECT,      \
 	     BIDE,         METRONOME,    SKULL_BASH,   REST,         PSYWAVE,      \
-	     SUBSTITUTE
+	     SUBSTITUTE,   DREAM_EATER
 	; end
 
 	db 0 ; padding

@@ -18,8 +18,8 @@
 	     BUBBLEBEAM,   WATER_GUN,    ICE_BEAM,     BLIZZARD,     HYPER_BEAM,   \
 	     SOLARBEAM,    DRAGON_RAGE,  THUNDERBOLT,  THUNDER,      EARTHQUAKE,   \
 	     PSYCHIC_M,    MIMIC,        DOUBLE_TEAM,  REFLECT,      BIDE,         \
-	     SKULL_BASH,   REST,         PSYWAVE,      SUBSTITUTE,   SURF,         \
-	     STRENGTH
+	     SKULL_BASH,   REST,         PSYWAVE,      SUBSTITUTE,   DREAM_EATER,  \
+	     SURF,         STRENGTH
 	; end
 
 	db 0 ; padding
