@@ -19,7 +19,7 @@
 	     SEISMIC_TOSS, FIRE_PUNCH,   THUNDERBOLT,  THUNDER,      DIG,          \
 	     MIMIC,        DOUBLE_TEAM,  BIDE,         METRONOME,    SWIFT,        \
 	     SKULL_BASH,   REST,         ROCK_SLIDE,   SUBSTITUTE,   ICE_PUNCH,    \
-		 STRENGTH
+		 EARTHQUAKE,   STRENGTH
 	; end
 
 	db 0 ; padding

@@ -18,7 +18,7 @@
 	     DOUBLE_EDGE,  SUBMISSION,   COUNTER,      SEISMIC_TOSS, FIRE_PUNCH,   \
 	     MIMIC,        DOUBLE_TEAM,  BIDE,         METRONOME,    SWIFT,        \
 	     SKULL_BASH,   REST,         SUBSTITUTE,   THUNDERPUNCH, ICE_PUNCH,    \
-		 ROCK_SLIDE,   STRENGTH
+		 ROCK_SLIDE,   EARTHQUAKE,   STRENGTH
 	; end
 
 	db 0 ; padding
