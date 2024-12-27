@@ -19,7 +19,7 @@
 	     SUBMISSION,   COUNTER,      SEISMIC_TOSS, FIRE_PUNCH,   EARTHQUAKE,   \
 	     FISSURE,      DIG,          MIMIC,        DOUBLE_TEAM,  BIDE,         \
 	     FIRE_BLAST,   SKULL_BASH,   REST,         SUBSTITUTE,   THUNDERPUNCH, \   
-		 ROCK_SLIDE,   STRENGTH
+		 ROCK_SLIDE,   SWORDS_DANCE, STRENGTH
 	; end
 
 	db 0 ; padding
