@@ -21,7 +21,7 @@
 	     MIMIC,        DOUBLE_TEAM,  REFLECT,      BIDE,         METRONOME,    \
 	     EGG_BOMB,     FIRE_BLAST,   SKULL_BASH,   SOFTBOILED,   REST,         \
 	     THUNDER_WAVE, PSYWAVE,      TRI_ATTACK,   SUBSTITUTE,   STRENGTH,     \
-	     THUNDERPUNCH, ICE_PUNCH,    FLASH
+	     THUNDERPUNCH, ICE_PUNCH,    ROCK_SLIDE,   FLASH
 	; end
 
 	db 0 ; padding

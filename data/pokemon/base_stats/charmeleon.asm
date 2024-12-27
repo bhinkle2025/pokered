@@ -18,7 +18,8 @@
 	     TAKE_DOWN,    DOUBLE_EDGE,  SUBMISSION,   COUNTER,      SEISMIC_TOSS, \
 	     FIRE_PUNCH,   DRAGON_RAGE,  DIG,          MIMIC,        DOUBLE_TEAM,  \
 	     REFLECT,      BIDE,         FIRE_BLAST,   SWIFT,        SKULL_BASH,   \
-	     REST,         THUNDERPUNCH, SUBSTITUTE,   CUT,          STRENGTH
+	     REST,         THUNDERPUNCH, SUBSTITUTE,   ROCK_SLIDE,                 \
+		 CUT,          STRENGTH
 	; end
 
 	db 0 ; padding

@@ -19,7 +19,7 @@
 	     BLIZZARD,     HYPER_BEAM,   SUBMISSION,   COUNTER,      SEISMIC_TOSS, \
 	     FIRE_PUNCH,   THUNDERBOLT,  THUNDER,      EARTHQUAKE,   FISSURE,      \
 	     MIMIC,        DOUBLE_TEAM,  BIDE,         FIRE_BLAST,   SKULL_BASH,   \
-	     REST,         SUBSTITUTE,   THUNDERPUNCH, ICE_PUNCH,                  \   
+	     REST,         SUBSTITUTE,   THUNDERPUNCH, ICE_PUNCH,    ROCK_SLIDE,   \   
 		 CUT,          SURF,         STRENGTH
 	; end
 
