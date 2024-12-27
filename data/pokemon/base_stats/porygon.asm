@@ -18,7 +18,7 @@
 	     HYPER_BEAM,   DREAM_EATER,  THUNDERBOLT,  THUNDER,      PSYCHIC_M,    \
 	     TELEPORT,     MIMIC,        DOUBLE_TEAM,  REFLECT,      BIDE,         \
 	     SWIFT,        SKULL_BASH,   REST,         THUNDER_WAVE, PSYWAVE,      \
-	     TRI_ATTACK,   SUBSTITUTE,   FLASH
+	     TRI_ATTACK,   SUBSTITUTE,   SOLARBEAM,    FLASH
 	; end
 
 	db 0 ; padding
