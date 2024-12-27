@@ -19,7 +19,7 @@
 	     HYPER_BEAM,   SUBMISSION,   COUNTER,      SEISMIC_TOSS, ICE_PUNCH,    \
 	     EARTHQUAKE,   FISSURE,      PSYCHIC_M,    MIMIC,        DOUBLE_TEAM,  \
 	     BIDE,         METRONOME,    SKULL_BASH,   REST,         PSYWAVE,      \
-	     SUBSTITUTE,   ROCK_SLIDE,   SURF,         STRENGTH
+	     SUBSTITUTE,   ROCK_SLIDE,   DIG,          SURF,         STRENGTH
 	; end
 
 	db 0 ; padding

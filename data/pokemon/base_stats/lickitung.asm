@@ -20,7 +20,7 @@
 	     FIRE_PUNCH,   THUNDERBOLT,  THUNDER,      EARTHQUAKE,   FISSURE,      \
 	     MIMIC,        DOUBLE_TEAM,  BIDE,         FIRE_BLAST,   SKULL_BASH,   \
 	     REST,         SUBSTITUTE,   THUNDERPUNCH, ICE_PUNCH,    ROCK_SLIDE,   \   
-		 DREAM_EATER,  CUT,          SURF,         STRENGTH
+		 DREAM_EATER,  DIG,          CUT,          SURF,         STRENGTH
 	; end
 
 	db 0 ; padding
