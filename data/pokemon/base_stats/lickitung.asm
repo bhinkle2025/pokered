@@ -20,7 +20,7 @@
 	     FIRE_PUNCH,   THUNDERBOLT,  THUNDER,      EARTHQUAKE,   FISSURE,      \
 	     MIMIC,        DOUBLE_TEAM,  BIDE,         FIRE_BLAST,   SKULL_BASH,   \
 	     REST,         SUBSTITUTE,   THUNDERPUNCH, ICE_PUNCH,    ROCK_SLIDE,   \   
-		 DREAM_EATER,  DIG,          SOLARBEAM,                                \
+		 DREAM_EATER,  DIG,          SOLARBEAM,    FLAMETHROWER,               \
 		 CUT,          SURF,         STRENGTH
 	; end
 

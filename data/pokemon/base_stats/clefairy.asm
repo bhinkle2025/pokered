@@ -21,7 +21,7 @@
 	     DOUBLE_TEAM,  REFLECT,      BIDE,         METRONOME,    FIRE_BLAST,   \
 	     SKULL_BASH,   REST,         THUNDER_WAVE, PSYWAVE,      TRI_ATTACK,   \
 	     SUBSTITUTE,   THUNDERPUNCH, ICE_PUNCH,    DREAM_EATER,  DIG,          \    
-		 STRENGTH,     FLASH
+		 FLAMETHROWER, STRENGTH,     FLASH
 	; end
 
 	db 0 ; padding

@@ -17,7 +17,8 @@
 	tmhm TOXIC,        HORN_DRILL,   BODY_SLAM,    TAKE_DOWN,    DOUBLE_EDGE,  \
 	     THUNDERBOLT,  THUNDER,      EARTHQUAKE,   FISSURE,      SWORDS_DANCE, \
 	     DIG,          MIMIC,        DOUBLE_TEAM,  BIDE,         FIRE_BLAST,   \
-	     SKULL_BASH,   REST,         ROCK_SLIDE,   SUBSTITUTE,   STRENGTH
+	     SKULL_BASH,   REST,         ROCK_SLIDE,   SUBSTITUTE,   FLAMETHROWER, \
+		 STRENGTH
 	; end
 
 	db 0 ; padding

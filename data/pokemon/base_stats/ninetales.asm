@@ -17,7 +17,7 @@
 	tmhm TOXIC,        BODY_SLAM,    TAKE_DOWN,    DOUBLE_EDGE,  HYPER_BEAM,   \
 	     DIG,          MIMIC,        DOUBLE_TEAM,  REFLECT,      DREAM_EATER,  \
 	     BIDE,         FIRE_BLAST,   SWIFT,        SKULL_BASH,   REST,         \
-	     SUBSTITUTE,   SOLARBEAM
+	     SUBSTITUTE,   SOLARBEAM,    FLAMETHROWER
 	; end
 
 	db 0 ; padding

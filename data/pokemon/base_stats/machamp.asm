@@ -19,7 +19,7 @@
 	     FIRE_PUNCH,   EARTHQUAKE,   FISSURE,      DIG,          MIMIC,        \
 	     DOUBLE_TEAM,  BIDE,         METRONOME,    FIRE_BLAST,   SKULL_BASH,   \
 	     REST,         ROCK_SLIDE,   SUBSTITUTE,   THUNDERPUNCH, ICE_PUNCH,    \
-		 STRENGTH
+		 FLAMETHROWER, STRENGTH
 	; end
 
 	db 0 ; padding
