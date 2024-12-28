@@ -1,7 +1,7 @@
 	object_const_def
 	const_export ROUTE4_COOLTRAINER_F1
 	const_export ROUTE4_COOLTRAINER_F2
-	const_export ROUTE4_TM_WHIRLWIND
+	const_export ROUTE4_TM_FIRE_PUNCH
 
 Route4_Object:
 	db $2c ; border block

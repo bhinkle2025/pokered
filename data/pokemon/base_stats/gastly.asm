@@ -17,7 +17,7 @@
 	tmhm TOXIC,        FIRE_PUNCH,   MEGA_DRAIN,   THUNDERBOLT,  THUNDER,      \
 	     PSYCHIC_M,    MIMIC,        DOUBLE_TEAM,  BIDE,         SELFDESTRUCT, \
 	     DREAM_EATER,  REST,         PSYWAVE,      EXPLOSION,    SUBSTITUTE,   \
-		 THUNDERPUNCH, ICE_PUNCH
+		 THUNDERPUNCH, ICE_PUNCH,    SLUDGE
 	; end
 
 	db 0 ; padding

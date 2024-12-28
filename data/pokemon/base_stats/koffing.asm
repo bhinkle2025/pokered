@@ -16,7 +16,7 @@
 	; tm/hm learnset
 	tmhm TOXIC,        THUNDERBOLT,  THUNDER,      MIMIC,        FLAMETHROWER, \
 	     DOUBLE_TEAM,  BIDE,         SELFDESTRUCT, FIRE_BLAST,   REST,         \
-	     EXPLOSION,    SUBSTITUTE
+	     EXPLOSION,    SUBSTITUTE,   SLUDGE
 	; end
 
 	db 0 ; padding

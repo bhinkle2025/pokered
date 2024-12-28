@@ -14,7 +14,7 @@
 	db GROWTH_MEDIUM_FAST ; growth rate
 
 	; tm/hm learnset
-	tmhm TOXIC,        TAKE_DOWN,    DOUBLE_EDGE,  \
+	tmhm TOXIC,        TAKE_DOWN,    DOUBLE_EDGE,  SLUDGE,       \
 	     MEGA_DRAIN,   MIMIC,        DOUBLE_TEAM,  BIDE,         \
 	     SWIFT,        REST,         SUBSTITUTE
 	; end
