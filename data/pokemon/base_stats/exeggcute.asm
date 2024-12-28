@@ -17,7 +17,7 @@
 	tmhm TOXIC,        TAKE_DOWN,    DOUBLE_EDGE,  PSYCHIC_M,    SWORDS_DANCE, \
 	     TELEPORT,     MIMIC,        DOUBLE_TEAM,  REFLECT,      BIDE,         \
 	     SELFDESTRUCT, EGG_BOMB,     REST,         PSYWAVE,      EXPLOSION,    \
-	     SUBSTITUTE,   DREAM_EATER,  SOLARBEAM,    SLUDGE
+	     SUBSTITUTE,   DREAM_EATER,  SOLARBEAM,    SLUDGE,       STRENGTH
 	; end
 
 	db 0 ; padding

@@ -17,7 +17,8 @@
 	tmhm TOXIC,        BODY_SLAM,    FIRE_PUNCH,   MEGA_DRAIN,   THUNDERBOLT,  \
 	     THUNDER,      MIMIC,        DOUBLE_TEAM,  BIDE,         SELFDESTRUCT, \
 	     FIRE_BLAST,   REST,         EXPLOSION,    SUBSTITUTE,   THUNDERPUNCH, \
-		 ICE_PUNCH,    ROCK_SLIDE,   DIG,          FLAMETHROWER, SLUDGE
+		 ICE_PUNCH,    ROCK_SLIDE,   DIG,          FLAMETHROWER, SLUDGE,       \
+		 STRENGTH
 	; end
 
 	db 0 ; padding
