@@ -20,7 +20,7 @@
 	     MIMIC,        DOUBLE_TEAM,  REFLECT,      BIDE,         FIRE_BLAST,   \
 	     SWIFT,        SKULL_BASH,   REST,         THUNDER_WAVE, SUBSTITUTE,   \
 	     THUNDERPUNCH, ROCK_SLIDE,   EARTHQUAKE,   FLAMETHROWER, SURF,         \
-		 STRENGTH,     CUT
+		 STRENGTH,     CUT,          FLY
 	; end
 
 	db 0 ; padding

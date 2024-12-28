@@ -20,7 +20,7 @@
 	     DIG,          MIMIC,        DOUBLE_TEAM,  REFLECT,      BIDE,         \
 	     FIRE_BLAST,   SWIFT,        SKULL_BASH,   REST,         SUBSTITUTE,   \
 	     THUNDERPUNCH, ROCK_SLIDE,   SOLARBEAM,    FLAMETHROWER,               \
-		 CUT,          STRENGTH,	   FLY
+		 CUT,          STRENGTH,	 FLY
 	; end
 
 	db 0 ; padding
