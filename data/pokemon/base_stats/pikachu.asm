@@ -18,7 +18,7 @@
 	     DOUBLE_EDGE,  SUBMISSION,   SEISMIC_TOSS, THUNDERPUNCH, \
 	     THUNDERBOLT,  THUNDER,      MIMIC,        DOUBLE_TEAM,  REFLECT,      \
 	     BIDE,         SWIFT,        SKULL_BASH,   REST,         THUNDER_WAVE, \
-	     SUBSTITUTE,   FLASH
+	     SUBSTITUTE,   FLASH,        SURF
 	; end
 
 	db 0 ; padding
