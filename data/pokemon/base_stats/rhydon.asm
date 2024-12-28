@@ -20,7 +20,8 @@
 	     SEISMIC_TOSS, FIRE_PUNCH,   THUNDERBOLT,  THUNDER,      EARTHQUAKE,   \
 	     FISSURE,      DIG,          MIMIC,        DOUBLE_TEAM,  BIDE,         \
 	     FIRE_BLAST,   SKULL_BASH,   REST,         ROCK_SLIDE,   SUBSTITUTE,   \
-	     ICE_PUNCH,    SWORDS_DANCE, FLAMETHROWER, SURF,         STRENGTH
+	     ICE_PUNCH,    SWORDS_DANCE, FLAMETHROWER, SURF,         STRENGTH,     \
+		 CUT
 	; end
 
 	db 0 ; padding

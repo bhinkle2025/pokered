@@ -17,7 +17,7 @@
 	tmhm TOXIC,        BODY_SLAM,    TAKE_DOWN,    DOUBLE_EDGE,  BUBBLEBEAM,   \
 	     WATER_GUN,    THUNDERBOLT,  THUNDER,      DREAM_EATER,  DIG,          \
 	     MIMIC,        DOUBLE_TEAM,  BIDE,         SWIFT,        SKULL_BASH,   \
-	     REST,         SUBSTITUTE
+	     REST,         SUBSTITUTE,   CUT
 	; end
 
 	db 0 ; padding
