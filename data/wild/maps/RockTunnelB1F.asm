@@ -4,12 +4,12 @@ RockTunnelB1FWildMons:
 	db 17, ZUBAT
 	db 17, GEODUDE
 	db 15, MACHOP
-	db 16, GEODUDE
-	db 18, ZUBAT
-	db 17, MACHOP
-	db 17, ONIX
-	db 13, ONIX
-	db 18, GEODUDE
+	db 16, RHYHORN
+	db 22, GOLBAT
+	db 17, KANGASKHAN
+	db 25, GRAVELER
+	db 20, ONIX
+	db 18, CHARMELEON
 	end_grass_wildmons
 
 	def_water_wildmons 0 ; encounter rate
