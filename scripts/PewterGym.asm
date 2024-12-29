@@ -43,21 +43,21 @@ PewterGymBrockPostBattle:
 	ld a, D_RIGHT | D_LEFT | D_UP | D_DOWN
 	ld [wJoyIgnore], a
 ; fallthrough
-PewterGymScriptReceiveTM34:
+PewterGymScriptReceiveTM48:
 	ld a, TEXT_PEWTERGYM_BROCK_WAIT_TAKE_THIS
 	ldh [hTextID], a
 	call DisplayTextID
 	SetEvent EVENT_BEAT_BROCK
-	lb bc, TM_BIDE, 1
+	lb bc, TM_ROCK_SLIDE, 1
 	call GiveItem
 	jr nc, .BagFull
-	ld a, TEXT_PEWTERGYM_RECEIVED_TM34
+	ld a, TEXT_PEWTERGYM_RECEIVED_TM48
 	ldh [hTextID], a
 	call DisplayTextID
-	SetEvent EVENT_GOT_TM34
+	SetEvent EVENT_GOT_TM48
 	jr .gymVictory
 .BagFull
-	ld a, TEXT_PEWTERGYM_TM34_NO_ROOM
+	ld a, TEXT_PEWTERGYM_TM48_NO_ROOM
 	ldh [hTextID], a
 	call DisplayTextID
 .gymVictory
@@ -86,8 +86,8 @@ PewterGym_TextPointers:
 	dw_const PewterGymCooltrainerMText,      TEXT_PEWTERGYM_COOLTRAINER_M
 	dw_const PewterGymGuideText,             TEXT_PEWTERGYM_GYM_GUIDE
 	dw_const PewterGymBrockWaitTakeThisText, TEXT_PEWTERGYM_BROCK_WAIT_TAKE_THIS
-	dw_const PewterGymReceivedTM34Text,      TEXT_PEWTERGYM_RECEIVED_TM34
-	dw_const PewterGymTM34NoRoomText,        TEXT_PEWTERGYM_TM34_NO_ROOM
+	dw_const PewterGymReceivedTM48Text,      TEXT_PEWTERGYM_RECEIVED_TM48
+	dw_const PewterGymTM48NoRoomText,        TEXT_PEWTERGYM_TM48_NO_ROOM
 
 PewterGymTrainerHeaders:
 	def_trainers 2
@@ -99,9 +99,9 @@ PewterGymBrockText:
 	text_asm
 	CheckEvent EVENT_BEAT_BROCK
 	jr z, .beforeBeat
-	CheckEventReuseA EVENT_GOT_TM34
+	CheckEventReuseA EVENT_GOT_TM48
 	jr nz, .afterBeat
-	call z, PewterGymScriptReceiveTM34
+	call z, PewterGymScriptReceiveTM48
 	call DisableWaitingAfterTextDisplay
 	jr .done
 .afterBeat
@@ -143,14 +143,14 @@ PewterGymBrockWaitTakeThisText:
 	text_far _PewterGymBrockWaitTakeThisText
 	text_end
 
-PewterGymReceivedTM34Text:
-	text_far _PewterGymReceivedTM34Text
+PewterGymReceivedTM48Text:
+	text_far _PewterGymReceivedTM48Text
 	sound_get_item_1
-	text_far _TM34ExplanationText
+	text_far _TM48ExplanationText
 	text_end
 
-PewterGymTM34NoRoomText:
-	text_far _PewterGymTM34NoRoomText
+PewterGymTM48NoRoomText:
+	text_far _PewterGymTM48NoRoomText
 	text_end
 
 PewterGymBrockReceivedBoulderBadgeText:

@@ -47,7 +47,7 @@
 	const_skip 8
 	const EVENT_BEAT_PEWTER_GYM_TRAINER_0
 	const_skip 3
-	const EVENT_GOT_TM34
+	const EVENT_GOT_TM48
 	const EVENT_BEAT_BROCK
 
 ; Cerulean City events
@@ -119,7 +119,7 @@
 	const EVENT_GOT_TM41
 	const_skip 11
 	const EVENT_GOT_TM13
-	const EVENT_GOT_TM48
+	const EVENT_GOT_TM34
 	const EVENT_GOT_TM49
 	const EVENT_GOT_TM18
 	const_skip 24
