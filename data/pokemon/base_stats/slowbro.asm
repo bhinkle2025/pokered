@@ -20,7 +20,7 @@
 	     EARTHQUAKE,   FISSURE,      DIG,          PSYCHIC_M,    DREAM_EATER,  \
 	     TELEPORT,     MIMIC,        DOUBLE_TEAM,  REFLECT,      BIDE,         \
 	     FIRE_BLAST,   SWIFT,        SKULL_BASH,   REST,         THUNDER_WAVE, \
-	     PSYWAVE,      TRI_ATTACK,   SUBSTITUTE,   SURF,         STRENGTH,     \
+	     AMNESIA,      TRI_ATTACK,   SUBSTITUTE,   SURF,         STRENGTH,     \
 	     FLAMETHROWER, FLASH
 	; end
 

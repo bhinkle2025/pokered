@@ -19,7 +19,7 @@
 	     HYPER_BEAM,   SUBMISSION,   COUNTER,      SEISMIC_TOSS, ICE_PUNCH,    \
 	     DIG,          MIMIC,        DOUBLE_TEAM,  BIDE,         PSYCHIC_M,    \
 	     SWIFT,        SKULL_BASH,   REST,         SUBSTITUTE,   SURF,         \
-	     STRENGTH,     FLASH
+	     AMNESIA,      STRENGTH,     FLASH
 	; end
 
 	db 0 ; padding
