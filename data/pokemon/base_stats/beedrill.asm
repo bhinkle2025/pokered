@@ -17,7 +17,7 @@
 	tmhm SWORDS_DANCE, TOXIC,        TAKE_DOWN,    DOUBLE_EDGE,  HYPER_BEAM,   \
 	     MEGA_DRAIN,   MIMIC,        DOUBLE_TEAM,  REFLECT,      SOLARBEAM,    \
 	     BIDE,         SWIFT,        SKULL_BASH,   REST,         SUBSTITUTE,   \
-	     SLUDGE,       CUT
+	     SLUDGE,       CUT,          FLASH
 	; end
 
 	db 0 ; padding

@@ -18,7 +18,7 @@
 	     MEGA_DRAIN,   SOLARBEAM,    PSYCHIC_M,    TELEPORT,     MIMIC,        \
 	     DOUBLE_TEAM,  REFLECT,      BIDE,         SELFDESTRUCT, EGG_BOMB,     \
 	     REST,         PSYWAVE,      EXPLOSION,    SUBSTITUTE,   SWORDS_DANCE, \
-		 DREAM_EATER,  SLUDGE,       STRENGTH
+		 DREAM_EATER,  SLUDGE,       STRENGTH,     FLASH
 	; end
 
 	db 0 ; padding

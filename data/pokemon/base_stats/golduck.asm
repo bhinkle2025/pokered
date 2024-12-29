@@ -17,9 +17,9 @@
 	tmhm MEGA_PUNCH,   MEGA_KICK,    TOXIC,        BODY_SLAM,    TAKE_DOWN,    \
 	     DOUBLE_EDGE,  BUBBLEBEAM,   WATER_GUN,    ICE_BEAM,     BLIZZARD,     \
 	     HYPER_BEAM,   SUBMISSION,   COUNTER,      SEISMIC_TOSS, ICE_PUNCH,    \
-	     DIG,          MIMIC,        DOUBLE_TEAM,  BIDE,         \
+	     DIG,          MIMIC,        DOUBLE_TEAM,  BIDE,         PSYCHIC_M,    \
 	     SWIFT,        SKULL_BASH,   REST,         SUBSTITUTE,   SURF,         \
-	     STRENGTH,     PSYCHIC_M
+	     STRENGTH,     FLASH
 	; end
 
 	db 0 ; padding
