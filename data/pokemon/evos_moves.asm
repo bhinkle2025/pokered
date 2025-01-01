@@ -858,7 +858,7 @@ DiglettEvosMoves:
 ; Learnset
 	db 15, GROWL
 	db 19, DIG
-	db 24, SAND_ATTACK
+	db 24, FURY_SWIPES
 	db 31, SLASH
 	db 40, EARTHQUAKE
 	db 0
@@ -1322,10 +1322,10 @@ ZubatEvosMoves:
 	db EVOLVE_LEVEL, 22, GOLBAT
 	db 0
 ; Learnset
-	db 10, SUPERSONIC
+	db 10, CONFUSE_RAY
 	db 15, BITE
-	db 21, CONFUSE_RAY
-	db 28, WING_ATTACK
+	db 21, WING_ATTACK
+	db 28, ACID
 	db 36, HAZE
 	db 0
 
@@ -1546,10 +1546,11 @@ GolbatEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
-	db 10, SUPERSONIC
+	db 10, CONFUSE_RAY
 	db 15, BITE
-	db 21, CONFUSE_RAY
-	db 32, WING_ATTACK
+	db 21, WING_ATTACK
+	db 28, ACID
+	db 32, AGILITY
 	db 43, HAZE
 	db 0
 

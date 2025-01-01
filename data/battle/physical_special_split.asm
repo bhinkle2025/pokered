@@ -2,7 +2,6 @@ PhysicalToSpecialMoves:
 ; Flying
         db GUST
 ; Poison
-        db ACID
         db SLUDGE
 ; Normal
         db HYPER_BEAM
