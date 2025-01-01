@@ -18,7 +18,7 @@
 	     THUNDER,      MIMIC,        DOUBLE_TEAM,  BIDE,         SELFDESTRUCT, \
 	     FIRE_BLAST,   REST,         EXPLOSION,    SUBSTITUTE,   THUNDERPUNCH, \
 		 ICE_PUNCH,    ROCK_SLIDE,   DIG,          FLAMETHROWER, SLUDGE,       \
-		 STRENGTH
+		 NIGHT_SHADE,  STRENGTH
 	; end
 
 	db 0 ; padding

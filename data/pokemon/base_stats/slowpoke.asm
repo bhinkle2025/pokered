@@ -19,7 +19,8 @@
 	     EARTHQUAKE,   FISSURE,      DIG,          PSYCHIC_M,    TELEPORT,     \
 	     MIMIC,        DOUBLE_TEAM,  REFLECT,      BIDE,         FIRE_BLAST,   \
 	     SWIFT,        SKULL_BASH,   REST,         THUNDER_WAVE, AMNESIA,      \
-	     TRI_ATTACK,   SUBSTITUTE,   SURF,         STRENGTH,     FLASH
+	     TRI_ATTACK,   SUBSTITUTE,   NIGHT_SHADE,                              \
+		 SURF,         STRENGTH,     FLASH
 	; end
 
 	db 0 ; padding

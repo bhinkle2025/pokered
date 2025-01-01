@@ -21,7 +21,7 @@
 	     FISSURE,      MIMIC,        DOUBLE_TEAM,  REFLECT,      BIDE,         \
 	     FIRE_BLAST,   SKULL_BASH,   REST,         ROCK_SLIDE,   SUBSTITUTE,   \
 	     ICE_PUNCH,    DIG,          FLAMETHROWER, SURF,         STRENGTH,     \
-		 CUT
+		 CUT,          NIGHT_SHADE
 	; end
 
 	db 0 ; padding

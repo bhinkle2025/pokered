@@ -20,7 +20,8 @@
 	     THUNDERBOLT,  THUNDER,      EARTHQUAKE,   FISSURE,      MIMIC,        \
 	     DOUBLE_TEAM,  BIDE,         FIRE_BLAST,   SKULL_BASH,   REST,         \
 	     ROCK_SLIDE,   SUBSTITUTE,   THUNDERPUNCH, ICE_PUNCH,    DIG,          \
-		 SOLARBEAM,    FLAMETHROWER, SURF,         STRENGTH,     CUT
+		 SOLARBEAM,    FLAMETHROWER, NIGHT_SHADE,  SURF,         STRENGTH,     \
+		 CUT
 	; end
 
 	db 0 ; padding

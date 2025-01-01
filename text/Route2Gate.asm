@@ -1,6 +1,8 @@
 _Route2GateOaksAideFlashExplanationText::
 	text "The HM FLASH"
-	line "lights even the"
+	line "is a powerful"
+	cont "steel move. It"
+	cont "lights even the"
 	cont "darkest dungeons."
 	done
 

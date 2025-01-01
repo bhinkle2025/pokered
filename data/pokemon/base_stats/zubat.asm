@@ -16,7 +16,8 @@
 	; tm/hm learnset
 	tmhm TOXIC,        TAKE_DOWN,    DOUBLE_EDGE,  SLUDGE,       \
 	     MEGA_DRAIN,   MIMIC,        DOUBLE_TEAM,  BIDE,         \
-	     SWIFT,        REST,         SUBSTITUTE,   FLY
+	     SWIFT,        REST,         SUBSTITUTE,   NIGHT_SHADE,  \
+		 FLY
 	; end
 
 	db 0 ; padding

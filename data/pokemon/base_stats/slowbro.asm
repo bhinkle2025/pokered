@@ -21,7 +21,7 @@
 	     TELEPORT,     MIMIC,        DOUBLE_TEAM,  REFLECT,      BIDE,         \
 	     FIRE_BLAST,   SWIFT,        SKULL_BASH,   REST,         THUNDER_WAVE, \
 	     AMNESIA,      TRI_ATTACK,   SUBSTITUTE,   SURF,         STRENGTH,     \
-	     FLAMETHROWER, FLASH
+	     FLAMETHROWER, NIGHT_SHADE,  FLASH
 	; end
 
 	db 0 ; padding

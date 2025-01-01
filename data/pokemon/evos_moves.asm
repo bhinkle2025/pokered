@@ -443,6 +443,7 @@ GyaradosEvosMoves:
 	db 0
 ; Learnset
 	db 20, GUST
+	db 21, WATERFALL
 	db 25, DRAGON_RAGE
 	db 32, BITE
 	db 41, HYDRO_PUMP

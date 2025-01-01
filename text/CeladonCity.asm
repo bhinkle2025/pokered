@@ -48,13 +48,15 @@ _CeladonCityGramps3ReceivedTM41Text::
 
 _CeladonCityGramps3TM41ExplanationText::
 	text "TM41 teaches"
-	line "SOFTBOILED!"
+	line "NIGHTSHADE!"
 
-	para "Only one #MON"
-	line "can use it!"
+	para "Only ghostly"
+	line "can use this!"
+	cont "technique!"
 
-	para "That #MON is"
-	line "CHANSEY!"
+	para "It may give"
+	line "Pokemon a!"
+	cont "fright!"
 	done
 
 _CeladonCityGramps3TM41NoRoomText::

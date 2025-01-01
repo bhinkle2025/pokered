@@ -21,7 +21,7 @@
 	     FISSURE,      PSYCHIC_M,    MIMIC,        DOUBLE_TEAM,  REFLECT,      \
 	     BIDE,         METRONOME,    SELFDESTRUCT, FIRE_BLAST,   SKULL_BASH,   \
 	     REST,         AMNESIA,      ROCK_SLIDE,   SUBSTITUTE,   ICE_PUNCH,    \
-		 DIG,          FLAMETHROWER, SURF,         STRENGTH
+		 DIG,          FLAMETHROWER, NIGHT_SHADE,  SURF,         STRENGTH
 	; end
 
 	db 0 ; padding
