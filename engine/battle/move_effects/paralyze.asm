@@ -20,9 +20,13 @@ ParalyzeEffect_:
 	ld a, [bc]
 	cp GROUND
 	jr z, .doesntAffect
+	cp ELECTRIC
+	jr z, .doesntAffect
 	inc bc
 	ld a, [bc]
 	cp GROUND
+	jr z, .doesntAffect
+	cp ELECTRIC
 	jr z, .doesntAffect
 .hitTest
 	push hl
