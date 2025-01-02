@@ -707,11 +707,11 @@ ArbokEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
-	db 10, POISON_STING
-	db 17, BITE
-	db 27, GLARE
-	db 36, SCREECH
-	db 47, ACID
+	db 10, BITE
+	db 17, GLARE
+	db 20, ACID
+	db 24, SCREECH
+	db 31, BODY_SLAM
 	db 0
 
 ParasectEvosMoves:
@@ -1334,11 +1334,11 @@ EkansEvosMoves:
 	db EVOLVE_LEVEL, 22, ARBOK
 	db 0
 ; Learnset
-	db 10, POISON_STING
-	db 17, BITE
-	db 24, GLARE
-	db 31, SCREECH
-	db 38, ACID
+	db 10, BITE
+	db 17, GLARE
+	db 20, ACID
+	db 24, SCREECH
+	db 31, BODY_SLAM
 	db 0
 
 ParasEvosMoves:
