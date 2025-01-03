@@ -732,7 +732,7 @@ PsyduckEvosMoves:
 ; Learnset
 	db 28, TAIL_WHIP
 	db 31, DISABLE
-	db 36, CONFUSION
+	db 36, PSYBEAM
 	db 43, FURY_SWIPES
 	db 52, HYDRO_PUMP
 	db 0
@@ -1392,7 +1392,7 @@ BeedrillEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
-	db 12, FURY_ATTACK
+	db 10, FURY_ATTACK
 	db 16, FOCUS_ENERGY
 	db 20, TWINEEDLE
 	db 25, RAGE
