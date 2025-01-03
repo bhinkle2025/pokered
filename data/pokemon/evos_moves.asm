@@ -2002,8 +2002,8 @@ SquirtleEvosMoves:
 	db EVOLVE_LEVEL, 16, WARTORTLE
 	db 0
 ; Learnset
-	db 8, BUBBLE
-	db 15, WATER_GUN
+	db 8, WATER_GUN
+	db 15, BUBBLE
 	db 22, BITE
 	db 28, WITHDRAW
 	db 35, SKULL_BASH
