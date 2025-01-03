@@ -13,14 +13,14 @@ Route21WildMons:
 	end_grass_wildmons
 
 	def_water_wildmons 5 ; encounter rate
-	db  5, TENTACOOL
-	db 10, TENTACOOL
 	db 15, TENTACOOL
-	db  5, TENTACOOL
-	db 10, TENTACOOL
-	db 15, TENTACOOL
-	db 20, TENTACOOL
-	db 30, TENTACOOL
-	db 35, TENTACOOL
-	db 40, TENTACOOL
+	db 34, TENTACRUEL
+	db 15, GOLDEEN
+	db 35, SEAKING
+	db 10, STARYU
+	db 22, GYARADOS 
+	db 25, STARMIE
+	db 30, WARTORTLE
+	db 35, VAPOREON
+	db 40, BLASTOISE
 	end_water_wildmons

@@ -5,24 +5,24 @@ IF DEF(_RED)
 	db 34, RATICATE
 	db 34, PONYTA
 	db 34, VULPIX
-	db 34, GROWLITHE
+	db 34, GRIMER
 	db 37, MAGMAR
-	db 32, GRIMER
+	db 42, MUK
 	db 40, RAPIDASH
 	db 40, WEEZING
-	db 42, MUK
+	db 32, FLAREON
 ENDC
 IF DEF(_BLUE)
 	db 34, KOFFING
 	db 34, RATICATE
 	db 34, PONYTA
 	db 34, VULPIX
-	db 34, GROWLITHE
+	db 34, GRIMER
 	db 37, MAGMAR
-	db 32, GRIMER
+	db 42, MUK
 	db 40, RAPIDASH
 	db 40, WEEZING
-	db 42, MUK
+	db 32, FLAREON
 ENDC
 	end_grass_wildmons
 
