@@ -4,7 +4,7 @@ IF DEF(_RED)
 	db 14, EKANS
 	db 15, SPEAROW
 	db 20, ARBOK
-	db  15, DROWZEE
+	db 15, DROWZEE
 	db 13, SANDSHREW
 	db 26, HYPNO
 	db 15, RATICATE

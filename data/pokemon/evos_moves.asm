@@ -1371,7 +1371,7 @@ PoliwrathEvosMoves:
 	db 0
 ; Learnset
 	db 16, HYPNOSIS
-	db 19, WATER_GUN
+	db 19, WATERFALL
 	db 0
 
 WeedleEvosMoves:
