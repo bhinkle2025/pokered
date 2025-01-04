@@ -1499,7 +1499,7 @@ ButterfreeEvosMoves:
 	db 13, SLEEP_POWDER
 	db 21, SUPERSONIC
 	db 26, GUST
-	db 32, PSYBEAM
+	db 32, BUG_BUZZ
 	db 0
 
 MachampEvosMoves:

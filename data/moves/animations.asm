@@ -164,6 +164,7 @@ AttackAnimationPointers:
 	dw SuperFangAnim
 	dw SlashAnim
 	dw SubstituteAnim
+	dw BugBuzzAnim
 	dw StruggleAnim
 	assert_table_length NUM_ATTACKS
 	dw ShowPicAnim
@@ -535,6 +536,7 @@ BlizzardAnim:
 	battle_anim HYDRO_PUMP, SUBANIM_0_ICE_FALL, 0, 4
 	db -1 ; end
 
+BugBuzzAnim:
 PsyBeamAnim:
 	battle_anim PSYBEAM, SUBANIM_0_BEAM, 0, 3
 	battle_anim NO_MOVE, SE_FLASH_SCREEN_LONG
