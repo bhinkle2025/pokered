@@ -60,7 +60,7 @@ SpecialTrainerMoves:
 
 	db SABRINA, 1
 	db 1, 1, FLASH
-	db 2, 1, KINESIS
+	db 2, 1, PSYCHIC_M
 	db 2, 4, PSYCHIC_M
 	db 3, 1, PSYCHIC_M
 	db 0
@@ -130,7 +130,7 @@ SpecialTrainerMoves:
 
 	db RIVAL3, 1
 	db 1, 3, EARTHQUAKE
-	db 2, 4, KINESIS
+	db 2, 4, PSYCHIC_M
 	db 3, 4, LEECH_SEED
 	db 4, 1, ICE_BEAM
 	db 5, 1, CONFUSE_RAY
@@ -140,7 +140,7 @@ SpecialTrainerMoves:
 
 	db RIVAL3, 2
 	db 1, 3, EARTHQUAKE
-	db 2, 4, KINESIS
+	db 2, 4, PSYCHIC_M
 	db 3, 4, LEECH_SEED
 	db 4, 1, THUNDERBOLT
 	db 5, 1, ICE_BEAM
@@ -150,7 +150,7 @@ SpecialTrainerMoves:
 
 	db RIVAL3, 3
 	db 1, 3, EARTHQUAKE
-	db 2, 4, KINESIS
+	db 2, 4, PSYCHIC_M
 	db 3, 4, LEECH_SEED
 	db 4, 1, CONFUSE_RAY
 	db 4, 4, FIRE_SPIN

@@ -133,7 +133,7 @@ AttackAnimationPointers:
 	dw SpikeCannonAnim
 	dw ConstrictAnim
 	dw AmnesiaAnim
-	dw KinesisAnim
+	dw SteelWingAnim
 	dw SoftboiledAnim
 	dw HiJumpKickAnim
 	dw GlareAnim
@@ -310,6 +310,7 @@ GustAnim:
 	battle_anim NO_MOVE, SUBANIM_0_STAR_THRICE, 0, 6
 	db -1 ; end
 
+SteelWingAnim:
 WingAttackAnim:
 	battle_anim WING_ATTACK, SUBANIM_1_STAR_BIG_MOVING, 1, 6
 	db -1 ; end
@@ -975,10 +976,6 @@ ConstrictAnim:
 AmnesiaAnim:
 	battle_anim AMNESIA, SUBANIM_0_STATUS_CONFUSED, 0, 8
 	battle_anim AMNESIA, SUBANIM_0_STATUS_CONFUSED, 0, 8
-	db -1 ; end
-
-KinesisAnim:
-	battle_anim KINESIS, SUBANIM_0_STAR_TWICE, 0, 8
 	db -1 ; end
 
 SoftboiledAnim:

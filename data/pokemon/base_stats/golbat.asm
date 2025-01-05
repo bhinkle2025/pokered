@@ -17,7 +17,7 @@
 	tmhm TOXIC,        TAKE_DOWN,    DOUBLE_EDGE,  SLUDGE,       \
 	     HYPER_BEAM,   MEGA_DRAIN,   MIMIC,        DOUBLE_TEAM,  \
 	     BIDE,         SWIFT,        REST,         SUBSTITUTE,   \
-		 NIGHT_SHADE,  FLY
+		 NIGHT_SHADE,  STEEL_WING,   FLY
 	; end
 
 	db 0 ; padding

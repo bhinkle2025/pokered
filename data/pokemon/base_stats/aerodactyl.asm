@@ -17,7 +17,7 @@
 	tmhm TOXIC,        TAKE_DOWN,    DOUBLE_EDGE,  ROCK_SLIDE,   EARTHQUAKE,   \
 	     HYPER_BEAM,   DRAGON_RAGE,  MIMIC,        DOUBLE_TEAM,  FLAMETHROWER, \
 	     REFLECT,      BIDE,         FIRE_BLAST,   SWIFT,        SKY_ATTACK,   \
-	     REST,         SUBSTITUTE,   FLY,          STRENGTH
+	     REST,         SUBSTITUTE,   STEEL_WING,   FLY,          STRENGTH
 	; end
 
 	db 0 ; padding

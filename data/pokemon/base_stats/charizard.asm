@@ -19,7 +19,7 @@
 	     SEISMIC_TOSS, FIRE_PUNCH,   DRAGON_RAGE,  EARTHQUAKE,   FISSURE,      \
 	     DIG,          MIMIC,        DOUBLE_TEAM,  REFLECT,      BIDE,         \
 	     FIRE_BLAST,   SWIFT,        SKULL_BASH,   REST,         SUBSTITUTE,   \
-	     THUNDERPUNCH, ROCK_SLIDE,   SOLARBEAM,    FLAMETHROWER,               \
+	     THUNDERPUNCH, ROCK_SLIDE,   SOLARBEAM,    FLAMETHROWER, STEEL_WING,   \
 		 CUT,          STRENGTH,	 FLY
 	; end
 
