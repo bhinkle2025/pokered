@@ -211,7 +211,7 @@ RhydonEvosMoves:
 	db 40, FURY_ATTACK
 	db 48, ROCK_SLIDE
 	db 55, LEER
-	db 64, TAKE_DOWN
+	db 64, DOUBLE_EDGE
 	db 0
 
 KangaskhanEvosMoves:
@@ -407,7 +407,7 @@ RhyhornEvosMoves:
 	db 40, FURY_ATTACK
 	db 45, ROCK_SLIDE
 	db 50, LEER
-	db 55, TAKE_DOWN
+	db 55, DOUBLE_EDGE
 	db 0
 
 LaprasEvosMoves:
@@ -567,7 +567,7 @@ GrowlitheEvosMoves:
 ; Learnset
 	db 18, EMBER
 	db 23, LEER
-	db 30, TAKE_DOWN
+	db 30, DOUBLE_EDGE
 	db 39, AGILITY
 	db 50, FLAMETHROWER
 	db 0
@@ -847,7 +847,7 @@ SeelEvosMoves:
 	db 30, GROWL
 	db 35, AURORA_BEAM
 	db 40, REST
-	db 45, TAKE_DOWN
+	db 45, DOUBLE_EDGE
 	db 50, ICE_BEAM
 	db 0
 
@@ -871,7 +871,7 @@ TaurosEvosMoves:
 	db 28, TAIL_WHIP
 	db 35, LEER
 	db 44, RAGE
-	db 51, TAKE_DOWN
+	db 51, DOUBLE_EDGE
 	db 0
 
 MissingNo3DEvosMoves:
@@ -1260,7 +1260,7 @@ EeveeEvosMoves:
 	db 27, QUICK_ATTACK
 	db 31, TAIL_WHIP
 	db 37, BITE
-	db 45, TAKE_DOWN
+	db 45, DOUBLE_EDGE
 	db 0
 
 FlareonEvosMoves:
@@ -1459,7 +1459,7 @@ DewgongEvosMoves:
 	db 30, GROWL
 	db 35, AURORA_BEAM
 	db 44, REST
-	db 50, TAKE_DOWN
+	db 50, DOUBLE_EDGE
 	db 56, ICE_BEAM
 	db 0
 
@@ -1857,7 +1857,7 @@ PonytaEvosMoves:
 	db 32, STOMP
 	db 35, DOUBLE_KICK
 	db 39, FIRE_SPIN
-	db 43, TAKE_DOWN
+	db 43, DOUBLE_EDGE
 	db 48, AGILITY
 	db 0
 
@@ -1869,7 +1869,7 @@ RapidashEvosMoves:
 	db 32, STOMP
 	db 35, DOUBLE_KICK
 	db 39, FIRE_SPIN
-	db 47, TAKE_DOWN
+	db 47, DOUBLE_EDGE
 	db 55, AGILITY
 	db 0
 
@@ -1949,7 +1949,7 @@ AerodactylEvosMoves:
 ; Learnset
 	db 33, SUPERSONIC
 	db 38, BITE
-	db 45, TAKE_DOWN
+	db 45, DOUBLE_EDGE
 	db 54, HYPER_BEAM
 	db 0
 

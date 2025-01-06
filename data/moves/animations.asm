@@ -35,7 +35,7 @@ AttackAnimationPointers:
 	dw TackleAnim
 	dw BodySlamAnim
 	dw WrapAnim
-	dw TakeDownAnim
+	dw GigaImpactAnim
 	dw ThrashAnim
 	dw DoubleEdgeAnim
 	dw TailWhipAnim
@@ -405,9 +405,9 @@ WrapAnim:
 	battle_anim WRAP, SUBANIM_0_BIND, 0, 4
 	db -1 ; end
 
-TakeDownAnim:
+GigaImpactAnim:
 	battle_anim LEECH_SEED, SE_MOVE_MON_HORIZONTALLY
-	battle_anim TAKE_DOWN, SE_DARK_SCREEN_FLASH
+	battle_anim GIGA_IMPACT, SE_DARK_SCREEN_FLASH
 	battle_anim NO_MOVE, SE_RESET_MON_POSITION
 	db -1 ; end
 

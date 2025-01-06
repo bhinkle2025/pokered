@@ -14,7 +14,7 @@
 	db GROWTH_SLOW ; growth rate
 
 	; tm/hm learnset
-	tmhm TOXIC,        TAKE_DOWN,    DOUBLE_EDGE,  ROCK_SLIDE,   EARTHQUAKE,   \
+	tmhm TOXIC,        GIGA_IMPACT,  DOUBLE_EDGE,  ROCK_SLIDE,   EARTHQUAKE,   \
 	     HYPER_BEAM,   DRAGON_RAGE,  MIMIC,        DOUBLE_TEAM,  FLAMETHROWER, \
 	     REFLECT,      BIDE,         FIRE_BLAST,   SWIFT,        SKY_ATTACK,   \
 	     REST,         SUBSTITUTE,   STEEL_WING,   FLY,          STRENGTH

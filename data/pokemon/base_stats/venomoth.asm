@@ -14,7 +14,7 @@
 	db GROWTH_MEDIUM_FAST ; growth rate
 
 	; tm/hm learnset
-	tmhm TOXIC,        TAKE_DOWN,    DOUBLE_EDGE,  DREAM_EATER,  SLUDGE,       \
+	tmhm TOXIC,        GIGA_IMPACT,  DOUBLE_EDGE,  DREAM_EATER,  SLUDGE,       \
 	     HYPER_BEAM,   MEGA_DRAIN,   SOLARBEAM,    PSYCHIC_M,    \
 	     TELEPORT,     MIMIC,        DOUBLE_TEAM,  REFLECT,      BIDE,         \
 	     SWIFT,        REST,         SUBSTITUTE

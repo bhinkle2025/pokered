@@ -17,7 +17,7 @@
 	tmhm TOXIC,        HYPER_BEAM,   THUNDERBOLT,  THUNDER,      FLAMETHROWER, \
 	     MIMIC,        DOUBLE_TEAM,  BIDE,         SELFDESTRUCT, FIRE_BLAST,   \
 	     REST,         EXPLOSION,    SUBSTITUTE,   SLUDGE,       NIGHT_SHADE,  \      
-		 FLASH
+		 GIGA_IMPACT,  FLASH
 	; end
 
 	db 0 ; padding

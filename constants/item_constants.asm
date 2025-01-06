@@ -165,7 +165,7 @@ DEF TM01 EQU const_value
 	add_tm TOXIC        ; $CE
 	add_tm SLUDGE       ; $CF
 	add_tm BODY_SLAM    ; $D0
-	add_tm TAKE_DOWN    ; $D1
+	add_tm GIGA_IMPACT  ; $D1
 	add_tm DOUBLE_EDGE  ; $D2
 	add_tm BUBBLEBEAM   ; $D3
 	add_tm STEEL_WING   ; $D4
