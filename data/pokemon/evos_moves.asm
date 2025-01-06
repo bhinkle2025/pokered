@@ -802,7 +802,7 @@ MagnetonEvosMoves:
 	db 0
 ; Learnset
 	db 21, SONICBOOM
-	db 25, THUNDERSHOCK
+	db 25, THUNDERBOLT
 	db 29, SUPERSONIC
 	db 38, THUNDER_WAVE
 	db 46, SWIFT
@@ -1965,7 +1965,7 @@ MagnemiteEvosMoves:
 	db 0
 ; Learnset
 	db 21, SONICBOOM
-	db 25, THUNDERSHOCK
+	db 25, THUNDERBOLT
 	db 29, SUPERSONIC
 	db 35, THUNDER_WAVE
 	db 41, SWIFT
