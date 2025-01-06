@@ -39,14 +39,14 @@ SpecialTrainerMoves:
 
 	db KOGA, 1
 	db 1, 1, TOXIC
-	db 1, 2, TACKLE
+	db 1, 2, SELFDESTRUCT
 	db 2, 1, TOXIC
-	db 2, 3, SUPERSONIC
-	db 3, 1, TOXIC
-	db 3, 2, DOUBLE_EDGE
+	db 2, 2, BODY_SLAM
+	db 2, 3, MINIMIZE
+	db 2, 4, SLUDGE
 	db 4, 1, LEECH_LIFE
-	db 4, 2, DOUBLE_TEAM
-	db 4, 3, PSYCHIC_M
+	db 4, 2, BUG_BUZZ
+	db 4, 3, SLUDGE
 	db 4, 4, TOXIC
 	db 0
 
@@ -59,19 +59,19 @@ SpecialTrainerMoves:
 	db 0
 
 	db SABRINA, 1
-	db 1, 1, FLASH
+	db 1, 1, PSYCHIC_M
 	db 2, 1, PSYCHIC_M
-	db 2, 4, PSYCHIC_M
-	db 3, 1, PSYCHIC_M
+	db 3, 4, PSYCHIC_M
+	db 4, 1, PSYCHIC_M
 	db 0
 
 	db GIOVANNI, 3
-	db 1, 3, FISSURE
+	db 1, 1, EARTHQUAKE
 	db 2, 2, DOUBLE_TEAM
 	db 3, 1, EARTHQUAKE
 	db 3, 3, THUNDER
 	db 4, 1, EARTHQUAKE
-	db 4, 2, LEER
+	db 4, 2, FIRE_PUNCH
 	db 4, 3, THUNDER
 	db 5, 1, ROCK_SLIDE
 	db 5, 4, EARTHQUAKE
