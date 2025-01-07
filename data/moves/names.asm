@@ -20,7 +20,7 @@ MoveNames::
 	li "WHIRLWIND"
 	li "FLY"
 	li "BIND"
-	li "SLAM"
+	li "OUTRAGE"
 	li "VINE WHIP"
 	li "STOMP"
 	li "DOUBLE KICK"

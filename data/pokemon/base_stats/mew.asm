@@ -21,7 +21,7 @@
 	     MEGA_DRAIN,   SOLARBEAM,    DRAGON_RAGE,  THUNDERBOLT,  THUNDER,      \
 	     EARTHQUAKE,   FISSURE,      DIG,          PSYCHIC_M,    TELEPORT,     \
 	     MIMIC,        DOUBLE_TEAM,  REFLECT,      BIDE,         METRONOME,    \
-	     SELFDESTRUCT, EGG_BOMB,     FIRE_BLAST,   SWIFT,        SKULL_BASH,   \
+	     SELFDESTRUCT, OUTRAGE,      FIRE_BLAST,   SWIFT,        SKULL_BASH,   \
 	     NIGHT_SHADE,  DREAM_EATER,  SKY_ATTACK,   REST,         THUNDER_WAVE, \
 	     AMNESIA,      EXPLOSION,    ROCK_SLIDE,   TRI_ATTACK,   SUBSTITUTE,   \
 	     CUT,          FLY,          SURF,         STRENGTH,     FLASH,        \

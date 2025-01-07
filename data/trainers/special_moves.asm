@@ -59,9 +59,9 @@ SpecialTrainerMoves:
 	db 0
 
 	db SABRINA, 1
-	db 1, 1, PSYCHIC_M
+	db 1, 2, AMNESIA
 	db 2, 1, PSYCHIC_M
-	db 3, 4, PSYCHIC_M
+	db 3, 1, SURF
 	db 4, 1, PSYCHIC_M
 	db 0
 

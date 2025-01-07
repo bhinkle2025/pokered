@@ -288,13 +288,13 @@ SlowbroEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
-	db 18, DISABLE
-	db 22, HEADBUTT
-	db 27, GROWL
-	db 33, WATER_GUN
-	db 37, WITHDRAW
-	db 44, AMNESIA
-	db 55, PSYCHIC_M
+	db  9, GROWL
+	db 15, DISABLE
+	db 18, WATER_GUN
+	db 21, HEADBUTT
+	db 27, WITHDRAW
+	db 33, AMNESIA
+	db 36, PSYCHIC_M
 	db 0
 
 IvysaurEvosMoves:
@@ -325,7 +325,7 @@ LickitungEvosMoves:
 	db 7, STOMP
 	db 15, DISABLE
 	db 23, DEFENSE_CURL
-	db 31, SLAM
+	db 31, BODY_SLAM
 	db 39, SCREECH
 	db 0
 
@@ -544,7 +544,7 @@ TangelaEvosMoves:
 	db 32, POISONPOWDER
 	db 36, STUN_SPORE
 	db 39, SLEEP_POWDER
-	db 45, SLAM
+	db 45, MEGA_DRAIN
 	db 49, AMNESIA
 	db 0
 
@@ -579,7 +579,7 @@ OnixEvosMoves:
 	db 15, BIND
 	db 19, ROCK_SLIDE
 	db 25, RAGE
-	db 33, SLAM
+	db 33, BODY_SLAM
 	db 43, HARDEN
 	db 0
 
@@ -677,7 +677,7 @@ MrMimeEvosMoves:
 	db 15, CONFUSION
 	db 23, LIGHT_SCREEN
 	db 31, DOUBLESLAP
-	db 39, MEDITATE
+	db 39, PSYCHIC_M
 	db 47, SUBSTITUTE
 	db 0
 
@@ -922,7 +922,7 @@ DragoniteEvosMoves:
 ; Learnset
 	db 10, THUNDER_WAVE
 	db 20, AGILITY
-	db 35, SLAM
+	db 35, OUTRAGE
 	db 45, DRAGON_RAGE
 	db 60, HYPER_BEAM
 	db 0
@@ -1113,7 +1113,7 @@ DratiniEvosMoves:
 ; Learnset
 	db 10, THUNDER_WAVE
 	db 20, AGILITY
-	db 30, SLAM
+	db 30, OUTRAGE
 	db 40, DRAGON_RAGE
 	db 50, HYPER_BEAM
 	db 0
@@ -1125,7 +1125,7 @@ DragonairEvosMoves:
 ; Learnset
 	db 10, THUNDER_WAVE
 	db 20, AGILITY
-	db 35, SLAM
+	db 35, OUTRAGE
 	db 45, DRAGON_RAGE
 	db 55, HYPER_BEAM
 	db 0
@@ -1534,12 +1534,12 @@ HypnoEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
-	db 12, DISABLE
+	db 12, POISON_GAS
 	db 17, CONFUSION
 	db 24, HEADBUTT
-	db 33, POISON_GAS
+	db 33, HYPNOSIS
 	db 37, PSYCHIC_M
-	db 43, MEDITATE
+	db 43, DREAM_EATER
 	db 0
 
 GolbatEvosMoves:
@@ -1572,7 +1572,7 @@ SnorlaxEvosMoves:
 	db 35, BODY_SLAM
 	db 41, HARDEN
 	db 48, DOUBLE_EDGE
-	db 56, HYPER_BEAM
+	db 56, GIGA_IMPACT
 	db 0
 
 MagikarpEvosMoves:
@@ -2118,7 +2118,7 @@ BellsproutEvosMoves:
 	db 21, STUN_SPORE
 	db 26, ACID
 	db 33, RAZOR_LEAF
-	db 42, SLAM
+	db 42, LEECH_LIFE
 	db 0
 
 WeepinbellEvosMoves:
@@ -2132,7 +2132,7 @@ WeepinbellEvosMoves:
 	db 23, STUN_SPORE
 	db 29, ACID
 	db 38, RAZOR_LEAF
-	db 49, SLAM
+	db 49, LEECH_LIFE
 	db 0
 
 VictreebelEvosMoves:

@@ -17,7 +17,7 @@
 	tmhm SWORDS_DANCE, TOXIC,        BODY_SLAM,    GIGA_IMPACT,  DOUBLE_EDGE,  \
 	     HYPER_BEAM,   MEGA_DRAIN,   SOLARBEAM,    MIMIC,        EARTHQUAKE,   \
 	     DOUBLE_TEAM,  REFLECT,      BIDE,         REST,         SUBSTITUTE,   \
-	     SLUDGE,       CUT,          STRENGTH,     FLASH
+	     SLUDGE,       OUTRAGE,      CUT,          STRENGTH,     FLASH
 	; end
 
 	db 0 ; padding

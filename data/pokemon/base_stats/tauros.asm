@@ -18,7 +18,8 @@
 	     ICE_BEAM,     BLIZZARD,     HYPER_BEAM,   THUNDERBOLT,  ROCK_SLIDE,   \
 	     THUNDER,      EARTHQUAKE,   FISSURE,      MIMIC,        DOUBLE_TEAM,  \
 	     BIDE,         FIRE_BLAST,   SKULL_BASH,   REST,         SUBSTITUTE,   \
-	     DIG,          SOLARBEAM,    FLAMETHROWER, STRENGTH,     SURF
+	     DIG,          SOLARBEAM,    FLAMETHROWER, OUTRAGE,                    \
+		 STRENGTH,     SURF
 	; end
 
 	db 0 ; padding
