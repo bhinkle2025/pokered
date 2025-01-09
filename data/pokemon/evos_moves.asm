@@ -529,7 +529,7 @@ PinsirEvosMoves:
 	db 0
 ; Learnset
 	db 25, SEISMIC_TOSS
-	db 30, GUILLOTINE
+	db 30, SUBMISSION
 	db 36, FOCUS_ENERGY
 	db 43, HARDEN
 	db 49, SLASH
@@ -1034,7 +1034,7 @@ KrabbyEvosMoves:
 	db 0
 ; Learnset
 	db 20, VICEGRIP
-	db 25, GUILLOTINE
+	db 25, BUBBLEBEAM
 	db 30, STOMP
 	db 35, CRABHAMMER
 	db 40, HARDEN
@@ -1241,7 +1241,7 @@ JigglypuffEvosMoves:
 	db 24, DOUBLESLAP
 	db 29, REST
 	db 34, BODY_SLAM
-	db 39, DOUBLE_EDGE
+	db 39, PLAY_ROUGH
 	db 0
 
 WigglytuffEvosMoves:
@@ -1618,7 +1618,7 @@ KinglerEvosMoves:
 	db 0
 ; Learnset
 	db 20, VICEGRIP
-	db 25, GUILLOTINE
+	db 25, BUBBLEBEAM
 	db 34, STOMP
 	db 42, CRABHAMMER
 	db 49, HARDEN

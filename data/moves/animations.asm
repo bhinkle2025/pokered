@@ -11,7 +11,7 @@ AttackAnimationPointers:
 	dw ThunderPunchAnim
 	dw ScratchAnim
 	dw VicegripAnim
-	dw GuillotineAnim
+	dw PlayRoughAnim
 	dw RazorWindAnim
 	dw SwordsDanceAnim
 	dw CutAnim
@@ -286,10 +286,6 @@ VicegripAnim:
 	battle_anim VICEGRIP, SUBANIM_0_SLICE_BOTH_SIDES, 0, 8
 	db -1 ; end
 
-GuillotineAnim:
-	battle_anim GUILLOTINE, SUBANIM_0_SLICE_BOTH_SIDES, 0, 6
-	db -1 ; end
-
 RazorWindAnim:
 	battle_anim RAZOR_WIND, SUBANIM_0_SLICE, 0, 4
 	db -1 ; end
@@ -415,6 +411,7 @@ ThrashAnim:
 	battle_anim THRASH, SUBANIM_1_STAR_BIG_MOVING, 1, 6
 	db -1 ; end
 
+PlayRoughAnim:
 DoubleEdgeAnim:
 	battle_anim LEECH_SEED, SE_LIGHT_SCREEN_PALETTE
 	battle_anim NO_MOVE, SUBANIM_0_CIRCLES_CENTERING, 0, 6
