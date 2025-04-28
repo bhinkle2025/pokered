@@ -2290,6 +2290,16 @@ UseBagItem:
 	ld a, $2
 	ld [wBattleResult], a
 	scf ; set carry
+
+	; —————————————————————————————————————————————
+    ; give EXP out without losing our RET C:
+    push    af              ; save A+flags (carry=1)
+    push    bc              ; save BC (any register pair will do)
+    callfar GainExperience  ; divide & award EXP as usual
+    pop     bc              ; restore BC
+    pop     af              ; restore A+flags (carry still set)
+    ; —————————————————————————————————————————————
+
 	ret
 
 ItemsCantBeUsedHereText:

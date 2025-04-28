@@ -51,11 +51,11 @@ SpecialTrainerMoves:
 	db 0
 
 	db BLAINE, 1
-	db 1, 1, FLAMETHROWER
+	db 1, 1, THUNDERPUNCH
 	db 1, 4, CONFUSE_RAY
 	db 3, 1, FLAMETHROWER
-	db 3, 2, FIRE_BLAST
-	db 3, 3, REFLECT
+	db 3, 4, FIRE_BLAST
+	db 4, 1, FIRE_BLAST 
 	db 0
 
 	db SABRINA, 1
