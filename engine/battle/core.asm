@@ -2285,22 +2285,22 @@ UseBagItem:
 
 .returnAfterCapturingMon
 	call GBPalNormal
-	xor a
-	ld [wCapturedMonSpecies], a
-	ld a, $2
-	ld [wBattleResult], a
-	scf ; set carry
 
-	; —————————————————————————————————————————————
-    ; give EXP out without losing our RET C:
-    push    af              ; save A+flags (carry=1)
-    push    bc              ; save BC (any register pair will do)
-    callfar GainExperience  ; divide & award EXP as usual
-    pop     bc              ; restore BC
-    pop     af              ; restore A+flags (carry still set)
-    ; —————————————————————————————————————————————
 
-	ret
+    ; — simply award catch-EXP —
+    callfar GainExperience
+
+    ; — Turn off auto‐BG transfer to avoid mid‐draw glitches —
+    xor a
+    ldh [hAutoBGTransferEnabled], a
+
+    ; — Now clear species, set battle result & exit battle — 
+    xor a
+    ld  [wCapturedMonSpecies], a
+    ld  a, $02
+    ld  [wBattleResult], a
+    scf                      ; RET C below tears down the battle
+    ret
 
 ItemsCantBeUsedHereText:
 	text_far _ItemsCantBeUsedHereText
