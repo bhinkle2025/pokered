@@ -231,11 +231,11 @@ NidoranMEvosMoves:
 	db 0
 ; Learnset
 	db 8, HORN_ATTACK
+	db 12, DOUBLE_KICK
 	db 14, POISON_STING
 	db 21, FOCUS_ENERGY
 	db 29, FURY_ATTACK
 	db 36, HORN_DRILL
-	db 43, DOUBLE_KICK
 	db 0
 
 ClefairyEvosMoves:
@@ -369,11 +369,11 @@ NidoranFEvosMoves:
 	db 0
 ; Learnset
 	db 8, SCRATCH
+	db 12, DOUBLE_KICK
 	db 14, POISON_STING
 	db 21, TAIL_WHIP
 	db 29, BITE
 	db 36, FURY_SWIPES
-	db 43, DOUBLE_KICK
 	db 0
 
 NidoqueenEvosMoves:
@@ -565,11 +565,11 @@ GrowlitheEvosMoves:
 	db EVOLVE_ITEM, FIRE_STONE, 1, ARCANINE
 	db 0
 ; Learnset
-	db 18, EMBER
-	db 23, LEER
-	db 30, DOUBLE_EDGE
-	db 39, AGILITY
-	db 50, FLAMETHROWER
+	db  6, EMBER
+	db  8, LEER
+	db 23, DOUBLE_EDGE
+	db 30, AGILITY
+	db 34, FLAMETHROWER
 	db 0
 
 OnixEvosMoves:
@@ -1393,11 +1393,11 @@ BeedrillEvosMoves:
 	db 0
 ; Learnset
 	db 10, FURY_ATTACK
-	db 16, FOCUS_ENERGY
-	db 20, TWINEEDLE
-	db 25, RAGE
-	db 30, PIN_MISSILE
-	db 35, AGILITY
+	db 16, TWINEEDLE
+	db 21, ACID
+	db 25, AGILITY
+	db 28, PIN_MISSILE
+	db 31, OUTRAGE
 	db 0
 
 MissingNo73EvosMoves:
@@ -1729,9 +1729,9 @@ PidgeottoEvosMoves:
 	db 5, SAND_ATTACK
 	db 12, QUICK_ATTACK
 	db 21, WHIRLWIND
-	db 31, WING_ATTACK
-	db 40, AGILITY
-	db 49, MIRROR_MOVE
+	db 26, WING_ATTACK
+	db 31, AGILITY
+	db 43, MIRROR_MOVE
 	db 0
 
 PidgeotEvosMoves:
@@ -1741,9 +1741,9 @@ PidgeotEvosMoves:
 	db 5, SAND_ATTACK
 	db 12, QUICK_ATTACK
 	db 21, WHIRLWIND
-	db 31, WING_ATTACK
-	db 44, AGILITY
-	db 54, MIRROR_MOVE
+	db 26, WING_ATTACK
+	db 31, AGILITY
+	db 43, MIRROR_MOVE
 	db 0
 
 StarmieEvosMoves:
@@ -1900,11 +1900,11 @@ NidorinoEvosMoves:
 	db 0
 ; Learnset
 	db 8, HORN_ATTACK
+	db 12, DOUBLE_KICK
 	db 14, POISON_STING
 	db 23, FOCUS_ENERGY
 	db 32, FURY_ATTACK
 	db 41, HORN_DRILL
-	db 50, DOUBLE_KICK
 	db 0
 
 NidorinaEvosMoves:
@@ -1913,11 +1913,12 @@ NidorinaEvosMoves:
 	db 0
 ; Learnset
 	db 8, SCRATCH
+	db 12, DOUBLE_KICK
 	db 14, POISON_STING
 	db 23, TAIL_WHIP
 	db 32, BITE
 	db 41, FURY_SWIPES
-	db 50, DOUBLE_KICK
+	
 	db 0
 
 GeodudeEvosMoves:
@@ -1990,11 +1991,11 @@ CharmanderEvosMoves:
 	db 0
 ; Learnset
 	db 9, EMBER
-	db 15, LEER
-	db 22, RAGE
-	db 30, SLASH
-	db 38, FLAMETHROWER
-	db 46, FIRE_SPIN
+	db 12, LEER
+	db 17, RAGE
+	db 20, SLASH
+	db 24, FLAMETHROWER
+	db 32, FIRE_SPIN
 	db 0
 
 SquirtleEvosMoves:
@@ -2017,10 +2018,10 @@ CharmeleonEvosMoves:
 ; Learnset
 	db 9, EMBER
 	db 15, LEER
-	db 24, RAGE
-	db 33, SLASH
-	db 42, FLAMETHROWER
-	db 56, FIRE_SPIN
+	db 19, RAGE
+	db 24, SLASH
+	db 30, FLAMETHROWER
+	db 42, FIRE_SPIN
 	db 0
 
 WartortleEvosMoves:
@@ -2042,10 +2043,10 @@ CharizardEvosMoves:
 ; Learnset
 	db 9, EMBER
 	db 15, LEER
-	db 24, RAGE
-	db 36, SLASH
-	db 46, FLAMETHROWER
-	db 55, FIRE_SPIN
+	db 19, RAGE
+	db 24, SLASH
+	db 30, FLAMETHROWER
+	db 46, FIRE_SPIN
 	db 0
 
 MissingNoB5EvosMoves:
