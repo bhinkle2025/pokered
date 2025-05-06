@@ -566,7 +566,7 @@ GrowlitheEvosMoves:
 	db 0
 ; Learnset
 	db 18, EMBER
-	db 23, LEER
+	db 23, PSYFANGS
 	db 30, DOUBLE_EDGE
 	db 39, AGILITY
 	db 50, FLAMETHROWER
@@ -710,8 +710,8 @@ ArbokEvosMoves:
 	db 10, BITE
 	db 17, GLARE
 	db 20, ACID
-	db 24, SCREECH
-	db 31, BODY_SLAM
+	db 24, PSYFANGS
+	db 31, SCREECH
 	db 0
 
 ParasectEvosMoves:
@@ -1337,8 +1337,8 @@ EkansEvosMoves:
 	db 10, BITE
 	db 17, GLARE
 	db 20, ACID
-	db 24, SCREECH
-	db 31, BODY_SLAM
+	db 24, PSYFANGS
+	db 31, SCREECH
 	db 0
 
 ParasEvosMoves:
@@ -1947,7 +1947,7 @@ AerodactylEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
-	db 33, SUPERSONIC
+	db 33, PSYFANGS
 	db 38, BITE
 	db 45, DOUBLE_EDGE
 	db 54, HYPER_BEAM

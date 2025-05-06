@@ -7,6 +7,8 @@ PhysicalToSpecialMoves:
         db HYPER_BEAM
         db SWIFT
         db TRI_ATTACK
+; Bug
+        db BUG_BUZZ
 ; Steel
         db FLASH
         db -1 ; end
@@ -27,6 +29,10 @@ SpecialToPhysicalMoves:
         db ICE_PUNCH
 ; Dragon
         db OUTRAGE
+; Fairy
+        db PLAY_ROUGH
+; Psychic
+        db PSYFANGS
 ; Ghost
         db LICK
         db -1 ; end

@@ -13,7 +13,7 @@ MoveSoundTable:
 	db SFX_DAMAGE,             $00, $80 ; SCRATCH
 	db SFX_BATTLE_0F,          $20, $40 ; VICEGRIP
 	db SFX_SUPER_EFFECTIVE,    $00, $80 ; PLAY_ROUGH
-	db SFX_BATTLE_0E,          $00, $a0 ; RAZOR_WIND
+	db SFX_PSYCHIC_M,          $00, $a0 ; PSYFANGS
 	db SFX_NOT_VERY_EFFECTIVE, $10, $c0 ; SWORDS_DANCE
 	db SFX_NOT_VERY_EFFECTIVE, $00, $a0 ; CUT
 	db SFX_BATTLE_12,          $00, $c0 ; GUST

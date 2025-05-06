@@ -12,7 +12,7 @@ AttackAnimationPointers:
 	dw ScratchAnim
 	dw VicegripAnim
 	dw PlayRoughAnim
-	dw RazorWindAnim
+	dw PsyFangsAnim
 	dw SwordsDanceAnim
 	dw CutAnim
 	dw GustAnim
@@ -286,10 +286,6 @@ VicegripAnim:
 	battle_anim VICEGRIP, SUBANIM_0_SLICE_BOTH_SIDES, 0, 8
 	db -1 ; end
 
-RazorWindAnim:
-	battle_anim RAZOR_WIND, SUBANIM_0_SLICE, 0, 4
-	db -1 ; end
-
 SwordsDanceAnim:
 	battle_anim SWORDS_DANCE, SUBANIM_1_SWORDS_CIRCLING, 1, 6
 	battle_anim SWORDS_DANCE, SUBANIM_1_SWORDS_CIRCLING, 1, 6
@@ -451,6 +447,7 @@ LeerAnim:
 	battle_anim NO_MOVE, SE_RESET_SCREEN_PALETTE
 	db -1 ; end
 
+PsyFangsAnim:
 BiteAnim:
 	battle_anim BITE, SUBANIM_0_STAR_THRICE, 0, 8
 	db -1 ; end
@@ -637,7 +634,6 @@ GrowthAnim:
 RazorLeafAnim:
 	battle_anim RAZOR_LEAF, SE_LEAVES_FALLING
 	battle_anim SWIFT, SUBANIM_1_LEAVES_TOSS, 1, 1
-	battle_anim RAZOR_WIND, SUBANIM_0_SLICE, 0, 1
 	db -1 ; end
 
 SolarBeamAnim:
