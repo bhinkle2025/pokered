@@ -21,7 +21,7 @@ SpecialTrainerMoves:
 	db 0
 
 	db MISTY, 1
-	db 2, 4, BUBBLEBEAM
+	db 1, 4, AMNESIA
 	db 0
 
 	db LT_SURGE, 1
@@ -129,34 +129,34 @@ SpecialTrainerMoves:
 	db 0
 
 	db RIVAL3, 1
-	db 1, 3, EARTHQUAKE
+	db 1, 3, STEEL_WING
 	db 2, 4, PSYCHIC_M
-	db 3, 4, LEECH_SEED
-	db 4, 1, ICE_BEAM
+	db 3, 4, EARTHQUAKE
+	db 4, 1, PSYCHIC_M
 	db 5, 1, CONFUSE_RAY
-	db 5, 4, FIRE_SPIN
+	db 5, 4, GIGA_IMPACT
 	db 6, 3, QUICK_ATTACK
 	db 0
 
 	db RIVAL3, 2
-	db 1, 3, EARTHQUAKE
+	db 1, 3, STEEL_WING
 	db 2, 4, PSYCHIC_M
-	db 3, 4, LEECH_SEED
+	db 3, 4, EARTHQUAKE
 	db 4, 1, THUNDERBOLT
 	db 5, 1, ICE_BEAM
-	db 6, 2, REFLECT
-	db 6, 3, QUICK_ATTACK
+	db 6, 2, BLIZZARD
+	db 6, 3, DIG
 	db 0
 
 	db RIVAL3, 3
-	db 1, 3, EARTHQUAKE
+	db 1, 3, STEEL_WING
 	db 2, 4, PSYCHIC_M
-	db 3, 4, LEECH_SEED
+	db 3, 4, EARTHQUAKE
 	db 4, 1, CONFUSE_RAY
 	db 4, 4, FIRE_SPIN
 	db 5, 1, THUNDERBOLT
-	db 6, 1, AURORA_BEAM
-	db 6, 3, QUICK_ATTACK
+	db 6, 2, MEGA_DRAIN
+	db 6, 4, SOLARBEAM
 	db 0
 
 	db -1 ; end

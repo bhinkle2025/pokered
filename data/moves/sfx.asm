@@ -132,7 +132,7 @@ MoveSoundTable:
 	db SFX_BATTLE_2B,          $1f, $60 ; SWIFT
 	db SFX_BATTLE_26,          $1e, $20 ; SKULL_BASH
 	db SFX_BATTLE_26,          $1f, $18 ; SPIKE_CANNON
-	db SFX_BATTLE_14,          $0f, $80 ; CONSTRICT
+	db SFX_BATTLE_20,          $0f, $80 ; POWER_WHIP
 	db SFX_BATTLE_09,          $f8, $10 ; AMNESIA
 	db SFX_NOT_VERY_EFFECTIVE, $01, $ff ; STEEL_WING
 	db SFX_BATTLE_32,          $08, $40 ; SOFTBOILED

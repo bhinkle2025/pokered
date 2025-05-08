@@ -131,7 +131,7 @@ AttackAnimationPointers:
 	dw SwiftAnim
 	dw SkullBashAnim
 	dw SpikeCannonAnim
-	dw ConstrictAnim
+	dw PowerWhipAnim
 	dw AmnesiaAnim
 	dw SteelWingAnim
 	dw SoftboiledAnim
@@ -326,6 +326,7 @@ OutrageAnim:
 	battle_anim OUTRAGE, SUBANIM_0_STAR_THRICE, 0, 6
 	db -1 ; end
 
+PowerWhipAnim:
 VineWhipAnim:
 	battle_anim VINE_WHIP, SUBANIM_0_SLICE, 0, 1
 	battle_anim NO_MOVE, SUBANIM_0_STAR_TWICE, 0, 8
@@ -944,8 +945,8 @@ WaterfallAnim:
 
 ClampAnim:
 	battle_anim CLAMP, SUBANIM_0_SLICE_BOTH_SIDES, 0, 8
-	battle_anim CONSTRICT, SUBANIM_0_BIND, 0, 6
-	battle_anim CONSTRICT, SUBANIM_0_BIND, 0, 6
+	battle_anim WRAP, SUBANIM_0_BIND, 0, 6
+	battle_anim WRAP, SUBANIM_0_BIND, 0, 6
 	db -1 ; end
 
 SwiftAnim:
@@ -958,12 +959,6 @@ SkullBashAnim:
 
 SpikeCannonAnim:
 	battle_anim SPIKE_CANNON, SUBANIM_1_STAR_BIG_MOVING, 1, 4
-	db -1 ; end
-
-ConstrictAnim:
-	battle_anim CONSTRICT, SUBANIM_0_BIND, 0, 6
-	battle_anim CONSTRICT, SUBANIM_0_BIND, 0, 6
-	battle_anim CONSTRICT, SUBANIM_0_BIND, 0, 6
 	db -1 ; end
 
 AmnesiaAnim:

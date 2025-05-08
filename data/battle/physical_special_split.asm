@@ -23,6 +23,7 @@ SpecialToPhysicalMoves:
 ; Grass
         db RAZOR_LEAF
         db VINE_WHIP
+        db POWER_WHIP
 ; Electric
         db THUNDERPUNCH
 ; Ice

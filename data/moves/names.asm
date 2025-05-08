@@ -131,7 +131,7 @@ MoveNames::
 	li "SWIFT"
 	li "SKULL BASH"
 	li "SPIKE CANNON"
-	li "CONSTRICT"
+	li "POWER WHIP"
 	li "AMNESIA"
 	li "STEEL WING"
 	li "SOFTBOILED"

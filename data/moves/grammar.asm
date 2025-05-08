@@ -55,7 +55,7 @@ ExclamationPointMoveSets:
 	db METRONOME
 	db LICK
 	db CLAMP
-	db CONSTRICT
+	db POWER_WHIP
 	db POISON_GAS
 	db LEECH_LIFE
 	db BUBBLE

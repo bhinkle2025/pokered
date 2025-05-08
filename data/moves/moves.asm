@@ -142,9 +142,9 @@ Moves:
 	move SWIFT,        SWIFT_EFFECT,                60, NORMAL,       100, 20
 	move SKULL_BASH,   CHARGE_EFFECT,              130, NORMAL,       100, 15
 	move SPIKE_CANNON, TWO_TO_FIVE_ATTACKS_EFFECT,  20, NORMAL,       100, 15
-	move CONSTRICT,    SPEED_DOWN_SIDE_EFFECT,      10, NORMAL,       100, 35
+	move POWER_WHIP,   NO_ADDITIONAL_EFFECT,       120, GRASS,        85, 10
 	move AMNESIA,      SPECIAL_UP2_EFFECT,           0, PSYCHIC_TYPE, 100, 20
-	move STEEL_WING,   NO_ADDITIONAL_EFFECT,        70, STEEL,  90, 25
+	move STEEL_WING,   NO_ADDITIONAL_EFFECT,        70, STEEL,         90, 25
 	move SOFTBOILED,   HEAL_EFFECT,                  0, NORMAL,       100, 10
 	move HI_JUMP_KICK, JUMP_KICK_EFFECT,           135, FIGHTING,      90, 20
 	move GLARE,        PARALYZE_EFFECT,              0, NORMAL,       100, 30

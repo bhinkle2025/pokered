@@ -10,7 +10,7 @@
 	INCBIN "gfx/pokemon/front/tangela.pic", 0, 1 ; sprite dimensions
 	dw TangelaPicFront, TangelaPicBack
 
-	db CONSTRICT, BIND, GROWTH, NO_MOVE ; level 1 learnset
+	db VINE_WHIP, ABSORB, GROWTH, WRAP; level 1 learnset
 	db GROWTH_MEDIUM_FAST ; growth rate
 
 	; tm/hm learnset
