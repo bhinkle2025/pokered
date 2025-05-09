@@ -302,13 +302,13 @@ IvysaurEvosMoves:
 	db EVOLVE_LEVEL, 32, VENUSAUR
 	db 0
 ; Learnset
-	db 7, LEECH_SEED
-	db 13, VINE_WHIP
-	db 22, POISONPOWDER
-	db 30, RAZOR_LEAF
-	db 38, GROWTH
-	db 46, SLEEP_POWDER
-	db 54, POWER_WHIP
+	db 9, VINE_WHIP
+	db 12, LEECH_SEED
+	db 15, POISONPOWDER
+	db 15, SLEEP_POWDER
+	db 21, RAZOR_LEAF
+	db 28, GROWTH
+	db 45, POWER_WHIP
 	db 0
 
 ExeggutorEvosMoves:
@@ -1135,20 +1135,20 @@ KabutoEvosMoves:
 	db EVOLVE_LEVEL, 40, KABUTOPS
 	db 0
 ; Learnset
-	db 34, ABSORB
+	db 34, WATERFALL
 	db 39, SLASH
-	db 44, ROCK_SLIDE
-	db 49, HYDRO_PUMP
+	db 40, ROCK_SLIDE
+	db 44, SWORDS_DANCE
 	db 0
 
 KabutopsEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
-	db 34, ABSORB
+	db 34, WATERFALL
 	db 39, SLASH
 	db 46, ROCK_SLIDE
-	db 53, HYDRO_PUMP
+	db 50, SWORDS_DANCE
 	db 0
 
 HorseaEvosMoves:
@@ -1215,9 +1215,9 @@ OmanyteEvosMoves:
 	db 0
 ; Learnset
 	db 34, HORN_ATTACK
-	db 39, ROCK_SLIDE
-	db 46, SPIKE_CANNON
-	db 53, HYDRO_PUMP
+	db 37, ROCK_SLIDE
+	db 40, SPIKE_CANNON
+	db 44, HYDRO_PUMP
 	db 0
 
 OmastarEvosMoves:
@@ -1225,7 +1225,7 @@ OmastarEvosMoves:
 	db 0
 ; Learnset
 	db 34, HORN_ATTACK
-	db 39, ROCK_SLIDE
+	db 37, ROCK_SLIDE
 	db 44, SPIKE_CANNON
 	db 49, HYDRO_PUMP
 	db 0
@@ -1757,26 +1757,26 @@ BulbasaurEvosMoves:
 	db EVOLVE_LEVEL, 16, IVYSAUR
 	db 0
 ; Learnset
-	db 7, LEECH_SEED
-	db 13, VINE_WHIP
-	db 20, POISONPOWDER
-	db 27, RAZOR_LEAF
-	db 34, GROWTH
-	db 41, SLEEP_POWDER
-	db 48, POWER_WHIP
+	db 9, VINE_WHIP
+	db 12, LEECH_SEED
+	db 15, POISONPOWDER
+	db 15, SLEEP_POWDER
+	db 21, RAZOR_LEAF
+	db 25, GROWTH
+	db 33, POWER_WHIP
 	db 0
 
 VenusaurEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
-	db 7, LEECH_SEED
-	db 13, VINE_WHIP
-	db 22, POISONPOWDER
-	db 30, RAZOR_LEAF
-	db 43, GROWTH
-	db 55, SLEEP_POWDER
-	db 65, POWER_WHIP
+	db 9, VINE_WHIP
+	db 12, LEECH_SEED
+	db 15, POISONPOWDER
+	db 15, SLEEP_POWDER
+	db 23, RAZOR_LEAF
+	db 28, GROWTH
+	db 50, POWER_WHIP
 	db 0
 
 TentacruelEvosMoves:
@@ -1804,24 +1804,24 @@ GoldeenEvosMoves:
 	db EVOLVE_LEVEL, 33, SEAKING
 	db 0
 ; Learnset
-	db 19, SUPERSONIC
-	db 24, HORN_ATTACK
-	db 30, FURY_ATTACK
-	db 37, WATERFALL
-	db 45, HORN_DRILL
-	db 54, AGILITY
+	db  4, SUPERSONIC
+	db 10, WATER_GUN
+	db 14, HORN_ATTACK
+	db 20, FURY_ATTACK
+	db 24, WATERFALL
+	db 30, AGILITY
 	db 0
 
 SeakingEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
-	db 19, SUPERSONIC
-	db 24, HORN_ATTACK
-	db 30, FURY_ATTACK
-	db 39, WATERFALL
-	db 48, HORN_DRILL
-	db 54, AGILITY
+	db  4, SUPERSONIC
+	db 10, WATER_GUN
+	db 14, HORN_ATTACK
+	db 20, FURY_ATTACK
+	db 24, WATERFALL
+	db 30, AGILITY
 	db 0
 
 MissingNo9FEvosMoves:
@@ -1948,9 +1948,9 @@ AerodactylEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
-	db 33, PSYFANGS
-	db 38, BITE
-	db 45, ROCK_SLIDE
+	db 32, PSYFANGS
+	db 35, BITE
+	db 42, ROCK_SLIDE
 	db 54, GIGA_IMPACT
 	db 0
 

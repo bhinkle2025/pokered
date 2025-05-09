@@ -31,7 +31,7 @@ AttackAnimationPointers:
 	dw HeadbuttAnim
 	dw HornAttackAnim
 	dw FuryAttackAnim
-	dw HornDrillAnim
+	dw PrimordialAnim
 	dw TackleAnim
 	dw BodySlamAnim
 	dw WrapAnim
@@ -370,14 +370,6 @@ HornAttackAnim:
 FuryAttackAnim:
 	battle_anim FURY_ATTACK, SUBANIM_0_HORN_JAB_THRICE, 0, 2
 	battle_anim NO_MOVE, SUBANIM_0_HORN_JAB_THRICE, 0, 2
-	db -1 ; end
-
-HornDrillAnim:
-	battle_anim HORN_DRILL, SUBANIM_1_STAR_BIG, 1, 2
-	battle_anim NO_MOVE, SUBANIM_1_STAR_BIG, 1, 2
-	battle_anim NO_MOVE, SUBANIM_1_STAR_BIG, 1, 2
-	battle_anim NO_MOVE, SUBANIM_1_STAR_BIG, 1, 2
-	battle_anim NO_MOVE, SUBANIM_1_STAR_BIG, 1, 2
 	db -1 ; end
 
 TackleAnim:
@@ -1081,6 +1073,7 @@ RestAnim:
 	battle_anim REST, SUBANIM_0_STATUS_SLEEP, 0, 16
 	db -1 ; end
 
+PrimordialAnim:
 RockSlideAnim:
 	battle_anim ROCK_SLIDE, SUBANIM_0_ROCKS_LIFT, 0, 4
 	battle_anim ROCK_SLIDE, SUBANIM_0_ROCKS_TOSS, 0, 3

@@ -32,7 +32,7 @@ MoveSoundTable:
 	db SFX_BATTLE_18,          $00, $80 ; HEADBUTT
 	db SFX_BATTLE_1E,          $00, $60 ; HORN_ATTACK
 	db SFX_BATTLE_1E,          $01, $40 ; FURY_ATTACK
-	db SFX_HORN_DRILL,         $00, $a0 ; HORN_DRILL
+	db SFX_BATTLE_2B,          $00, $a0 ; PRIMORDIAL
 	db SFX_SUPER_EFFECTIVE,    $10, $a0 ; TACKLE
 	db SFX_BATTLE_20,          $00, $c0 ; BODY_SLAM
 	db SFX_BATTLE_14,          $10, $60 ; WRAP
