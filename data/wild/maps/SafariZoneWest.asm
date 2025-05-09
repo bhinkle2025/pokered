@@ -18,7 +18,7 @@ IF DEF(_BLUE)
 	db 28, PERSIAN
 	db 25, IVYSAUR
 ENDC
-	db 31, SCYTHER
+	db 25, SCYTHER
 	db 32, VENUSAUR
 	db 28, POLIWRATH
 	end_grass_wildmons
