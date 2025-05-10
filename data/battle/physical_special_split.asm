@@ -7,6 +7,10 @@ PhysicalToSpecialMoves:
         db HYPER_BEAM
         db SWIFT
         db TRI_ATTACK
+; FIGHTING
+        db FOCUS_BLAST
+; Rock
+        db PRIMORDIAL
 ; Bug
         db BUG_BUZZ
 ; Steel
@@ -30,6 +34,7 @@ SpecialToPhysicalMoves:
         db ICE_PUNCH
 ; Dragon
         db OUTRAGE
+        db DRAGON_CLAW
 ; Fairy
         db PLAY_ROUGH
 ; Psychic

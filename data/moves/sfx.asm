@@ -50,7 +50,7 @@ MoveSoundTable:
 	db SFX_BATTLE_35,          $00, $80 ; SING
 	db SFX_BATTLE_27,          $40, $60 ; SUPERSONIC
 	db SFX_BATTLE_27,          $00, $80 ; SONICBOOM
-	db SFX_BATTLE_27,          $ff, $40 ; DISABLE
+	db SFX_BATTLE_36,          $ff, $40 ; FOCUS_BLAST
 	db SFX_BATTLE_2A,          $80, $c0 ; ACID
 	db SFX_BATTLE_19,          $10, $a0 ; EMBER
 	db SFX_BATTLE_19,          $21, $e0 ; FLAMETHROWER

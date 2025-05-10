@@ -49,7 +49,7 @@ AttackAnimationPointers:
 	dw SingAnim
 	dw SupersonicAnim
 	dw SonicBoomAnim
-	dw DisableAnim
+	dw FocusBlastAnim
 	dw AcidAnim
 	dw EmberAnim
 	dw FlamethrowerAnim
@@ -472,13 +472,6 @@ SonicBoomAnim:
 	battle_anim NO_MOVE, SUBANIM_1_STAR_BIG, 1, 6
 	db -1 ; end
 
-DisableAnim:
-	battle_anim LEECH_SEED, SE_DARK_SCREEN_PALETTE
-	battle_anim LEER, SE_DARK_SCREEN_FLASH
-	battle_anim LEER, SE_DARK_SCREEN_FLASH
-	battle_anim NO_MOVE, SE_RESET_SCREEN_PALETTE
-	db -1 ; end
-
 AcidAnim:
 	battle_anim ACID, SUBANIM_1_BLOB_TOSS, 1, 6
 	battle_anim ACID, SUBANIM_1_BLOB_DRIP_ENEMY, 1, 6
@@ -541,6 +534,7 @@ AuroraBeamAnim:
 	battle_anim NO_MOVE, SE_DELAY_ANIMATION_10
 	db -1 ; end
 
+FocusBlastAnim:
 HyperBeamAnim:
 	battle_anim LEECH_SEED, SE_DARK_SCREEN_PALETTE
 	battle_anim NO_MOVE, SE_SPIRAL_BALLS_INWARD

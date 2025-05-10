@@ -288,13 +288,12 @@ SlowbroEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
-	db  9, GROWL
-	db 15, DISABLE
-	db 18, WATER_GUN
-	db 21, HEADBUTT
-	db 27, WITHDRAW
-	db 33, AMNESIA
-	db 36, PSYCHIC_M
+	db 9, WATER_GUN
+	db 22, HEADBUTT
+	db 27, GROWL
+	db 30, REST
+	db 42, PSYCHIC_M
+	db 48, AMNESIA
 	db 0
 
 IvysaurEvosMoves:
@@ -567,7 +566,7 @@ GrowlitheEvosMoves:
 ; Learnset
 	db  6, EMBER
 	db  8, PSYFANGS
-	db 23, DOUBLE_EDGE
+	db 23, PLAY_ROUGH
 	db 30, AGILITY
 	db 34, FLAMETHROWER
 	db 0
@@ -576,11 +575,11 @@ OnixEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
-	db 15, BIND
+	db 15, HARDEN
 	db 19, ROCK_SLIDE
 	db 25, RAGE
-	db 33, BODY_SLAM
-	db 43, HARDEN
+	db 30, SKULL_BASH
+	db 35, EARTHQUAKE
 	db 0
 
 FearowEvosMoves:
@@ -612,12 +611,12 @@ SlowpokeEvosMoves:
 	db EVOLVE_LEVEL, 37, SLOWBRO
 	db 0
 ; Learnset
-	db 18, DISABLE
+	db 9, WATER_GUN
 	db 22, HEADBUTT
 	db 27, GROWL
-	db 33, WATER_GUN
-	db 40, AMNESIA
-	db 48, PSYCHIC_M
+	db 30, REST
+	db 42, PSYCHIC_M
+	db 48, AMNESIA
 	db 0
 
 KadabraEvosMoves:
@@ -626,11 +625,11 @@ KadabraEvosMoves:
 	db 0
 ; Learnset
 	db 16, CONFUSION
-	db 20, DISABLE
+	db 20, REFLECT
 	db 27, PSYBEAM
 	db 31, RECOVER
 	db 38, PSYCHIC_M
-	db 42, REFLECT
+	db 42, FOCUS_BLAST
 	db 0
 
 GravelerEvosMoves:
@@ -641,7 +640,7 @@ GravelerEvosMoves:
 	db 11, DEFENSE_CURL
 	db 16, ROCK_THROW
 	db 21, SELFDESTRUCT
-	db 29, HARDEN
+	db 29, DIG
 	db 36, EARTHQUAKE
 	db 43, EXPLOSION
 	db 0
@@ -730,11 +729,11 @@ PsyduckEvosMoves:
 	db EVOLVE_LEVEL, 33, GOLDUCK
 	db 0
 ; Learnset
-	db 28, TAIL_WHIP
-	db 31, DISABLE
-	db 36, PSYBEAM
-	db 43, FURY_SWIPES
-	db 52, HYDRO_PUMP
+	db 6, CONFUSION
+	db 9, FURY_SWIPES
+	db 10, HYPNOSIS
+	db 18, PSYBEAM
+	db 34, AMNESIA
 	db 0
 
 DrowzeeEvosMoves:
@@ -742,12 +741,12 @@ DrowzeeEvosMoves:
 	db EVOLVE_LEVEL, 26, HYPNO
 	db 0
 ; Learnset
-	db 12, DISABLE
-	db 17, CONFUSION
-	db 24, HEADBUTT
-	db 29, POISON_GAS
+	db 13, POISON_GAS
+	db 18, MEDITATE
+	db 21, PSYBEAM
+	db 27, HEADBUTT
 	db 32, PSYCHIC_M
-	db 37, MEDITATE
+	db 40, DREAM_EATER
 	db 0
 
 GolemEvosMoves:
@@ -757,7 +756,7 @@ GolemEvosMoves:
 	db 11, DEFENSE_CURL
 	db 16, ROCK_THROW
 	db 21, SELFDESTRUCT
-	db 29, HARDEN
+	db 29, DIG
 	db 36, EARTHQUAKE
 	db 43, EXPLOSION
 	db 0
@@ -1235,13 +1234,12 @@ JigglypuffEvosMoves:
 	db EVOLVE_ITEM, MOON_STONE, 1, WIGGLYTUFF
 	db 0
 ; Learnset
-	db 9, POUND
-	db 14, DISABLE
-	db 19, DEFENSE_CURL
-	db 24, DOUBLESLAP
-	db 29, REST
-	db 34, BODY_SLAM
-	db 39, PLAY_ROUGH
+	db 4, POUND
+	db 6, DEFENSE_CURL
+	db 12, DOUBLESLAP
+	db 18, REST
+	db 22, BODY_SLAM
+	db 28, PLAY_ROUGH
 	db 0
 
 WigglytuffEvosMoves:
@@ -1523,23 +1521,22 @@ GolduckEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
-	db 28, TAIL_WHIP
-	db 31, DISABLE
-	db 39, CONFUSION
-	db 48, FURY_SWIPES
-	db 59, HYDRO_PUMP
+	db 6, CONFUSION
+	db 9, FURY_SWIPES
+	db 10, HYPNOSIS
+	db 18, PSYBEAM
+	db 41, AMNESIA
 	db 0
 
 HypnoEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
-	db 12, POISON_GAS
-	db 17, CONFUSION
-	db 24, HEADBUTT
-	db 33, HYPNOSIS
-	db 37, PSYCHIC_M
-	db 43, DREAM_EATER
+	db 13, POISON_GAS
+	db 22, PSYBEAM
+	db 27, HEADBUTT
+	db 36, PSYCHIC_M
+	db 55, DREAM_EATER
 	db 0
 
 GolbatEvosMoves:
@@ -1559,7 +1556,7 @@ MewtwoEvosMoves:
 	db 0
 ; Learnset
 	db 63, BARRIER
-	db 66, PSYCHIC_M
+	db 66, FOCUS_BLAST
 	db 70, RECOVER
 	db 75, MIST
 	db 81, AMNESIA
@@ -1570,7 +1567,7 @@ SnorlaxEvosMoves:
 	db 0
 ; Learnset
 	db 35, BODY_SLAM
-	db 41, HARDEN
+	db 41, BITE
 	db 48, DOUBLE_EDGE
 	db 56, GIGA_IMPACT
 	db 0
@@ -1714,11 +1711,11 @@ AlakazamEvosMoves:
 	db 0
 ; Learnset
 	db 16, CONFUSION
-	db 20, DISABLE
+	db 20, REFLECT
 	db 27, PSYBEAM
 	db 31, RECOVER
 	db 38, PSYCHIC_M
-	db 42, REFLECT
+	db 42, FOCUS_BLAST
 	db 0
 
 PidgeottoEvosMoves:
@@ -1929,7 +1926,7 @@ GeodudeEvosMoves:
 	db 11, DEFENSE_CURL
 	db 16, ROCK_THROW
 	db 21, SELFDESTRUCT
-	db 26, HARDEN
+	db 26, DIG
 	db 31, EARTHQUAKE
 	db 36, EXPLOSION
 	db 0
