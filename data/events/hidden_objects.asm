@@ -511,11 +511,11 @@ PowerPlantHiddenObjects:
 	db -1 ; end
 
 SeafoamIslands3HiddenObjects:
-	hidden_object 15, 15, NUGGET, HiddenItems
+	hidden_object 15, 15, HELIX_FOSSIL, HiddenItems
 	db -1 ; end
 
 SeafoamIslands5HiddenObjects:
-	hidden_object 25, 17, ULTRA_BALL, HiddenItems
+	hidden_object 25, 17, DOME_FOSSIL, HiddenItems
 	db -1 ; end
 
 Mansion1HiddenObjects:

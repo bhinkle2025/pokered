@@ -515,12 +515,12 @@ BlastoiseEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
-	db 8, BUBBLE
-	db 15, WATER_GUN
-	db 24, BITE
-	db 31, WITHDRAW
-	db 42, SKULL_BASH
-	db 52, HYDRO_PUMP
+	db 8, WATER_GUN
+	db 10, WITHDRAW
+	db 15, BUBBLE
+	db 17, BITE
+	db 40, SKULL_BASH
+	db 49, HYDRO_PUMP
 	db 0
 
 PinsirEvosMoves:
@@ -539,12 +539,12 @@ TangelaEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
-	db 29, POISONPOWDER
-	db 32, STUN_SPORE
-	db 36, SLEEP_POWDER
-	db 39, MEGA_DRAIN
-	db 45, AMNESIA
-	db 49, POWER_WHIP
+	db 5, SLEEP_POWDER
+	db 24, PRIMORDIAL
+	db 29, STUN_SPORE
+	db 34, MEGA_DRAIN
+	db 49, AMNESIA
+	db 54, POWER_WHIP
 	db 0
 
 MissingNo1FEvosMoves:
@@ -1368,8 +1368,8 @@ PoliwrathEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
-	db 16, HYPNOSIS
-	db 19, WATERFALL
+	db 28, WATERFALL
+	db 30, LOW_KICK
 	db 0
 
 WeedleEvosMoves:
@@ -2001,11 +2001,11 @@ SquirtleEvosMoves:
 	db 0
 ; Learnset
 	db 8, WATER_GUN
+	db 10, WITHDRAW
 	db 15, BUBBLE
-	db 22, BITE
-	db 28, WITHDRAW
-	db 35, SKULL_BASH
-	db 42, HYDRO_PUMP
+	db 17, BITE
+	db 31, SKULL_BASH
+	db 40, HYDRO_PUMP
 	db 0
 
 CharmeleonEvosMoves:
@@ -2026,12 +2026,12 @@ WartortleEvosMoves:
 	db EVOLVE_LEVEL, 36, BLASTOISE
 	db 0
 ; Learnset
-	db 8, BUBBLE
-	db 15, WATER_GUN
-	db 24, BITE
-	db 31, WITHDRAW
-	db 39, SKULL_BASH
-	db 47, HYDRO_PUMP
+	db 8, WATER_GUN
+	db 10, WITHDRAW
+	db 15, BUBBLE
+	db 17, BITE
+	db 37, SKULL_BASH
+	db 45, HYDRO_PUMP
 	db 0
 
 CharizardEvosMoves:

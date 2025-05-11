@@ -7,7 +7,7 @@ CeruleanCaveB1FWildMons:
 	db 64, PARASECT
 	db 64, RAICHU
 IF DEF(_RED)
-	db 57, ARBOK
+	db 57, GENGAR
 ENDC
 IF DEF(_BLUE)
 	db 57, SANDSLASH

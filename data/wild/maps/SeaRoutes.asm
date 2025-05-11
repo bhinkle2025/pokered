@@ -3,14 +3,14 @@ SeaRoutesWildMons:
 	end_grass_wildmons
 
 	def_water_wildmons 5 ; encounter rate
-	db  5, TENTACOOL
-	db 10, TENTACOOL
-	db 15, TENTACOOL
-	db  5, TENTACOOL
-	db 10, TENTACOOL
-	db 15, TENTACOOL
 	db 20, TENTACOOL
-	db 30, TENTACOOL
-	db 35, TENTACOOL
-	db 40, TENTACOOL
+	db 15, MAGIKARP
+	db 30, TENTACRUEL
+	db 30, STARYU
+	db 34, SEAKING
+	db 21, GYARADOS
+	db 30, STARMIE
+	db 40, BLASTOISE
+	db 35, LAPRAS
+	db 34, VAPOREON
 	end_water_wildmons
