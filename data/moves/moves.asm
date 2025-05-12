@@ -176,5 +176,8 @@ Moves:
 	move SLASH,        NO_ADDITIONAL_EFFECT,        70, NORMAL,       100, 20
 	move SUBSTITUTE,   SUBSTITUTE_EFFECT,            0, NORMAL,       100, 10
 	move BUG_BUZZ,     SPECIAL_DOWN_SIDE_EFFECT,    90, BUG,          100, 10
+	move HURRICANE,    CONFUSION_SIDE_EFFECT,      110, FLYING,        70, 10
+	move FLARE_BLITZ,  RECOIL_EFFECT,              120, FIRE,         100, 15
+	move FIRE_FANG,    BURN_SIDE_EFFECT1,           65, FIRE,          90, 15
 	move STRUGGLE,     RECOIL_EFFECT,               50, NORMAL,       100, 10
 	assert_table_length NUM_ATTACKS

@@ -166,6 +166,9 @@ MoveSoundTable:
 	db SFX_NOT_VERY_EFFECTIVE, $01, $ff ; SLASH
 	db SFX_BATTLE_2C,          $d8, $04 ; SUBSTITUTE
 	db SFX_PSYBEAM,            $00, $80 ; BUG BUZZ
+	db SFX_BATTLE_13,          $00, $e0 ; HURRICANE
+	db SFX_BATTLE_20,          $00, $c0 ; FLARE_BLITZ
+	db SFX_BATTLE_1E,          $00, $80 ; FIRE_FANG
 	db SFX_BATTLE_0B,          $00, $80 ; STRUGGLE
 	assert_table_length NUM_ATTACKS
 	db SFX_BATTLE_0B,          $00, $80

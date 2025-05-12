@@ -603,7 +603,7 @@ PidgeyEvosMoves:
 	db 19, WHIRLWIND
 	db 28, WING_ATTACK
 	db 36, AGILITY
-	db 44, MIRROR_MOVE
+	db 44, HURRICANE
 	db 0
 
 SlowpokeEvosMoves:
@@ -923,7 +923,7 @@ DragoniteEvosMoves:
 	db 20, AGILITY
 	db 35, OUTRAGE
 	db 45, DRAGON_RAGE
-	db 60, HYPER_BEAM
+	db 60, HURRICANE
 	db 0
 
 MissingNo43EvosMoves:
@@ -1267,9 +1267,9 @@ FlareonEvosMoves:
 ; Learnset
 	db 27, QUICK_ATTACK
 	db 31, EMBER
-	db 37, TAIL_WHIP
+	db 37, FIRE_FANG
 	db 40, BITE
-	db 42, LEER
+	db 42, FLARE_BLITZ
 	db 44, FIRE_SPIN
 	db 48, RAGE
 	db 54, FLAMETHROWER
@@ -1728,7 +1728,7 @@ PidgeottoEvosMoves:
 	db 21, WHIRLWIND
 	db 26, WING_ATTACK
 	db 31, AGILITY
-	db 43, MIRROR_MOVE
+	db 43, HURRICANE
 	db 0
 
 PidgeotEvosMoves:
@@ -1740,7 +1740,7 @@ PidgeotEvosMoves:
 	db 21, WHIRLWIND
 	db 26, WING_ATTACK
 	db 31, AGILITY
-	db 43, MIRROR_MOVE
+	db 43, HURRICANE
 	db 0
 
 StarmieEvosMoves:

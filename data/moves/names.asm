@@ -165,5 +165,8 @@ MoveNames::
 	li "SLASH"
 	li "SUBSTITUTE"
 	li "BUG BUZZ"
+	li "HURRICANE"
+	li "FLARE BLITZ"
+	li "FIRE FANG"
 	li "STRUGGLE"
 	assert_list_length NUM_ATTACKS

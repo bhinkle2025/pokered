@@ -1,6 +1,7 @@
 PhysicalToSpecialMoves:
 ; Flying
         db GUST
+        db HURRICANE
 ; Poison
         db SLUDGE
 ; Normal
@@ -20,6 +21,8 @@ PhysicalToSpecialMoves:
 SpecialToPhysicalMoves:
 ; Fire
         db FIRE_PUNCH
+        db FLARE_BLITZ
+        db FIRE_FANG
 ; Water
         db CLAMP
         db CRABHAMMER

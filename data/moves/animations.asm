@@ -165,6 +165,9 @@ AttackAnimationPointers:
 	dw SlashAnim
 	dw SubstituteAnim
 	dw BugBuzzAnim
+	dw HurricaneAnim
+	dw FlareBlitzAnim
+	dw FireFangAnim
 	dw StruggleAnim
 	assert_table_length NUM_ATTACKS
 	dw ShowPicAnim
@@ -307,6 +310,10 @@ WingAttackAnim:
 	battle_anim WING_ATTACK, SUBANIM_1_STAR_BIG_MOVING, 1, 6
 	db -1 ; end
 
+HurricaneAnim:
+	battle_anim WHIRLWIND, SUBANIM_1_TORNADO, 1, 6
+	db -1 ; end
+
 WhirlwindAnim:
 	battle_anim WHIRLWIND, SUBANIM_1_TORNADO, 1, 6
 	battle_anim NO_MOVE, SE_SLIDE_ENEMY_MON_OFF
@@ -440,6 +447,11 @@ LeerAnim:
 	battle_anim NO_MOVE, SE_RESET_SCREEN_PALETTE
 	db -1 ; end
 
+FireFangAnim:
+	battle_anim BITE, SUBANIM_0_STAR_THRICE, 0, 8
+	battle_anim EMBER, SUBANIM_1_FLAMES, 1, 6
+	db -1 ; end
+
 PsyFangsAnim:
 BiteAnim:
 	battle_anim BITE, SUBANIM_0_STAR_THRICE, 0, 8
@@ -480,6 +492,16 @@ AcidAnim:
 EmberAnim:
 	battle_anim EMBER, SUBANIM_1_FLAMES, 1, 6
 	db -1 ; end
+
+FlareBlitzAnim:
+	battle_anim LEECH_SEED, SE_MOVE_MON_HORIZONTALLY
+	battle_anim NO_MOVE, SE_DARK_SCREEN_FLASH
+	battle_anim NO_MOVE, SE_DARK_SCREEN_FLASH
+	battle_anim FLAMETHROWER, SUBANIM_1_FLAME_COLUMN_1, 1, 6
+	battle_anim FLAMETHROWER, SUBANIM_1_FLAME_COLUMN_2, 1, 6
+	battle_anim NO_MOVE, SE_RESET_MON_POSITION
+	db -1 ; end
+
 
 FlamethrowerAnim:
 	battle_anim FLAMETHROWER, SUBANIM_1_FLAME_BEAM, 1, 6

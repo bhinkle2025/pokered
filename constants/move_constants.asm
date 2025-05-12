@@ -171,6 +171,9 @@
 	const SLASH        ; a3
 	const SUBSTITUTE   ; a4
 	const BUG_BUZZ     ; a5
+	const HURRICANE    ; a5
+	const FLARE_BLITZ  ; a5
+	const FIRE_FANG    ; a5
 	const STRUGGLE     ; a5
 DEF NUM_ATTACKS EQU const_value - 1
 
