@@ -17,7 +17,7 @@
 	tmhm MEGA_PUNCH,   SWORDS_DANCE, MEGA_KICK,    TOXIC,        BODY_SLAM,    \
 	     GIGA_IMPACT,  DOUBLE_EDGE,  HYPER_BEAM,   SUBMISSION,   COUNTER,      \
 	     SEISMIC_TOSS, FIRE_PUNCH,   DRAGON_RAGE,  EARTHQUAKE,   FISSURE,      \
-	     DIG,          MIMIC,        DOUBLE_TEAM,  REFLECT,      BIDE,         \
+	     DIG,          MIMIC,        DOUBLE_TEAM,  REFLECT,      \
 	     FIRE_BLAST,   SWIFT,        SKULL_BASH,   REST,         SUBSTITUTE,   \
 	     THUNDERPUNCH, ROCK_SLIDE,   SOLARBEAM,    FLAMETHROWER, STEEL_WING,   \
 		 OUTRAGE,      CUT,          STRENGTH,	   FLY

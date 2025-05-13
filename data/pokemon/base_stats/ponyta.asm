@@ -10,12 +10,12 @@
 	INCBIN "gfx/pokemon/front/ponyta.pic", 0, 1 ; sprite dimensions
 	dw PonytaPicFront, PonytaPicBack
 
-	db EMBER, DOUBLE_KICK, NO_MOVE, NO_MOVE ; level 1 learnset
+	db EMBER, DOUBLE_KICK, AGILITY, NO_MOVE ; level 1 learnset
 	db GROWTH_MEDIUM_FAST ; growth rate
 
 	; tm/hm learnset
 	tmhm TOXIC,        BODY_SLAM,    DOUBLE_EDGE,  \
-	     MIMIC,        DOUBLE_TEAM,  REFLECT,      BIDE,         SOLARBEAM,    \
+	     MIMIC,        DOUBLE_TEAM,  REFLECT,      SOLARBEAM,    \
 	     FIRE_BLAST,   SWIFT,        SKULL_BASH,   REST,         SUBSTITUTE,   \
 		 FLAMETHROWER, STRENGTH
 	; end

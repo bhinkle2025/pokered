@@ -16,7 +16,7 @@
 	; tm/hm learnset
 	tmhm TOXIC,        BODY_SLAM,    GIGA_IMPACT,  DOUBLE_EDGE,         \
 	     EARTHQUAKE,   FISSURE,      DIG,          MIMIC,        DOUBLE_TEAM,  \
-	     BIDE,         SELFDESTRUCT, SKULL_BASH,   REST,         EXPLOSION,    \
+	     SELFDESTRUCT, SKULL_BASH,   REST,         EXPLOSION,    \
 	     ROCK_SLIDE,   SUBSTITUTE,   STRENGTH,     FLASH
 	; end
 

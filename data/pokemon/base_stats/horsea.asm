@@ -16,7 +16,7 @@
 	; tm/hm learnset
 	tmhm TOXIC,        DOUBLE_EDGE,  BUBBLEBEAM,   OUTRAGE,      \
 	     ICE_BEAM,     BLIZZARD,     MIMIC,        DOUBLE_TEAM,  \
-	     BIDE,         SWIFT,        SKULL_BASH,   REST,         SUBSTITUTE,   \
+	     SWIFT,        SKULL_BASH,   REST,         SUBSTITUTE,   \
 	     SURF,         DRAGON_RAGE,  FLASH
 	; end
 

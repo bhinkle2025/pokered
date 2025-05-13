@@ -15,7 +15,7 @@
 
 	; tm/hm learnset
 	tmhm TOXIC,        GIGA_IMPACT,  DOUBLE_EDGE,  STEEL_WING,   \
-	     HYPER_BEAM,   MIMIC,        DOUBLE_TEAM,  BIDE,         \
+	     HYPER_BEAM,   MIMIC,        DOUBLE_TEAM,  \
 	     SWIFT,        SKY_ATTACK,   REST,         SUBSTITUTE,   FLY
 	; end
 

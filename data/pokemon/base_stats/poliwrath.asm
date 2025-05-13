@@ -18,7 +18,7 @@
 	     DOUBLE_EDGE,  BUBBLEBEAM,   ICE_BEAM,     BLIZZARD,     \
 	     HYPER_BEAM,   SUBMISSION,   COUNTER,      SEISMIC_TOSS, ICE_PUNCH,    \
 	     EARTHQUAKE,   FISSURE,      PSYCHIC_M,    MIMIC,        DOUBLE_TEAM,  \
-	     BIDE,         METRONOME,    SKULL_BASH,   REST,         AMNESIA,      \
+	     METRONOME,    SKULL_BASH,   REST,         AMNESIA,      \
 	     SUBSTITUTE,   ROCK_SLIDE,   DIG,          SURF,         STRENGTH
 	; end
 

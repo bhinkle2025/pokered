@@ -15,9 +15,9 @@
 
 	; tm/hm learnset
 	tmhm SWORDS_DANCE, MEGA_KICK,    TOXIC,        BODY_SLAM,    ROCK_SLIDE,   \
-	     GIGA_IMPACT,  DOUBLE_EDGE,  BUBBLEBEAM,   ICE_BEAM,     \
+	     GIGA_IMPACT,  DOUBLE_EDGE,  BUBBLEBEAM,   ICE_BEAM,     IRON_DEFENSE, \
 	     BLIZZARD,     HYPER_BEAM,   SUBMISSION,   SEISMIC_TOSS, DIG,          \
-	     MIMIC,        DOUBLE_TEAM,  REFLECT,      BIDE,         SKULL_BASH,   \
+	     MIMIC,        DOUBLE_TEAM,  REFLECT,      SKULL_BASH,   \
 	     REST,         SUBSTITUTE,   SURF
 	; end
 

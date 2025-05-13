@@ -457,7 +457,7 @@ ShellderEvosMoves:
 	db 18, SUPERSONIC
 	db 23, CLAMP
 	db 30, AURORA_BEAM
-	db 39, LEER
+	db 39, IRON_DEFENSE
 	db 50, ICE_BEAM
 	db 0
 
@@ -517,10 +517,10 @@ BlastoiseEvosMoves:
 ; Learnset
 	db 8, WATER_GUN
 	db 10, WITHDRAW
-	db 15, BUBBLE
 	db 17, BITE
-	db 40, SKULL_BASH
+	db 42, IRON_DEFENSE
 	db 49, HYDRO_PUMP
+	db 56, SKULL_BASH
 	db 0
 
 PinsirEvosMoves:
@@ -564,7 +564,7 @@ GrowlitheEvosMoves:
 	db EVOLVE_ITEM, FIRE_STONE, 1, ARCANINE
 	db 0
 ; Learnset
-	db  6, EMBER
+	db  6, FIRE_FANG
 	db  8, PSYFANGS
 	db 23, PLAY_ROUGH
 	db 30, AGILITY
@@ -1855,7 +1855,7 @@ PonytaEvosMoves:
 	db 35, DOUBLE_KICK
 	db 39, FIRE_SPIN
 	db 43, DOUBLE_EDGE
-	db 48, AGILITY
+	db 48, FLARE_BLITZ
 	db 0
 
 RapidashEvosMoves:
@@ -1867,7 +1867,7 @@ RapidashEvosMoves:
 	db 35, DOUBLE_KICK
 	db 39, FIRE_SPIN
 	db 47, DOUBLE_EDGE
-	db 55, AGILITY
+	db 55, FLARE_BLITZ
 	db 0
 
 RattataEvosMoves:
@@ -2004,8 +2004,9 @@ SquirtleEvosMoves:
 	db 10, WITHDRAW
 	db 15, BUBBLE
 	db 17, BITE
-	db 31, SKULL_BASH
-	db 40, HYDRO_PUMP
+	db 30, IRON_DEFENSE
+	db 33, HYDRO_PUMP
+	db 36, SKULL_BASH
 	db 0
 
 CharmeleonEvosMoves:
@@ -2030,8 +2031,9 @@ WartortleEvosMoves:
 	db 10, WITHDRAW
 	db 15, BUBBLE
 	db 17, BITE
-	db 37, SKULL_BASH
+	ds 40, IRON_DEFENSE
 	db 45, HYDRO_PUMP
+	db 50, SKULL_BASH
 	db 0
 
 CharizardEvosMoves:

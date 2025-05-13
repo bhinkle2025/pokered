@@ -168,6 +168,7 @@ AttackAnimationPointers:
 	dw HurricaneAnim
 	dw FlareBlitzAnim
 	dw FireFangAnim
+	dw IronDefenseAnim
 	dw StruggleAnim
 	assert_table_length NUM_ATTACKS
 	dw ShowPicAnim
@@ -808,6 +809,7 @@ RecoverAnim:
 	battle_anim NO_MOVE, SE_RESET_SCREEN_PALETTE
 	db -1 ; end
 
+IronDefenseAnim:
 HardenAnim:
 	battle_anim HARDEN, SE_LIGHT_SCREEN_PALETTE
 	battle_anim NO_MOVE, SUBANIM_0_CIRCLE_1_SQUARE_CLOSING, 1, 6

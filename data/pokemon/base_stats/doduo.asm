@@ -15,7 +15,7 @@
 
 	; tm/hm learnset
 	tmhm TOXIC,        BODY_SLAM,    DOUBLE_EDGE,  SWORDS_DANCE, \
-	     MIMIC,        DOUBLE_TEAM,  REFLECT,      BIDE,         STEEL_WING,   \
+	     MIMIC,        DOUBLE_TEAM,  REFLECT,      STEEL_WING,   \
 	     SKULL_BASH,   SKY_ATTACK,   REST,         TRI_ATTACK,   SUBSTITUTE,   \
 	     FLY
 	; end

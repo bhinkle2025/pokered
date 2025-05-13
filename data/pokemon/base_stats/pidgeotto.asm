@@ -15,7 +15,7 @@
 
 	; tm/hm learnset
 	tmhm TOXIC,        DOUBLE_EDGE,  STEEL_WING,   \
-	     MIMIC,        DOUBLE_TEAM,  REFLECT,      BIDE,         \
+	     MIMIC,        DOUBLE_TEAM,  REFLECT,      \
 	     SWIFT,        SKY_ATTACK,   REST,         SUBSTITUTE,   FLY
 	; end
 

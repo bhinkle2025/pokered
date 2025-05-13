@@ -15,8 +15,8 @@
 
 	; tm/hm learnset
 	tmhm TOXIC,        GIGA_IMPACT,  DOUBLE_EDGE,  DREAM_EATER,  NIGHT_SHADE,  \
-	     HYPER_BEAM,   MEGA_DRAIN,   SOLARBEAM,    PSYCHIC_M,    \
-	     TELEPORT,     MIMIC,        DOUBLE_TEAM,  REFLECT,      BIDE,         \
+	     HYPER_BEAM,   MEGA_DRAIN,   SOLARBEAM,    PSYCHIC_M,    IRON_DEFENSE, \
+	     TELEPORT,     MIMIC,        DOUBLE_TEAM,  REFLECT,      \
 	     SWIFT,        REST,         AMNESIA,      SUBSTITUTE
 	; end
 

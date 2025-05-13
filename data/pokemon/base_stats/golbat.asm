@@ -16,7 +16,7 @@
 	; tm/hm learnset
 	tmhm TOXIC,        GIGA_IMPACT,  DOUBLE_EDGE,  SLUDGE,       \
 	     HYPER_BEAM,   MEGA_DRAIN,   MIMIC,        DOUBLE_TEAM,  \
-	     BIDE,         SWIFT,        REST,         SUBSTITUTE,   \
+	     SWIFT,        REST,         SUBSTITUTE,   \
 		 NIGHT_SHADE,  STEEL_WING,   FLY
 	; end
 

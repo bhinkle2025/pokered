@@ -17,7 +17,7 @@
 	tmhm TOXIC,        BODY_SLAM,    GIGA_IMPACT,  DOUBLE_EDGE,  NIGHT_SHADE,  \
 	     ICE_BEAM,     BLIZZARD,     HYPER_BEAM,   THUNDERBOLT,  ROCK_SLIDE,   \
 	     THUNDER,      EARTHQUAKE,   FISSURE,      MIMIC,        DOUBLE_TEAM,  \
-	     BIDE,         FIRE_BLAST,   SKULL_BASH,   REST,         SUBSTITUTE,   \
+	     FIRE_BLAST,   SKULL_BASH,   REST,         SUBSTITUTE,   \
 	     DIG,          SOLARBEAM,    FLAMETHROWER, OUTRAGE,                    \
 		 STRENGTH,     SURF
 	; end

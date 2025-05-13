@@ -16,7 +16,7 @@
 	; tm/hm learnset
 	tmhm TOXIC,        BODY_SLAM,    GIGA_IMPACT,  DOUBLE_EDGE,  BUBBLEBEAM,   \
 	     HYPER_BEAM,   THUNDERBOLT,  DREAM_EATER,  DIG,          \
-	     THUNDER,      MIMIC,        DOUBLE_TEAM,  BIDE,         SWIFT,        \
+	     THUNDER,      MIMIC,        DOUBLE_TEAM,  SWIFT,        \
 	     SKULL_BASH,   REST,         SUBSTITUTE,   NIGHT_SHADE,                \
 		 CUT,          FLASH
 	; end

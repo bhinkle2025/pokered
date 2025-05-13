@@ -169,6 +169,7 @@ MoveSoundTable:
 	db SFX_BATTLE_13,          $00, $e0 ; HURRICANE
 	db SFX_BATTLE_20,          $00, $c0 ; FLARE_BLITZ
 	db SFX_BATTLE_1E,          $00, $80 ; FIRE_FANG
+	db SFX_BATTLE_14,          $33, $30 ; IRON_DEFENSE
 	db SFX_BATTLE_0B,          $00, $80 ; STRUGGLE
 	assert_table_length NUM_ATTACKS
 	db SFX_BATTLE_0B,          $00, $80

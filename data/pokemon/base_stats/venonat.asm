@@ -16,7 +16,7 @@
 	; tm/hm learnset
 	tmhm TOXIC,        DOUBLE_EDGE,  MEGA_DRAIN,   SLUDGE,       \
 	     SOLARBEAM,    PSYCHIC_M,    MIMIC,        DOUBLE_TEAM,  REFLECT,      \
-	     BIDE,         REST,         SUBSTITUTE
+	     REST,         SUBSTITUTE
 	; end
 
 	db 0 ; padding

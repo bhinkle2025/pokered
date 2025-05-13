@@ -17,7 +17,7 @@
 	tmhm TOXIC,        GIGA_IMPACT,  DOUBLE_EDGE,  BUBBLEBEAM,   \
 	     ICE_BEAM,     BLIZZARD,     HYPER_BEAM,   THUNDERBOLT,  DREAM_EATER,  \
 	     THUNDER,      PSYCHIC_M,    TELEPORT,     MIMIC,        DOUBLE_TEAM,  \
-	     REFLECT,      BIDE,         SWIFT,        SKULL_BASH,   REST,         \
+	     REFLECT,      SWIFT,        SKULL_BASH,   REST,         \
 	     THUNDER_WAVE, TRI_ATTACK,   SUBSTITUTE,   SURF,         \
 	     FLASH
 	; end

@@ -15,7 +15,7 @@
 
 	; tm/hm learnset
 	tmhm TOXIC,        DOUBLE_EDGE,  SLUDGE,       \
-	     MEGA_DRAIN,   MIMIC,        DOUBLE_TEAM,  BIDE,         \
+	     MEGA_DRAIN,   MIMIC,        DOUBLE_TEAM,  \
 	     SWIFT,        REST,         SUBSTITUTE,   NIGHT_SHADE,  \
 		 STEEL_WING,   FLY
 	; end

@@ -16,7 +16,7 @@
 	; tm/hm learnset
 	tmhm TOXIC,        BODY_SLAM,    GIGA_IMPACT,  DOUBLE_EDGE,  HYPER_BEAM,   \
 	     EARTHQUAKE,   FISSURE,      DIG,          MIMIC,        SWORDS_DANCE, \
-	     DOUBLE_TEAM,  BIDE,         REST,         ROCK_SLIDE,   SLUDGE,       \
+	     DOUBLE_TEAM,  REST,         ROCK_SLIDE,   SLUDGE,       \
 		 SUBSTITUTE, CUT
 	; end
 
