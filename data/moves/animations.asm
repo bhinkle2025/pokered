@@ -170,6 +170,7 @@ AttackAnimationPointers:
 	dw FireFangAnim
 	dw IronDefenseAnim
 	dw ShadowClawAnim
+	dw DazzleAnim
 	dw StruggleAnim
 	assert_table_length NUM_ATTACKS
 	dw ShowPicAnim
@@ -397,6 +398,18 @@ WrapAnim:
 	battle_anim WRAP, SUBANIM_0_BIND, 0, 4
 	battle_anim WRAP, SUBANIM_0_BIND, 0, 4
 	battle_anim WRAP, SUBANIM_0_BIND, 0, 4
+	db -1 ; end
+
+DazzleAnim:
+	battle_anim LEECH_SEED, SE_LIGHT_SCREEN_PALETTE
+	battle_anim GLARE, SE_DARK_SCREEN_FLASH
+	battle_anim NO_MOVE, SE_DARK_SCREEN_FLASH
+	battle_anim NO_MOVE, SE_RESET_SCREEN_PALETTE
+	battle_anim LEECH_SEED, SE_MOVE_MON_HORIZONTALLY
+	battle_anim NO_MOVE, SE_DARK_SCREEN_FLASH
+	battle_anim NO_MOVE, SE_DARK_SCREEN_FLASH
+	battle_anim NO_MOVE, SE_RESET_MON_POSITION
+	db -1 ; end
 	db -1 ; end
 
 GigaImpactAnim:

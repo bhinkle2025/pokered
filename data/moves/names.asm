@@ -170,5 +170,6 @@ MoveNames::
 	li "FIRE FANG"
 	li "IRON DEFENSE"
 	li "SHADOW CLAW"
+	li "DAZZLE"
 	li "STRUGGLE"
 	assert_list_length NUM_ATTACKS

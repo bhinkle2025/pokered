@@ -10,12 +10,12 @@
 	INCBIN "gfx/pokemon/front/mr.mime.pic", 0, 1 ; sprite dimensions
 	dw MrMimePicFront, MrMimePicBack
 
-	db CONFUSION, BARRIER, NO_MOVE, NO_MOVE ; level 1 learnset
+	db CONFUSION, BARRIER, DAZZLE, NO_MOVE ; level 1 learnset
 	db GROWTH_MEDIUM_FAST ; growth rate
 
 	; tm/hm learnset
 	tmhm MEGA_PUNCH,   MEGA_KICK,    TOXIC,        BODY_SLAM,    GIGA_IMPACT,  \
-	     DOUBLE_EDGE,  HYPER_BEAM,   SUBMISSION,   COUNTER,      SEISMIC_TOSS, \
+	     DOUBLE_EDGE,  HYPER_BEAM,   SUBMISSION,   SEISMIC_TOSS, DAZZLE,       \
 	     FIRE_PUNCH,   SOLARBEAM,    THUNDERBOLT,  THUNDER,      PSYCHIC_M,    \
 	     TELEPORT,     MIMIC,        DOUBLE_TEAM,  REFLECT,      IRON_DEFENSE, \
 	     METRONOME,    SKULL_BASH,   REST,         THUNDER_WAVE, AMNESIA,      \

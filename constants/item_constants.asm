@@ -174,7 +174,7 @@ DEF TM01 EQU const_value
 	add_tm HYPER_BEAM   ; $D7
 	add_tm THUNDERPUNCH ; $D8
 	add_tm SUBMISSION   ; $D9
-	add_tm COUNTER      ; $DA
+	add_tm DAZZLE       ; $DA
 	add_tm SEISMIC_TOSS ; $DB
 	add_tm ICE_PUNCH    ; $DC
 	add_tm MEGA_DRAIN   ; $DD
