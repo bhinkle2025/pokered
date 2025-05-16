@@ -16,7 +16,7 @@
 	; tm/hm learnset
 	tmhm MEGA_PUNCH,   TOXIC,        BODY_SLAM,    DOUBLE_EDGE,  IRON_DEFENSE, \
 	     SUBMISSION,   COUNTER,      SEISMIC_TOSS, FIRE_PUNCH,   EARTHQUAKE,   \
-	     FISSURE,      DIG,          MIMIC,        DOUBLE_TEAM,  \
+	     DIG,          MIMIC,        DOUBLE_TEAM,  \
 	     METRONOME,    SELFDESTRUCT, FIRE_BLAST,   REST,         EXPLOSION,    \
 	     ROCK_SLIDE,   SUBSTITUTE,   THUNDERPUNCH, FLAMETHROWER, STRENGTH
 	; end

@@ -15,7 +15,7 @@
 
 	; tm/hm learnset
 	tmhm TOXIC,        BODY_SLAM,    DOUBLE_EDGE,  \
-	     THUNDERBOLT,  THUNDER,      EARTHQUAKE,   FISSURE,      SWORDS_DANCE, \
+	     THUNDERBOLT,  THUNDER,      EARTHQUAKE,   SWORDS_DANCE, \
 	     DIG,          MIMIC,        DOUBLE_TEAM,  FIRE_BLAST,   \
 	     SKULL_BASH,   REST,         ROCK_SLIDE,   SUBSTITUTE,   FLAMETHROWER, \
 		 STRENGTH

@@ -15,7 +15,7 @@
 
 	; tm/hm learnset
 	tmhm MEGA_PUNCH,   MEGA_KICK,    TOXIC,        BODY_SLAM,    \
-	     DOUBLE_EDGE,  BUBBLEBEAM,   ICE_BEAM,     BLIZZARD,     \
+	     DOUBLE_EDGE,  BUBBLEBEAM,   ICE_BEAM,     BLIZZARD,     SHADOW_CLAW,  \
 	     SUBMISSION,   COUNTER,      SEISMIC_TOSS, ICE_PUNCH,    AMNESIA,      \
 	     DIG,          MIMIC,        DOUBLE_TEAM,  SWIFT,        \
 	     SKULL_BASH,   REST,         SUBSTITUTE,   SURF,         STRENGTH,     \

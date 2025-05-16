@@ -169,6 +169,7 @@ AttackAnimationPointers:
 	dw FlareBlitzAnim
 	dw FireFangAnim
 	dw IronDefenseAnim
+	dw ShadowClawAnim
 	dw StruggleAnim
 	assert_table_length NUM_ATTACKS
 	dw ShowPicAnim
@@ -1128,6 +1129,7 @@ SuperFangAnim:
 	battle_anim NO_MOVE, SE_RESET_SCREEN_PALETTE
 	db -1 ; end
 
+ShadowClawAnim:
 DragonClawAnim:
 SlashAnim:
 	battle_anim SLASH, SUBANIM_0_SCRATCHES, 0, 6

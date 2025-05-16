@@ -15,7 +15,7 @@
 
 	; tm/hm learnset
 	tmhm SWORDS_DANCE, TOXIC,        BODY_SLAM,    DOUBLE_EDGE,  \
-	     SUBMISSION,   SEISMIC_TOSS, EARTHQUAKE,   FISSURE,      \
+	     SUBMISSION,   SEISMIC_TOSS, EARTHQUAKE,   SHADOW_CLAW,  \
 	     DIG,          MIMIC,        DOUBLE_TEAM,  SWIFT,        \
 	     SKULL_BASH,   REST,         ROCK_SLIDE,   SUBSTITUTE,   CUT,          \
 	     STRENGTH

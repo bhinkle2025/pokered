@@ -180,5 +180,6 @@ Moves:
 	move FLARE_BLITZ,  RECOIL_EFFECT,              120, FIRE,         100, 15
 	move FIRE_FANG,    BURN_SIDE_EFFECT1,           65, FIRE,          90, 15
 	move IRON_DEFENSE, DEFENSE_UP2_EFFECT,           0, STEEL,        100, 15
+	move SHADOW_CLAW,  NO_ADDITIONAL_EFFECT,        70, GHOST,        100, 15
 	move STRUGGLE,     RECOIL_EFFECT,               50, NORMAL,       100, 10
 	assert_table_length NUM_ATTACKS

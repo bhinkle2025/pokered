@@ -175,6 +175,7 @@
 	const FLARE_BLITZ  ; a5
 	const FIRE_FANG    ; a5
 	const IRON_DEFENSE ; a5
+	const SHADOW_CLAW  ; a5
 	const STRUGGLE     ; a5
 DEF NUM_ATTACKS EQU const_value - 1
 

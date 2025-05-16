@@ -10,14 +10,14 @@
 	INCBIN "gfx/pokemon/front/gengar.pic", 0, 1 ; sprite dimensions
 	dw GengarPicFront, GengarPicBack
 
-	db LICK, CONFUSE_RAY, NIGHT_SHADE, NO_MOVE ; level 1 learnset
+	db LICK, CONFUSE_RAY, NIGHT_SHADE, SHADOW_CLAW ; level 1 learnset
 	db GROWTH_MEDIUM_SLOW ; growth rate
 
 	; tm/hm learnset
 	tmhm MEGA_PUNCH,   MEGA_KICK,    TOXIC,        BODY_SLAM,    GIGA_IMPACT,  \
 	     DOUBLE_EDGE,  HYPER_BEAM,   SUBMISSION,   COUNTER,      SEISMIC_TOSS, \
 	     FIRE_PUNCH,   MEGA_DRAIN,   THUNDERBOLT,  THUNDER,      PSYCHIC_M,    \
-	     MIMIC,        DOUBLE_TEAM,  METRONOME,    SELFDESTRUCT, \
+	     MIMIC,        DOUBLE_TEAM,  METRONOME,    SELFDESTRUCT, SHADOW_CLAW,  \
 	     SKULL_BASH,   DREAM_EATER,  REST,         EXPLOSION,    NIGHT_SHADE,  \
 	     SUBSTITUTE,   THUNDERPUNCH, ICE_PUNCH,    SLUDGE,       STRENGTH
 	; end

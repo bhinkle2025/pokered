@@ -10,12 +10,12 @@
 	INCBIN "gfx/pokemon/front/haunter.pic", 0, 1 ; sprite dimensions
 	dw HaunterPicFront, HaunterPicBack
 
-	db LICK, CONFUSE_RAY, NIGHT_SHADE, NO_MOVE ; level 1 learnset
+	db LICK, CONFUSE_RAY, NIGHT_SHADE, SHADOW_CLAW ; level 1 learnset
 	db GROWTH_MEDIUM_SLOW ; growth rate
 
 	; tm/hm learnset
 	tmhm TOXIC,        FIRE_PUNCH,   MEGA_DRAIN,   THUNDERBOLT,  THUNDER,      \
-	     PSYCHIC_M,    MIMIC,        DOUBLE_TEAM,  SELFDESTRUCT, \
+	     PSYCHIC_M,    MIMIC,        DOUBLE_TEAM,  SELFDESTRUCT, SHADOW_CLAW,  \
 	     DREAM_EATER,  REST,         EXPLOSION,    SUBSTITUTE,   NIGHT_SHADE,  \
 		 THUNDERPUNCH, ICE_PUNCH,    SLUDGE
 	; end
