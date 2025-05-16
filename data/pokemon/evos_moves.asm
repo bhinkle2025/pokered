@@ -218,11 +218,11 @@ KangaskhanEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
-	db 26, BITE
-	db 31, TAIL_WHIP
-	db 36, MEGA_PUNCH
-	db 41, LEER
-	db 46, DIZZY_PUNCH
+	db 11, TAIL_WHIP
+	db 17, BITE
+	db 28, MEGA_PUNCH
+	db 33, DIZZY_PUNCH
+	db 41, OUTRAGE
 	db 0
 
 NidoranMEvosMoves:
@@ -247,8 +247,8 @@ ClefairyEvosMoves:
 	db 18, DOUBLESLAP
 	db 24, MINIMIZE
 	db 31, METRONOME
-	db 39, DEFENSE_CURL
-	db 48, LIGHT_SCREEN
+	db 40, BODY_SLAM
+	db 44, MOONBLAST
 	db 0
 
 SpearowEvosMoves:
@@ -789,9 +789,9 @@ ElectabuzzEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
-	db 34, THUNDERSHOCK
+	db 34, THUNDERPUNCH
 	db 37, SCREECH
-	db 42, THUNDERPUNCH
+	db 42, THUNDERBOLT
 	db 49, LIGHT_SCREEN
 	db 54, THUNDER
 	db 0
@@ -1962,12 +1962,12 @@ MagnemiteEvosMoves:
 	db EVOLVE_LEVEL, 30, MAGNETON
 	db 0
 ; Learnset
-	db 21, SONICBOOM
-	db 25, THUNDERBOLT
-	db 29, SUPERSONIC
-	db 35, THUNDER_WAVE
-	db 41, SWIFT
-	db 47, SCREECH
+	db 10, THUNDER_WAVE
+	db 15, SONICBOOM
+	db 20, LIGHT_SCREEN
+	db 26, THUNDERBOLT
+	db 32, SCREECH
+	db 44, THUNDER
 	db 0
 
 MissingNoAEEvosMoves:

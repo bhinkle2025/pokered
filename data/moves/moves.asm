@@ -45,7 +45,7 @@ Moves:
 	move PRIMORDIAL,   NO_ADDITIONAL_EFFECT,        80, ROCK,         100, 20
 	move TACKLE,       NO_ADDITIONAL_EFFECT,        35, NORMAL,        95, 35
 	move BODY_SLAM,    PARALYZE_SIDE_EFFECT2,       85, NORMAL,       100, 15
-	move WRAP,         TRAPPING_EFFECT,             15, NORMAL,        85, 20
+	move WRAP,         TRAPPING_EFFECT,             15, NORMAL,        90, 20
 	move GIGA_IMPACT,  HYPER_BEAM_EFFECT,          150, NORMAL,        90, 5
 	move THRASH,       THRASH_PETAL_DANCE_EFFECT,   90, NORMAL,       100, 20
 	move DOUBLE_EDGE,  RECOIL_EFFECT,              120, NORMAL,       100, 15

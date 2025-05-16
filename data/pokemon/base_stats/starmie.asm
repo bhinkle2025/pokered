@@ -10,7 +10,7 @@
 	INCBIN "gfx/pokemon/front/starmie.pic", 0, 1 ; sprite dimensions
 	dw StarmiePicFront, StarmiePicBack
 
-	db SWIFT, PSYBEAM, RECOVER, BUBBLEBEAM ; level 1 learnset
+	db ICE_BEAM, PSYBEAM, RECOVER, BUBBLEBEAM ; level 1 learnset
 	db GROWTH_SLOW ; growth rate
 
 	; tm/hm learnset

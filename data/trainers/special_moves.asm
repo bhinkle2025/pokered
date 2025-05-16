@@ -22,19 +22,25 @@ SpecialTrainerMoves:
 
 	db MISTY, 1
 	db 1, 4, AMNESIA
+	db 1, 2, BUBBLEBEAM
 	db 0
 
 	db LT_SURGE, 1
 	db 1, 1, FLASH
+	db 1, 3, THUNDERBOLT
+	db 1, 4, DOUBLE_TEAM
 	db 2, 2, ICE_PUNCH
+	db 2, 4, THUNDERBOLT
 	db 3, 1, MEGA_KICK
 	db 3, 2, SURF
 	db 0
 
 	db ERIKA, 1
-	db 1, 3, MEGA_DRAIN
-	db 2, 4, MEGA_DRAIN
+	db 1, 3, SWORDS_DANCE
+	db 2, 1, AMNESIA
+	db 2, 2, MEGA_DRAIN
 	db 3, 2, MEGA_DRAIN
+	db 3, 1, SOLARBEAM
 	db 0
 
 	db KOGA, 1
