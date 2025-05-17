@@ -45,15 +45,15 @@ SpecialTrainerMoves:
 
 	db KOGA, 1
 	db 1, 1, TOXIC
-	db 1, 2, SELFDESTRUCT
+	db 1, 3, FIRE_BLAST
 	db 2, 1, TOXIC
-	db 2, 2, BODY_SLAM
-	db 2, 3, MINIMIZE
-	db 2, 4, SLUDGE
-	db 4, 1, LEECH_LIFE
+	db 2, 4, BODY_SLAM
+	db 3, 1, FLY
+	db 3, 3, TOXIC
+	db 3, 4, DOUBLE_TEAM
+	db 4, 1, TOXIC
 	db 4, 2, BUG_BUZZ
 	db 4, 3, SLUDGE
-	db 4, 4, TOXIC
 	db 0
 
 	db BLAINE, 1

@@ -1,4 +1,4 @@
-_CeladonMart3FClerkTM18PreReceiveText::
+_CeladonMart3FClerkTM27PreReceiveText::
 	text "Oh, hi! I finally"
 	line "finished #MON!"
 
@@ -7,21 +7,21 @@ _CeladonMart3FClerkTM18PreReceiveText::
 	cont "useful!"
 	prompt
 
-_CeladonMart3FClerkReceivedTM18Text::
+_CeladonMart3FClerkReceivedTM27Text::
 	text "<PLAYER> received"
 	line "@"
 	text_ram wStringBuffer
 	text "!@"
 	text_end
 
-_CeladonMart3FClerkTM18ExplanationText::
-	text "TM18 is COUNTER!"
-	line "Not like the one"
-	cont "I'm leaning on,"
-	cont "mind you!"
+_CeladonMart3FClerkTM27ExplanationText::
+	text "TM27 is...."
+	line "SHADOW CLAW!"
+	cont "Not a clean cut"
+	cont "more haunted."
 	done
 
-_CeladonMart3FClerkTM18NoRoomText::
+_CeladonMart3FClerkTM27NoRoomText::
 	text "Your pack is full"
 	line "of items!"
 	done

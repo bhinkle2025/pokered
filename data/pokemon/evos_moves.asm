@@ -445,7 +445,10 @@ GyaradosEvosMoves:
 	db 21, WATERFALL
 	db 25, DRAGON_RAGE
 	db 32, BITE
-	db 41, HYDRO_PUMP
+	db 40, HYDRO_PUMP
+	db 41, OUTRAGE
+	db 44, HURRICANE
+	db 48, THRASH
 	db 52, HYPER_BEAM
 	db 0
 
@@ -569,6 +572,8 @@ GrowlitheEvosMoves:
 	db 23, PLAY_ROUGH
 	db 30, AGILITY
 	db 34, FLAMETHROWER
+	db 43, OUTRAGE
+	db 45, FLARE_BLITZ
 	db 0
 
 OnixEvosMoves:
@@ -866,11 +871,12 @@ TaurosEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
-	db 21, STOMP
-	db 28, TAIL_WHIP
+	db 30, REST
 	db 35, LEER
-	db 44, RAGE
-	db 51, DOUBLE_EDGE
+	db 42, THRASH
+	db 46, DOUBLE_EDGE
+	db 50, OUTRAGE
+	db 60, GIGA_IMPACT
 	db 0
 
 MissingNo3DEvosMoves:
@@ -1062,11 +1068,12 @@ VulpixEvosMoves:
 	db EVOLVE_ITEM, FIRE_STONE, 1, NINETALES
 	db 0
 ; Learnset
-	db 16, QUICK_ATTACK
-	db 21, ROAR
-	db 28, CONFUSE_RAY
-	db 35, FLAMETHROWER
-	db 42, FIRE_SPIN
+	db 10, QUICK_ATTACK
+	db 14, CONFUSE_RAY
+	db 21, FIRE_SPIN
+	db 24, FLAMETHROWER
+	db 28, ROAR
+	db 31, FIRE_BLAST
 	db 0
 
 NinetalesEvosMoves:
@@ -1596,7 +1603,7 @@ MukEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
-	db 30, POISON_GAS
+	db 30, ACID
 	db 33, MINIMIZE
 	db 37, SLUDGE
 	db 45, HARDEN
