@@ -24,7 +24,7 @@ Moves:
 	move VICEGRIP,     NO_ADDITIONAL_EFFECT,        55, NORMAL,       100, 30
 	move PLAY_ROUGH,   ATTACK_DOWN_SIDE_EFFECT,     90, FAIRY,         90, 10
 	move PSYFANGS,     DEFENSE_DOWN_SIDE_EFFECT,    85, PSYCHIC_TYPE, 100, 10
-	move SWORDS_DANCE, ATTACK_UP2_EFFECT,            0, NORMAL,       100, 30
+	move SWORDS_DANCE, ATTACK_UP2_EFFECT,            0, STAT,         100, 30
 	move CUT,          NO_ADDITIONAL_EFFECT,        80, BUG,          100, 15
 	move GUST,         NO_ADDITIONAL_EFFECT,        40, FLYING,       100, 35
 	move WING_ATTACK,  NO_ADDITIONAL_EFFECT,        60, FLYING,       100, 35
@@ -84,7 +84,7 @@ Moves:
 	move ABSORB,       DRAIN_HP_EFFECT,             40, GRASS,        100, 20
 	move MEGA_DRAIN,   DRAIN_HP_EFFECT,             75, GRASS,        100, 10
 	move LEECH_SEED,   LEECH_SEED_EFFECT,            0, GRASS,         90, 10
-	move GROWTH,       SPECIAL_UP1_EFFECT,           0, NORMAL,       100, 40
+	move GROWTH,       SPECIAL_UP1_EFFECT,           0, STAT,         100, 40
 	move RAZOR_LEAF,   NO_ADDITIONAL_EFFECT,        55, GRASS,         95, 25
 	move SOLARBEAM,    CHARGE_EFFECT,              200, GRASS,        100, 10
 	move POISONPOWDER, POISON_EFFECT,                0, POISON,        75, 35
@@ -106,8 +106,8 @@ Moves:
 	move CONFUSION,    CONFUSION_SIDE_EFFECT,       50, PSYCHIC_TYPE, 100, 25
 	move PSYCHIC_M,    SPECIAL_DOWN_SIDE_EFFECT,    90, PSYCHIC_TYPE, 100, 10
 	move HYPNOSIS,     SLEEP_EFFECT,                 0, PSYCHIC_TYPE,  60, 20
-	move MEDITATE,     ATTACK_UP1_EFFECT,            0, PSYCHIC_TYPE, 100, 40
-	move AGILITY,      SPEED_UP2_EFFECT,             0, PSYCHIC_TYPE, 100, 30
+	move MEDITATE,     ATTACK_UP1_EFFECT,            0, STAT,         100, 40
+	move AGILITY,      SPEED_UP2_EFFECT,             0, STAT,         100, 30
 	move QUICK_ATTACK, NO_ADDITIONAL_EFFECT,        40, NORMAL,       100, 30
 	move RAGE,         RAGE_EFFECT,                 60, NORMAL,       100, 20
 	move TELEPORT,     SWITCH_AND_TELEPORT_EFFECT,   0, PSYCHIC_TYPE, 100, 20
@@ -122,10 +122,10 @@ Moves:
 	move CONFUSE_RAY,  CONFUSION_EFFECT,             0, GHOST,        100, 10
 	move WITHDRAW,     DEFENSE_UP1_EFFECT,           0, WATER,        100, 40
 	move DEFENSE_CURL, DEFENSE_UP1_EFFECT,           0, NORMAL,       100, 40
-	move BARRIER,      DEFENSE_UP2_EFFECT,           0, PSYCHIC_TYPE, 100, 30
-	move LIGHT_SCREEN, LIGHT_SCREEN_EFFECT,          0, PSYCHIC_TYPE, 100, 30
+	move BARRIER,      DEFENSE_UP2_EFFECT,           0, STAT,         100, 30
+	move LIGHT_SCREEN, LIGHT_SCREEN_EFFECT,          0, STAT,         100, 30
 	move HAZE,         HAZE_EFFECT,                  0, ICE,          100, 30
-	move REFLECT,      REFLECT_EFFECT,               0, PSYCHIC_TYPE, 100, 20
+	move REFLECT,      REFLECT_EFFECT,               0, STAT,         100, 20
 	move DRAGON_CLAW,  NO_ADDITIONAL_EFFECT,        80, DRAGON,       100, 15
 	move BIDE,         BIDE_EFFECT,                  0, NORMAL,       100, 10
 	move METRONOME,    METRONOME_EFFECT,             0, NORMAL,       100, 10
@@ -142,8 +142,8 @@ Moves:
 	move SWIFT,        SWIFT_EFFECT,                60, NORMAL,       100, 20
 	move SKULL_BASH,   CHARGE_EFFECT,              130, NORMAL,       100, 15
 	move SPIKE_CANNON, TWO_TO_FIVE_ATTACKS_EFFECT,  20, NORMAL,       100, 15
-	move POWER_WHIP,   NO_ADDITIONAL_EFFECT,       120, GRASS,        85, 10
-	move AMNESIA,      SPECIAL_UP2_EFFECT,           0, PSYCHIC_TYPE, 100, 20
+	move POWER_WHIP,   NO_ADDITIONAL_EFFECT,       120, GRASS,         85, 10
+	move AMNESIA,      SPECIAL_UP2_EFFECT,           0, STAT,         100, 20
 	move STEEL_WING,   NO_ADDITIONAL_EFFECT,        70, STEEL,         90, 25
 	move SOFTBOILED,   HEAL_EFFECT,                  0, NORMAL,       100, 10
 	move HI_JUMP_KICK, JUMP_KICK_EFFECT,           135, FIGHTING,      90, 20
@@ -179,7 +179,7 @@ Moves:
 	move HURRICANE,    CONFUSION_SIDE_EFFECT,      110, FLYING,        70, 10
 	move FLARE_BLITZ,  RECOIL_EFFECT,              120, FIRE,         100, 15
 	move FIRE_FANG,    BURN_SIDE_EFFECT1,           65, FIRE,          90, 15
-	move IRON_DEFENSE, DEFENSE_UP2_EFFECT,           0, STEEL,        100, 15
+	move IRON_DEFENSE, DEFENSE_UP2_EFFECT,           0, STAT,         100, 15
 	move SHADOW_CLAW,  NO_ADDITIONAL_EFFECT,        70, GHOST,        100, 15
 	move DAZZLE,       NO_ADDITIONAL_EFFECT,        80, FAIRY,        100, 10
 	move STRUGGLE,     RECOIL_EFFECT,               50, NORMAL,       100, 10
