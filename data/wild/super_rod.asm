@@ -68,16 +68,16 @@ SuperRodData:
 .Group6:
 	db 4
 	db 15, DRATINI
-	db 15, KRABBY
+	db 15, DRAGONAIR
 	db 15, PSYDUCK
-	db 15, SLOWPOKE
+	db 15, SQUIRTLE
 
 .Group7:
 	db 4
 	db 5, TENTACOOL
 	db 15, KRABBY
 	db 15, GOLDEEN
-	db 15, MAGIKARP
+	db 20, GYARADOS
 
 .Group8:
 	db 4
@@ -98,4 +98,4 @@ SuperRodData:
 	db 23, SEAKING
 	db 15, KRABBY
 	db 15, GOLDEEN
-	db 15, MAGIKARP
+	db 20, GYARADOS

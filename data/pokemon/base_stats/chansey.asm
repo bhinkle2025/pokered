@@ -10,7 +10,7 @@
 	INCBIN "gfx/pokemon/front/chansey.pic", 0, 1 ; sprite dimensions
 	dw ChanseyPicFront, ChanseyPicBack
 
-	db POUND, DOUBLESLAP, SOFTBOILED, EGG_BOMB ; level 1 learnset
+	db GROWL, POUND, DEFENSE_CURL, DOUBLESLAP ; level 1 learnset
 	db GROWTH_FAST ; growth rate
 
 	; tm/hm learnset

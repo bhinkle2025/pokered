@@ -10,7 +10,7 @@ IF DEF(_RED)
 	db 16, BELLSPROUT
 	db 16, JIGGLYPUFF
 	db 14, ABRA
-	db 16, CHANSEY
+	db 14, CHANSEY
 ENDC
 IF DEF(_BLUE)
 	db 13, ODDISH
@@ -22,7 +22,7 @@ IF DEF(_BLUE)
 	db 16, BELLSPROUT
 	db 16, JIGGLYPUFF
 	db 14, ABRA
-	db 16, CHANSEY
+	db 14, CHANSEY
 ENDC
 	end_grass_wildmons
 
