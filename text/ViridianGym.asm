@@ -69,10 +69,10 @@ _ViridianGymGiovanniReceivedTM26Text::
 _ViridianGymGiovanniTM26ExplanationText::
 	text_start
 
-	para "TM26 is EARTHQUAKE!"
-	line "It will take out"
-	cont "#MON with just"
-	cont "one hit!"
+	para "TM26 is..."
+	line "EARTHQUAKE!"
+	cont "It causes a.."
+	cont "powerful tremor!"
 
 	para "I made it when I"
 	line "ran the GYM here,"

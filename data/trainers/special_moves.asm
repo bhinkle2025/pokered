@@ -57,29 +57,53 @@ SpecialTrainerMoves:
 	db 0
 
 	db BLAINE, 1
-	db 1, 1, THUNDERPUNCH
-	db 1, 4, CONFUSE_RAY
-	db 3, 1, FLAMETHROWER
+	db 1, 3, PSYCHIC_M
+	db 1, 4, THUNDERPUNCH
+	db 2, 1, BODY_SLAM
+	db 2, 2, DOUBLE_KICK
+	db 2, 4, FLARE_BLITZ
+	db 3, 1, SOLARBEAM
+	db 3, 2, NIGHT_SHADE
+	db 3, 3, CONFUSE_RAY
 	db 3, 4, FIRE_BLAST
-	db 4, 1, FIRE_BLAST 
+	db 4, 1, GIGA_IMPACT
+	db 4, 3, QUICK_ATTACK
+	db 4, 4, SOLARBEAM
+	db 5, 1, FLARE_BLITZ
+	db 5, 2, REST
 	db 0
 
 	db SABRINA, 1
-	db 1, 2, AMNESIA
-	db 2, 1, PSYCHIC_M
+	db 1, 1, AMNESIA
+	db 1, 2, REFLECT
+	db 1, 3, DAZZLE
+	db 2, 1, LOVELY_KISS
+	db 2, 2, PSYCHIC_M
+	db 2, 3, BLIZZARD
+	db 2, 4, NIGHT_SHADE
 	db 3, 1, SURF
-	db 4, 1, PSYCHIC_M
+	db 3, 2, AMNESIA
+	db 4, 1, HYPER_BEAM
 	db 0
 
 	db GIOVANNI, 3
-	db 1, 1, EARTHQUAKE
-	db 2, 2, DOUBLE_TEAM
+	db 1, 1, SWORDS_DANCE
+	db 1, 3, FIRE_PUNCH
+	db 1, 4, THUNDERPUNCH
+	db 2, 1, SWORDS_DANCE
+	db 2, 2, SHADOW_CLAW
+	db 2, 3, ROCK_SLIDE
 	db 3, 1, EARTHQUAKE
-	db 3, 3, THUNDER
+	db 3, 2, ICE_PUNCH
+	db 3, 3, FIRE_BLAST
+	db 3, 4, SLUDGE
 	db 4, 1, EARTHQUAKE
 	db 4, 2, FIRE_PUNCH
 	db 4, 3, THUNDER
+	db 4, 4, ACID
 	db 5, 1, ROCK_SLIDE
+	db 5, 2, SWORDS_DANCE
+	db 5, 3, GIGA_IMPACT
 	db 5, 4, EARTHQUAKE
 	db 0
 
