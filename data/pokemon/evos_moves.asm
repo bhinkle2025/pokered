@@ -449,7 +449,7 @@ GyaradosEvosMoves:
 	db 41, OUTRAGE
 	db 44, HURRICANE
 	db 48, THRASH
-	db 52, HYPER_BEAM
+	db 52, GIGA_IMPACT
 	db 0
 
 ShellderEvosMoves:

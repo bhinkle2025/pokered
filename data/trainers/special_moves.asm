@@ -31,8 +31,7 @@ SpecialTrainerMoves:
 	db 1, 4, DOUBLE_TEAM
 	db 2, 2, ICE_PUNCH
 	db 2, 4, THUNDERBOLT
-	db 3, 1, MEGA_KICK
-	db 3, 2, SURF
+	db 3, 3, SURF
 	db 0
 
 	db ERIKA, 1
@@ -108,54 +107,58 @@ SpecialTrainerMoves:
 	db 0
 
 	db LORELEI, 1
-	db 1, 1, BUBBLEBEAM
-	db 2, 3, ICE_BEAM
+	db 1, 1, SURF
+	db 1, 2, ICE_BEAM
+	db 2, 4, IRON_DEFENSE
 	db 3, 1, PSYCHIC_M
-	db 3, 2, SURF
+	db 3, 1, SURF
+	db 3, 3, ICE_BEAM
+	db 4, 1, BLIZZARD
+	db 4, 2, NIGHT_SHADE
 	db 4, 3, LOVELY_KISS
+	db 4, 4, PSYCHIC_M
 	db 5, 3, BLIZZARD
 	db 0
 
 	db BRUNO, 1
-	db 1, 1, ROCK_SLIDE
-	db 1, 2, SCREECH
-	db 1, 4, DIG
-	db 2, 3, FIRE_PUNCH
-	db 2, 4, DOUBLE_TEAM
-	db 3, 1, DOUBLE_KICK
-	db 3, 2, MEGA_KICK
-	db 3, 4, DOUBLE_TEAM
-	db 4, 1, ROCK_SLIDE
-	db 4, 2, SCREECH
-	db 4, 4, EARTHQUAKE
-	db 5, 2, KARATE_CHOP
-	db 5, 3, STRENGTH
+	db 1, 2, EXPLOSION
+	db 1, 3, DOUBLE_TEAM 
+	db 2, 3, MEGA_PUNCH
+	db 2, 4, SUBMISSION
+	db 3, 1, SWORDS_DANCE
+	db 4, 4, SUBMISSION
+	db 5, 1, EARTHQUAKE
+	db 5, 2, ROCK_SLIDE
 	db 0
 
 	db AGATHA, 1
-	db 1, 2, SUBSTITUTE
-	db 1, 3, LICK
+	db 1, 1, DOUBLE_TEAM
+	db 1, 2, CONFUSE_RAY
+	db 1, 3, LEECH_LIFE
 	db 1, 4, MEGA_DRAIN
-	db 2, 2, TOXIC
-	db 2, 4, LEECH_LIFE
-	db 3, 2, LICK
-	db 4, 1, WRAP
-	db 5, 2, PSYCHIC_M
+	db 2, 2, SWORDS_DANCE
+	db 2, 3, SHADOW_CLAW
+	db 2, 4, DOUBLE_TEAM
+	db 3, 3, GLARE
+	db 3, 4, WRAP
+	db 4, 2, PSYCHIC_M
+	db 4, 4, SLUDGE
+	db 5, 2, SLUDGE
 	db 0
 
 	db LANCE, 1
-	db 1, 1, DRAGON_RAGE
+	db 1, 2, FLY
+	db 1, 3, WATERFALL
 	db 2, 1, THUNDER_WAVE
-	db 2, 3, THUNDERBOLT
-	db 3, 1, BUBBLEBEAM
-	db 3, 2, WRAP
+	db 2, 2, ICE_BEAM
+	db 3, 1, DRAGON_RAGE
+	db 3, 2, HYPER_BEAM
 	db 3, 3, ICE_BEAM
-	db 4, 1, WING_ATTACK
-	db 4, 2, SWIFT
-	db 4, 3, FLY
-	db 5, 1, BLIZZARD
-	db 5, 2, FIRE_BLAST
-	db 5, 3, THUNDER
+	db 4, 1, FLY
+	db 4, 2, DRAGON_CLAW
+	db 5, 1, FLY
+	db 5, 3, GIGA_IMPACT
+	db 5, 4, THUNDERPUNCH
 	db 0
 
 	db RIVAL3, 1
