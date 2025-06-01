@@ -2285,14 +2285,21 @@ UseBagItem:
 
 .returnAfterCapturingMon
 	call GBPalNormal
+	and     a         
+	ret     z 
+	call	DelayFrames
+	call	DelayFrames
 
 
-    ; — simply award catch-EXP —
-    callfar GainExperience
-
-    ; — Turn off auto‐BG transfer to avoid mid‐draw glitches —
-    xor a
-    ldh [hAutoBGTransferEnabled], a
+	callfar GainExperience   ; 1) do EXP math, “X gained Y EXP!”, “X evolved into Z!” animation, etc.
+	call LoadScreenTilesFromBuffer1  
+    ; ← Force the PPU to redraw the original battle window tiles, 
+    ;    ensuring no leftovers remain once we exit.
+	call RunPaletteCommand  
+	call LoadScreenTilesFromBuffer1
+	; ← Reset palettes (same step that battle‐cleanup normally does).
+	xor     a
+	ldh     [hAutoBGTransferEnabled], a
 
     ; — Now clear species, set battle result & exit battle — 
     xor a

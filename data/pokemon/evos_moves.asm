@@ -258,9 +258,10 @@ SpearowEvosMoves:
 ; Learnset
 	db 9, LEER
 	db 15, FURY_ATTACK
+	db 18, WING_ATTACK
 	db 22, MIRROR_MOVE
+	db 25, AGILITY
 	db 29, DRILL_PECK
-	db 36, AGILITY
 	db 0
 
 VoltorbEvosMoves:
@@ -305,6 +306,7 @@ IvysaurEvosMoves:
 	db 12, LEECH_SEED
 	db 15, POISONPOWDER
 	db 15, SLEEP_POWDER
+	db 18, ACID
 	db 21, RAZOR_LEAF
 	db 25, GROWTH
 	db 32, POWER_WHIP
@@ -521,9 +523,11 @@ BlastoiseEvosMoves:
 	db 8, WATER_GUN
 	db 10, WITHDRAW
 	db 17, BITE
-	db 42, IRON_DEFENSE
-	db 49, HYDRO_PUMP
-	db 56, SKULL_BASH
+	db 22, HEADBUTT
+	db 26, WATERFALL
+	ds 30, IRON_DEFENSE
+	db 31, SKULL_BASH
+	db 36, HYDRO_PUMP
 	db 0
 
 PinsirEvosMoves:
@@ -593,9 +597,10 @@ FearowEvosMoves:
 ; Learnset
 	db 9, LEER
 	db 15, FURY_ATTACK
+	db 18, WING_ATTACK
 	db 25, MIRROR_MOVE
+	db 28, AGILITY
 	db 34, DRILL_PECK
-	db 43, AGILITY
 	db 0
 
 PidgeyEvosMoves:
@@ -1506,8 +1511,10 @@ ButterfreeEvosMoves:
 	db 13, STUN_SPORE
 	db 13, SLEEP_POWDER
 	db 16, GUST
+	db 21, PSYBEAM
+	db 25, WHIRLWIND
 	db 32, BUG_BUZZ
-	db 40, HURRICANE
+	db 38, HURRICANE
 	db 0
 
 MachampEvosMoves:
@@ -1771,6 +1778,7 @@ BulbasaurEvosMoves:
 	db 12, LEECH_SEED
 	db 15, POISONPOWDER
 	db 15, SLEEP_POWDER
+	db 18, ACID
 	db 21, RAZOR_LEAF
 	db 25, GROWTH
 	db 32, POWER_WHIP
@@ -1784,8 +1792,9 @@ VenusaurEvosMoves:
 	db 12, LEECH_SEED
 	db 15, POISONPOWDER
 	db 15, SLEEP_POWDER
-	db 23, RAZOR_LEAF
-	db 28, GROWTH
+	db 18, ACID
+	db 21, RAZOR_LEAF
+	db 25, GROWTH
 	db 32, POWER_WHIP
 	db 0
 
@@ -1900,7 +1909,7 @@ RaticateEvosMoves:
 ; Learnset
 	db 6, QUICK_ATTACK
 	db 12, BITE
-	db 15, SUPER_FANG
+	db 14, SUPER_FANG
 	db 26, HYPER_FANG
 	db 0
 
@@ -2018,6 +2027,8 @@ SquirtleEvosMoves:
 	db 8, WATER_GUN
 	db 10, WITHDRAW
 	db 17, BITE
+	db 22, HEADBUTT
+	db 26, WATERFALL
 	db 30, IRON_DEFENSE
 	db 31, SKULL_BASH
 	db 36, HYDRO_PUMP
@@ -2045,6 +2056,8 @@ WartortleEvosMoves:
 	db 8, WATER_GUN
 	db 10, WITHDRAW
 	db 17, BITE
+	db 22, HEADBUTT
+	db 26, WATERFALL
 	ds 30, IRON_DEFENSE
 	db 31, SKULL_BASH
 	db 36, HYDRO_PUMP
