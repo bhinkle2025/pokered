@@ -3,7 +3,7 @@ Route17WildMons:
 	db 20, FEAROW
 	db 22, PONYTA
 	db 25, RATICATE
-	db 24, DODUO
+	db 20, DODUO
 	db 27, DODRIO
 	db 26, PSYDUCK
 	db 28, TAUROS

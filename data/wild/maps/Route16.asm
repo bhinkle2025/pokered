@@ -5,7 +5,7 @@ Route16WildMons:
 	db 18, DITTO
 	db 20, PIDGEOT
 	db 20, MEOWTH
-	db 22, DODUO
+	db 15, DODUO
 	db 31, DODRIO
 	db 22, LICKITUNG
 	db 23, RATICATE

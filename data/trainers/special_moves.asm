@@ -29,8 +29,9 @@ SpecialTrainerMoves:
 	db 1, 1, FLASH
 	db 1, 3, THUNDERBOLT
 	db 1, 4, DOUBLE_TEAM
+	db 2, 1, THUNDERPUNCH
 	db 2, 2, ICE_PUNCH
-	db 2, 4, THUNDERBOLT
+	db 2, 3, THUNDERBOLT
 	db 3, 3, SURF
 	db 0
 
