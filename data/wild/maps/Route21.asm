@@ -7,7 +7,7 @@ Route21WildMons:
 	db 25, IVYSAUR
 	db 30, MR_MIME
 	db 32, VENUSAUR
-	db 28, TANGELA
+	db 22, TANGELA
 	db 30, VICTREEBEL
 	db 32, VILEPLUME
 	end_grass_wildmons

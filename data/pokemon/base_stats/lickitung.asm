@@ -10,7 +10,7 @@
 	INCBIN "gfx/pokemon/front/lickitung.pic", 0, 1 ; sprite dimensions
 	dw LickitungPicFront, LickitungPicBack
 
-	db WRAP, SUPERSONIC, LICK, SWORDS_DANCE ; level 1 learnset
+	db WRAP, ACID, LICK, SWORDS_DANCE ; level 1 learnset
 	db GROWTH_MEDIUM_FAST ; growth rate
 
 	; tm/hm learnset

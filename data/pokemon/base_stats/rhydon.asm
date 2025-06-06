@@ -10,7 +10,7 @@
 	INCBIN "gfx/pokemon/front/rhydon.pic", 0, 1 ; sprite dimensions
 	dw RhydonPicFront, RhydonPicBack
 
-	db HORN_ATTACK, STOMP, ROCK_THROW, FURY_ATTACK ; level 1 learnset
+	db HORN_ATTACK, ROCK_THROW, TAIL_WHIP, NO_MOVE ; level 1 learnset
 	db GROWTH_SLOW ; growth rate
 
 	; tm/hm learnset
