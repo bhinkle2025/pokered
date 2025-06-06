@@ -171,6 +171,7 @@ AttackAnimationPointers:
 	dw IronDefenseAnim
 	dw ShadowClawAnim
 	dw DazzleAnim
+	dw HammerArmAnim
 	dw StruggleAnim
 	assert_table_length NUM_ATTACKS
 	dw ShowPicAnim
@@ -258,6 +259,7 @@ CometPunchAnim:
 	battle_anim COMET_PUNCH, SUBANIM_0_STAR_THRICE, 0, 4
 	db -1 ; end
 
+HammerArmAnim:
 MegaPunchAnim:
 	battle_anim MEGA_PUNCH, SUBANIM_1_STAR_BIG_MOVING, 1, 6
 	db -1 ; end

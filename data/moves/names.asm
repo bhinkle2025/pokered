@@ -171,5 +171,6 @@ MoveNames::
 	li "IRON DEFENSE"
 	li "SHADOW CLAW"
 	li "DAZZLE"
+	li "HAMMER ARM"
 	li "STRUGGLE"
 	assert_list_length NUM_ATTACKS

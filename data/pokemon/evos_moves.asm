@@ -209,6 +209,7 @@ RhydonEvosMoves:
 	db 24, DIG
 	db 30, STOMP
 	db 36, FURY_ATTACK
+	db 42, HAMMER_ARM
 	db 48, ROCK_SLIDE
 	db 54, EARTHQUAKE
 	db 60, DOUBLE_EDGE
@@ -1065,6 +1066,8 @@ KrabbyEvosMoves:
 	db 14, HARDEN
 	db 18, BUBBLEBEAM
 	db 23, STOMP
+	db 28, HAMMER_ARM
+	db 31, SWORDS_DANCE
 	db 36, CRABHAMMER
 	db 0
 
@@ -1610,6 +1613,7 @@ SnorlaxEvosMoves:
 ; Learnset
 	db 35, BODY_SLAM
 	db 41, BITE
+	db 44, HAMMER_ARM
 	db 48, DOUBLE_EDGE
 	db 56, GIGA_IMPACT
 	db 0
@@ -1660,6 +1664,8 @@ KinglerEvosMoves:
 	db 14, HARDEN
 	db 18, BUBBLEBEAM
 	db 23, STOMP
+	db 28, HAMMER_ARM
+	db 36, SWORDS_DANCE
 	db 41, CRABHAMMER
 	
 	db 0

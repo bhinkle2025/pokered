@@ -172,6 +172,7 @@ MoveSoundTable:
 	db SFX_BATTLE_14,          $33, $30 ; IRON_DEFENSE
 	db SFX_NOT_VERY_EFFECTIVE, $11, $20 ; SHADOW_CLAW
 	db SFX_NOT_VERY_EFFECTIVE, $11, $20 ; DAZZLE
+	db SFX_SUPER_EFFECTIVE,    $00, $80 ; HAMMER_ARM
 	db SFX_BATTLE_0B,          $00, $80 ; STRUGGLE
 	assert_table_length NUM_ATTACKS
 	db SFX_BATTLE_0B,          $00, $80

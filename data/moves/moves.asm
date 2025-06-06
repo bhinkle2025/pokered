@@ -182,5 +182,6 @@ Moves:
 	move IRON_DEFENSE, DEFENSE_UP2_EFFECT,           0, STAT,         100, 15
 	move SHADOW_CLAW,  NO_ADDITIONAL_EFFECT,        70, GHOST,        100, 15
 	move DAZZLE,       NO_ADDITIONAL_EFFECT,        80, FAIRY,        100, 10
+	move HAMMER_ARM,   NO_ADDITIONAL_EFFECT,       100, FIGHTING,      90, 10
 	move STRUGGLE,     RECOIL_EFFECT,               50, NORMAL,       100, 10
 	assert_table_length NUM_ATTACKS
