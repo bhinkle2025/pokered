@@ -281,9 +281,9 @@ NidokingEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
-	db 8, HORN_ATTACK
-	db 14, POISON_STING
-	db 23, THRASH
+	db 45, SUBMISSION
+	db 50, SLUDGE
+	db 55, EARTHQUAKE
 	db 0
 
 SlowbroEvosMoves:
@@ -373,11 +373,11 @@ NidoranFEvosMoves:
 	db EVOLVE_LEVEL, 16, NIDORINA
 	db 0
 ; Learnset
-	db 8, SCRATCH
 	db 12, DOUBLE_KICK
-	db 14, POISON_STING
-	db 21, FURY_SWIPES
-	db 29, BITE
+	db 15, FURY_SWIPES
+	db 21, DIG
+	db 27, ACID
+	db 31, BITE
 	db 36, SUPER_FANG
 	db 0
 
@@ -385,9 +385,9 @@ NidoqueenEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
-	db 8, SCRATCH
-	db 14, POISON_STING
-	db 23, BODY_SLAM
+	db 45, SUBMISSION
+	db 50, SLUDGE
+	db 55, EARTHQUAKE
 	db 0
 
 CuboneEvosMoves:
@@ -475,14 +475,12 @@ TentacoolEvosMoves:
 	db EVOLVE_LEVEL, 30, TENTACRUEL
 	db 0
 ; Learnset
-	db 7, SUPERSONIC
-	db 13, WRAP
-	db 18, POISON_STING
-	db 22, WATER_GUN
-	db 27, SLUDGE
-	db 33, BARRIER
-	db 40, SCREECH
-	db 48, HYDRO_PUMP
+	db 22, SCREECH
+	db 27, ACID_ARMOR
+	db 31, ACID
+	db 36, SURF
+	db 40, SLUDGE
+	db 45, HYDRO_PUMP
 	db 0
 
 GastlyEvosMoves:
@@ -1834,13 +1832,11 @@ TentacruelEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
-	db 7, SUPERSONIC
-	db 13, WRAP
-	db 18, POISON_STING
-	db 22, WATER_GUN
-	db 27, SLUDGE
-	db 35, BARRIER
-	db 43, SCREECH
+	db 22, SCREECH
+	db 27, ACID_ARMOR
+	db 31, ACID
+	db 36, SURF
+	db 43, SLUDGE
 	db 50, HYDRO_PUMP
 	db 0
 
@@ -1969,11 +1965,11 @@ NidorinaEvosMoves:
 	db EVOLVE_ITEM, MOON_STONE, 1, NIDOQUEEN
 	db 0
 ; Learnset
-	db 8, SCRATCH
 	db 12, DOUBLE_KICK
-	db 14, POISON_STING
-	db 23, FURY_SWIPES
-	db 32, BITE
+	db 15, FURY_SWIPES
+	db 23, DIG
+	db 31, ACID
+	db 39, BITE
 	db 41, SUPER_FANG
 	
 	db 0
