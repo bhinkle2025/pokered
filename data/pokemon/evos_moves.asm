@@ -317,7 +317,7 @@ ExeggutorEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
-	db 28, STOMP
+	db 30, STOMP
 	db 0
 
 LickitungEvosMoves:
@@ -342,7 +342,7 @@ ExeggcuteEvosMoves:
 	db 27, PSYBEAM
 	db 32, STUN_SPORE
 	db 34, LEECH_SEED
-	db 37, POISONPOWDER
+	db 40, EXTRASENSORY
 	db 42, SOLARBEAM
 	db 48, SLEEP_POWDER
 	db 0
@@ -864,7 +864,7 @@ SeelEvosMoves:
 	db EVOLVE_LEVEL, 34, DEWGONG
 	db 0
 ; Learnset
-	db 4, GROWL
+	db 12, AQUA_JET
 	db 20, REST
 	db 26, AURORA_BEAM
 	db 32, WATERFALL
@@ -1096,7 +1096,7 @@ VulpixEvosMoves:
 	db 14, CONFUSE_RAY
 	db 21, FIRE_SPIN
 	db 24, FLAMETHROWER
-	db 28, ROAR
+	db 28, EXTRASENSORY
 	db 31, FIRE_BLAST
 	db 0
 
@@ -1166,19 +1166,21 @@ KabutoEvosMoves:
 	db EVOLVE_LEVEL, 40, KABUTOPS
 	db 0
 ; Learnset
-	db 34, WATERFALL
+	db 34, AQUA_JET
 	db 39, SLASH
-	db 40, ROCK_SLIDE
-	db 44, SWORDS_DANCE
+	db 40, WATERFALL
+	db 44, ROCK_SLIDE
+	db 50, SWORDS_DANCE
 	db 0
 
 KabutopsEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
-	db 34, WATERFALL
+	db 34, AQUA_JET
 	db 39, SLASH
-	db 40, ROCK_SLIDE
+	db 40, WATERFALL
+	db 44, ROCK_SLIDE
 	db 50, SWORDS_DANCE
 	db 0
 
@@ -1246,9 +1248,10 @@ OmanyteEvosMoves:
 	db 0
 ; Learnset
 	db 34, HORN_ATTACK
-	db 37, ROCK_SLIDE
-	db 40, SPIKE_CANNON
-	db 44, HYDRO_PUMP
+	db 37, SURF
+	db 40, ROCK_SLIDE
+	db 44, SPIKE_CANNON
+	db 50, HYDRO_PUMP
 	db 0
 
 OmastarEvosMoves:
@@ -1256,8 +1259,9 @@ OmastarEvosMoves:
 	db 0
 ; Learnset
 	db 34, HORN_ATTACK
-	db 37, ROCK_SLIDE
-	db 40, SPIKE_CANNON
+	db 37, SURF
+	db 40, ROCK_SLIDE
+	db 44, SPIKE_CANNON
 	db 50, HYDRO_PUMP
 	db 0
 
@@ -1492,7 +1496,7 @@ DewgongEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
-	db 4, GROWL
+	db 12, AQUA_JET
 	db 20, REST
 	db 26, AURORA_BEAM
 	db 32, WATERFALL
@@ -1934,6 +1938,8 @@ RattataEvosMoves:
 	db 12, BITE
 	db 15, SUPER_FANG
 	db 21, HYPER_FANG
+	db 24, EXTREMESPEED
+	db 27, SWORDS_DANCE
 	db 0
 
 RaticateEvosMoves:
@@ -1944,6 +1950,8 @@ RaticateEvosMoves:
 	db 12, BITE
 	db 14, SUPER_FANG
 	db 26, HYPER_FANG
+	db 34, EXTREMESPEED
+	db 42, SWORDS_DANCE
 	db 0
 
 NidorinoEvosMoves:

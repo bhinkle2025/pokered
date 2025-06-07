@@ -183,5 +183,8 @@ Moves:
 	move SHADOW_CLAW,  NO_ADDITIONAL_EFFECT,        70, GHOST,        100, 15
 	move DAZZLE,       NO_ADDITIONAL_EFFECT,        80, FAIRY,        100, 10
 	move HAMMER_ARM,   NO_ADDITIONAL_EFFECT,       100, FIGHTING,      90, 10
+	move EXTREMESPEED, NO_ADDITIONAL_EFFECT,        80, NORMAL,       100,  5
+	move EXTRASENSORY, FLINCH_SIDE_EFFECT1,         80, PSYCHIC_TYPE, 100, 20
+	move AQUA_JET,     NO_ADDITIONAL_EFFECT,        40, WATER,        100, 20
 	move STRUGGLE,     RECOIL_EFFECT,               50, NORMAL,       100, 10
 	assert_table_length NUM_ATTACKS

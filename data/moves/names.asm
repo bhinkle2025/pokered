@@ -172,5 +172,8 @@ MoveNames::
 	li "SHADOW CLAW"
 	li "DAZZLE"
 	li "HAMMER ARM"
+	li "EXTREMESPEED"
+	li "EXTRASENSORY"
+	li "AQUA JET"
 	li "STRUGGLE"
 	assert_list_length NUM_ATTACKS

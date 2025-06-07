@@ -172,6 +172,9 @@ AttackAnimationPointers:
 	dw ShadowClawAnim
 	dw DazzleAnim
 	dw HammerArmAnim
+	dw ExtremeSpeedAnim
+	dw ExtrasensoryAnim
+	dw AquaJetAnim
 	dw StruggleAnim
 	assert_table_length NUM_ATTACKS
 	dw ShowPicAnim
@@ -532,6 +535,13 @@ MistAnim:
 	battle_anim NO_MOVE, SE_RESET_SCREEN_PALETTE
 	db -1 ; end
 
+AquaJetAnim:
+	battle_anim QUICK_ATTACK, SE_SLIDE_MON_OFF
+	battle_anim NO_MOVE, SUBANIM_1_STAR_BIG_MOVING, 1, 6
+	battle_anim WATER_GUN, SUBANIM_0_WATER_DROPLETS, 0, 6
+	battle_anim NO_MOVE, SE_SHOW_MON_PIC
+	db -1 ; end
+
 WaterGunAnim:
 	battle_anim WATER_GUN, SUBANIM_0_WATER_DROPLETS, 0, 6
 	db -1 ; end
@@ -756,6 +766,7 @@ ConfusionAnim:
 	battle_anim CONFUSION, SE_FLASH_SCREEN_LONG
 	db -1 ; end
 
+ExtrasensoryAnim:
 PsychicAnim:
 	battle_anim PSYCHIC_M, SE_FLASH_SCREEN_LONG
 	battle_anim NO_MOVE, SE_WAVY_SCREEN
@@ -777,6 +788,7 @@ AgilityAnim:
 	battle_anim NO_MOVE, SE_RESET_SCREEN_PALETTE
 	db -1 ; end
 
+ExtremeSpeedAnim:
 QuickAttackAnim:
 	battle_anim QUICK_ATTACK, SE_SLIDE_MON_OFF
 	battle_anim NO_MOVE, SUBANIM_1_STAR_BIG_MOVING, 1, 6

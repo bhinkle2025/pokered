@@ -178,6 +178,9 @@
 	const SHADOW_CLAW  ; a5
 	const DAZZLE       ; a5
 	const HAMMER_ARM   ; a5
+	const EXTREMESPEED ; a5
+	const EXTRASENSORY ; a5
+	const AQUA_JET     ; a5
 	const STRUGGLE     ; a5
 DEF NUM_ATTACKS EQU const_value - 1
 

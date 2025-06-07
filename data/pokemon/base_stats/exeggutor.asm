@@ -10,7 +10,7 @@
 	INCBIN "gfx/pokemon/front/exeggutor.pic", 0, 1 ; sprite dimensions
 	dw ExeggutorPicFront, ExeggutorPicBack
 
-	db BARRAGE, HYPNOSIS, EGG_BOMB, GROWTH ; level 1 learnset
+	db LEECH_SEED, STUN_SPORE, EGG_BOMB, EXTRASENSORY ; level 1 learnset
 	db GROWTH_SLOW ; growth rate
 
 	; tm/hm learnset
