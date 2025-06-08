@@ -864,7 +864,6 @@ SeelEvosMoves:
 	db EVOLVE_LEVEL, 34, DEWGONG
 	db 0
 ; Learnset
-	db 12, AQUA_JET
 	db 20, REST
 	db 26, AURORA_BEAM
 	db 32, WATERFALL
@@ -1166,22 +1165,20 @@ KabutoEvosMoves:
 	db EVOLVE_LEVEL, 40, KABUTOPS
 	db 0
 ; Learnset
-	db 34, AQUA_JET
-	db 39, SLASH
-	db 40, WATERFALL
-	db 44, ROCK_SLIDE
-	db 50, SWORDS_DANCE
+	db 34, SLASH
+	db 39, WATERFALL
+	db 40, ROCK_SLIDE
+	db 44, SWORDS_DANCE
 	db 0
 
 KabutopsEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
-	db 34, AQUA_JET
-	db 39, SLASH
-	db 40, WATERFALL
-	db 44, ROCK_SLIDE
-	db 50, SWORDS_DANCE
+	db 34, SLASH
+	db 39, WATERFALL
+	db 40, ROCK_SLIDE
+	db 44, SWORDS_DANCE
 	db 0
 
 HorseaEvosMoves:
@@ -1496,7 +1493,6 @@ DewgongEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
-	db 12, AQUA_JET
 	db 20, REST
 	db 26, AURORA_BEAM
 	db 32, WATERFALL

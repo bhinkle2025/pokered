@@ -180,7 +180,8 @@
 	const HAMMER_ARM   ; a5
 	const EXTREMESPEED ; a5
 	const EXTRASENSORY ; a5
-	const AQUA_JET     ; a5
+	const MACH_PUNCH   ; a5
+	const BLAZE_KICK   ; a5
 	const STRUGGLE     ; a5
 DEF NUM_ATTACKS EQU const_value - 1
 

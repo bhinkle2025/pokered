@@ -185,6 +185,7 @@ Moves:
 	move HAMMER_ARM,   NO_ADDITIONAL_EFFECT,       100, FIGHTING,      90, 10
 	move EXTREMESPEED, NO_ADDITIONAL_EFFECT,        80, NORMAL,       100,  5
 	move EXTRASENSORY, FLINCH_SIDE_EFFECT1,         80, PSYCHIC_TYPE, 100, 20
-	move AQUA_JET,     NO_ADDITIONAL_EFFECT,        40, WATER,        100, 20
+	move MACH_PUNCH,   NO_ADDITIONAL_EFFECT,        40, FIGHTING,     100, 30
+	move BLAZE_KICK,   BURN_SIDE_EFFECT1,           85, FIRE,          90, 10
 	move STRUGGLE,     RECOIL_EFFECT,               50, NORMAL,       100, 10
 	assert_table_length NUM_ATTACKS

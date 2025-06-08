@@ -174,6 +174,7 @@ MoveNames::
 	li "HAMMER ARM"
 	li "EXTREMESPEED"
 	li "EXTRASENSORY"
-	li "AQUA JET"
+	li "MACH PUNCH"
+	li "BLAZE KICK"
 	li "STRUGGLE"
 	assert_list_length NUM_ATTACKS

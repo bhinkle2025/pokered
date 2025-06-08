@@ -174,7 +174,8 @@ AttackAnimationPointers:
 	dw HammerArmAnim
 	dw ExtremeSpeedAnim
 	dw ExtrasensoryAnim
-	dw AquaJetAnim
+	dw MachPunchAnim
+	dw BlazeKickAnim
 	dw StruggleAnim
 	assert_table_length NUM_ATTACKS
 	dw ShowPicAnim
@@ -262,6 +263,7 @@ CometPunchAnim:
 	battle_anim COMET_PUNCH, SUBANIM_0_STAR_THRICE, 0, 4
 	db -1 ; end
 
+MachPunchAnim:
 HammerArmAnim:
 MegaPunchAnim:
 	battle_anim MEGA_PUNCH, SUBANIM_1_STAR_BIG_MOVING, 1, 6
@@ -354,6 +356,11 @@ StompAnim:
 DoubleKickAnim:
 	battle_anim DOUBLE_KICK, SUBANIM_0_STAR_TWICE, 0, 8
 	battle_anim DOUBLE_KICK, SUBANIM_0_STAR_TWICE, 0, 8
+	db -1 ; end
+
+BlazeKickAnim:
+	battle_anim MEGA_KICK, SUBANIM_1_STAR_BIG_MOVING, 1, 6
+	battle_anim EMBER, SUBANIM_1_FLAMES, 1, 6
 	db -1 ; end
 
 MegaKickAnim:
@@ -533,13 +540,6 @@ MistAnim:
 	battle_anim NO_MOVE, SE_LIGHT_SCREEN_PALETTE
 	battle_anim SURF, SE_WATER_DROPLETS_EVERYWHERE
 	battle_anim NO_MOVE, SE_RESET_SCREEN_PALETTE
-	db -1 ; end
-
-AquaJetAnim:
-	battle_anim QUICK_ATTACK, SE_SLIDE_MON_OFF
-	battle_anim NO_MOVE, SUBANIM_1_STAR_BIG_MOVING, 1, 6
-	battle_anim WATER_GUN, SUBANIM_0_WATER_DROPLETS, 0, 6
-	battle_anim NO_MOVE, SE_SHOW_MON_PIC
 	db -1 ; end
 
 WaterGunAnim:
