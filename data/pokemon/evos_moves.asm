@@ -680,6 +680,7 @@ MachokeEvosMoves:
 	db 16, LOW_KICK
 	db 21, SEISMIC_TOSS
 	db 26, FIRE_PUNCH
+	db 31, MEDITATE
 	db 48, SUBMISSION
 	db 0
 
@@ -722,11 +723,13 @@ ArbokEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
+	db 8, MEDITATE
 	db 10, BITE
 	db 17, GLARE
 	db 20, ACID
 	db 24, PSYFANGS
 	db 31, SCREECH
+	db 36, ACID_ARMOR
 	db 0
 
 ParasectEvosMoves:
@@ -855,7 +858,8 @@ MankeyEvosMoves:
 	db 16, FURY_SWIPES
 	db 24, SEISMIC_TOSS
 	db 29, THUNDERPUNCH
-	db 34, THRASH
+	db 32, MEDITATE
+	db 37, THRASH
 	db 40, OUTRAGE
 	db 0
 
@@ -1051,6 +1055,7 @@ MeowthEvosMoves:
 	db 19, FURY_SWIPES
 	db 24, SCREECH
 	db 27, SLASH
+	db 31, AGILITY
 	db 35, PLAY_ROUGH
 	db 0
 
@@ -1345,6 +1350,7 @@ MachopEvosMoves:
 	db 16, LOW_KICK
 	db 21, SEISMIC_TOSS
 	db 26, FIRE_PUNCH
+	db 31, MEDITATE
 	db 36, SUBMISSION
 	db 0
 
@@ -1366,11 +1372,13 @@ EkansEvosMoves:
 	db EVOLVE_LEVEL, 22, ARBOK
 	db 0
 ; Learnset
+	db 8, MEDITATE
 	db 10, BITE
 	db 17, GLARE
 	db 20, ACID
 	db 24, PSYFANGS
 	db 31, SCREECH
+	db 36, ACID_ARMOR
 	db 0
 
 ParasEvosMoves:
@@ -1461,6 +1469,7 @@ PrimeapeEvosMoves:
 	db 16, FURY_SWIPES
 	db 24, SEISMIC_TOSS
 	db 33, THUNDERPUNCH
+	db 40, MEDITATE
 	db 49, THRASH
 	db 56, OUTRAGE
 	db 0
@@ -1549,6 +1558,7 @@ MachampEvosMoves:
 	db 16, LOW_KICK
 	db 21, SEISMIC_TOSS
 	db 26, FIRE_PUNCH
+	db 31, MEDITATE
 	db 48, SUBMISSION
 	db 0
 
@@ -1718,6 +1728,7 @@ PersianEvosMoves:
 	db 19, FURY_SWIPES
 	db 24, SCREECH
 	db 27, SLASH
+	db 37, AGILITY
 	db 47, PLAY_ROUGH
 	db 0
 
