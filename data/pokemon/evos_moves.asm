@@ -680,7 +680,7 @@ MachokeEvosMoves:
 	db 16, LOW_KICK
 	db 21, SEISMIC_TOSS
 	db 26, FIRE_PUNCH
-	db 31, MEDITATE
+	db 37, MEDITATE
 	db 48, SUBMISSION
 	db 0
 
@@ -1558,7 +1558,7 @@ MachampEvosMoves:
 	db 16, LOW_KICK
 	db 21, SEISMIC_TOSS
 	db 26, FIRE_PUNCH
-	db 31, MEDITATE
+	db 37, MEDITATE
 	db 48, SUBMISSION
 	db 0
 

@@ -1,6 +1,6 @@
 Route7WildMons:
 	def_grass_wildmons 15 ; encounter rate
-	db 19, PIDGEY
+	db 19, PIDGEOTTO
 IF DEF(_RED)
 	db 20, VULPIX
 	db 20, MANKEY
