@@ -1,6 +1,6 @@
 	db DEX_WIGGLYTUFF ; pokedex id
 
-	db 140,  70,  55,  45,  85
+	db 140,  95,  70,  45,  90
 	;   hp  atk  def  spd  spc
 
 	db NORMAL, FAIRY ; type
