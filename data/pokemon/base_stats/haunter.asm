@@ -10,7 +10,7 @@
 	INCBIN "gfx/pokemon/front/haunter.pic", 0, 1 ; sprite dimensions
 	dw HaunterPicFront, HaunterPicBack
 
-	db LICK, CONFUSE_RAY, NIGHT_SHADE, SHADOW_CLAW ; level 1 learnset
+	db HYPNOSIS, LICK, SMOG, CONFUSE_RAY ; level 1 learnset
 	db GROWTH_MEDIUM_SLOW ; growth rate
 
 	; tm/hm learnset

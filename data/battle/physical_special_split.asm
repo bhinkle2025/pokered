@@ -4,6 +4,7 @@ PhysicalToSpecialMoves:
         db HURRICANE
 ; Poison
         db SLUDGE
+        db SMOG
 ; Normal
         db HYPER_BEAM
         db SWIFT
@@ -44,4 +45,5 @@ SpecialToPhysicalMoves:
         db PSYFANGS
 ; Ghost
         db LICK
+        db SHADOW_CLAW
         db -1 ; end
