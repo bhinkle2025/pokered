@@ -16,7 +16,7 @@
 	; tm/hm learnset
 	tmhm SWORDS_DANCE, TOXIC,        BODY_SLAM,    DOUBLE_EDGE,  OUTRAGE,      \
 	     MEGA_DRAIN,   SOLARBEAM,    MIMIC,        DOUBLE_TEAM,  SLUDGE,       \
-	     REFLECT,      REST,         SUBSTITUTE,   CUT,          \
+	     REFLECT,      REST,         SUBSTITUTE,   CALM_MIND,    CUT,          \
 		 STRENGTH,     FLASH
 	; end
 

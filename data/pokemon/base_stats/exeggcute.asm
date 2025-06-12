@@ -15,7 +15,7 @@
 
 	; tm/hm learnset
 	tmhm TOXIC,        DOUBLE_EDGE,  PSYCHIC_M,    SWORDS_DANCE, \
-	     TELEPORT,     MIMIC,        DOUBLE_TEAM,  REFLECT,      \
+	     CALM_MIND,    MIMIC,        DOUBLE_TEAM,  REFLECT,      \
 	     SELFDESTRUCT, REST,         EXPLOSION,    \
 	     SUBSTITUTE,   DREAM_EATER,  SOLARBEAM,    SLUDGE,       STRENGTH,     \
 		 FLASH

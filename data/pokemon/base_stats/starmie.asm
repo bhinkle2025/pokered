@@ -16,7 +16,7 @@
 	; tm/hm learnset
 	tmhm TOXIC,        GIGA_IMPACT,  DOUBLE_EDGE,  BUBBLEBEAM,   DAZZLE,       \
 	     ICE_BEAM,     BLIZZARD,     HYPER_BEAM,   THUNDERBOLT,  DREAM_EATER,  \
-	     THUNDER,      PSYCHIC_M,    TELEPORT,     MIMIC,        DOUBLE_TEAM,  \
+	     THUNDER,      PSYCHIC_M,    MIMIC,        DOUBLE_TEAM,  \
 	     REFLECT,      SWIFT,        SKULL_BASH,   REST,         \
 	     THUNDER_WAVE, TRI_ATTACK,   SUBSTITUTE,   SURF,         \
 	     FLASH

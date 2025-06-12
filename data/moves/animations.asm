@@ -73,7 +73,7 @@ AttackAnimationPointers:
 	dw AbsorbAnim
 	dw MegaDrainAnim
 	dw LeechSeedAnim
-	dw GrowthAnim
+	dw CalmMindAnim
 	dw RazorLeafAnim
 	dw SolarBeamAnim
 	dw PoisonPowderAnim
@@ -661,8 +661,8 @@ LeechSeedAnim:
 	battle_anim STUN_SPORE, SUBANIM_1_SEED_LAND, 1, 21
 	db -1 ; end
 
-GrowthAnim:
-	battle_anim GROWTH, SE_LIGHT_SCREEN_PALETTE
+CalmMindAnim:
+	battle_anim CALM_MIND, SE_LIGHT_SCREEN_PALETTE
 	battle_anim NO_MOVE, SE_SPIRAL_BALLS_INWARD
 	battle_anim NO_MOVE, SE_RESET_SCREEN_PALETTE
 	db -1 ; end

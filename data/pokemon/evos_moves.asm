@@ -310,7 +310,7 @@ IvysaurEvosMoves:
 	db 15, SLEEP_POWDER
 	db 18, ACID
 	db 21, RAZOR_LEAF
-	db 25, GROWTH
+	db 25, CALM_MIND
 	db 27, TOXIC
 	db 32, POWER_WHIP
 	db 0
@@ -747,7 +747,7 @@ ParasectEvosMoves:
 	db 0
 ; Learnset
 	db 9, ABSORB
-	db 12, GROWTH
+	db 12, CALM_MIND
 	db 15, FURY_SWIPES
 	db 19, SLASH
 	db 23, LEECH_LIFE
@@ -1400,7 +1400,7 @@ ParasEvosMoves:
 	db 0
 ; Learnset
 	db 9, ABSORB
-	db 12, GROWTH
+	db 12, CALM_MIND
 	db 15, FURY_SWIPES
 	db 19, SLASH
 	db 23, LEECH_LIFE
@@ -1841,7 +1841,7 @@ BulbasaurEvosMoves:
 	db 15, SLEEP_POWDER
 	db 18, ACID
 	db 21, RAZOR_LEAF
-	db 25, GROWTH
+	db 25, CALM_MIND
 	db 27, TOXIC
 	db 32, POWER_WHIP
 	db 0
@@ -1856,7 +1856,7 @@ VenusaurEvosMoves:
 	db 15, SLEEP_POWDER
 	db 18, ACID
 	db 21, RAZOR_LEAF
-	db 25, GROWTH
+	db 25, CALM_MIND
 	db 27, TOXIC
 	db 32, POWER_WHIP
 	db 0

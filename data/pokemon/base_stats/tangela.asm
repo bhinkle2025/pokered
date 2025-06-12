@@ -10,13 +10,13 @@
 	INCBIN "gfx/pokemon/front/tangela.pic", 0, 1 ; sprite dimensions
 	dw TangelaPicFront, TangelaPicBack
 
-	db VINE_WHIP, ABSORB, GROWTH, WRAP; level 1 learnset
+	db VINE_WHIP, ABSORB, CALM_MIND, WRAP; level 1 learnset
 	db GROWTH_MEDIUM_FAST ; growth rate
 
 	; tm/hm learnset
 	tmhm SWORDS_DANCE, TOXIC,        BODY_SLAM,    GIGA_IMPACT,  DOUBLE_EDGE,  \
 	     HYPER_BEAM,   MEGA_DRAIN,   SOLARBEAM,    MIMIC,        SLUDGE,       \
-	     DOUBLE_TEAM,  SKULL_BASH,   REST,         SUBSTITUTE,   \
+	     DOUBLE_TEAM,  SKULL_BASH,   REST,         SUBSTITUTE,   CALM_MIND,    \
 	     AMNESIA,      CUT,          FLASH
 	; end
 

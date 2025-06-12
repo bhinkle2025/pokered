@@ -10,13 +10,13 @@
 	INCBIN "gfx/pokemon/front/gloom.pic", 0, 1 ; sprite dimensions
 	dw GloomPicFront, GloomPicBack
 
-	db ABSORB, GROWTH, POISONPOWDER, STUN_SPORE ; level 1 learnset
+	db ABSORB, CALM_MIND, POISONPOWDER, STUN_SPORE ; level 1 learnset
 	db GROWTH_MEDIUM_SLOW ; growth rate
 
 	; tm/hm learnset
 	tmhm SWORDS_DANCE, TOXIC,        DOUBLE_EDGE,  SLUDGE,       DAZZLE,       \
 	     MEGA_DRAIN,   SOLARBEAM,    MIMIC,        DOUBLE_TEAM,  REFLECT,      \
-	     REST,         SUBSTITUTE,   CUT,          FLASH
+	     REST,         SUBSTITUTE,   CALM_MIND,    CUT,          FLASH
 	; end
 
 	db 0 ; padding

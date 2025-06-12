@@ -74,7 +74,7 @@ MoveSoundTable:
 	db SFX_BATTLE_24,          $00, $80 ; ABSORB
 	db SFX_BATTLE_24,          $40, $c0 ; MEGA_DRAIN
 	db SFX_BATTLE_1B,          $03, $60 ; LEECH_SEED
-	db SFX_BATTLE_25,          $11, $e0 ; GROWTH
+	db SFX_BATTLE_25,          $11, $e0 ; CALM_MIND
 	db SFX_BATTLE_12,          $20, $e0 ; RAZOR_LEAF
 	db SFX_BATTLE_2E,          $00, $80 ; SOLARBEAM
 	db SFX_BATTLE_1C,          $00, $80 ; POISONPOWDER

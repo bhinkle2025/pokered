@@ -15,7 +15,7 @@
 
 	; tm/hm learnset
 	tmhm TOXIC,        BODY_SLAM,    GIGA_IMPACT,  DOUBLE_EDGE,  HYPER_BEAM,   \
-	     DRAGON_RAGE,  DIG,          TELEPORT,     MIMIC,        SOLARBEAM,    \
+	     DRAGON_RAGE,  DIG,          MIMIC,        SOLARBEAM,    \
 	     DOUBLE_TEAM,  REFLECT,      FIRE_BLAST,   SWIFT,        \
 	     SKULL_BASH,   REST,         SUBSTITUTE,   FLAMETHROWER, OUTRAGE,      \
 		 STRENGTH

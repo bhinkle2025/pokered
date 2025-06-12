@@ -15,7 +15,7 @@
 
 	; tm/hm learnset
 	tmhm TOXIC,        GIGA_IMPACT,  DOUBLE_EDGE,  HYPER_BEAM,   EARTHQUAKE,   \
-	     MEGA_DRAIN,   SOLARBEAM,    PSYCHIC_M,    TELEPORT,     MIMIC,        \
+	     MEGA_DRAIN,   SOLARBEAM,    PSYCHIC_M,    CALM_MIND,     MIMIC,       \
 	     DOUBLE_TEAM,  REFLECT,      SELFDESTRUCT, \
 	     REST,         EXPLOSION,    SUBSTITUTE,   SWORDS_DANCE, \
 		 DREAM_EATER,  SLUDGE,       STRENGTH,     FLASH

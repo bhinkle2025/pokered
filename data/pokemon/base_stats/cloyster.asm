@@ -15,7 +15,7 @@
 
 	; tm/hm learnset
 	tmhm TOXIC,        GIGA_IMPACT,  DOUBLE_EDGE,  BUBBLEBEAM,   IRON_DEFENSE, \
-	     ICE_BEAM,     BLIZZARD,     HYPER_BEAM,   TELEPORT,     \
+	     ICE_BEAM,     BLIZZARD,     HYPER_BEAM,   \
 	     MIMIC,        DOUBLE_TEAM,  REFLECT,      SELFDESTRUCT, \
 	     SWIFT,        REST,         EXPLOSION,    TRI_ATTACK,   SUBSTITUTE,   \
 	     SURF

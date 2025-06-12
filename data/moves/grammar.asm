@@ -1,7 +1,6 @@
 ExclamationPointMoveSets:
 ; set 0
 	db SWORDS_DANCE
-	db GROWTH
 	db 0 ; end set
 
 ; set 1

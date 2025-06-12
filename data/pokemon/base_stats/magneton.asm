@@ -15,7 +15,7 @@
 
 	; tm/hm learnset
 	tmhm TOXIC,        GIGA_IMPACT,  DOUBLE_EDGE,  HYPER_BEAM,   IRON_DEFENSE, \
-	     THUNDERBOLT,  THUNDER,      TELEPORT,     MIMIC,        DOUBLE_TEAM,  \
+	     THUNDERBOLT,  THUNDER,      MIMIC,        DOUBLE_TEAM,  \
 	     REFLECT,      SWIFT,        REST,         THUNDER_WAVE, \
 	     SUBSTITUTE,   FLASH
 	; end
