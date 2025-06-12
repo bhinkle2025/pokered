@@ -2319,29 +2319,12 @@ UseBagItem:
 
 .returnAfterCapturingMon
 	call GBPalNormal
-	and     a         
-	ret     z 
-	call	DelayFrames
-	call	DelayFrames
-
-
-	callfar GainExperience   ; 1) do EXP math, “X gained Y EXP!”, “X evolved into Z!” animation, etc.
-	call LoadScreenTilesFromBuffer1  
-    ; ← Force the PPU to redraw the original battle window tiles, 
-    ;    ensuring no leftovers remain once we exit.
-	call RunPaletteCommand  
-	call LoadScreenTilesFromBuffer1
-	; ← Reset palettes (same step that battle‐cleanup normally does).
-	xor     a
-	ldh     [hAutoBGTransferEnabled], a
-
-    ; — Now clear species, set battle result & exit battle — 
-    xor a
-    ld  [wCapturedMonSpecies], a
-    ld  a, $02
-    ld  [wBattleResult], a
-    scf                      ; RET C below tears down the battle
-    ret
+	xor a
+	ld [wCapturedMonSpecies], a
+	ld a, $2
+	ld [wBattleResult], a
+	scf ; set carry
+	ret
 
 ItemsCantBeUsedHereText:
 	text_far _ItemsCantBeUsedHereText
