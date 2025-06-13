@@ -36,23 +36,22 @@ SpecialTrainerMoves:
 	db 0
 
 	db ERIKA, 1
-	db 1, 3, SWORDS_DANCE
+	db 1, 1, SWORDS_DANCE
 	db 2, 1, AMNESIA
-	db 2, 2, MEGA_DRAIN
+	db 2, 3, MEGA_DRAIN
 	db 3, 2, MEGA_DRAIN
 	db 3, 1, SOLARBEAM
 	db 0
 
 	db KOGA, 1
-	db 1, 1, TOXIC
-	db 1, 3, FIRE_BLAST
-	db 2, 1, TOXIC
-	db 2, 4, BODY_SLAM
+	db 1, 1, SELFDESTRUCT
+	db 1, 2, FIRE_BLAST
+	db 2, 2, ICE_PUNCH
 	db 3, 1, FLY
-	db 3, 3, TOXIC
-	db 3, 4, DOUBLE_TEAM
-	db 4, 1, TOXIC
-	db 4, 2, BUG_BUZZ
+	db 3, 3, LEECH_LIFE
+	db 3, 2, DOUBLE_TEAM
+	db 4, 1, AMNESIA
+	db 4, 2, SLEEP_POWDER
 	db 4, 3, SLUDGE
 	db 0
 

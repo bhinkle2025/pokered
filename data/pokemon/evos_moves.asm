@@ -1669,7 +1669,7 @@ MukEvosMoves:
 	db 12, MINIMIZE
 	db 24, ACID
 	db 30, SCREECH
-	db 35, SLUDGE
+	db 35, TOXIC
 	db 42, ACID_ARMOR
 	db 48, SLUDGE
 	db 0
@@ -2086,8 +2086,8 @@ CharmanderEvosMoves:
 	db 0
 ; Learnset
 	db 7, EMBER
-	db 8, SMOKESCREEN
-	db 12, DRAGON_RAGE
+	db 10, SMOKESCREEN
+	db 14, DRAGON_RAGE
 	db 17, FIRE_FANG
 	db 20, SLASH
 	db 24, FLAMETHROWER
@@ -2219,7 +2219,7 @@ VileplumeEvosMoves:
 	db 0
 ; Learnset
 	db 50, TOXIC
-	db 54, PETAL_DANCE
+	db 54, MOONBLAST
 	db 60, SOLARBEAM
 	db 0
 

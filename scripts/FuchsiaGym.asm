@@ -45,21 +45,21 @@ FuchsiaGymKogaPostBattleScript:
 	ld a, D_RIGHT | D_LEFT | D_UP | D_DOWN
 	ld [wJoyIgnore], a
 ; fallthrough
-FuchsiaGymReceiveTM06:
+FuchsiaGymReceiveTM07:
 	ld a, TEXT_FUCHSIAGYM_KOGA_SOUL_BADGE_INFO
 	ldh [hTextID], a
 	call DisplayTextID
 	SetEvent EVENT_BEAT_KOGA
-	lb bc, TM_TOXIC, 1
+	lb bc, TM_SLUDGE, 1
 	call GiveItem
 	jr nc, .BagFull
-	ld a, TEXT_FUCHSIAGYM_KOGA_RECEIVED_TM06
+	ld a, TEXT_FUCHSIAGYM_KOGA_RECEIVED_TM07
 	ldh [hTextID], a
 	call DisplayTextID
-	SetEvent EVENT_GOT_TM06
+	SetEvent EVENT_GOT_TM07
 	jr .gymVictory
 .BagFull
-	ld a, TEXT_FUCHSIAGYM_KOGA_TM06_NO_ROOM
+	ld a, TEXT_FUCHSIAGYM_KOGA_TM07_NO_ROOM
 	ldh [hTextID], a
 	call DisplayTextID
 .gymVictory
@@ -84,8 +84,8 @@ FuchsiaGym_TextPointers:
 	dw_const FuchsiaGymRocker6Text,           TEXT_FUCHSIAGYM_ROCKER6
 	dw_const FuchsiaGymGymGuideText,          TEXT_FUCHSIAGYM_GYM_GUIDE
 	dw_const FuchsiaGymKogaSoulBadgeInfoText, TEXT_FUCHSIAGYM_KOGA_SOUL_BADGE_INFO
-	dw_const FuchsiaGymKogaReceivedTM06Text,  TEXT_FUCHSIAGYM_KOGA_RECEIVED_TM06
-	dw_const FuchsiaGymKogaTM06NoRoomText,    TEXT_FUCHSIAGYM_KOGA_TM06_NO_ROOM
+	dw_const FuchsiaGymKogaReceivedTM07Text,  TEXT_FUCHSIAGYM_KOGA_RECEIVED_TM07
+	dw_const FuchsiaGymKogaTM07NoRoomText,    TEXT_FUCHSIAGYM_KOGA_TM07_NO_ROOM
 
 FuchsiaGymTrainerHeaders:
 	def_trainers 2
@@ -107,9 +107,9 @@ FuchsiaGymKogaText:
 	text_asm
 	CheckEvent EVENT_BEAT_KOGA
 	jr z, .beforeBeat
-	CheckEventReuseA EVENT_GOT_TM06
+	CheckEventReuseA EVENT_GOT_TM07
 	jr nz, .afterBeat
-	call z, FuchsiaGymReceiveTM06
+	call z, FuchsiaGymReceiveTM07
 	call DisableWaitingAfterTextDisplay
 	jr .done
 .afterBeat
@@ -154,14 +154,14 @@ FuchsiaGymKogaSoulBadgeInfoText:
 	text_far _FuchsiaGymKogaSoulBadgeInfoText
 	text_end
 
-FuchsiaGymKogaReceivedTM06Text:
-	text_far _FuchsiaGymKogaReceivedTM06Text
+FuchsiaGymKogaReceivedTM07Text:
+	text_far _FuchsiaGymKogaReceivedTM07Text
 	sound_get_key_item
-	text_far _FuchsiaGymKogaTM06ExplanationText
+	text_far _FuchsiaGymKogaTM07ExplanationText
 	text_end
 
-FuchsiaGymKogaTM06NoRoomText:
-	text_far _FuchsiaGymKogaTM06NoRoomText
+FuchsiaGymKogaTM07NoRoomText:
+	text_far _FuchsiaGymKogaTM07NoRoomText
 	text_end
 
 FuchsiaGymRocker1Text:

@@ -1,12 +1,12 @@
 _FuchsiaGymKogaPostBattleAdviceText::
-	text "When afflicted by"
-	line "TOXIC, #MON"
-	cont "suffer more and"
-	cont "more as battle"
-	cont "progresses!"
+	text "When hit by"
+	line "SLUDGE, #MON"
+	cont "may be poisoned!"
 
-	para "It will surely"
-	line "terrorize foes!"
+	para "It's toxic goo"
+	line "will surely"
+	cont "terrorize your" 
+	cont "foes!"
 	done
 
 _FuchsiaGymKogaSoulBadgeInfoText::
@@ -24,24 +24,24 @@ _FuchsiaGymKogaSoulBadgeInfoText::
 	line "too!"
 	done
 
-_FuchsiaGymKogaReceivedTM06Text::
+_FuchsiaGymKogaReceivedTM07Text::
 	text "<PLAYER> received"
 	line "@"
 	text_ram wStringBuffer
 	text "!@"
 	text_end
 
-_FuchsiaGymKogaTM06ExplanationText::
+_FuchsiaGymKogaTM07ExplanationText::
 	text_start
-	para "TM06 contains"
-	line "TOXIC!"
+	para "TM07 contains"
+	line "SLUDGE!"
 
-	para "It is a secret"
-	line "technique over"
-	cont "400 years old!"
+	para "A poisonous"
+	line "attack used for"
+	cont "generations!"
 	done
 
-_FuchsiaGymKogaTM06NoRoomText::
+_FuchsiaGymKogaTM07NoRoomText::
 	text "Make space for"
 	line "this, child!"
 	done
