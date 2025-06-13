@@ -24,39 +24,8 @@ ApplyOutOfBattlePoisonDamage:
 	ld a, [hli]
 	or b
 	jr z, .nextMon ; already fainted
-; subtract 1 from HP
-	ld a, [hl]
-	dec a
-	ld [hld], a
-	inc a
-	jr nz, .noBorrow
-; borrow 1 from upper byte of HP
-	dec [hl]
-	inc hl
+; Out-of-battle poison disabled: skip damage/fainting
 	jr .nextMon
-.noBorrow
-	ld a, [hli]
-	or [hl]
-	jr nz, .nextMon ; didn't faint from damage
-; the mon fainted from the damage
-	push hl
-	inc hl
-	inc hl
-	ld [hl], a
-	ld a, [de]
-	ld [wPokedexNum], a
-	push de
-	ld a, [wWhichPokemon]
-	ld hl, wPartyMonNicks
-	call GetPartyMonName
-	xor a
-	ld [wJoyIgnore], a
-	call EnableAutoTextBoxDrawing
-	ld a, TEXT_MON_FAINTED
-	ldh [hTextID], a
-	call DisplayTextID
-	pop de
-	pop hl
 .nextMon
 	inc hl
 	inc hl
@@ -89,10 +58,6 @@ ApplyOutOfBattlePoisonDamage:
 	ld a, e
 	and a ; are any party members poisoned?
 	jr z, .skipPoisonEffectAndSound
-	ld b, $2
-	predef ChangeBGPalColor0_4Frames ; change BG white to dark grey for 4 frames
-	ld a, SFX_POISONED
-	call PlaySound
 .skipPoisonEffectAndSound
 	predef AnyPartyAlive
 	ld a, d
