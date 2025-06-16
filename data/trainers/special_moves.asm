@@ -46,7 +46,7 @@ SpecialTrainerMoves:
 	db KOGA, 1
 	db 1, 1, SELFDESTRUCT
 	db 1, 2, FIRE_BLAST
-	db 2, 2, ICE_PUNCH
+	db 2, 2, REST
 	db 3, 1, FLY
 	db 3, 3, LEECH_LIFE
 	db 3, 2, DOUBLE_TEAM
@@ -63,10 +63,10 @@ SpecialTrainerMoves:
 	db 2, 4, FLARE_BLITZ
 	db 3, 1, SOLARBEAM
 	db 3, 2, NIGHT_SHADE
-	db 3, 3, CONFUSE_RAY
+	db 3, 3, CALM_MIND
 	db 3, 4, FIRE_BLAST
 	db 4, 1, GIGA_IMPACT
-	db 4, 3, QUICK_ATTACK
+	db 4, 2, QUICK_ATTACK
 	db 4, 4, SOLARBEAM
 	db 5, 1, FLARE_BLITZ
 	db 5, 2, REST
@@ -79,10 +79,10 @@ SpecialTrainerMoves:
 	db 2, 1, LOVELY_KISS
 	db 2, 2, PSYCHIC_M
 	db 2, 3, BLIZZARD
-	db 2, 4, NIGHT_SHADE
+	db 2, 4, CALM_MIND
 	db 3, 1, SURF
 	db 3, 2, AMNESIA
-	db 4, 1, HYPER_BEAM
+	db 4, 1, CALM_MIND
 	db 0
 
 	db GIOVANNI, 3

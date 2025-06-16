@@ -756,7 +756,7 @@ ParasectEvosMoves:
 
 PsyduckEvosMoves:
 ; Evolutions
-	db EVOLVE_LEVEL, 33, GOLDUCK
+	db EVOLVE_LEVEL, 28, GOLDUCK
 	db 0
 ; Learnset
 	db 6, CONFUSION
@@ -1199,7 +1199,7 @@ KabutopsEvosMoves:
 
 HorseaEvosMoves:
 ; Evolutions
-	db EVOLVE_LEVEL, 32, SEADRA
+	db EVOLVE_LEVEL, 30, SEADRA
 	db 0
 ; Learnset
 	db 18, BUBBLEBEAM
@@ -1881,7 +1881,7 @@ MissingNo9CEvosMoves:
 
 GoldeenEvosMoves:
 ; Evolutions
-	db EVOLVE_LEVEL, 33, SEAKING
+	db EVOLVE_LEVEL, 30, SEAKING
 	db 0
 ; Learnset
 	db  4, SUPERSONIC
@@ -1930,7 +1930,7 @@ MissingNoA2EvosMoves:
 
 PonytaEvosMoves:
 ; Evolutions
-	db EVOLVE_LEVEL, 40, RAPIDASH
+	db EVOLVE_LEVEL, 38, RAPIDASH
 	db 0
 ; Learnset
 	db 10, QUICK_ATTACK
