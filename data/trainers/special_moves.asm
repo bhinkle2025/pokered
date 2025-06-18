@@ -16,8 +16,7 @@ SpecialTrainerMoves:
 	db BROCK, 1
 	db 1, 1, MEGA_PUNCH
 	db 1, 4, THUNDERPUNCH
-	db 2, 1, BODY_SLAM
-	db 2, 4, ROCK_SLIDE
+	db 2, 3, ROCK_SLIDE
 	db 0
 
 	db MISTY, 1
@@ -100,24 +99,19 @@ SpecialTrainerMoves:
 	db 4, 2, FIRE_PUNCH
 	db 4, 3, THUNDER
 	db 4, 4, ACID
-	db 5, 1, ROCK_SLIDE
+	db 5, 1, EARTHQUAKE
 	db 5, 2, SWORDS_DANCE
 	db 5, 3, GIGA_IMPACT
-	db 5, 4, EARTHQUAKE
 	db 0
 
 	db LORELEI, 1
-	db 1, 1, SURF
-	db 1, 2, ICE_BEAM
+	db 1, 2, SURF
 	db 2, 4, IRON_DEFENSE
-	db 3, 1, PSYCHIC_M
 	db 3, 1, SURF
-	db 3, 3, ICE_BEAM
-	db 4, 1, BLIZZARD
-	db 4, 2, NIGHT_SHADE
-	db 4, 3, LOVELY_KISS
-	db 4, 4, PSYCHIC_M
-	db 5, 3, BLIZZARD
+	db 3, 2, ICE_BEAM
+	db 4, 1, NIGHT_SHADE
+	db 4, 2, LOVELY_KISS
+	db 5, 1, BLIZZARD
 	db 0
 
 	db BRUNO, 1

@@ -596,10 +596,11 @@ OnixEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
+	db 10, RAGE
 	db 15, HARDEN
-	db 19, ROCK_SLIDE
-	db 25, RAGE
-	db 30, SKULL_BASH
+	db 20, SHARPEN
+	db 25, SKULL_BASH
+	db 30, ROCK_SLIDE
 	db 35, EARTHQUAKE
 	db 0
 
@@ -1493,8 +1494,8 @@ DugtrioEvosMoves:
 	db 0
 ; Learnset
 	db 8, GROWL
+	db 15, FURY_SWIPES
 	db 18, DIG
-	db 24, SAND_ATTACK
 	db 21, SLASH
 	db 35, EARTHQUAKE
 	db 0
