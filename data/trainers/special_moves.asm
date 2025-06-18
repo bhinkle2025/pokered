@@ -115,11 +115,13 @@ SpecialTrainerMoves:
 	db 0
 
 	db BRUNO, 1
-	db 1, 2, EXPLOSION
-	db 1, 3, DOUBLE_TEAM 
-	db 2, 3, MEGA_PUNCH
-	db 2, 4, SUBMISSION
+	db 1, 1, EXPLOSION
+	db 1, 2, DOUBLE_TEAM 
+	db 2, 3, SUBMISSION
 	db 3, 1, SWORDS_DANCE
+	db 3, 2, BLAZE_KICK
+	db 4, 1, ICE_PUNCH
+	db 4, 3, WATERFALL
 	db 4, 4, SUBMISSION
 	db 5, 1, EARTHQUAKE
 	db 5, 2, ROCK_SLIDE
