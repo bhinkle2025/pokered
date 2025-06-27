@@ -132,14 +132,16 @@ SpecialTrainerMoves:
 	db 1, 2, CONFUSE_RAY
 	db 1, 3, LEECH_LIFE
 	db 1, 4, MEGA_DRAIN
-	db 2, 2, SWORDS_DANCE
-	db 2, 3, SHADOW_CLAW
-	db 2, 4, DOUBLE_TEAM
-	db 3, 3, GLARE
+	db 2, 1, SHADOW_CLAW
+	db 2, 2, DOUBLE_TEAM
+	db 3, 1, BITE
+	db 3, 2, GLARE
 	db 3, 4, WRAP
-	db 4, 2, PSYCHIC_M
-	db 4, 4, SLUDGE
-	db 5, 2, SLUDGE
+	db 4, 2, SLUDGE
+	db 4, 3, HYPNOSIS
+	db 5, 2, HYPNOSIS
+	db 5, 3, DREAM_EATER
+	db 5, 4, CALM_MIND
 	db 0
 
 	db LANCE, 1
