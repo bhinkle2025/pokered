@@ -149,12 +149,11 @@ SpecialTrainerMoves:
 	db 1, 3, WATERFALL
 	db 2, 1, THUNDER_WAVE
 	db 2, 2, ICE_BEAM
-	db 3, 1, DRAGON_RAGE
-	db 3, 2, HYPER_BEAM
-	db 3, 3, ICE_BEAM
+	db 3, 1, HYPER_BEAM
+	db 3, 2, ICE_BEAM
 	db 4, 1, FLY
 	db 4, 2, DRAGON_CLAW
-	db 5, 1, FLY
+	db 5, 2, FLY
 	db 5, 3, GIGA_IMPACT
 	db 5, 4, THUNDERPUNCH
 	db 0
