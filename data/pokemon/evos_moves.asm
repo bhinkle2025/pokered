@@ -1822,7 +1822,7 @@ PidgeotEvosMoves:
 	db 15, WING_ATTACK
 	db 25, WHIRLWIND
 	db 31, AGILITY
-	db 43, HURRICANE
+	db 44, HURRICANE
 	db 0
 
 StarmieEvosMoves:

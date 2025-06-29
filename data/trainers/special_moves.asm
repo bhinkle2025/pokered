@@ -158,35 +158,51 @@ SpecialTrainerMoves:
 	db 5, 4, THUNDERPUNCH
 	db 0
 
-	db RIVAL3, 1
+	db RIVAL3, 1 ; Blastoise Team
+	db 1, 1, SKY_ATTACK
+	db 1, 2, GIGA_IMPACT
 	db 1, 3, STEEL_WING
-	db 2, 4, PSYCHIC_M
-	db 3, 4, EARTHQUAKE
-	db 4, 1, PSYCHIC_M
-	db 5, 1, CONFUSE_RAY
-	db 5, 4, GIGA_IMPACT
-	db 6, 3, QUICK_ATTACK
+	db 2, 1, HYPER_BEAM
+	db 3, 1, SWORDS_DANCE
+	db 3, 4, GIGA_IMPACT
+	db 4, 1, FLARE_BLITZ
+	db 5, 2, MEGA_DRAIN
+	db 5, 4, CALM_MIND
+	db 6, 1, ICE_PUNCH
+	db 6, 3, GIGA_IMPACT
 	db 0
 
-	db RIVAL3, 2
+	db RIVAL3, 2 ; Venusaur Team
+	db 1, 1, SKY_ATTACK
+	db 1, 2, GIGA_IMPACT
 	db 1, 3, STEEL_WING
-	db 2, 4, PSYCHIC_M
-	db 3, 4, EARTHQUAKE
-	db 4, 1, THUNDERBOLT
-	db 5, 1, ICE_BEAM
-	db 6, 2, BLIZZARD
-	db 6, 3, DIG
+	db 2, 1, HYPER_BEAM
+	db 3, 1, SWORDS_DANCE
+	db 3, 4, GIGA_IMPACT
+	db 4, 1, WATERFALL
+	db 4, 3, ICE_BEAM
+	db 4, 4, EARTHQUAKE
+	db 5, 1, FLARE_BLITZ
+	db 6, 1, SLUDGE
+	db 6, 3, MEGA_DRAIN
 	db 0
 
-	db RIVAL3, 3
+	db RIVAL3, 3 ; Charizard Team
+	db 1, 1, SKY_ATTACK
+	db 1, 2, GIGA_IMPACT
 	db 1, 3, STEEL_WING
-	db 2, 4, PSYCHIC_M
-	db 3, 4, EARTHQUAKE
-	db 4, 1, CONFUSE_RAY
-	db 4, 4, FIRE_SPIN
-	db 5, 1, THUNDERBOLT
-	db 6, 2, MEGA_DRAIN
-	db 6, 4, SOLARBEAM
+	db 2, 1, HYPER_BEAM
+	db 3, 1, SWORDS_DANCE
+	db 3, 4, GIGA_IMPACT
+	db 4, 2, MEGA_DRAIN
+	db 4, 4, CALM_MIND
+	db 5, 1, WATERFALL
+	db 5, 3, ICE_BEAM
+	db 4, 4, EARTHQUAKE
+	db 6, 1, EARTHQUAKE
+	db 6, 2, THUNDERPUNCH
+	db 6, 3, FIRE_PUNCH
+	db 6, 4, SWORDS_DANCE
 	db 0
 
 	db -1 ; end
