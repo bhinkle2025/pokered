@@ -14,7 +14,7 @@
 	db GROWTH_MEDIUM_FAST ; growth rate
 
 	; tm/hm learnset
-	tmhm TOXIC,        GIGA_IMPACT,  DOUBLE_EDGE,  BUBBLEBEAM,   \
+	tmhm GIGA_IMPACT,  DOUBLE_EDGE,  BUBBLEBEAM,   \
 	     ICE_BEAM,     BLIZZARD,     HYPER_BEAM,   MIMIC,        OUTRAGE,      \
 	     DOUBLE_TEAM,  SWIFT,        SKULL_BASH,   REST,         \
 	     SUBSTITUTE,   SURF,         DRAGON_RAGE,  FLASH

@@ -169,7 +169,9 @@ SpecialTrainerMoves:
 	db 5, 2, MEGA_DRAIN
 	db 5, 4, CALM_MIND
 	db 6, 1, ICE_PUNCH
-	db 6, 3, GIGA_IMPACT
+	db 6, 2, HYDRO_PUMP
+	db 6, 3, IRON_DEFENSE
+	db 6, 4, GIGA_IMPACT
 	db 0
 
 	db RIVAL3, 2 ; Venusaur Team

@@ -14,7 +14,7 @@
 	db GROWTH_SLOW ; growth rate
 
 	; tm/hm learnset
-	tmhm TOXIC,        DOUBLE_EDGE,  BUBBLEBEAM,   DAZZLE,       \
+	tmhm DOUBLE_EDGE,  BUBBLEBEAM,   DAZZLE,       LIGHT_SCREEN, \
 	     ICE_BEAM,     BLIZZARD,     THUNDERBOLT,  THUNDER,      \
 	     PSYCHIC_M,    MIMIC,        DOUBLE_TEAM,  REFLECT,      \
 	     SWIFT,        SKULL_BASH,   REST,         THUNDER_WAVE, \

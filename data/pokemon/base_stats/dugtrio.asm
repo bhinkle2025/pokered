@@ -14,7 +14,7 @@
 	db GROWTH_MEDIUM_FAST ; growth rate
 
 	; tm/hm learnset
-	tmhm TOXIC,        BODY_SLAM,    GIGA_IMPACT,  DOUBLE_EDGE,  HYPER_BEAM,   \
+	tmhm BODY_SLAM,    GIGA_IMPACT,  DOUBLE_EDGE,  HYPER_BEAM,   \
 	     EARTHQUAKE,   DIG,          MIMIC,        SWORDS_DANCE, SHADOW_CLAW,  \
 	     DOUBLE_TEAM,  REST,         ROCK_SLIDE,   SLUDGE,       \
 		 SUBSTITUTE, CUT

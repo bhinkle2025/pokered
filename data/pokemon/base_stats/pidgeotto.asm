@@ -14,7 +14,7 @@
 	db GROWTH_MEDIUM_SLOW ; growth rate
 
 	; tm/hm learnset
-	tmhm TOXIC,        DOUBLE_EDGE,  STEEL_WING,   \
+	tmhm DOUBLE_EDGE,  STEEL_WING,   \
 	     MIMIC,        DOUBLE_TEAM,  REFLECT,      \
 	     SWIFT,        SKY_ATTACK,   REST,         SUBSTITUTE,   FLY
 	; end

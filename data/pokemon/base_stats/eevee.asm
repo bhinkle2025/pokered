@@ -14,7 +14,7 @@
 	db GROWTH_MEDIUM_FAST ; growth rate
 
 	; tm/hm learnset
-	tmhm TOXIC,        BODY_SLAM,    DOUBLE_EDGE,  DIG,          \
+	tmhm BODY_SLAM,    DOUBLE_EDGE,  DIG,          \
 	     MIMIC,        DOUBLE_TEAM,  REFLECT,      SWIFT,        \
 	     SKULL_BASH,   REST,         SUBSTITUTE,   NIGHT_SHADE,  \
 		 CALM_MIND

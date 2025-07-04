@@ -14,10 +14,10 @@
 	db GROWTH_MEDIUM_FAST ; growth rate
 
 	; tm/hm learnset
-	tmhm MEGA_PUNCH,   MEGA_KICK,    TOXIC,        BODY_SLAM,    GIGA_IMPACT,  \
+	tmhm MEGA_PUNCH,   MEGA_KICK,    BODY_SLAM,    GIGA_IMPACT,  \
 	     DOUBLE_EDGE,  HYPER_BEAM,   SUBMISSION,   SEISMIC_TOSS, THUNDERPUNCH, \
 	     THUNDERBOLT,  THUNDER,      MIMIC,        DOUBLE_TEAM,  CALM_MIND,    \
-	     REFLECT,      SWIFT,        SKULL_BASH,   REST,         \
+	     REFLECT,      SWIFT,        SKULL_BASH,   REST,         LIGHT_SCREEN, \
 	     THUNDER_WAVE, SUBSTITUTE,   FLASH,        SURF,         STRENGTH
 	; end
 

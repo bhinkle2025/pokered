@@ -14,7 +14,7 @@
 	db GROWTH_MEDIUM_FAST ; growth rate
 
 	; tm/hm learnset
-	tmhm TOXIC,        GIGA_IMPACT,  HYPER_BEAM,   THUNDERBOLT,  \
+	tmhm GIGA_IMPACT,  HYPER_BEAM,   THUNDERBOLT,  LIGHT_SCREEN, \
 	     THUNDER,      MIMIC,        DOUBLE_TEAM,  REFLECT,      \
 	     SELFDESTRUCT, SWIFT,        SKULL_BASH,   REST,         \
 	     THUNDER_WAVE, EXPLOSION,    SUBSTITUTE,   FLASH

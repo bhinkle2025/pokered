@@ -14,10 +14,10 @@
 	db GROWTH_SLOW ; growth rate
 
 	; tm/hm learnset
-	tmhm TOXIC,        BODY_SLAM,    GIGA_IMPACT,  ICE_PUNCH,    OUTRAGE,      \
+	tmhm BODY_SLAM,    GIGA_IMPACT,  ICE_PUNCH,    OUTRAGE,      \
 	     DOUBLE_EDGE,  BUBBLEBEAM,   ICE_BEAM,     BLIZZARD,     STEEL_WING,   \
 	     HYPER_BEAM,   FIRE_PUNCH,   DRAGON_RAGE,  THUNDERBOLT,  THUNDER,      \
-	     MIMIC,        DOUBLE_TEAM,  REFLECT,      FIRE_BLAST,   \
+	     MIMIC,        DOUBLE_TEAM,  REFLECT,      LIGHT_SCREEN, FIRE_BLAST,   \
 	     SWIFT,        SKULL_BASH,   REST,         THUNDER_WAVE, SUBSTITUTE,   \
 	     THUNDERPUNCH, ROCK_SLIDE,   EARTHQUAKE,   FLAMETHROWER, SURF,         \
 		 STRENGTH,     CUT,          FLY

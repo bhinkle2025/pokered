@@ -14,7 +14,7 @@
 	db GROWTH_MEDIUM_SLOW ; growth rate
 
 	; tm/hm learnset
-	tmhm SWORDS_DANCE, TOXIC,        BODY_SLAM,    GIGA_IMPACT,  DOUBLE_EDGE,  \
+	tmhm SWORDS_DANCE, BODY_SLAM,    GIGA_IMPACT,  DOUBLE_EDGE,  LIGHT_SCREEN, \
 	     HYPER_BEAM,   MEGA_DRAIN,   SOLARBEAM,    MIMIC,        EARTHQUAKE,   \
 	     DOUBLE_TEAM,  REFLECT,      REST,         SUBSTITUTE,   CALM_MIND,    \
 	     SLUDGE,       OUTRAGE,      CUT,          STRENGTH,     FLASH

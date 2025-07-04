@@ -14,8 +14,8 @@
 	db GROWTH_SLOW ; growth rate
 
 	; tm/hm learnset
-	tmhm TOXIC,        GIGA_IMPACT,  DOUBLE_EDGE,  BUBBLEBEAM,   IRON_DEFENSE, \
-	     ICE_BEAM,     BLIZZARD,     HYPER_BEAM,   \
+	tmhm GIGA_IMPACT,  DOUBLE_EDGE,  BUBBLEBEAM,   IRON_DEFENSE, \
+	     ICE_BEAM,     BLIZZARD,     HYPER_BEAM,   LIGHT_SCREEN, \
 	     MIMIC,        DOUBLE_TEAM,  REFLECT,      SELFDESTRUCT, \
 	     SWIFT,        REST,         EXPLOSION,    TRI_ATTACK,   SUBSTITUTE,   \
 	     SURF

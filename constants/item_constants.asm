@@ -162,7 +162,7 @@ DEF TM01 EQU const_value
 	add_tm SWORDS_DANCE ; $CB
 	add_tm FIRE_PUNCH   ; $CC
 	add_tm MEGA_KICK    ; $CD
-	add_tm TOXIC        ; $CE
+	add_tm LIGHT_SCREEN ; $CE
 	add_tm SLUDGE       ; $CF
 	add_tm BODY_SLAM    ; $D0
 	add_tm GIGA_IMPACT  ; $D1

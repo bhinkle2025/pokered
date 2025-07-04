@@ -14,7 +14,7 @@
 	db GROWTH_MEDIUM_FAST ; growth rate
 
 	; tm/hm learnset
-	tmhm TOXIC,        DOUBLE_EDGE,  SLUDGE,       \
+	tmhm DOUBLE_EDGE,  SLUDGE,       \
 	     MEGA_DRAIN,   MIMIC,        DOUBLE_TEAM,  CALM_MIND,    \
 	     SWIFT,        REST,         SUBSTITUTE,   NIGHT_SHADE,  \
 		 STEEL_WING,   FLY
