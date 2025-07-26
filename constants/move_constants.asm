@@ -139,7 +139,7 @@
 	const SPIKE_CANNON ; 83
 	const POWER_WHIP   ; 84
 	const AMNESIA      ; 85
-	const STEEL_WING   ; 86
+	const BUG_BUZZ     ; 86
 	const SOFTBOILED   ; 87
 	const HI_JUMP_KICK ; 88
 	const GLARE        ; 89
@@ -170,7 +170,7 @@
 	const SUPER_FANG   ; a2
 	const SLASH        ; a3
 	const SUBSTITUTE   ; a4
-	const BUG_BUZZ     ; a5
+	const STEEL_WING   ; a5
 	const HURRICANE    ; a5
 	const FLARE_BLITZ  ; a5
 	const FIRE_FANG    ; a5

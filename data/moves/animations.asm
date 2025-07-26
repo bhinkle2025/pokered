@@ -133,7 +133,7 @@ AttackAnimationPointers:
 	dw SpikeCannonAnim
 	dw PowerWhipAnim
 	dw AmnesiaAnim
-	dw SteelWingAnim
+	dw BugBuzzAnim
 	dw SoftboiledAnim
 	dw HiJumpKickAnim
 	dw GlareAnim
@@ -164,7 +164,7 @@ AttackAnimationPointers:
 	dw SuperFangAnim
 	dw SlashAnim
 	dw SubstituteAnim
-	dw BugBuzzAnim
+	dw SteelWingAnim
 	dw HurricaneAnim
 	dw FlareBlitzAnim
 	dw FireFangAnim

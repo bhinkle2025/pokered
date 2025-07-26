@@ -134,7 +134,7 @@ MoveSoundTable:
 	db SFX_BATTLE_26,          $1f, $18 ; SPIKE_CANNON
 	db SFX_BATTLE_20,          $0f, $80 ; POWER_WHIP
 	db SFX_BATTLE_09,          $f8, $10 ; AMNESIA
-	db SFX_NOT_VERY_EFFECTIVE, $01, $ff ; STEEL_WING
+	db SFX_PSYBEAM,            $01, $ff ; STEEL_WING
 	db SFX_BATTLE_32,          $08, $40 ; SOFTBOILED
 	db SFX_BATTLE_17,          $01, $e0 ; HI_JUMP_KICK
 	db SFX_NOT_VERY_EFFECTIVE, $09, $ff ; GLARE
@@ -165,7 +165,7 @@ MoveSoundTable:
 	db SFX_BATTLE_26,          $f0, $ff ; SUPER_FANG
 	db SFX_NOT_VERY_EFFECTIVE, $01, $ff ; SLASH
 	db SFX_BATTLE_2C,          $d8, $04 ; SUBSTITUTE
-	db SFX_PSYBEAM,            $00, $80 ; BUG BUZZ
+	db SFX_NOT_VERY_EFFECTIVE, $00, $80 ; STEEL_WING
 	db SFX_BATTLE_13,          $00, $e0 ; HURRICANE
 	db SFX_BATTLE_20,          $00, $c0 ; FLARE_BLITZ
 	db SFX_BATTLE_1E,          $00, $80 ; FIRE_FANG

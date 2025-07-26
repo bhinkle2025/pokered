@@ -144,7 +144,7 @@ Moves:
 	move SPIKE_CANNON, TWO_TO_FIVE_ATTACKS_EFFECT,  20, NORMAL,       100, 15
 	move POWER_WHIP,   NO_ADDITIONAL_EFFECT,       120, GRASS,         85, 10
 	move AMNESIA,      SPECIAL_UP2_EFFECT,           0, STAT,         100, 20
-	move STEEL_WING,   NO_ADDITIONAL_EFFECT,        70, STEEL,         90, 25
+	move BUG_BUZZ,     SPECIAL_DOWN_SIDE_EFFECT,    90, BUG,          100, 10
 	move SOFTBOILED,   HEAL_EFFECT,                  0, NORMAL,       100, 10
 	move HI_JUMP_KICK, JUMP_KICK_EFFECT,           135, FIGHTING,      90, 20
 	move GLARE,        PARALYZE_EFFECT,              0, NORMAL,       100, 30
@@ -175,7 +175,7 @@ Moves:
 	move SUPER_FANG,   SUPER_FANG_EFFECT,            1, NORMAL,        90, 10
 	move SLASH,        NO_ADDITIONAL_EFFECT,        70, NORMAL,       100, 20
 	move SUBSTITUTE,   SUBSTITUTE_EFFECT,            0, NORMAL,       100, 10
-	move BUG_BUZZ,     SPECIAL_DOWN_SIDE_EFFECT,    90, BUG,          100, 10
+	move STEEL_WING,   NO_ADDITIONAL_EFFECT,        70, STEEL,         90, 25
 	move HURRICANE,    CONFUSION_SIDE_EFFECT,      110, FLYING,        70, 10
 	move FLARE_BLITZ,  RECOIL_EFFECT,              120, FIRE,         100, 15
 	move FIRE_FANG,    BURN_SIDE_EFFECT1,           65, FIRE,          90, 15
