@@ -23,7 +23,7 @@ Moves:
 	move SCRATCH,      NO_ADDITIONAL_EFFECT,        40, NORMAL,       100, 35
 	move VICEGRIP,     NO_ADDITIONAL_EFFECT,        55, NORMAL,       100, 30
 	move PLAY_ROUGH,   ATTACK_DOWN_SIDE_EFFECT,     90, FAIRY,         90, 10
-	move PSYFANGS,     DEFENSE_DOWN_SIDE_EFFECT,    85, PSYCHIC_TYPE, 100, 10
+	move DAZZLE,       NO_ADDITIONAL_EFFECT,        80, FAIRY,        100, 10
 	move SWORDS_DANCE, ATTACK_UP2_EFFECT,            0, STAT,         100, 30
 	move CUT,          NO_ADDITIONAL_EFFECT,        80, BUG,          100, 15
 	move GUST,         NO_ADDITIONAL_EFFECT,        40, FLYING,       100, 35
@@ -181,7 +181,6 @@ Moves:
 	move FIRE_FANG,    BURN_SIDE_EFFECT1,           65, FIRE,          90, 15
 	move IRON_DEFENSE, DEFENSE_UP2_EFFECT,           0, STAT,         100, 15
 	move SHADOW_CLAW,  NO_ADDITIONAL_EFFECT,        70, GHOST,        100, 15
-	move DAZZLE,       NO_ADDITIONAL_EFFECT,        80, FAIRY,        100, 10
 	move HAMMER_ARM,   NO_ADDITIONAL_EFFECT,       100, FIGHTING,      90, 10
 	move EXTREMESPEED, NO_ADDITIONAL_EFFECT,        80, NORMAL,       100,  5
 	move EXTRASENSORY, FLINCH_SIDE_EFFECT1,         80, PSYCHIC_TYPE, 100, 20

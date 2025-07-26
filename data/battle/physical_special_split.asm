@@ -41,8 +41,6 @@ SpecialToPhysicalMoves:
         db DRAGON_CLAW
 ; Fairy
         db PLAY_ROUGH
-; Psychic
-        db PSYFANGS
 ; Ghost
         db LICK
         db SHADOW_CLAW

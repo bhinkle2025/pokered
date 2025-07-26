@@ -12,7 +12,7 @@ AttackAnimationPointers:
 	dw ScratchAnim
 	dw VicegripAnim
 	dw PlayRoughAnim
-	dw PsyFangsAnim
+	dw DazzleAnim
 	dw SwordsDanceAnim
 	dw CutAnim
 	dw GustAnim
@@ -170,7 +170,6 @@ AttackAnimationPointers:
 	dw FireFangAnim
 	dw IronDefenseAnim
 	dw ShadowClawAnim
-	dw DazzleAnim
 	dw HammerArmAnim
 	dw ExtremeSpeedAnim
 	dw ExtrasensoryAnim
@@ -479,7 +478,6 @@ FireFangAnim:
 	battle_anim EMBER, SUBANIM_1_FLAMES, 1, 6
 	db -1 ; end
 
-PsyFangsAnim:
 BiteAnim:
 	battle_anim BITE, SUBANIM_0_STAR_THRICE, 0, 8
 	db -1 ; end

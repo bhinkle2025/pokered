@@ -586,7 +586,6 @@ GrowlitheEvosMoves:
 	db 17, FIRE_FANG
 	db 21, AGILITY
 	db 24, FLAMETHROWER
-	db 28, PSYFANGS
 	db 31, OUTRAGE
 	db 35, PLAY_ROUGH
 	db 38, FLARE_BLITZ
@@ -737,7 +736,6 @@ ArbokEvosMoves:
 	db 10, BITE
 	db 17, GLARE
 	db 20, ACID
-	db 24, PSYFANGS
 	db 28, SCREECH
 	db 31, ACID_ARMOR
 	db 36, TOXIC
@@ -1389,7 +1387,6 @@ EkansEvosMoves:
 	db 10, BITE
 	db 17, GLARE
 	db 20, ACID
-	db 24, PSYFANGS
 	db 28, SCREECH
 	db 31, ACID_ARMOR
 	db 36, TOXIC
@@ -2043,7 +2040,6 @@ AerodactylEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
-	db 32, PSYFANGS
 	db 35, BITE
 	db 42, ROCK_SLIDE
 	db 54, GIGA_IMPACT

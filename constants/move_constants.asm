@@ -18,7 +18,7 @@
 	const SCRATCH      ; 0a
 	const VICEGRIP     ; 0b
 	const PLAY_ROUGH   ; 0c
-	const PSYFANGS     ; 0d
+	const DAZZLE       ; 0d
 	const SWORDS_DANCE ; 0e
 	const CUT          ; 0f
 	const GUST         ; 10
@@ -176,7 +176,6 @@
 	const FIRE_FANG    ; a5
 	const IRON_DEFENSE ; a5
 	const SHADOW_CLAW  ; a5
-	const DAZZLE       ; a5
 	const HAMMER_ARM   ; a5
 	const EXTREMESPEED ; a5
 	const EXTRASENSORY ; a5
