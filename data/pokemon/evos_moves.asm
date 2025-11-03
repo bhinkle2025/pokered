@@ -1632,7 +1632,9 @@ SnorlaxEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
-	db 35, BODY_SLAM
+	db 33, BODY_SLAM
+	db 35, DEFENSE_CURL
+	db 36, MEDITATE
 	db 41, BITE
 	db 44, HAMMER_ARM
 	db 48, DOUBLE_EDGE
