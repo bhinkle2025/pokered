@@ -61,6 +61,28 @@ OakSpeech:
 	call PrepareForSpecialWarp
 	xor a
 	ldh [hTileAnimations], a
+.MenuCursorLoop ; difficulty menu
+	ld hl, DifficultyText
+ 	call PrintText
+ 	call DifficultyChoice
+	ld a, [wCurrentMenuItem]
+	ld [wDifficulty], a
+	and a
+	jr z, .SelectedNormalMode
+	ld hl, HardModeText
+	call PrintText
+	jp .YesNoNormalHard
+.SelectedNormalMode
+	ld hl, NormalModeText
+	call PrintText
+.YesNoNormalHard ; Give the player a brief description of each game mode and make sure that's what they want
+  	call YesNoNormalHardChoice
+	ld a, [wCurrentMenuItem]
+	and a
+	jr z, .done
+	jp .MenuCursorLoop ; If player says no, back to difficulty selection
+.done
+	call ClearScreen ; clear the screen before resuming normal intro
 	ld a, [wStatusFlags6]
 	bit BIT_DEBUG_MODE, a
 	jp nz, .skipSpeech
@@ -178,6 +200,15 @@ IntroduceRivalText:
 OakSpeechText3:
 	text_far _OakSpeechText3
 	text_end
+NormalModeText:
+	text_far _NormalModeText
+	text_end
+HardModeText:
+	text_far _HardModeText
+	text_end
+DifficultyText:
+	text_far _DifficultyText
+	text_end
 
 FadeInIntroPic:
 	ld hl, IntroFadePalettes
@@ -240,3 +271,41 @@ IntroDisplayPicCenteredOrUpperRight:
 	xor a
 	ldh [hStartTileID], a
 	predef_jump CopyUncompressedPicToTilemap
+
+; displays difficulty choice
+DifficultyChoice::
+	call SaveScreenTilesToBuffer1
+	call InitDifficultyTextBoxParameters
+	jr DisplayDifficultyChoice
+
+InitDifficultyTextBoxParameters::
+  	ld a, DIFFICULTY_MENU
+	ld [wTwoOptionMenuID], a
+	hlcoord 5, 5
+	lb bc, 6, 6 ; Cursor Pos
+	ret
+	
+DisplayDifficultyChoice::
+	ld a, TWO_OPTION_MENU
+	ld [wTextBoxID], a
+	call DisplayTextBoxID
+	jp LoadScreenTilesFromBuffer1
+
+; display yes/no choice
+YesNoNormalHardChoice::
+	call SaveScreenTilesToBuffer1
+	call InitYesNoNormalHardTextBoxParameters
+	jr DisplayYesNoNormalHardChoice
+
+InitYesNoNormalHardTextBoxParameters::
+  	ld a, YES_NO_MENU
+	ld [wTwoOptionMenuID], a
+	hlcoord 7, 5
+	lb bc, 6, 8 ; Cursor Pos
+	ret
+	
+DisplayYesNoNormalHardChoice::
+	ld a, TWO_OPTION_MENU
+	ld [wTextBoxID], a
+	call DisplayTextBoxID
+	jp LoadScreenTilesFromBuffer1

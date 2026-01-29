@@ -1405,6 +1405,9 @@ EnemySendOutFirstMon:
 	ld a, [wLinkState]
 	cp LINK_STATE_BATTLING
 	jr z, .next4
+	ld a, [wDifficulty] ; Check if player is on hard mode
+    and a
+    jr nz, .next4 ; if hard mode is enabled (nz), skip switch request
 	ld a, [wOptions]
 	bit BIT_BATTLE_SHIFT, a
 	jr nz, .next4
@@ -2195,7 +2198,7 @@ DisplayBattleMenu::
 .throwSafariBallWasSelected
 	ld a, SAFARI_BALL
 	ld [wCurItem], a
-	jr UseBagItem
+	jp UseBagItem
 
 .upperLeftMenuItemWasNotSelected ; a menu item other than the upper left item was selected
 	cp $2
@@ -2232,8 +2235,23 @@ BagWasSelected:
 	call DrawHUDsAndHPBars
 .next
 	ld a, [wBattleType]
-	dec a ; is it the old man tutorial?
+	cp BATTLE_TYPE_OLD_MAN ; is it the old man battle?
+    jr z, .simulatedInputBattle
+
+    ld a, [wDifficulty] ; Check if player is on hard mode
+	and a
+	jr z, .NormalMode
+
+	ld a, [wIsInBattle] ; Check if this is a wild battle or trainer battle
+	dec a
+	jr z, .NormalMode ; Not a trainer battle
+
+	ld hl, ItemsCantBeUsedHereText ; items can't be used during trainer battles in hard mode
+	call PrintText
+	jp DisplayBattleMenu
+.NormalMode
 	jr nz, DisplayPlayerBag ; no, it is a normal battle
+.simulatedInputBattle
 	ld hl, OldManItemList
 	ld a, l
 	ld [wListPointer], a
@@ -2243,7 +2261,7 @@ BagWasSelected:
 
 OldManItemList:
 	db 1 ; # items
-	db POKE_BALL, 50
+	db POKE_BALL, 1
 	db -1 ; end
 
 DisplayPlayerBag:
@@ -2317,14 +2335,89 @@ UseBagItem:
 	and a ; reset carry
 	ret
 
+; =====================================================================
+; After a successful capture, we come back here from the bag flow.
+; Goal: award EXP like a faint (incl. Exp. All) *without* tile glitches
+; that can appear after the Pokédex page and nickname prompt.
+; We:
+;   1) restore a sane battle HUD and open a message box,
+;   2) run the standard GainExperience flow (with Exp. All handling),
+;   3) wipe/refresh the tilemap, then exit as a capture victory.
+; =====================================================================
 .returnAfterCapturingMon
-	call GBPalNormal
-	xor a
-	ld [wCapturedMonSpecies], a
-	ld a, $2
-	ld [wBattleResult], a
-	scf ; set carry
-	ret
+    ; Make sure palettes/text colors are normalized after ball/Dex UIs
+    call GBPalNormal
+
+    ; Rebuild a clean battle screen so the text engine has a stable target.
+    ; (Dex/nickname screens redraw the BG; this gets us back to battle HUD.)
+    call LoadScreenTilesFromBuffer1
+    call DrawHUDsAndHPBars
+    call Delay3
+
+    ; Open the standard bottom message box before EXP text is printed.
+    ; PrintEmptyString “primes” the text engine like the faint path does.
+    ld   a, MESSAGE_BOX
+    ld   [wTextBoxID], a
+    call DisplayTextBoxID
+    call PrintEmptyString
+
+    ; ======== EXP gain (mirror faint-EXP logic) ========
+
+    ; Check if the player has Exp. All
+    ld   b, EXP_ALL
+    call IsItemInBag
+    push af
+    jr   z, .GiveToFighters
+
+    ; With Exp. All present, halve enemy base stats + base EXP
+    ; (same math used by the faint/Exp. All routine)
+    ld   hl, wEnemyMonBaseStats
+    ld   b, NUM_STATS + 2        ; base stats (5) + 2 base EXP bytes
+.HalveLoop
+    srl  [hl]
+    inc  hl
+    dec  b
+    jr   nz, .HalveLoop
+
+.GiveToFighters
+    ; First pass: give EXP to participants (full or halved as above)
+    xor  a
+    ld   [wBoostExpByExpAll], a
+    farcall GainExperience
+
+    ; Second pass if Exp. All is active: share with entire party
+    pop  af
+    jr   z, .AfterExp
+
+    ld   a, 1
+    ld   [wBoostExpByExpAll], a
+
+    ; Build bitmask of “everyone gains” in wPartyGainExpFlags
+    ld   a, [wPartyCount]
+    ld   b, 0
+.SetFlagsLoop
+    scf
+    rl   b
+    dec  a
+    jr   nz, .SetFlagsLoop
+    ld   a, b
+    ld   [wPartyGainExpFlags], a
+
+    farcall GainExperience
+
+.AfterExp
+    ; Give DMA/text a beat to finish, then hard-restore the HUD.
+    call Delay3
+    call LoadScreenTilesFromBuffer1
+    call DrawHUDsAndHPBars
+    call Delay3
+
+    ; Mark battle as “caught” and exit battle.
+    ld   a, $02
+    ld   [wBattleResult], a
+    scf
+    ret
+
 
 ItemsCantBeUsedHereText:
 	text_far _ItemsCantBeUsedHereText

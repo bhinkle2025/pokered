@@ -328,3 +328,26 @@ _TradeCenterOpponentText::
 _ColosseumOpponentText::
 	text "!"
 	done
+
+_NormalModeText::
+	text "You have chosen"
+	line "NORMAL MODE!"
+
+	para "Classic #MON."
+	line "No difficulty"
+	cont "changes made."
+	
+	para "Continue on"
+	line "NORMAL MODE?"
+	done
+
+_HardModeText::
+	text "You have chosen"
+	line "HARD MODE!"
+
+	para "Increased"
+	line "difficulty."
+	
+	para "Continue on"
+	line "HARD MODE?"
+	done

@@ -1793,3 +1793,7 @@ _CantUsePCHere:: ; new, for portablePC
 	text "You cannot use"
 	line "this here!"
 	prompt
+
+_DifficultyText::
+   text "Select Difficulty"
+   done

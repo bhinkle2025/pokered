@@ -124,6 +124,18 @@ ItemUseBall:
 	cp MONS_PER_BOX
 	jp z, BoxFullCannotThrowBall
 
+	; Hard mode, can't throw balls at pokemon above level cap
+	ld a, [wDifficulty]
+	and a
+	jr z, .canUseBall ; skip on normal mode
+	callfar GetLevelCap
+	ld a, [wMaxLevel]
+	ld b, a
+	ld a, [wEnemyMonLevel]
+	dec a ; force a carry if values are equal
+	cp b
+	jp nc, TooStrongToCatch
+
 .canUseBall
 	xor a
 	ld [wCapturedMonSpecies], a
@@ -1333,9 +1345,19 @@ ItemUseMedicine:
 	push hl
 	ld bc, wPartyMon1Level - wPartyMon1
 	add hl, bc ; hl now points to level
+	push hl ; store mon's level
+	ld b, MAX_LEVEL
+	ld a, [wDifficulty]
+	and a
+	jr z, .next1 ; no level caps if not on hard mode
+	callfar GetLevelCap
+	ld a, [wMaxLevel]
+	ld b, a
+.next1
+	pop hl ; retrieve mon's level
 	ld a, [hl] ; a = level
-	cp MAX_LEVEL
-	jr z, .vitaminNoEffect ; can't raise level above 100
+	cp b ; MAX_LEVEL on normal mode, level cap on hard mode
+	jr nc, .vitaminNoEffect ; can't raise level above cap ; Carry is better than zero here.
 	inc a
 	ld [hl], a ; store incremented level
 	ld [wCurEnemyLevel], a
@@ -1704,6 +1726,9 @@ ItemUsePokeFlute:
 	ld hl, PlayedFluteNoEffectText
 	jp PrintText
 .inBattle
+	ld a, [wDifficulty]
+	and a
+	jp nz, ItemUseNotTime
 	xor a
 	ld [wWereAnyMonsAsleep], a
 	ld b, ~SLP_MASK
@@ -2285,6 +2310,10 @@ ItemUseNotTime:
 	ld hl, ItemUseNotTimeText
 	jr ItemUseFailed
 
+TooStrongToCatch:
+	ld hl, TooStrongToCatchText
+	jr ItemUseFailed
+
 ItemUseNotYoursToUse:
 	ld hl, ItemUseNotYoursToUseText
 	jr ItemUseFailed
@@ -2320,6 +2349,10 @@ ItemUseFailed:
 
 ItemUseNotTimeText:
 	text_far _ItemUseNotTimeText
+	text_end
+
+TooStrongToCatchText:
+	text_far _TooStrongToCatchText
 	text_end
 
 ItemUseNotYoursToUseText:

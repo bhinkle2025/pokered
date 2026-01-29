@@ -9,7 +9,7 @@ TwoOptionMenuStrings:
 	; width, height, blank line before first menu item?, text pointer
 	two_option_menu 4, 3, FALSE, .YesNoMenu
 	two_option_menu 6, 3, FALSE, .NorthWestMenu
-	two_option_menu 6, 3, FALSE, .SouthEastMenu
+	two_option_menu 7, 3, FALSE, .DifficultyMenu
 	two_option_menu 6, 3, FALSE, .YesNoMenu
 	two_option_menu 6, 3, FALSE, .NorthEastMenu
 	two_option_menu 7, 3, FALSE, .TradeCancelMenu
@@ -29,9 +29,9 @@ TwoOptionMenuStrings:
 	db   "NORTH"
 	next "WEST@"
 
-.SouthEastMenu:
-	db   "SOUTH"
-	next "EAST@"
+.DifficultyMenu:
+	db   "NORMAL"
+	next "HARD@"
 
 .NorthEastMenu:
 	db   "NORTH"
