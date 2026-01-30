@@ -474,7 +474,7 @@ PokemonTower5HiddenObjects:
 
 Route13HiddenObjects:
 	hidden_object  1, 14, PP_UP, HiddenItems
-	hidden_object 16, 13, CALCIUM, HiddenItems
+	hidden_object 16, 13, RARE_CANDY, HiddenItems
 	db -1 ; end
 
 SafariZoneEntranceHiddenObjects:
@@ -618,7 +618,7 @@ BikeShopHiddenObjects:
 	db -1 ; end
 
 Route11HiddenObjects:
-	hidden_object 48,  5, ESCAPE_ROPE, HiddenItems
+	hidden_object 48,  5, RARE_CANDY, HiddenItems
 	db -1 ; end
 
 Route12HiddenObjects:
@@ -639,7 +639,7 @@ Route17HiddenObjects:
 
 UndergroundPathNsHiddenObjects:
 	hidden_object  3,  4, FULL_RESTORE, HiddenItems
-	hidden_object  4, 34, X_SPECIAL, HiddenItems
+	hidden_object  4, 34, LINKING_CABLE, HiddenItems
 	db -1 ; end
 
 UndergroundPathWeHiddenObjects:
@@ -648,7 +648,7 @@ UndergroundPathWeHiddenObjects:
 	db -1 ; end
 
 CeladonCityHiddenObjects:
-	hidden_object 48, 15, PP_UP, HiddenItems
+	hidden_object 48, 15, RARE_CANDY, HiddenItems
 	db -1 ; end
 
 SeafoamIslands4HiddenObjects:

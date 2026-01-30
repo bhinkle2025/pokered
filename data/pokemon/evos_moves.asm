@@ -645,6 +645,7 @@ SlowpokeEvosMoves:
 KadabraEvosMoves:
 ; Evolutions
 	db EVOLVE_LEVEL, 42, ALAKAZAM
+	db EVOLVE_ITEM, LINKING_CABLE,1, ALAKAZAM
 	db 0
 ; Learnset
 	db 16, CONFUSION
@@ -658,6 +659,7 @@ KadabraEvosMoves:
 GravelerEvosMoves:
 ; Evolutions
 	db EVOLVE_LEVEL, 38, GOLEM
+	db EVOLVE_ITEM, LINKING_CABLE,1, GOLEM
 	db 0
 ; Learnset
 	db 11, DEFENSE_CURL
@@ -683,6 +685,7 @@ ChanseyEvosMoves:
 MachokeEvosMoves:
 ; Evolutions
 	db EVOLVE_LEVEL, 38, MACHAMP
+	db EVOLVE_ITEM, LINKING_CABLE,1, MACHAMP
 	db 0
 ; Learnset
 	db 12, LEER
@@ -1769,6 +1772,7 @@ MissingNo92EvosMoves:
 HaunterEvosMoves:
 ; Evolutions
 	db EVOLVE_LEVEL, 42, GENGAR
+	db EVOLVE_ITEM, LINKING_CABLE,1, GENGAR
 	db 0
 ; Learnset
 	db 19, POISON_GAS

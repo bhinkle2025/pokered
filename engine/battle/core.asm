@@ -2352,11 +2352,20 @@ UseBagItem:
 ;   3) wipe/refresh the tilemap, then exit as a capture victory.
 ; =====================================================================
 .returnAfterCapturingMon
-    ; Make sure palettes/text colors are normalized after ball/Dex UIs
-    call GBPalNormal
+    ; Hard reset battle VRAM patterns because Dex/nickname + EXP text
+    ; can overwrite HUD/HP bar tile graphics.
+    call DisableLCD
+    call LoadFontTilePatterns
+    call LoadHudAndHpBarAndStatusTilePatterns
+    call EnableLCD
 
-    ; Rebuild a clean battle screen so the text engine has a stable target.
-    ; (Dex/nickname screens redraw the BG; this gets us back to battle HUD.)
+    ld a, $1
+    ldh [hAutoBGTransferEnabled], a
+    ld a, $ff
+    ld [wUpdateSpritesEnabled], a
+    call ClearSprites
+
+    call GBPalNormal
     call LoadScreenTilesFromBuffer1
     call DrawHUDsAndHPBars
     call Delay3
@@ -2411,6 +2420,11 @@ UseBagItem:
     ld   [wPartyGainExpFlags], a
 
     farcall GainExperience
+
+	call DisableLCD
+    call LoadFontTilePatterns
+    call LoadHudAndHpBarAndStatusTilePatterns
+    call EnableLCD
 
 .AfterExp
     ; Give DMA/text a beat to finish, then hard-restore the HUD.
