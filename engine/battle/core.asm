@@ -2235,23 +2235,8 @@ BagWasSelected:
 	call DrawHUDsAndHPBars
 .next
 	ld a, [wBattleType]
-	cp BATTLE_TYPE_OLD_MAN ; is it the old man battle?
-    jr z, .simulatedInputBattle
-
-    ld a, [wDifficulty] ; Check if player is on hard mode
-	and a
-	jr z, .NormalMode
-
-	ld a, [wIsInBattle] ; Check if this is a wild battle or trainer battle
-	dec a
-	jr z, .NormalMode ; Not a trainer battle
-
-	ld hl, ItemsCantBeUsedHereText ; items can't be used during trainer battles in hard mode
-	call PrintText
-	jp DisplayBattleMenu
-.NormalMode
+	dec a ; is it the old man tutorial?
 	jr nz, DisplayPlayerBag ; no, it is a normal battle
-.simulatedInputBattle
 	ld hl, OldManItemList
 	ld a, l
 	ld [wListPointer], a
@@ -2288,7 +2273,29 @@ DisplayBagMenu:
 	jp c, DisplayBattleMenu ; go back to battle menu if an item was not selected
 
 UseBagItem:
-	; either use an item from the bag or use a safari zone item
+    ; --- Block item usage in trainer battles on Hard mode ---
+    ld a, [wBattleType]
+    cp BATTLE_TYPE_SAFARI
+    jr z, .okToUseItems            ; allow safari items
+
+    cp BATTLE_TYPE_OLD_MAN
+    jr z, .okToUseItems            ; allow old-man tutorial (optional)
+
+    ld a, [wDifficulty]
+    and a
+    jr z, .okToUseItems            ; Normal mode -> allow items
+
+    ld a, [wIsInBattle]
+    dec a
+    jr z, .okToUseItems            ; wIsInBattle == 1 -> wild battle -> allow
+
+    ; trainer battle on hard mode -> deny
+    ld hl, ItemsCantBeUsedHereText
+    call PrintText
+    jp DisplayBattleMenu
+
+.okToUseItems
+	; (existing UseBagItem code continues here)
 	ld a, [wCurItem]
 	ld [wNamedObjectIndex], a
 	call GetItemName
