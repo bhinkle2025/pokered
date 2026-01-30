@@ -88,11 +88,25 @@ TryDoWildEncounter:
 	jr c, .CantEncounter2 ; repel prevents encounters if the leading party mon's level is higher than the wild mon
 	jr .willEncounter
 .lastRepelStep
+	ld [wRepelRemainingSteps], a   ; a is 0 here
+
+	; If toggle is enabled, instantly refresh repel and KEEP blocking encounters
+	ld a, [wRepelToggleEnabled]
+	and a
+	jr z, .woreOffNormally
+
+	; loop refresh amount (pick one)
+	ld a, 255          ; max possible if wRepelRemainingSteps is 1 byte
 	ld [wRepelRemainingSteps], a
+	jr .CantEncounter2  ; keep repel effect on this step
+
+.woreOffNormally
 	ld a, TEXT_REPEL_WORE_OFF
 	ldh [hTextID], a
 	call EnableAutoTextBoxDrawing
 	call DisplayTextID
+	jr .CantEncounter2
+
 .CantEncounter2
 	ld a, $1
 	and a

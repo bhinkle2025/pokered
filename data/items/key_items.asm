@@ -28,8 +28,8 @@ KeyItemFlags:
 	dbit TRUE  ; MARSHBADGE
 	dbit TRUE  ; VOLCANOBADGE
 	dbit TRUE  ; EARTHBADGE
-	dbit FALSE ; ESCAPE_ROPE
-	dbit FALSE ; REPEL
+	dbit TRUE  ; ESCAPE_ROPE
+	dbit TRUE  ; REPEL
 	dbit TRUE  ; OLD_AMBER
 	dbit FALSE ; FIRE_STONE
 	dbit FALSE ; THUNDER_STONE

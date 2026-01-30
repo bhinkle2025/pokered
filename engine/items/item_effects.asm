@@ -1545,7 +1545,7 @@ ItemUseEscapeRope:
 	call ItemUseReloadOverworldData
 	ld c, 30
 	call DelayFrames
-	jp RemoveUsedItem
+	ret
 .notUsable
 	jp ItemUseNotTime
 
@@ -1558,9 +1558,40 @@ ItemUseRepelCommon:
 	ld a, [wIsInBattle]
 	and a
 	jp nz, ItemUseNotTime
+
+	; If repel already active, toggle OFF
+	ld a, [wRepelRemainingSteps]
+	and a
+	jr z, .turnOn
+
+.turnOff
+	xor a
+	ld [wRepelToggleEnabled], a
+	ld [wRepelRemainingSteps], a
+	ld hl, RepelToggledOffText
+	jp PrintText
+
+.turnOn
+	ld a, 1
+	ld [wRepelToggleEnabled], a
 	ld a, b
 	ld [wRepelRemainingSteps], a
-	jp PrintItemUseTextAndRemoveItem
+	ld hl, RepelToggledOnText
+	jp PrintText
+
+
+; ------------------------------------------------------------
+; Repel toggle texts (defined in same object to avoid link issues)
+; ------------------------------------------------------------
+
+RepelToggledOnText:
+	text "REPEL is active!"
+	done
+
+RepelToggledOffText:
+	text "REPEL is off!"
+	done
+
 
 ; handles X Accuracy item
 ItemUseXAccuracy:
