@@ -1797,3 +1797,33 @@ _CantUsePCHere:: ; new, for portablePC
 _DifficultyText::
    text "Select Difficulty"
    done
+
+_CableClubNPC_WonderTradeIntroText::
+	text "Welcome to WONDER"
+	line "TRADE!"
+	para "Send one #MON"
+	line "away?"
+	para "You'll get a" 
+	line "surprise #MON"
+	para "in return!"
+	line "Try WONDER TRADE?"
+	done
+
+_CableClubNPC_WonderTradeSaveText::
+	text "Please save your"
+	line "game first."
+	para "Save and begin?"
+	done
+
+_CableClubNPC_WonderTradeStartingText::
+	text "Sending your..."
+	line "#MON.."
+	para "Receiving a.."
+	line "surprise.."
+	para "#MON!"
+	done
+
+_CableClubNPC_WonderTradeComeAgainText::
+	text "Come again!"
+	done
+
