@@ -84,25 +84,6 @@ GetPrizeMenuId:
 	ld de, wPrize1Price
 	ld bc, 6
 	call CopyData
-	ld a, [wWhichPrizeWindow]
-	cp 2 ; is TM_menu?
-	jr nz, .putMonName
-	ld a, [wPrize1]
-	ld [wNamedObjectIndex], a
-	call GetItemName
-	hlcoord 2, 4
-	call PlaceString
-	ld a, [wPrize2]
-	ld [wNamedObjectIndex], a
-	call GetItemName
-	hlcoord 2, 6
-	call PlaceString
-	ld a, [wPrize3]
-	ld [wNamedObjectIndex], a
-	call GetItemName
-	hlcoord 2, 8
-	call PlaceString
-	jr .putNoThanksText
 .putMonName
 	ld a, [wPrize1]
 	ld [wNamedObjectIndex], a
@@ -190,13 +171,10 @@ HandlePrizeChoice:
 	add hl, de
 	ld a, [hl]
 	ld [wNamedObjectIndex], a
-	ld a, [wWhichPrizeWindow]
-	cp 2 ; is prize a TM?
-	jr nz, .getMonName
-	call GetItemName
-	jr .givePrize
-.getMonName
+	
+	; All prize windows are Pokémon now
 	call GetMonName
+
 .givePrize
 	ld hl, SoYouWantPrizeTextPtr
 	call PrintText
@@ -204,19 +182,12 @@ HandlePrizeChoice:
 	ld a, [wCurrentMenuItem] ; yes/no answer (Y=0, N=1)
 	and a
 	jr nz, .printOhFineThen
+
 	call LoadCoinsToSubtract
 	call HasEnoughCoins
 	jr c, .notEnoughCoins
-	ld a, [wWhichPrizeWindow]
-	cp 2 ; is prize a TM?
-	jr nz, .giveMon
-	ld a, [wNamedObjectIndex]
-	ld b, a
-	ld a, 1
-	ld c, a
-	call GiveItem
-	jr nc, .bagFull
-	jr .subtractCoins
+
+	; Always give a Pokémon (no TM prize window anymore)
 .giveMon
 	ld a, [wNamedObjectIndex]
 	ld [wCurPartySpecies], a

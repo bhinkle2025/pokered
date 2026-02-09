@@ -55,13 +55,13 @@ ENDC
 	db "@"
 
 PrizeMenuTMsEntries:
-	db TM_DRAGON_RAGE
-	db TM_HYPER_BEAM
-	db TM_GIGA_IMPACT
+	db PIKACHU
+	db VULPIX
+	db DRATINI
 	db "@"
 
 PrizeMenuTMsCost:
-	bcd2 3300
-	bcd2 5500
-	bcd2 5500
+	bcd2 180
+	bcd2 500
+	bcd2 4000
 	db "@"

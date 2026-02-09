@@ -7,6 +7,10 @@ IF DEF(_RED)
 	db PINSIR,   25
 	db SCYTHER,  25
 	db PORYGON,  20
+	
+	db PIKACHU,   25
+	db VULPIX,    25
+	db DRATINI,   18
 ENDC
 IF DEF(_BLUE)
 	db ABRA,      6
@@ -16,4 +20,8 @@ IF DEF(_BLUE)
 	db PINSIR,   25
 	db SCYTHER,  25
 	db PORYGON,  18
+
+	db PIKACHU,   25
+	db VULPIX,    25
+	db DRATINI,   18
 ENDC

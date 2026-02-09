@@ -2296,13 +2296,7 @@ ItemUseTMHM:
 	ld [wCurItem], a
 	pop af
 	ld [wWhichPokemon], a
-	ld a, b
-	and a
-	ret z
-	ld a, [wCurItem]
-	call IsItemHM
-	ret c
-	jp RemoveUsedItem
+	ret
 
 BootedUpTMText:
 	text_far _BootedUpTMText
@@ -2682,7 +2676,7 @@ IsKeyItem_::
 	ld [wIsKeyItem], a
 	ld a, [wCurItem]
 	cp HM01 ; is the item an HM or TM?
-	jr nc, .checkIfItemIsHM
+	ret nc
 ; if the item is not an HM or TM
 	push af
 	ld hl, KeyItemFlags
@@ -2699,10 +2693,6 @@ IsKeyItem_::
 	ld a, c
 	and a
 	ret nz
-.checkIfItemIsHM
-	ld a, [wCurItem]
-	call IsItemHM
-	ret c
 	xor a
 	ld [wIsKeyItem], a
 	ret

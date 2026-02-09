@@ -1,10 +1,11 @@
-_CeladonMart2FMiddleAgedManText::
-	text "SUPER REPEL keeps"
-	line "weak #MON at"
-	cont "bay..."
 
-	para "Hmm, it's a more"
-	line "powerful REPEL!"
+_CeladonMart2FMiddleAgedManText::
+	text "REPEL keeps weak"
+	line "#MON at bay..."
+
+	para "And this new kind"
+	line "lasts until you"
+	cont "switch it off!"
 	done
 
 _CeladonMart2FGirlText::
@@ -20,3 +21,26 @@ _CeladonMart2FCurrentFloorSignText::
 	para "2F: TRAINER'S"
 	line "    MARKET"
 	done
+
+_CeladonMart2FClerk2GiveSurfboardText::
+	text "Don't have a"
+	line "water #MON?"
+
+	para "This SURFBOARD"
+	line "should help!"
+	done
+
+_CeladonMart2FClerk2AlreadyGotSurfboardText::
+	text "Enjoy the"
+	line "SURFBOARD!"
+	done
+
+_CeladonMart2FClerk2BagFullText::
+	text "Your pack is full."
+	done
+
+_CeladonMart2FClerk2ReceivedSurfboardText::
+	text "<PLAYER> got a"
+	line "SURFBOARD!"
+	done
+
