@@ -25,7 +25,7 @@ MtMoon1F_TextPointers:
 	dw_const PickUpItemText,            TEXT_MTMOON1F_REPEL1
 	dw_const PickUpItemText,            TEXT_MTMOON1F_MOON_STONE
 	dw_const PickUpItemText,            TEXT_MTMOON1F_RARE_CANDY
-	dw_const PickUpItemText,            TEXT_MTMOON1F_ESCAPE_ROPE
+	dw_const PickUpItemText,            TEXT_MTMOON1F_BOTTLE_CAP
 	dw_const PickUpItemText,            TEXT_MTMOON1F_POTION2
 	dw_const PickUpItemText,            TEXT_MTMOON1F_TM_STEEL_WING
 	dw_const MtMoon1FBewareZubatSign,   TEXT_MTMOON1F_BEWARE_ZUBAT_SIGN

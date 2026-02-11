@@ -1798,7 +1798,12 @@ wSpriteSetID:: db
 
 wObjectDataPointerTemp:: dw
 
+; Used on the new status screen
+wDVCalcVar1:: 
 	ds 2
+
+wDVCalcVar2::
+	ds 4
 
 ; the tile shown outside the boundaries of the map
 wMapBackgroundTile:: db
@@ -1815,7 +1820,7 @@ wDestinationWarpID:: db
 ;;;;;;;;; note: CHANGED: this empty space is now used for bigger bag space
 	UNION
 	; original size of this empty space
-	ds 128
+	ds 124
 
 	NEXTU
 	wNumBagItems:: db

@@ -33,6 +33,7 @@ DrawHP_:
 	ld a, $6
 	ld d, a
 	ld c, a
+	; shin pokered status screen func
 .drawHPBarAndPrintFraction
 	pop hl
 	push de
@@ -40,7 +41,7 @@ DrawHP_:
 	push hl
 	call DrawHPBar
 	pop hl
-	ldh a, [hUILayoutFlags]
+	ld a, [hUILayoutFlags]
 	bit BIT_PARTY_MENU_HP_BAR, a
 	jr z, .printFractionBelowBar
 	ld bc, $9 ; right of bar
@@ -49,6 +50,21 @@ DrawHP_:
 	ld bc, SCREEN_WIDTH + 1 ; below bar
 .printFraction
 	add hl, bc
+	call DVParse
+	call Joypad
+	ld a, [hJoyHeld]
+	bit 2, a
+	jr z, .checkstart
+	ld de, wLoadedMonHPExp
+	lb bc, 2, 5
+	jr .printnum
+.checkstart	; print DVs if start is held
+	bit 3, a
+	jr z, .doregular
+	ld de, wDVCalcVar1 
+	lb bc, 1, 2
+	jr .printnum
+.doregular
 	ld de, wLoadedMonHP
 	lb bc, 2, 3
 	call PrintNumber
@@ -56,6 +72,7 @@ DrawHP_:
 	ld [hli], a
 	ld de, wLoadedMonMaxHP
 	lb bc, 2, 3
+.printnum
 	call PrintNumber
 	pop hl
 	pop de
@@ -272,6 +289,23 @@ PrintStatsBox:
 	pop hl
 	pop bc
 	add hl, bc
+; New Stat Exp / DVs display functionality, from shin pokered.
+;joenote - print stat exp if select is held
+	call Joypad
+	ld a, [hJoyHeld]
+.checkstart	;joenote - print DVs if start is held
+	bit 3, a
+	jr z, .doregular
+	ld de, wDVCalcVar2
+	lb bc, 1, 2
+	call PrintStat
+	ld de, wDVCalcVar2 + 1
+	call PrintStat
+	ld de, wDVCalcVar2 + 2
+	call PrintStat
+	ld de, wDVCalcVar2 + 3
+	jp PrintNumber
+.doregular
 	ld de, wLoadedMonAttack
 	lb bc, 2, 3
 	call PrintStat
@@ -479,4 +513,59 @@ StatusScreen_PrintPP:
 	add hl, de
 	dec c
 	jr nz, StatusScreen_PrintPP
+	ret
+
+; DV parsing from shin pokered
+;joenote - parse DV scores
+DVParse:
+	push hl
+	push bc
+	ld hl, wDVCalcVar2
+	ld b, $00
+
+	ld a, [wLoadedMonDVs]	;get attack dv
+	swap a
+	and $0F
+	ld [hl], a
+	inc hl
+	and $01
+	sla a
+	sla a
+	sla a
+	or b
+	ld b, a
+	
+	
+	ld a, [wLoadedMonDVs]	;get defense dv
+	and $0F
+	ld [hl], a
+	inc hl
+	and $01
+	sla a
+	sla a
+	or b
+	ld b, a
+	
+	ld a, [wLoadedMonDVs + 1]	;get speed dv
+	swap a
+	and $0F
+	ld [hl], a
+	inc hl
+	and $01
+	sla a
+	or b
+	ld b, a
+	
+	ld a, [wLoadedMonDVs + 1]	;get special dv
+	and $0F
+	ld [hl], a
+	inc hl
+	and $01
+	or b
+	ld b, a
+
+	ld [hl], b	;load hp dv
+	
+	pop bc
+	pop hl
 	ret
