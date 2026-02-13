@@ -30,12 +30,10 @@ _TM48ExplanationText::
 	cont "can be taught to"
 	cont "#MON!"
 
-	para "A TM is good only"
-	line "once! So when you"
-	cont "use one to teach"
-	cont "a new technique,"
-	cont "pick the #MON"
-	cont "carefully!"
+	para "TMs are reusable,"
+	line "so experiment with"
+	cont "different moves"
+	cont "on your team!"
 
 	para "TM48 contains"
 	line "ROCK SLIDE!"

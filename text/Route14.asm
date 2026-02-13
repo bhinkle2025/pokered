@@ -11,9 +11,9 @@ _Route14CooltrainerM1EndBattleText::
 
 _Route14CooltrainerM1AfterBattleText::
 	text "You have some HMs"
-	line "right? #MON"
-	cont "can't ever forget"
-	cont "those moves."
+	line "right? Those moves"
+	cont "are useful both in"
+	cont "and out of battle!"
 	done
 
 _Route14CooltrainerM2BattleText::
@@ -33,9 +33,9 @@ _Route14CooltrainerM2AfterBattleText::
 	done
 
 _Route14CooltrainerM3BattleText::
-	text "TMs are on sale"
-	line "in CELADON!"
-	cont "But, only a few"
+	text "TMs are scattered"
+	line "across the region!"
+	cont "But only a few"
 	cont "people have HMs!"
 	done
 

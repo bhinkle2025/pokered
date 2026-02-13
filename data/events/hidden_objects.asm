@@ -482,7 +482,7 @@ SafariZoneEntranceHiddenObjects:
 	db -1 ; end
 
 SafariZoneWestHiddenObjects:
-	hidden_object  6,  5, REVIVE, HiddenItems
+	hidden_object  6,  5, SURFBOARD, HiddenItems
 	db -1 ; end
 
 SilphCo5FHiddenObjects:

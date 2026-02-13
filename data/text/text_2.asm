@@ -478,9 +478,9 @@ TMNotebookText::
 	para "There are 50 TMs"
 	line "in all."
 
-	para "There are also 5"
-	line "HMs that can be"
-	cont "used repeatedly."
+	para "TMs and HMs can"
+	line "be used again"
+	cont "and again."
 
 	para "SILPH CO.@"
 	text_end
