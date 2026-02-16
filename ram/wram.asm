@@ -2258,6 +2258,11 @@ wEXPBarCurEXP::       ds 3
 wEXPBarNeededEXP::    ds 3
 wEXPBarKeepFullFlag:: ds 1
 
+wExpCandyMonBasePtr::  ds 2 ; little-endian pointer to wPartyMonX base
+wExpCandyAmount::      ds 2 ; [0]=lo, [1]=hi
+wExpCandyStartLevel::  ds 1
+wExpCandyCap::         ds 1
+
 
 SECTION "Stack", WRAM0
 

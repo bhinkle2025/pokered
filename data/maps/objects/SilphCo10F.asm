@@ -2,9 +2,9 @@
 	const_export SILPHCO10F_ROCKET
 	const_export SILPHCO10F_SCIENTIST
 	const_export SILPHCO10F_SILPH_WORKER_F
-	const_export SILPHCO10F_TM_FISSURE
+	const_export SILPHCO10F_TM_SHADOW_CLAW
 	const_export SILPHCO10F_RARE_CANDY
-	const_export SILPHCO10F_CARBOS
+	const_export SILPHCO10F_TM_DRAGON_RAGE
 
 SilphCo10F_Object:
 	db $2e ; border block

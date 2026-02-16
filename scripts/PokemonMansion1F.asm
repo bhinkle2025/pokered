@@ -65,7 +65,7 @@ PokemonMansion1F_TextPointers:
 	def_text_pointers
 	dw_const PokemonMansion1FScientistText, TEXT_POKEMONMANSION1F_SCIENTIST
 	dw_const PickUpItemText,                TEXT_POKEMONMANSION1F_BOTTLE_CAP
-	dw_const PickUpItemText,                TEXT_POKEMONMANSION1F_CARBOS
+	dw_const PickUpItemText,                TEXT_POKEMONMANSION1F_EXP_CANDY_L
 	dw_const PokemonMansion1FSwitchText,    TEXT_POKEMONMANSION1F_SWITCH
 
 Mansion1TrainerHeaders:

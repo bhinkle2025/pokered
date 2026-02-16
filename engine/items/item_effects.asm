@@ -51,11 +51,11 @@ ItemUsePtrTable:
 	dw ItemUseEvoStone   ; FIRE_STONE
 	dw ItemUseEvoStone   ; THUNDER_STONE
 	dw ItemUseEvoStone   ; WATER_STONE
-	dw ItemUseVitamin    ; HP_UP
-	dw ItemUseVitamin    ; PROTEIN
-	dw ItemUseVitamin    ; IRON
-	dw ItemUseVitamin    ; CARBOS
-	dw ItemUseVitamin    ; CALCIUM
+	dw ItemUseVitamin    ; EXP_CANDY_XS
+	dw ItemUseVitamin    ; EXP_CANDY_S
+	dw ItemUseVitamin    ; EXP_CANDY_M
+	dw ItemUseVitamin    ; EXP_CANDY_L
+	dw ItemUseVitamin    ; EXP_CANDY_XL
 	dw ItemUseVitamin    ; RARE_CANDY
 	dw UnusableItem      ; DOME_FOSSIL
 	dw UnusableItem      ; HELIX_FOSSIL
@@ -872,8 +872,8 @@ ItemUseMedicine:
 	jr nc, .healHP ; if it's a Revive or Max Revive
 	cp FULL_HEAL
 	jr z, .cureStatusAilment ; if it's a Full Heal
-	cp HP_UP
-	jp nc, .useVitamin ; if it's a vitamin or Rare Candy
+	cp EXP_CANDY_XS
+	jp nc, .useVitamin ; if it's an EXP Candy (any size) or a Rare Candy
 	cp FULL_RESTORE
 	jr nc, .healHP ; if it's a Full Restore or one of the potions
 ; fall through if it's one of the status-specific healing items
@@ -1282,51 +1282,59 @@ ItemUseMedicine:
 	ld a, [wCurItem]
 	cp RARE_CANDY
 	jp z, .useRareCandy
-	push hl
-	sub HP_UP
-	add a
-	ld bc, wPartyMon1HPExp - wPartyMon1
-	add hl, bc
-	add l
-	ld l, a
-	jr nc, .noCarry2
-	inc h
-.noCarry2
-	ld a, 10
-	ld b, a
-	ld a, [hl] ; a = MSB of stat experience of the appropriate stat
-	cp 100 ; is there already at least 25600 (256 * 100) stat experience?
-	jr nc, .vitaminNoEffect ; if so, vitamins can't add any more
-	add b ; add 2560 (256 * 10) stat experience
-	jr nc, .noCarry3 ; a carry should be impossible here, so this will always jump
-	ld a, 255
-.noCarry3
-	ld [hl], a
-	pop hl
-	call .recalculateStats
-	ld hl, VitaminStats
-	ld a, [wCurItem]
-	sub HP_UP - 1
-	ld c, a
-.statNameLoop ; loop to get the address of the name of the stat the vitamin increases
-	dec c
-	jr z, .gotStatName
-.statNameInnerLoop
-	ld a, [hli]
-	ld b, a
-	ld a, $50
-	cp b
-	jr nz, .statNameInnerLoop
-	jr .statNameLoop
-.gotStatName
-	ld de, wStringBuffer
-	ld bc, 10
-	call CopyData ; copy the stat's name to wStringBuffer
-	ld a, SFX_HEAL_AILMENT
-	call PlaySound
-	ld hl, VitaminStatRoseText
-	call PrintText
-	jp RemoveUsedItem
+
+    ; --- EXP Candy family ---
+    cp EXP_CANDY_XS
+    jr z, .useExpCandyXS
+    cp EXP_CANDY_S
+    jr z, .useExpCandyS
+    cp EXP_CANDY_M
+    jr z, .useExpCandyM
+    cp EXP_CANDY_L
+    jr z, .useExpCandyL
+    cp EXP_CANDY_XL
+    jr z, .useExpCandyXL
+    jr .vitaminNoEffect
+
+; Build HL = wPartyMonX base, then set BC = amount, then call routine
+.useExpCandyXS
+    ld bc, 100
+    jr .doExpCandy
+.useExpCandyS
+    ld bc, 800
+    jr .doExpCandy
+.useExpCandyM
+    ld bc, 3000
+    jr .doExpCandy
+.useExpCandyL
+    ld bc, 10000
+    jr .doExpCandy
+.useExpCandyXL
+    ld bc, 30000
+    ; fallthrough
+
+.doExpCandy
+    ; save amount (BC) into WRAM temp
+    ld a, c
+    ld [wExpCandyAmount], a
+    ld a, b
+    ld [wExpCandyAmount + 1], a
+
+    ; build HL = wPartyMonX base (AddNTimes wants BC = struct size)
+    ld hl, wPartyMons
+    ld bc, wPartyMon2 - wPartyMon1
+    ld a, [wWhichPokemon]
+    call AddNTimes           ; HL = base for chosen mon
+
+    ; restore amount into BC
+    ld a, [wExpCandyAmount]
+    ld c, a
+    ld a, [wExpCandyAmount + 1]
+    ld b, a
+
+    call ApplyExpCandy_Common
+    jp .done
+
 .vitaminNoEffect
 	pop hl
 	ld hl, VitaminNoEffectText
@@ -2995,3 +3003,182 @@ CheckMapForMon:
 	jr nz, .loop
 	dec hl
 	ret
+
+; -----------------------------------------
+; ApplyExpCandy_Common (corrected lean)
+; IN:  HL = wPartyMonX base pointer
+;      BC = EXP amount (0..65535)
+; Uses:
+;   wExpCandyCap (1 byte) must exist (you already have it)
+; -----------------------------------------
+ApplyExpCandy_Common::
+    ; Preserve amount across cap math / farcalls
+    push bc
+
+    ; ----------------------------
+    ; Determine level cap -> wExpCandyCap
+    ; ----------------------------
+    ld b, MAX_LEVEL
+    ld a, [wDifficulty]
+    and a
+    jr z, .capReady
+    callfar GetLevelCap
+    ld a, [wMaxLevel]
+    ld b, a
+.capReady
+    ld a, b
+    ld [wExpCandyCap], a
+
+    ; ----------------------------
+    ; Check current level vs cap
+    ; ----------------------------
+    ld a, [wExpCandyCap]
+    ld b, a                 ; B = cap
+
+    push hl
+    ld de, wPartyMon1Level - wPartyMon1
+    add hl, de              ; HL = level ptr
+    ld a, [hl]              ; A = current level
+    pop hl
+
+    cp b
+    jr nc, .NoEffect_restoreBC
+
+    ; Restore BC = amount for EXP add (cap is in WRAM now)
+    pop bc
+
+    ; ----------------------------
+    ; Add EXP (24-bit): monEXP += BC
+    ; ----------------------------
+    push hl
+    ld de, wPartyMon1Exp - wPartyMon1
+    add hl, de              ; HL = EXP MSB
+    inc hl
+    inc hl                  ; HL = EXP LSB
+
+    ; LSB += C
+    ld a, [hl]
+    add c
+    ld [hld], a             ; HL -> MID
+
+    ; MID += B + carry
+    ld a, [hl]
+    adc b
+    ld [hld], a             ; HL -> MSB
+
+    ; MSB += carry
+    ld a, [hl]
+    adc 0
+    ld [hl], a
+    jr nc, .noOverflow
+
+    ; Clamp to $FFFFFF on overflow
+    ld a, $ff
+    ld [hli], a             ; MSB
+    ld [hli], a             ; MID
+    ld [hl], a              ; LSB
+.noOverflow
+    pop hl                  ; HL = mon base
+
+    ; ----------------------------
+    ; Level-up loop (cap reloaded from WRAM)
+    ; ----------------------------
+.levelLoop
+    ; Read current level
+    push hl
+    ld de, wPartyMon1Level - wPartyMon1
+    add hl, de
+    ld a, [hl]              ; A = current level
+    pop hl
+
+    ; Load cap into B (BC no longer holds cap)
+    ld a, [wExpCandyCap]
+    ld b, a
+    cp b
+    jr nc, .SuccessConsume  ; reached cap
+
+    ; Next level requirement
+    inc a                   ; next level
+    ld d, a                 ; CalcExperience expects D = level
+    push hl
+    callfar CalcExperience
+    pop hl
+
+    ; Compare mon EXP vs required in hExperience
+    push hl
+    ld de, wPartyMon1Exp - wPartyMon1
+    add hl, de              ; HL = EXP MSB
+    call .CompareExp_HL_vs_hExperience
+    pop hl
+    jr c, .SuccessConsume   ; monEXP < required => stop
+
+    ; Apply the level-up (write level)
+    push hl
+    ld de, wPartyMon1Level - wPartyMon1
+    add hl, de
+    inc [hl]
+    ld a, [hl]
+    ld [wCurEnemyLevel], a
+    pop hl
+
+    ; Recalc stats (must RETURN)
+    push hl
+    call .RecalcStatsFromBase
+    pop hl
+
+    jr .levelLoop
+
+.SuccessConsume
+    jp RemoveUsedItem
+
+.NoEffect_restoreBC
+    pop bc                  ; balance the earlier push bc (no item consumed)
+.NoEffect
+    call ItemUseNoEffect
+    jp ItemUseMedicine.done ; exit cleanly WITHOUT consuming item
+
+
+; ----------------------------
+; Helpers (local to this routine)
+; ----------------------------
+
+; HL = mon base
+.RecalcStatsFromBase:
+    ld de, wPartyMon1Stats - wPartyMon1
+    add hl, de
+    ld d, h
+    ld e, l                 ; DE = stats ptr
+    ld bc, (wPartyMon1Exp + 2) - wPartyMon1Stats
+    add hl, bc              ; HL = EXP LSB
+    ld b, 1
+    call CalcStats
+    ret
+
+; HL = mon EXP MSB
+; Carry set if monEXP < required (hExperience)
+.CompareExp_HL_vs_hExperience:
+    ; MSB
+    ldh a, [hExperience]
+    ld b, a
+    ld a, [hli]
+    cp b
+    ret c
+    ret nz
+
+    ; MID
+    ldh a, [hExperience + 1]
+    ld b, a
+    ld a, [hli]
+    cp b
+    ret c
+    ret nz
+
+    ; LSB
+    ldh a, [hExperience + 2]
+    ld b, a
+    ld a, [hl]
+    cp b
+    ret
+
+
+

@@ -51,11 +51,42 @@ OakSpeech:
 	call PrepareOakSpeech
 	predef InitPlayerData2
 	ld hl, wNumBoxItems
+
+	; Give Potion
 	ld a, POTION
 	ld [wCurItem], a
 	ld a, 1
 	ld [wItemQuantity], a
 	call AddItemToInventory
+
+	; Give 5 Rare Candies
+	ld a, RARE_CANDY
+	ld [wCurItem], a
+	ld a, 5
+	ld [wItemQuantity], a
+	call AddItemToInventory
+
+	; Give 10 Exp Candy XS
+	ld a, EXP_CANDY_XS
+	ld [wCurItem], a
+	ld a, 10
+	ld [wItemQuantity], a
+	call AddItemToInventory
+
+	; Give 2 Exp Candy S
+	ld a, EXP_CANDY_S
+	ld [wCurItem], a
+	ld a, 2
+	ld [wItemQuantity], a
+	call AddItemToInventory
+
+	; Give Exp All
+	ld a, EXP_ALL
+	ld [wCurItem], a
+	ld a, 1
+	ld [wItemQuantity], a
+	call AddItemToInventory
+
 	ld a, [wDefaultMap]
 	ld [wDestinationMap], a
 	call PrepareForSpecialWarp
