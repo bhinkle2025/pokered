@@ -1540,8 +1540,17 @@ TryRunningFromBattle:
 	jp z, .canEscape
 	ld a, [wIsInBattle]
 	dec a
-	jr nz, .trainerBattle ; jump if it's a trainer battle
+	jp nz, .trainerBattle ; jump if it's a trainer battle
 	ld a, [wNumRunAttempts]
+
+	; NEW: if player’s active mon is Ghost-type, always escape (wild battles)
+  	ld a, [wBattleMonType1]
+    cp GHOST
+    jp z, .canEscape
+    ld a, [wBattleMonType2]
+    cp GHOST
+    jp z, .canEscape
+
 	inc a
 	ld [wNumRunAttempts], a
 	ld a, [hli]

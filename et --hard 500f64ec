@@ -1,0 +1,176 @@
+[33me49fffc4[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32marchive[m[33m)[m HEAD@{0}: reset: moving to HEAD~2
+[33m500f64ec[m HEAD@{1}: reset: moving to HEAD~1
+[33m85d344ba[m[33m ([m[1;31morigin/archive[m[33m)[m HEAD@{2}: commit: Ghost Escape Wild Battles
+[33m500f64ec[m HEAD@{3}: commit: Exp Candy Not Working Properly
+[33m33771f49[m HEAD@{4}: commit: Surfboard, Dialogue TM Updates, and Trainer Revisions
+[33me49fffc4[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32marchive[m[33m)[m HEAD@{5}: reset: moving to e49fffc4
+[33me49fffc4[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32marchive[m[33m)[m HEAD@{6}: commit: Move Descriptions in Battle
+[33m5499c5a6[m HEAD@{7}: commit: Bottle Cap, Hyper Training, and DV Display
+[33mad9eb982[m HEAD@{8}: commit: Surfboard, Infinite TMs, and Increased Bag Storage
+[33m150f458a[m[33m ([m[1;32mmain[m[33m)[m HEAD@{9}: checkout: moving from test to archive
+[33mccd026fd[m[33m ([m[1;31morigin/test[m[33m, [m[1;32mtest[m[33m, [m[1;32mWonder-Trade[m[33m)[m HEAD@{10}: checkout: moving from restructured to test
+[33ma891fc11[m[33m ([m[1;31morigin/vanilla[m[33m, [m[1;31morigin/restructured[m[33m, [m[1;32mvanilla[m[33m, [m[1;32mrestructured[m[33m)[m HEAD@{11}: checkout: moving from vanilla to restructured
+[33ma891fc11[m[33m ([m[1;31morigin/vanilla[m[33m, [m[1;31morigin/restructured[m[33m, [m[1;32mvanilla[m[33m, [m[1;32mrestructured[m[33m)[m HEAD@{12}: checkout: moving from main to vanilla
+[33m150f458a[m[33m ([m[1;32mmain[m[33m)[m HEAD@{13}: reset: moving to HEAD
+[33m150f458a[m[33m ([m[1;32mmain[m[33m)[m HEAD@{14}: reset: moving to origin/main
+[33mccd026fd[m[33m ([m[1;31morigin/test[m[33m, [m[1;32mtest[m[33m, [m[1;32mWonder-Trade[m[33m)[m HEAD@{15}: checkout: moving from Wonder-Trade to main
+[33mccd026fd[m[33m ([m[1;31morigin/test[m[33m, [m[1;32mtest[m[33m, [m[1;32mWonder-Trade[m[33m)[m HEAD@{16}: checkout: moving from main to Wonder-Trade
+[33mccd026fd[m[33m ([m[1;31morigin/test[m[33m, [m[1;32mtest[m[33m, [m[1;32mWonder-Trade[m[33m)[m HEAD@{17}: commit: Wonder Trade Testing
+[33m150f458a[m[33m ([m[1;32mmain[m[33m)[m HEAD@{18}: commit: Linking Cable and Exp on Catch Glitch Fix
+[33m485bf61b[m HEAD@{19}: commit: Escape Rope and Repel
+[33m388bcbf8[m HEAD@{20}: commit: Inventory Glitch Fix
+[33mbc131f16[m HEAD@{21}: commit: Remove Stat EXP
+[33m46d9667f[m HEAD@{22}: commit: Added Hard Mode
+[33mf6bde2f1[m HEAD@{23}: commit: Snorlax Learnset and Surge Changes
+[33m78d700a2[m HEAD@{24}: commit: Crystal Reforged Compatibility #2
+[33m482ffa63[m HEAD@{25}: commit: Crystal Reforged Compatibility #1
+[33m0ed1b242[m HEAD@{26}: commit: Light Screen TM and Trainer TM updates
+[33mfe523d9e[m HEAD@{27}: commit: Champion Fight Updates
+[33m94f7c36e[m HEAD@{28}: commit: Lance Fight Update
+[33m9c6cd84a[m HEAD@{29}: commit: Updated Agatha Fight
+[33mf2eac748[m HEAD@{30}: commit: Bruno Update
+[33mf6be66c2[m HEAD@{31}: commit: Lorelei Update
+[33maa5298cb[m HEAD@{32}: commit: Evo and Title Screen Revisions
+[33mbdd9e181[m HEAD@{33}: commit: Removed Overworld Poison
+[33mb9c0101e[m HEAD@{34}: commit: Made Steel Immune to the Poison Effect
+[33m13d8655b[m HEAD@{35}: commit: Koga Battle rework and TM swap
+[33mb93f68a9[m HEAD@{36}: commit: Attack after waking up from Sleep
+[33m18acde8d[m HEAD@{37}: commit: Reverted Exp. from Catching Pokemon
+[33m06939d9e[m HEAD@{38}: commit: Changed TM30 Teleport to TM30 Calm Mind
+[33m3ef43c4c[m HEAD@{39}: commit: Learnset Updates
+[33mf95d7210[m HEAD@{40}: commit: Stat Improvements
+[33mcfe39611[m HEAD@{41}: reset: moving to cfe396116e302da7a135031c642baff9fea5a353
+[33m8e5d75fe[m HEAD@{42}: checkout: moving from cfe396116e302da7a135031c642baff9fea5a353 to main
+[33mcfe39611[m HEAD@{43}: reset: moving to cfe396116e302da7a135031c642baff9fea5a353
+[33m8e5d75fe[m HEAD@{44}: checkout: moving from main to 8e5d75fe60817bbe5605e90243641abdc474ec14
+[33m8e5d75fe[m HEAD@{45}: checkout: moving from cfe396116e302da7a135031c642baff9fea5a353 to main
+[33mcfe39611[m HEAD@{46}: checkout: moving from 3b03db84252a60054da5504eed760e2ed1513f43 to cfe396116e302da7a135031c642baff9fea5a353
+[33m3b03db84[m HEAD@{47}: checkout: moving from cfe396116e302da7a135031c642baff9fea5a353 to 3b03db84252a60054da5504eed760e2ed1513f43
+[33mcfe39611[m HEAD@{48}: checkout: moving from main to cfe396116e302da7a135031c642baff9fea5a353
+[33m8e5d75fe[m HEAD@{49}: commit: Stat Improvements
+[33m059721a4[m HEAD@{50}: reset: moving to HEAD~1
+[33m3af0d57a[m HEAD@{51}: reset: moving to HEAD
+[33m3af0d57a[m HEAD@{52}: commit: Attack after waking up from sleep
+[33m059721a4[m HEAD@{53}: commit: Removed Overworld Poison and Poison move changes
+[33mcfe39611[m HEAD@{54}: commit: Trainer Money Reward and Pay Day increases
+[33m509c26ce[m HEAD@{55}: commit: Made HMs deletable
+[33m102f5bd7[m HEAD@{56}: commit: Learnset Updates
+[33mb7f6802a[m HEAD@{57}: commit: Added Mach Punch and Blaze Kick
+[33m3b03db84[m HEAD@{58}: commit: Remove 25% chance for enemy stat down moves to miss
+[33ma06ad7a0[m HEAD@{59}: commit: Poison, Burn, and Leech Seed do an 8th of max HP
+[33m18897d34[m HEAD@{60}: commit: Added Portable PC
+[33mb049e3b6[m HEAD@{61}: commit: crits affected by stat modifications
+[33m8c3fe8ba[m HEAD@{62}: commit: Moves and Priority System Added
+[33m60cb66be[m HEAD@{63}: commit: Learnset Updates
+[33mcda64493[m HEAD@{64}: commit: Added Hammer Arm
+[33mc804d213[m HEAD@{65}: commit: Updated Learnsets
+[33m8c1fd80d[m HEAD@{66}: commit: Learnset Updates
+[33mc4784b57[m HEAD@{67}: reset: moving to HEAD
+[33mc4784b57[m HEAD@{68}: commit: Learnset Updates
+[33me6d5a3c7[m HEAD@{69}: reset: moving to HEAD
+[33me6d5a3c7[m HEAD@{70}: reset: moving to HEAD
+[33me6d5a3c7[m HEAD@{71}: commit: Improved Elite Four
+[33m137223a5[m HEAD@{72}: commit: Gym Leader Updates
+[33mfe09c6be[m HEAD@{73}: commit: Learnset Updates
+[33md9cf4329[m HEAD@{74}: commit: Removed items from Gym Leaders & Elite Four
+[33m46459a31[m HEAD@{75}: commit: More Gym Leader Rework & TM dialogue
+[33me0d7c962[m HEAD@{76}: commit: Gym Leader Teams Improvements
+[33m7dd8cd0e[m HEAD@{77}: commit: Added Dazzle and made it TM18
+[33m883d10ca[m HEAD@{78}: commit: Added Shadow Claw and made it TM27
+[33m875949fd[m HEAD@{79}: commit: Added Iron Defence and made it TM34
+[33m5efec3ed[m HEAD@{80}: commit: Added Hurricane, Fire Fang, and Flare Blitz
+[33m8bd08c99[m HEAD@{81}: commit: Learnset and Biodiversity Updates
+[33m166321a8[m HEAD@{82}: commit: Removed Disable and added Focus Blast
+[33m142c28d7[m HEAD@{83}: commit: Removed Horn Drill and added Primordial
+[33mc8ac5274[m HEAD@{84}: commit: Removed Focus Energy and added Dragon Claw
+[33mee27fb70[m HEAD@{85}: commit: Stat improvements
+[33mec7a0526[m HEAD@{86}: commit (merge): Removed Constrict and Added Power Whip
+[33m56018ba2[m HEAD@{87}: checkout: moving from main to main
+[33m56018ba2[m HEAD@{88}: commit: Removed Razor Wind and Added Psyfangs
+[33m39ae6c10[m HEAD@{89}: reset: moving to 39ae6c106f09ed37e75bd7a4d93f4177855674b5
+[33m33bbd31d[m HEAD@{90}: commit: Learnset Updates
+[33m39ae6c10[m HEAD@{91}: commit: Stat updates and title screen
+[33mefb6c488[m HEAD@{92}: commit: Give EXP on catch
+[33ma4fdd234[m HEAD@{93}: commit: Giovanni gives TM46 Earthquake instead of TM47 Fissure
+[33m981ff312[m HEAD@{94}: commit: Removed Guillotine and Added Play Rough
+[33m95de94de[m HEAD@{95}: commit: TM37 Egg Bomb to TM37 Outrage
+[33m51851c88[m HEAD@{96}: commit: Koga Rework
+[33me356d9df[m HEAD@{97}: commit: Erika Rework
+[33m99c1d4d1[m HEAD@{98}: commit: Lt. Surge Rework
+[33m6fe26fc3[m HEAD@{99}: commit: Changed TM09 Take Down to TM09 Giga Impact (New Move)
+[33m7e03ed20[m HEAD@{100}: commit: Changed TM12 Water Gun to TM12 Steel Wing (New Move Added)
+[33m3a80c298[m HEAD@{101}: commit: Biodiversity Update: Cerulean Cave
+[33mcc3a2147[m HEAD@{102}: commit: Biodiversity Update: Victory Road
+[33ma25093c4[m HEAD@{103}: commit: New Move: Bug Buzz
+[33m4cc28062[m HEAD@{104}: commit: New Move: Moonblast
+[33mdebb863f[m HEAD@{105}: commit: Trainer Updates: Mt. Moon & Route 24
+[33m2d637602[m HEAD@{106}: commit: Trainer Updates: Route 3
+[33m919fc7a5[m HEAD@{107}: commit: Gym Leader Update: Brock
+[33mc38839c7[m HEAD@{108}: commit: Biodiversity Update: Safari Zone
+[33m0d6f0e64[m HEAD@{109}: commit: Biodiversity Update: Seafoam Islands and Route 21 (Surfing)
+[33m9d513a5a[m HEAD@{110}: commit: Biodiversity Update: Pokemon Mansion
+[33me8b407a1[m HEAD@{111}: commit: Biodiversity Update: Route 24 & 25
+[33m977dc9d3[m HEAD@{112}: commit: Biodiversity Update: Route 21 & 23
+[33me3fdd364[m HEAD@{113}: commit: Biodiversity Update: Route 17 & 18
+[33m6ca41577[m HEAD@{114}: commit: Biodiversity Update: Route 9
+[33m9c11a017[m HEAD@{115}: commit: Biodiversity Update: Route 5, 6, and 7
+[33m8f04d0cf[m HEAD@{116}: commit: Biodiversity Update: Route 14,15, and 16
+[33m85b83216[m HEAD@{117}: commit: Biodiversity Update: Route 11, 12, and 13
+[33macfd3e09[m HEAD@{118}: commit: Biodiversity Update: Power Plant
+[33meb53d442[m HEAD@{119}: commit: Electric type Immune to Paralysis
+[33mbf6a724a[m HEAD@{120}: commit: Improved Gym Leader Teams
+[33m7ccf5ab1[m HEAD@{121}: commit: Learnset Improvements
+[33m68403a22[m HEAD@{122}: commit: TM41 Softboiled to TM41 Night Shade
+[33ma312eb18[m HEAD@{123}: commit: Biodiversity Update: Route 8, Pokemon Tower, and Route 10
+[33m09328fcf[m HEAD@{124}: commit: Biodiversity Update: Rock Tunnel
+[33m0a2bef90[m HEAD@{125}: commit: Sabrina gives TM46 Amnesia instead of TM46 Psywave
+[33m664e5d40[m HEAD@{126}: commit: Brock gives TM48 Rock Slide instead of TM34 Bide
+[33md7607881[m HEAD@{127}: commit: HM05 Flash Learnset Updates
+[33mea0efbdf[m HEAD@{128}: commit: HM04 Strength Learnset Updates
+[33m43df70a7[m HEAD@{129}: commit: HM03 Surf Learnset Updates
+[33m5b74dfb9[m HEAD@{130}: commit: HM02 Fly Learnset Updates
+[33m953a9bf4[m HEAD@{131}: commit: HM01 Cut Learnset Updates
+[33m505e8a81[m HEAD@{132}: commit: Changed TM07 Horn Drill to TM07 Sludge
+[33m29266b17[m HEAD@{133}: commit: Changed TM02 Razor Wind to TM02 Flamethrower
+[33me91c9bff[m HEAD@{134}: commit: Updated Pokemon moves 4
+[33mf4e6dd1b[m HEAD@{135}: commit: TM22 Solarbeam Learnset Updates
+[33m19995f80[m HEAD@{136}: commit: TM28 Dig Learnset Updates
+[33mec7f16a5[m HEAD@{137}: commit: TM42 Dream Eater Learnset Updates
+[33m16d19667[m HEAD@{138}: commit: TM03 Swords Dance Learnset Updates
+[33meda08375[m HEAD@{139}: commit: TM26 Earthquake Learnset Updates
+[33mfeef7297[m HEAD@{140}: commit: TM48 Rock Slide Learnset Updates
+[33m6d650314[m HEAD@{141}: commit: Biodiversity Update: Route 3, Mt. Moon, and Route 4
+[33m66838bf5[m HEAD@{142}: reset: moving to 66838bf5
+[33m5682216d[m HEAD@{143}: reset: moving to HEAD~
+[33m66838bf5[m HEAD@{144}: commit: Changed TM20 Rage to TM20 Ice Punch
+[33m5682216d[m HEAD@{145}: commit: Changed TM16 Pay Day to TM16 Thunderpunch
+[33m28cc533f[m HEAD@{146}: commit: Changed TM04 Whirlwind to TM04 Fire Punch
+[33m45b6c9b3[m HEAD@{147}: commit: Biodiversity Update: Viridian Forrest
+[33mbf99d538[m HEAD@{148}: commit: Biodiveristy Update: Route 1, 22, and 2
+[33m4ef5200a[m HEAD@{149}: commit: Exp. All Rework 1
+[33mc6499bb9[m HEAD@{150}: commit: Updated Critical Hit change to Gen 7 mechanics
+[33m608d330b[m HEAD@{151}: commit: Improved Pokemon Stats
+[33m5cce03d8[m HEAD@{152}: commit: Improved Pokemon Moves
+[33md7b7327b[m HEAD@{153}: reset: moving to d7b7327b4b8600b106fec371bedc2dbd157bf14b
+[33m9900e1af[m HEAD@{154}: commit: Improved Pokemon Stats
+[33m4fdf3e82[m HEAD@{155}: commit: Improved Pokemon moves
+[33mfab3dc92[m HEAD@{156}: commit: Added Elemental Punch TMs
+[33md7b7327b[m HEAD@{157}: commit: Updated Pokemon Learnsets
+[33m13785d4e[m HEAD@{158}: commit: Removed Trade Evolutions and Updated Evolution Levels
+[33m9c249fc1[m HEAD@{159}: commit: Updated Pokemon moves 3
+[33mec83c4af[m HEAD@{160}: commit: Added Counterpart Moves
+[33md3a8020b[m HEAD@{161}: commit: Updated Pokemon moves 2
+[33m6350f3d7[m HEAD@{162}: commit: Updated Pokemon moves
+[33m959b78d0[m HEAD@{163}: commit: Added Physical/Special Split
+[33mb018975e[m HEAD@{164}: commit: Allow multiple moves to be learned at the same level
+[33m675e334a[m HEAD@{165}: reset: moving to 675e334aa14ae36c2a2402403c4b1607c3eeaf05
+[33m4d94f456[m HEAD@{166}: commit: Free some space in the Home Bank
+[33m675e334a[m HEAD@{167}: commit: Updated Type Matchups
+[33m99120a2b[m HEAD@{168}: commit: Fixed Ghost No Effect to Psychic Bug
+[33m205d68e2[m HEAD@{169}: commit: Added Fairy type
+[33meb81a6fd[m HEAD@{170}: commit: Added Steel type
+[33ma23a746b[m HEAD@{171}: commit: Added Dark Type
+[33ma7f67738[m HEAD@{172}: commit: Added Experience Bar
+[33m30290f99[m HEAD@{173}: Branch: renamed refs/heads/master to refs/heads/main
+[33m30290f99[m HEAD@{175}: commit: Added Running Shoes
+[33ma891fc11[m[33m ([m[1;31morigin/vanilla[m[33m, [m[1;31morigin/restructured[m[33m, [m[1;32mvanilla[m[33m, [m[1;32mrestructured[m[33m)[m HEAD@{176}: clone: from https://github.com/bhinkle2025/pokered.git
