@@ -146,13 +146,60 @@ GameCornerClerk1Text:
 	call YesNoChoice
 	ld a, [wCurrentMenuItem]
 	and a
-	jr nz, .declined
+	jp nz, .declined
 	; Can only get more coins if you
 	; - have the Coin Case
 	ld b, COIN_CASE
 	call IsItemInBag
-	jr z, .no_coin_case
-	; - have room in the Coin Case for at least 9 coins
+	jp z, .no_coin_case
+
+	; Ask which amount
+    ld hl, .Want500Coins
+    call PrintText
+    call YesNoChoice
+    ld a, [wCurrentMenuItem]
+    and a
+    jr nz, .try_buy_50
+.try_buy_500
+    call Has9500Coins        ; must have < 9500 to fit +500
+    jp nc, .coin_case_full
+
+    ; cost = 10000 yen (00 10 00 was 1000; 01 00 00 is 10000)
+    ld a, $01
+    ldh [hMoney], a
+    xor a
+    ldh [hMoney + 1], a
+    ldh [hMoney + 2], a
+    call HasEnoughMoney
+    jr nc, .buy_500
+    ld hl, .CantAffordTheCoins
+    jp .print_ret
+.buy_500
+    ; subtract 10000
+    ld a, $01
+    ldh [hMoney], a
+    xor a
+    ldh [hMoney + 1], a
+    ldh [hMoney + 2], a
+    ld hl, hMoney + 2
+    ld de, wPlayerMoney + 2
+    ld c, $3
+    predef SubBCDPredef
+
+    ; add 500 coins (05 00)
+    ld a, $05
+    ldh [hCoins], a
+    xor a
+    ldh [hCoins + 1], a
+    ld de, wPlayerCoins + 1
+    ld hl, hCoins + 1
+    ld c, $2
+    predef AddBCDPredef
+
+    call GameCornerDrawCoinBox
+    ld hl, .ThanksHereAre500Coins
+    jr .print_ret
+.try_buy_50
 	call Has9990Coins
 	jr nc, .coin_case_full
 	; - have at least 1000 yen
@@ -162,10 +209,10 @@ GameCornerClerk1Text:
 	ld a, $10
 	ldh [hMoney + 1], a
 	call HasEnoughMoney
-	jr nc, .buy_coins
+	jr nc, .buy_50
 	ld hl, .CantAffordTheCoins
 	jr .print_ret
-.buy_coins
+.buy_50
 	; Spend 1000 yen
 	xor a
 	ldh [hMoney], a
@@ -202,12 +249,20 @@ GameCornerClerk1Text:
 	call PrintText
 	jp TextScriptEnd
 
+.Want500Coins:
+	text_far _GameCornerClerk1Want500CoinsText
+	text_end
+
 .DoYouNeedSomeGameCoins:
 	text_far _GameCornerClerk1DoYouNeedSomeGameCoinsText
 	text_end
 
 .ThanksHereAre50Coins:
 	text_far _GameCornerClerk1ThanksHereAre50CoinsText
+	text_end
+
+.ThanksHereAre500Coins:
+	text_far _GameCornerClerk1ThanksHereAre500CoinsText
 	text_end
 
 .PleaseComePlaySometime:
@@ -533,5 +588,12 @@ Has9990Coins:
 	ld a, $99
 	ldh [hCoins], a
 	ld a, $90
+	ldh [hCoins + 1], a
+	jp HasEnoughCoins
+
+Has9500Coins:
+	ld a, $95        
+	ldh [hCoins], a
+	xor a            
 	ldh [hCoins + 1], a
 	jp HasEnoughCoins

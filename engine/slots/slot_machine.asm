@@ -180,15 +180,15 @@ SlotMachine_SetFlags:
 	and a
 	jr nz, .allowMatches
 	call Random
-	and a
-	jr z, .setAllowMatchesCounter ; 1/256 (~0.4%) chance
 	ld b, a
+	and $0f
+	jr z, .setAllowMatchesCounter ; 1/16 (6.25%) chance
 	ld a, [wSlotMachineSevenAndBarModeChance]
 	cp b
 	jr c, .allowSevenAndBarMatches
-	ld a, 210
+	ld a, 140
 	cp b
-	jr c, .allowMatches ; 55/256 (~21.5%) chance
+	jr c, .allowMatches ; 114/256 (44.53%) chance
 	ld [hl], 0
 	ret
 .allowMatches

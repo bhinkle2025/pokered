@@ -7,6 +7,14 @@ _GameCornerBeauty1Text::
 	cont "next door."
 	done
 
+_GameCornerClerk1Want500CoinsText::
+	text "Would you like to"
+	line "buy 500 coins"
+
+	para "for ¥10000"
+	line "instead?"
+	done
+
 _GameCornerClerk1DoYouNeedSomeGameCoinsText::
 	text "Welcome to ROCKET"
 	line "GAME CORNER!"
@@ -17,6 +25,11 @@ _GameCornerClerk1DoYouNeedSomeGameCoinsText::
 	para "It's ¥1000 for 50"
 	line "coins. Would you"
 	cont "like some?"
+	done
+
+_GameCornerClerk1ThanksHereAre500CoinsText::
+	text "Thanks! Here are"
+	line "your 500 coins!"
 	done
 
 _GameCornerClerk1ThanksHereAre50CoinsText::
