@@ -68,9 +68,9 @@ _PewterGymBrockBoulderBadgeInfoText::
 	line "#MON LEAGUE"
 	cont "BADGE!"
 
-	para "Its bearer's"
-	line "#MON become"
-	cont "more powerful!"
+	para "It proves your"
+	line "victory in a"
+	cont "GYM battle!"
 
 	para "The technique"
 	line "FLASH can now be"

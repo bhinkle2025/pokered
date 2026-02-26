@@ -34,9 +34,8 @@ _CinnabarGymBlaineVolcanoBadgeInfoText::
 	text "Hah!"
 
 	para "The VOLCANOBADGE"
-	line "heightens the"
-	cont "SPECIAL abilities"
-	cont "of your #MON!"
+	line "is a mark of"
+	cont "burning resolve!"
 
 	para "Here, you can"
 	line "have this too!"

@@ -12,9 +12,8 @@ _FuchsiaGymKogaPostBattleAdviceText::
 _FuchsiaGymKogaSoulBadgeInfoText::
 	text "Now that you have"
 	line "the SOULBADGE,"
-	cont "the DEFENSE of"
-	cont "your #MON"
-	cont "increases!"
+	cont "your skill is"
+	cont "recognized!"
 
 	para "It also lets you"
 	line "SURF outside of"
