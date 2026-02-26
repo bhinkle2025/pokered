@@ -666,8 +666,9 @@ _ViridianBlackboardPoisonText::
 	line "#MON's health"
 	cont "steadily drops."
 
-	para "Poison lingers"
-	line "after battles."
+	para "Poison weakens"
+	line "a #MON during"
+	cont "battle."
 
 	para "Use an ANTIDOTE"
 	line "to cure poison!"
