@@ -46,6 +46,33 @@ SleepEffect:
 	ld hl, AlreadyAsleepText
 	jp PrintText
 .notAlreadySleeping
+	; Powder moves: Grass immunity (Sleep Powder / Spore)
+	ldh a, [hWhoseTurn]
+	and a
+	jr z, .playerSleepMove
+	ld a, [wEnemyMoveNum]
+	jr .checkSleepPowder
+.playerSleepMove
+	ld a, [wPlayerMoveNum]
+.checkSleepPowder
+	cp SLEEP_POWDER
+	jr z, .powderSleep
+	cp SPORE
+	jr nz, .skipPowderSleep
+.powderSleep
+	; de points to target status; types are de+1 (type1) and de+2 (type2)
+	push de
+	inc de
+	ld a, [de]
+	cp GRASS
+	jr z, .powderSleepImmune
+	inc de
+	ld a, [de]
+	cp GRASS
+.powderSleepImmune
+	pop de
+	jr z, .didntAffect
+.skipPowderSleep
 	ld a, b
 	and a
 	jr nz, .didntAffect ; can't affect a mon that is already statused
@@ -85,7 +112,30 @@ PoisonEffect:
 	ld de, wEnemyMoveEffect
 .poisonEffect
 	call CheckTargetSubstitute
-	jr nz, .noEffect ; can't poison a substitute target
+	jp nz, .noEffect ; can't poison a substitute target
+		; Powder move: Grass immunity (PoisonPowder)
+	ldh a, [hWhoseTurn]
+	and a
+	jr z, .playerPoisonMove
+	ld a, [wEnemyMoveNum]
+	jr .checkPoisonPowder
+.playerPoisonMove
+	ld a, [wPlayerMoveNum]
+.checkPoisonPowder
+	cp POISONPOWDER
+	jr nz, .continuePoisonChecks
+	; hl points to target status; hl+1/hl+2 are types (same layout used below)
+	push hl
+	inc hl
+	ld a, [hli] ; type1
+	cp GRASS
+	jr z, .grassPowderNoEffect
+	ld a, [hl]  ; type2
+	cp GRASS
+.grassPowderNoEffect
+	pop hl
+	jr z, .noEffect
+.continuePoisonChecks
 	ld a, [hli]
 	ld b, a
 	and a

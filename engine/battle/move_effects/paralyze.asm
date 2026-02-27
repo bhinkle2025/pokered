@@ -10,7 +10,33 @@ ParalyzeEffect_:
 	ld a, [hl]
 	and a ; does the target already have a status ailment?
 	jr nz, .didntAffect
-; check if the target is immune due to types
+; -----------------------------
+; Stun Spore: Grass immunity
+; -----------------------------
+	ldh a, [hWhoseTurn]
+	and a
+	jr z, .playerMove
+	ld a, [wEnemyMoveNum]
+	jr .checkMove
+.playerMove
+	ld a, [wPlayerMoveNum]
+
+.checkMove
+	cp STUN_SPORE
+	jr nz, .checkTypeImmunity
+
+	; check target types
+	ld b, h
+	ld c, l
+	inc bc          ; type1
+	ld a, [bc]
+	cp GRASS
+	jr z, .doesntAffect
+	inc bc          ; type2
+	ld a, [bc]
+	cp GRASS
+	jr z, .doesntAffect
+.checkTypeImmunity
 	ld a, [de]
 	cp ELECTRIC
 	jr nz, .hitTest
