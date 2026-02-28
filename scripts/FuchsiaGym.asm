@@ -44,7 +44,12 @@ FuchsiaGymKogaPostBattleScript:
 	jp z, FuchsiaGymResetScripts
 	ld a, D_RIGHT | D_LEFT | D_UP | D_DOWN
 	ld [wJoyIgnore], a
-; fallthrough
+	CheckEvent EVENT_PLAYER_IS_CHAMPION
+	jr z, FuchsiaGymReceiveTM07	
+	ld a, TEXT_FUCHSIAGYM_REMATCH_POST_BATTLE
+	ldh [hTextID], a
+	call DisplayTextID
+	jp FuchsiaGymResetScripts
 FuchsiaGymReceiveTM07:
 	ld a, TEXT_FUCHSIAGYM_KOGA_SOUL_BADGE_INFO
 	ldh [hTextID], a
@@ -86,6 +91,7 @@ FuchsiaGym_TextPointers:
 	dw_const FuchsiaGymKogaSoulBadgeInfoText, TEXT_FUCHSIAGYM_KOGA_SOUL_BADGE_INFO
 	dw_const FuchsiaGymKogaReceivedTM07Text,  TEXT_FUCHSIAGYM_KOGA_RECEIVED_TM07
 	dw_const FuchsiaGymKogaTM07NoRoomText,    TEXT_FUCHSIAGYM_KOGA_TM07_NO_ROOM
+	dw_const FuchsiaGymRematchPostBattleText, TEXT_FUCHSIAGYM_REMATCH_POST_BATTLE
 
 FuchsiaGymTrainerHeaders:
 	def_trainers 2
@@ -113,6 +119,8 @@ FuchsiaGymKogaText:
 	call DisableWaitingAfterTextDisplay
 	jr .done
 .afterBeat
+	CheckEvent EVENT_PLAYER_IS_CHAMPION
+	jr nz, .KogaRematch
 	ld hl, .PostBattleAdviceText
 	call PrintText
 	jr .done
@@ -133,6 +141,34 @@ FuchsiaGymKogaText:
 	ld [wGymLeaderNo], a
 	xor a
 	ldh [hJoyHeld], a
+	jr .endBattle
+.KogaRematch
+	ld hl, .PreBattleRematchText
+	call PrintText
+	call YesNoChoice
+	ld a, [wCurrentMenuItem]
+	and a
+	jr nz, .refused
+	ld hl, .PreBattleRematchAcceptedText
+	call PrintText
+	call Delay3
+	ld hl, wStatusFlags3
+	set BIT_TALKED_TO_TRAINER, [hl]
+	set BIT_PRINT_END_BATTLE_TEXT, [hl]
+	ld hl, FuchsiaGymRematchDefeatedText
+	ld de, FuchsiaGymRematchDefeatedText
+	call SaveEndBattleTextPointers
+	ld a, OPP_KOGA
+	ld [wCurOpponent], a
+	ld a, 2
+	ld [wTrainerNo], a
+	jr .endBattle
+.refused
+	ld hl, .PreBattleRematchRefusedText
+	call PrintText
+	jr .done
+.endBattle
+	ldh [hJoyHeld], a
 	ld a, SCRIPT_FUCHSIAGYM_KOGA_POST_BATTLE
 	ld [wFuchsiaGymCurScript], a
 .done
@@ -148,6 +184,26 @@ FuchsiaGymKogaText:
 
 .PostBattleAdviceText:
 	text_far _FuchsiaGymKogaPostBattleAdviceText
+	text_end
+
+.PreBattleRematchText:
+	text_far _FuchsiaGymRematchPreBattleText
+	text_end
+	
+.PreBattleRematchAcceptedText:
+	text_far _FuchsiaGymRematchAcceptedText
+	text_end
+	
+.PreBattleRematchRefusedText:
+	text_far _FuchsiaGymRematchRefusedText
+	text_end
+
+FuchsiaGymRematchDefeatedText:
+	text_far _FuchsiaGymRematchDefeatedText
+	text_end
+
+FuchsiaGymRematchPostBattleText:
+	text_far _FuchsiaGymRematchPostBattleText
 	text_end
 
 FuchsiaGymKogaSoulBadgeInfoText:

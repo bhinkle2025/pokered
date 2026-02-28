@@ -9,6 +9,58 @@ _FuchsiaGymKogaPostBattleAdviceText::
 	cont "foes!"
 	done
 
+_FuchsiaGymRematchPreBattleText::
+	text "Ah... CHAMPION."
+	line "You return."
+	
+	para "Since our last"
+	line "clash, my #MON"
+	cont "have refined"
+	cont "their poison."
+
+	para "Speed. Silence."
+	line "Precision."
+
+	para "Can you pierce"
+	line "the shadows once"
+	cont "more?"
+	done
+
+_FuchsiaGymRematchAcceptedText::
+	text "Good."
+
+	para "Face the art"
+	line "of the ninja!"
+	done
+
+_FuchsiaGymRematchRefusedText::
+	text "Hesitation is"
+	line "a weakness."
+	done
+
+_FuchsiaGymRematchDefeatedText::
+	text "Impressive..."
+	line "You saw through"
+	cont "my tactics."
+	prompt
+
+_FuchsiaGymRematchPostBattleText::
+	text "Your awareness"
+	line "is razor sharp."
+
+	para "You move with"
+	line "purpose and"
+	cont "resolve."
+
+	para "A true master"
+	line "of battle."
+
+	para "Remain vigilant."
+	line "Stronger foes"
+	cont "await in the"
+	cont "dark."
+	done
+
 _FuchsiaGymKogaSoulBadgeInfoText::
 	text "Now that you have"
 	line "the SOULBADGE,"
