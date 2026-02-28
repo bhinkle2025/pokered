@@ -17,6 +17,55 @@ _CeruleanGymMistyPreBattleText::
 	cont "#MON!"
 	done
 
+_CeruleanGymRematchPreBattleText::
+	text "Since our last"
+	line "battle, my"
+	
+	para "#MON have"
+	line "grown stronger!"
+
+	para "The tide has"
+	line "turned in my"
+	cont "favor!"
+
+	para "Ready to dive"
+	line "into a rematch"
+	cont "of a lifetime?"
+	done
+
+_CeruleanGymRematchAcceptedText::
+	text "Make a splash!"
+	line "Let's battle!"
+	done
+
+_CeruleanGymRematchRefusedText::
+	text "Come back when"
+	line "you're ready to"
+	cont "get soaked!"
+	done
+
+_CeruleanGymRematchDefeatedText::
+	text "You outswam"
+	line "me again..."
+	prompt
+
+_CeruleanGymRematchPostBattleText::
+	text "Unbelievable!"
+
+	para "Your power flows"
+	line "like a raging"
+	cont "current!"
+
+	para "You truly are"
+	line "a CHAMPION."
+
+	para "Keep riding the"
+	line "waves of victory!"
+
+	para "Stronger waters"
+	line "lie ahead."
+	done
+
 _CeruleanGymMistyTM11ExplanationText::
 	text "TM11 teaches"
 	line "BUBBLEBEAM!"

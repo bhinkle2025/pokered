@@ -647,6 +647,8 @@ BrockData:
 
 MistyData:
 	db $FF, 18, PSYDUCK, 21, STARMIE, 0
+; Rematch
+	db $FF, 62, GOLDUCK, 63, DEWGONG, 63, VAPOREON, 64, GYARADOS, 64, STARMIE, 0
 
 LtSurgeData:
 	db $FF, 21, VOLTORB, 23, ELECTABUZZ, 24, RAICHU, 0
