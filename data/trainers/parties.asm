@@ -642,6 +642,8 @@ BrunoData:
 
 BrockData:
 	db $FF, 12, GEODUDE, 14, ONIX, 0
+; Rematch
+	db $FF, 62, OMASTAR, 63, ONIX, 63, KABUTOPS, 64, GOLEM, 64, AERODACTYL, 0
 
 MistyData:
 	db $FF, 18, PSYDUCK, 21, STARMIE, 0
