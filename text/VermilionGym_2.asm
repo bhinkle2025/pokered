@@ -10,6 +10,58 @@ _VermilionGymLTSurgePostBattleAdviceText::
 	cont "type #MON!"
 	done
 
+_VermilionGymRematchPreBattleText::
+	text "Hey! CHAMP!"
+	line "Back for more?"
+	
+	para "My #MON are"
+	line "charged up and"
+	cont "ready to strike!"
+
+	para "This won't be"
+	line "a light shock!"
+	
+	para "Ready for a"
+	line "high-voltage"
+	cont "rematch?"
+	done
+
+_VermilionGymRematchAcceptedText::
+	text "That's the"
+	line "spirit!"
+
+	para "Time to feel"
+	line "the thunder!"
+	done
+
+_VermilionGymRematchRefusedText::
+	text "Ha! Come back"
+	line "when you're not"
+	cont "running on empty!"
+	done
+
+_VermilionGymRematchDefeatedText::
+	text "What?!"
+	line "You shorted out"
+	cont "my offense!"
+	prompt
+
+_VermilionGymRematchPostBattleText::
+	text "Outstanding!"
+
+	para "You've got the"
+	line "reflexes of a"
+	cont "true veteran!"
+
+	para "No doubt about"
+	line "it, CHAMPION!"
+
+	para "Keep training!"
+	line "The world needs"
+	cont "strength like"
+	cont "yours!"
+	done
+
 _VermilionGymLTSurgeThunderBadgeInfoText::
 	text "The THUNDERBADGE"
 	line "shows you've got"
