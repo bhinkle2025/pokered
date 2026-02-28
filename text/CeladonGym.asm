@@ -25,6 +25,59 @@ _CeladonGymErikaPreBattleText::
 	line "shall not lose."
 	done
 
+_CeladonGymRematchPreBattleText::
+	text "Welcome back,"
+	line "CHAMPION..."
+
+	para "Since we last"
+	line "met, my #MON"
+	cont "have blossomed."
+
+	para "Their petals"
+	line "hide quiet"
+	cont "strength."
+
+	para "Shall we begin"
+	line "this graceful"
+	cont "rematch?"
+	done
+
+_CeladonGymRematchAcceptedText::
+	text "Very well..."
+
+	para "Let our battle"
+	line "unfold like a"
+	cont "beautiful bloom."
+	done
+
+_CeladonGymRematchRefusedText::
+	text "I will be here,"
+	line "when you are"
+	cont "ready."
+	done
+
+_CeladonGymRematchDefeatedText::
+	text "Oh my..."
+	line "You have grown"
+	cont "even stronger."
+	prompt
+
+_CeladonGymRematchPostBattleText::
+	text "Remarkable."
+
+	para "Your strength"
+	line "rises like the"
+	cont "morning sun."
+
+	para "You truly are"
+	line "worthy of your"
+	cont "title."
+
+	para "May your journey"
+	line "continue to"
+	cont "flourish."
+	done
+
 _CeladonGymErikaReceivedRainbowBadgeText::
 	text "Oh!"
 	line "I concede defeat."
