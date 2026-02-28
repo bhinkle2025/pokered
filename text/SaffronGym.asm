@@ -49,8 +49,9 @@ _SaffronGymRematchRefusedText::
 	done
 
 _SaffronGymRematchDefeatedText::
-	text "So the vision"
-	line "changes..."
+	text ""
+	line "So the vision"
+	cont "changes..."
 	prompt
 
 _SaffronGymRematchPostBattleText::

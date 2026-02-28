@@ -13,6 +13,55 @@ _CinnabarGymBlainePreBattleText::
 	line "have BURN HEAL!"
 	done
 
+_CinnabarGymRematchPreBattleText::
+	text "Hah! CHAMPION!"
+	line "You return!"
+	
+	para "Since our last"
+	line "experiment, my"
+	cont "#MON burn"
+	cont "hotter than ever!"
+
+	para "Science and"
+	line "strategy ignite"
+	cont "together!"
+
+	para "Care for a"
+	line "blazing rematch?"
+	done
+
+_CinnabarGymRematchAcceptedText::
+	text "Excellent!"
+
+	para "Prepare for a"
+	line "white-hot battle!"
+	done
+
+_CinnabarGymRematchRefusedText::
+	text "Heh! Afraid of"
+	line "getting burned?"
+	done
+
+_CinnabarGymRematchDefeatedText::
+	text ""
+	line "Incredible!"
+	cont "You extinguished"
+	cont "my flames!"
+	prompt
+
+_CinnabarGymRematchPostBattleText::
+	text "Magnificent!"
+
+	para "Your power burns"
+	line "bright and fierce."
+
+	para "A true master"
+	line "of battle!"
+
+	para "Keep your fire"
+	line "alive, CHAMPION!"
+	done
+
 _CinnabarGymBlaineReceivedVolcanoBadgeText::
 	text "I have"
 	line "burnt out!"
