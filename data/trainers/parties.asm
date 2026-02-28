@@ -670,6 +670,8 @@ BlaineData:
 
 SabrinaData:
 	db $FF, 43, MR_MIME, 43, JYNX, 43, SLOWBRO, 44, ALAKAZAM, 0
+; Rematch
+	db $FF, 62, MR_MIME, 63, HYPNO, 63, JYNX, 64, ALAKAZAM, 64, SLOWBRO, 0
 
 GentlemanData:
 ; SS Anne 1F Rooms

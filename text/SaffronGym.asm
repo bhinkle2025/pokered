@@ -16,6 +16,59 @@ _SaffronGymSabrinaText::
 	cont "you my powers!"
 	done
 
+_SaffronGymRematchPreBattleText::
+	text "I foresaw your"
+	line "return, CHAMPION."
+	
+	para "Since our last"
+	line "encounter, my"
+	cont "#MON have"
+	cont "expanded their"
+	cont "minds."
+
+	para "The future is"
+	line "never fixed..."
+
+	para "Shall we test"
+	line "what destiny"
+	cont "holds?"
+	done
+
+_SaffronGymRematchAcceptedText::
+	text "Focus your"
+	line "thoughts."
+
+	para "The battle"
+	line "begins now."
+	done
+
+_SaffronGymRematchRefusedText::
+	text "You are not yet"
+	line "ready to face"
+	cont "your fate."
+	done
+
+_SaffronGymRematchDefeatedText::
+	text "So the vision"
+	line "changes..."
+	prompt
+
+_SaffronGymRematchPostBattleText::
+	text "Your will is"
+	line "extraordinary."
+
+	para "You bend the"
+	line "future through"
+	cont "sheer resolve."
+
+	para "Continue walking"
+	line "your chosen"
+	cont "path."
+
+	para "Greater trials"
+	line "await you."
+	done
+
 _SaffronGymSabrinaReceivedMarshBadgeText::
 	text "I'm"
 	line "shocked!"
