@@ -19,9 +19,34 @@ SpecialTrainerMoves:
 	db 2, 3, ROCK_SLIDE
 	db 0
 
+	db BROCK, 2
+	db 1, 1, BLIZZARD
+	db 1, 2, PRIMORDIAL
+	db 1, 3, AMNESIA
+	db 4, 1, ROCK_SLIDE
+	db 4, 2, FIRE_PUNCH
+	db 5, 1, DRAGON_CLAW
+	db 5, 2, FLY
+	db 0
+
 	db MISTY, 1
 	db 1, 4, AMNESIA
 	db 1, 2, BUBBLEBEAM
+	db 0
+
+	db MISTY, 2
+	db 1, 1, ICE_BEAM
+	db 1, 2, PSYCHIC_M
+	db 1, 3, SURF
+	db 2, 2, SURF
+	db 3, 1, SURF
+	db 3, 2, ICE_BEAM
+	db 3, 4, REST
+	db 4, 1, EARTHQUAKE
+	db 4, 2, FLY
+	db 4, 3, WATERFALL
+	db 5, 2, PSYCHIC_M
+	db 5, 4, SURF
 	db 0
 
 	db LT_SURGE, 1
@@ -35,12 +60,35 @@ SpecialTrainerMoves:
 	db 3, 3, SURF
 	db 0
 
+	db LT_SURGE, 2
+	db 1, 3, FLASH
+	db 2, 3, PIN_MISSILE
+	db 3, 2, PSYCHIC_M
+	db 3, 4, ICE_PUNCH
+	db 4, 2, HYPER_BEAM
+	db 4, 3, FLASH
+	db 5, 1, CALM_MIND
+	db 5, 2, SURF
+	db 5, 3, THUNDER
+	db 0
+
 	db ERIKA, 1
 	db 1, 1, SWORDS_DANCE
 	db 2, 1, AMNESIA
 	db 2, 3, MEGA_DRAIN
 	db 3, 2, MEGA_DRAIN
 	db 3, 1, SOLARBEAM
+	db 0
+
+	db ERIKA, 2
+	db 1, 1, SWORDS_DANCE
+	db 2, 1, MEGA_DRAIN
+	db 2, 2, CALM_MIND
+	db 3, 2, PRIMORDIAL
+	db 4, 2, CALM_MIND
+	db 4, 4, MEGA_DRAIN
+	db 5, 1, CALM_MIND
+	db 5, 2, MEGA_DRAIN
 	db 0
 
 	db KOGA, 1
