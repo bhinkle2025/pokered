@@ -4,15 +4,6 @@
 ;	db 0
 
 SpecialTrainerMoves:
-	db BUG_CATCHER, 15
-	db 2, 2, TACKLE
-	db 2, 3, STRING_SHOT
-	db 0
-
-	db YOUNGSTER, 14
-	db 1, 4, FISSURE
-	db 0
-
 	db BROCK, 1
 	db 1, 1, MEGA_PUNCH
 	db 1, 4, THUNDERPUNCH
@@ -103,6 +94,19 @@ SpecialTrainerMoves:
 	db 4, 3, SLUDGE
 	db 0
 
+	db KOGA, 2
+	db 1, 3, FIRE_BLAST
+	db 2, 1, BLIZZARD
+	db 3, 1, REST
+	db 3, 4, ACID
+	db 4, 1, LEECH_LIFE
+	db 4, 2, DOUBLE_TEAM
+	db 4, 3, SLUDGE
+	db 5, 1, AMNESIA
+	db 5, 2, SLEEP_POWDER
+	db 5, 3, SLUDGE
+	db 0
+
 	db BLAINE, 1
 	db 1, 3, PSYCHIC_M
 	db 1, 4, THUNDERPUNCH
@@ -120,6 +124,19 @@ SpecialTrainerMoves:
 	db 5, 2, REST
 	db 0
 
+	db BLAINE, 2
+	db 1, 2, PSYCHIC_M
+	db 1, 3, THUNDERPUNCH
+	db 2, 1, SWORDS_DANCE
+	db 2, 3, GIGA_IMPACT
+	db 3, 2, CALM_MIND
+	db 3, 4, SOLARBEAM
+	db 4, 1, GIGA_IMPACT
+	db 4, 3, SOLARBEAM
+	db 5, 1, FLARE_BLITZ
+	db 5, 3 , REST
+	db 0
+
 	db SABRINA, 1
 	db 1, 1, AMNESIA
 	db 1, 2, REFLECT
@@ -131,6 +148,16 @@ SpecialTrainerMoves:
 	db 3, 1, SURF
 	db 3, 2, AMNESIA
 	db 4, 1, CALM_MIND
+	db 0
+
+	db SABRINA, 2
+	db 1, 1, AMNESIA
+	db 1, 2, REFLECT
+	db 2, 4, HYPNOSIS
+	db 3, 1, LOVELY_KISS
+	db 3, 2, NIGHT_SHADE
+	db 4, 1, HYPER_BEAM
+	db 5, 1, SURF
 	db 0
 
 	db GIOVANNI, 3

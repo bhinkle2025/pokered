@@ -28,7 +28,7 @@ Moves:
 	move CUT,          NO_ADDITIONAL_EFFECT,        80, BUG,          100, 15
 	move GUST,         NO_ADDITIONAL_EFFECT,        40, FLYING,       100, 35
 	move WING_ATTACK,  NO_ADDITIONAL_EFFECT,        60, FLYING,       100, 35
-	move WHIRLWIND,    SWITCH_AND_TELEPORT_EFFECT,   0, NORMAL,        85, 20
+	move WHIRLWIND,    SWITCH_AND_TELEPORT_EFFECT,   0, NORMAL,       100, 20
 	move FLY,          FLY_EFFECT,                  90, FLYING,        95, 15
 	move BIND,         TRAPPING_EFFECT,             15, NORMAL,        75, 20
 	move OUTRAGE,      THRASH_PETAL_DANCE_EFFECT,  120, DRAGON,       100, 10
