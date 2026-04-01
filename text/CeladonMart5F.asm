@@ -99,30 +99,26 @@ _TrainingCompleteText::
 
 
 _CeladonMart5FGentlemanText::
-	text "#MON ability"
-	line "enhancers can be"
+	text "Battle items for"
+	line "#MON can be"
 	cont "bought only here."
 
-	para "Use CALCIUM to"
-	line "increase SPECIAL"
-	cont "abilities."
-
-	para "Use CARBOS to"
-	line "increase SPEED."
+	para "ELIXER restores"
+	line "the PP of all"
+	cont "moves."
 	done
 
 _CeladonMart5FSailorText::
 	text "I'm here for"
-	line "#MON ability"
-	cont "enhancers."
+	line "items that keep"
+	cont "#MON going."
 
-	para "PROTEIN increases"
-	line "ATTACK power."
-
-	para "IRON increases"
-	line "DEFENSE!"
+	para "PP UP raises"
+	line "the max PP of"
+	cont "a move!"
 	done
 
 _CeladonMart5FCurrentFloorSignText::
-	text "5F: DRUG STORE"
+	text "5F: TRAINING"
+	line "GOODS"
 	done

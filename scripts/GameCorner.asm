@@ -130,6 +130,7 @@ GameCorner_TextPointers:
 	dw_const GameCornerClerk2Text,            TEXT_GAMECORNER_CLERK2
 	dw_const GameCornerGentlemanText,         TEXT_GAMECORNER_GENTLEMAN
 	dw_const GameCornerRocketText,            TEXT_GAMECORNER_ROCKET
+	dw_const GameCornerCandyManText,          TEXT_GAMECORNER_CANDYMAN
 	dw_const GameCornerPosterText,            TEXT_GAMECORNER_POSTER
 	dw_const GameCornerRocketAfterBattleText, TEXT_GAMECORNER_ROCKET_AFTER_BATTLE
 
@@ -367,6 +368,78 @@ GameCornerGymGuideTheyOfferRarePokemonText:
 
 GameCornerGamblerText:
 	text_far _GameCornerGamblerText
+	text_end
+
+GameCornerCandyManText:
+	text_asm
+	ld hl, .IntroText
+	call PrintText
+	call YesNoChoice
+	ld a, [wCurrentMenuItem]
+	and a
+	jr nz, .declined
+
+	; price = 1000
+	xor a
+	ldh [hMoney], a
+	ldh [hMoney + 2], a
+	ld a, $10
+	ldh [hMoney + 1], a
+	call HasEnoughMoney
+	jr nc, .buy
+	ld hl, .CantAffordText
+	jr .print_ret
+
+.buy
+	ld b, RARE_CANDY
+	ld c, 10
+	call GiveItem
+	jr nc, .bag_full
+
+	; subtract 1000
+	xor a
+	ldh [hMoney], a
+	ldh [hMoney + 2], a
+	ld a, $10
+	ldh [hMoney + 1], a
+	ld hl, hMoney + 2
+	ld de, wPlayerMoney + 2
+	ld c, $3
+	predef SubBCDPredef
+
+	ld hl, .BuyText
+	jr .print_ret
+
+.declined
+	ld hl, .NoText
+	jr .print_ret
+
+.bag_full
+	ld hl, .BagFullText
+	jr .print_ret
+
+.print_ret
+	call PrintText
+	jp TextScriptEnd
+
+.IntroText
+	text_far _GameCornerCandyManIntroText
+	text_end
+
+.NoText
+	text_far _GameCornerCandyManNoText
+	text_end
+
+.BuyText
+	text_far _GameCornerCandyManBuyText
+	text_end
+
+.CantAffordText
+	text_far _GameCornerCandyManCantAffordText
+	text_end
+
+.BagFullText
+	text_far _GameCornerCandyManBagFullText
 	text_end
 
 GameCornerClerk2Text:

@@ -274,7 +274,7 @@ SilphCo7F_TextPointers:
 	dw_const SilphCo7FRocket2Text,            TEXT_SILPHCO7F_ROCKET2
 	dw_const SilphCo7FRocket3Text,            TEXT_SILPHCO7F_ROCKET3
 	dw_const SilphCo7FRivalText,              TEXT_SILPHCO7F_RIVAL
-	dw_const PickUpItemText,                  TEXT_SILPHCO7F_EXP_CANDY_S
+	dw_const PickUpItemText,                  TEXT_SILPHCO7F_RARE_CANDY
 	dw_const PickUpItemText,                  TEXT_SILPHCO7F_TM_SWORDS_DANCE
 	dw_const PickUpItemText,                  TEXT_SILPHCO7F_UNREFERENCED_ITEM ; unreferenced
 	dw_const SilphCo7FRivalWaitedHereText,    TEXT_SILPHCO7F_RIVAL_WAITED_HERE

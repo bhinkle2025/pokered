@@ -129,6 +129,40 @@ _GameCornerGamblerText::
 	cont "get hooked!"
 	done
 
+_GameCornerCandyManIntroText::
+	text "Hey, kid... Keep"
+	line "it quiet, see?"
+	para "I got some good"
+	line "stuff for sale."
+	para "Only ¥1000."
+	line "Interested?"
+	done
+
+_GameCornerCandyManNoText::
+	text "Heh. Suit"
+	line "yourself."
+	para "Come back when"
+	line "the grind hurts."
+	done
+
+_GameCornerCandyManBuyText::
+	text "Heh heh..."
+	line "Good choice."
+	para "Use 'em smart."
+	line "Too much sugar"
+	cont "ain't free."
+	done
+
+_GameCornerCandyManCantAffordText::
+	text "You're short on"
+	line "cash, kid."
+	done
+
+_GameCornerCandyManBagFullText::
+	text "Your BAG's full."
+	line "Make some room."
+	done
+
 _GameCornerClerk2WantSomeCoinsText::
 	text "What's up? Want"
 	line "some coins?"

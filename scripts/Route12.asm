@@ -72,7 +72,7 @@ Route12_TextPointers:
 	dw_const Route12Fisher4Text,           TEXT_ROUTE12_FISHER4
 	dw_const Route12Fisher5Text,           TEXT_ROUTE12_FISHER5
 	dw_const PickUpItemText,               TEXT_ROUTE12_TM_THUNDERPUNCH
-	dw_const PickUpItemText,               TEXT_ROUTE12_EXP_CANDY_M
+	dw_const PickUpItemText,               TEXT_ROUTE12_RARE_CANDY
 	dw_const Route12SignText,              TEXT_ROUTE12_SIGN
 	dw_const Route12SportFishingSignText,  TEXT_ROUTE12_SPORT_FISHING_SIGN
 	dw_const Route12SnorlaxWokeUpText,     TEXT_ROUTE12_SNORLAX_WOKE_UP

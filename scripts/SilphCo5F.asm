@@ -79,7 +79,7 @@ SilphCo5F_TextPointers:
 	dw_const SilphCo5FRockerText,         TEXT_SILPHCO5F_ROCKER
 	dw_const SilphCo5FRocket2Text,        TEXT_SILPHCO5F_ROCKET2
 	dw_const PickUpItemText,              TEXT_SILPHCO5F_TM_GIGA_IMPACT
-	dw_const PickUpItemText,              TEXT_SILPHCO5F_EXP_CANDY_M
+	dw_const PickUpItemText,              TEXT_SILPHCO5F_RARE_CANDY
 	dw_const PickUpItemText,              TEXT_SILPHCO5F_CARD_KEY
 	dw_const SilphCo5FPokemonReport1Text, TEXT_SILPHCO5F_POKEMON_REPORT1
 	dw_const SilphCo5FPokemonReport2Text, TEXT_SILPHCO5F_POKEMON_REPORT2
