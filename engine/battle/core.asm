@@ -3565,11 +3565,25 @@ CheckPlayerStatusConditions:
 .FrozenCheck
 	bit FRZ, [hl] ; frozen?
 	jr z, .HeldInPlaceCheck
+
+	call BattleRandom
+	cp 20 percent + 1
+	jr nc, .stillFrozen
+
+	; thaw
+	res FRZ, [hl]
+
+	ld hl, ThawedOutText
+	call PrintText
+
+	jr .HeldInPlaceCheck ; allow the move this turn
+
+.stillFrozen
 	ld hl, IsFrozenText
 	call PrintText
 	xor a
 	ld [wPlayerUsedMove], a
-	ld hl, ExecutePlayerMoveDone ; player can't move this turn
+	ld hl, ExecutePlayerMoveDone
 	jp .returnToHL
 
 .HeldInPlaceCheck
@@ -3806,6 +3820,10 @@ WokeUpText:
 
 IsFrozenText:
 	text_far _IsFrozenText
+	text_end
+
+ThawedOutText:
+	text_far _ThawedOutText
 	text_end
 
 FullyParalyzedText:
