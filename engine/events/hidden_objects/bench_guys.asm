@@ -55,10 +55,6 @@ UnusedBenchGuyText2::
 	text_far _UnusedBenchGuyText2
 	text_end
 
-UnusedBenchGuyText3::
-	text_far _UnusedBenchGuyText3
-	text_end
-
 VermilionCityPokecenterBenchGuyText::
 	text_far _VermilionPokecenterGuyText
 	text_end

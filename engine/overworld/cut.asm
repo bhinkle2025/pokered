@@ -29,6 +29,9 @@ UsedCut:
 	ld [wCutTile], a
 	ld a, 1
 	ld [wActionResultOrTookBattleTurn], a ; used cut
+	ld a, [wSearchedMove] 		; check if we need to use abridged routine for overworld Cut
+	cp CUT						; see CutTreeText in 'home\overworld_text.asm' for full explanation
+	jr z, .usedCutFromOverworld ; skip getting Mon name and screen white out if using overworld Cut
 	ld a, [wWhichPokemon]
 	ld hl, wPartyMonNicks
 	call GetPartyMonName
@@ -51,6 +54,7 @@ UsedCut:
 	call LoadScreenTilesFromBuffer2
 	ld hl, wStatusFlags5
 	res BIT_NO_TEXT_DELAY, [hl]
+.usedCutFromOverworld
 	ld a, $ff
 	ld [wUpdateSpritesEnabled], a
 	call InitCutAnimOAM

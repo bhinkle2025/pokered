@@ -20,3 +20,9 @@ CeladonMart2FGirlText:
 CeladonMart2FCurrentFloorSignText:
 	text_far _CeladonMart2FCurrentFloorSignText
 	text_end
+
+CeladonMart2FClerk1Text::
+	script_mart GREAT_BALL, SUPER_POTION, REVIVE, ANTIDOTE, BURN_HEAL, ICE_HEAL, AWAKENING, PARLYZ_HEAL
+
+CeladonMart2FClerk2Text::
+	script_mart X_ACCURACY, GUARD_SPEC, DIRE_HIT, X_ATTACK, X_DEFEND, X_SPEED, X_SPECIAL

@@ -87,10 +87,15 @@ OverworldLoopLessDelay::
 	jp nz, .noDirectionButtonsPressed
 	call IsPlayerCharacterBeingControlledByGame
 	jr nz, .checkForOpponent
+	ld a, [wWalkBikeSurfState] 		; prevent triggering water text while surfing
+	ld [wWalkBikeSurfStateCopy], a
+	cp 2							; value used while surfing
+	jr z, .checkNextTileForSprite	; if we're surfing, skip to check if we're looking at a sign/sprite
 	call CheckForHiddenObjectOrBookshelfOrCardKeyDoor
 	ldh a, [hItemAlreadyFound]
 	and a
 	jp z, OverworldLoop ; jump if a hidden object or bookshelf was found, but not if a card key door was found
+.checkNextTileForSprite
 	call IsSpriteOrSignInFrontOfPlayer
 	ldh a, [hTextID]
 	and a

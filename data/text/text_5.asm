@@ -8,6 +8,16 @@ _CableClubNPCMakingPreparationsText::
 	cont "Please wait."
 	done
 
+_RequiresStrengthText::
+	text "This requires"
+	line "STRENGTH to move!"
+	done
+
+_LikeToUseStrengthText::
+	text "Would you like to"
+	line "use STRENGTH?"
+	done
+
 _UsedStrengthText::
 	text_ram wNameBuffer
 	text " used"
@@ -19,6 +29,30 @@ _CanMoveBouldersText::
 	text " can"
 	line "move boulders."
 	prompt
+
+_BouldersCanBeMovedText::
+	text "Boulders can now"
+	line "be moved."
+	done
+
+_TreeCanBeCutText::
+	text "This tree can be"
+	line "CUT."
+	done
+
+_LikeToUseCutText::
+	text "Would you like to"
+	line "use CUT?"
+	done
+
+_WaterIsCalmText::
+	text "The water is calm."
+	done
+
+_LikeToUseSurfText::
+	text "Would you like to"
+	line "use SURF?"
+	done
 
 _CurrentTooFastText::
 	text "The current is"

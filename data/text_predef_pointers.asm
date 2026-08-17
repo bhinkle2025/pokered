@@ -32,8 +32,8 @@ TextPredefs::
 	add_tx_pre RockTunnelPokecenterBenchGuyText     ; 1A
 	add_tx_pre UnusedBenchGuyText1                  ; 1B XXX unused
 	add_tx_pre UnusedBenchGuyText2                  ; 1C XXX unused
-	add_tx_pre UnusedBenchGuyText3                  ; 1D XXX unused
-	add_tx_pre UnusedPredefText                     ; 1E XXX unused
+	add_tx_pre CutTreeText                          ; 1D
+	add_tx_pre CalmWaterText                        ; 1E
 	add_tx_pre PokemonCenterPCText                  ; 1F
 	add_tx_pre ViridianSchoolNotebook               ; 20
 	add_tx_pre ViridianSchoolBlackboard             ; 21

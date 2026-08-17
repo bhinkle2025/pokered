@@ -14,3 +14,6 @@ CinnabarMartSilphWorkerFText:
 CinnabarMartScientistText:
 	text_far _CinnabarMartScientistText
 	text_end
+
+CinnabarMartClerkText::
+	script_mart ULTRA_BALL, GREAT_BALL, HYPER_POTION, FULL_HEAL, REVIVE
