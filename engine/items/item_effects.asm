@@ -51,7 +51,7 @@ ItemUsePtrTable:
 	dw ItemUseEvoStone   ; FIRE_STONE
 	dw ItemUseEvoStone   ; THUNDER_STONE
 	dw ItemUseEvoStone   ; WATER_STONE
-	dw ItemUseVitamin    ; EXP_CANDY_XS
+	dw ItemUseReminder   ; MOVE_REMINDER
 	dw ItemUseVitamin    ; EXP_CANDY_S
 	dw ItemUseVitamin    ; EXP_CANDY_M
 	dw ItemUseVitamin    ; EXP_CANDY_L
@@ -91,7 +91,7 @@ ItemUsePtrTable:
 	dw UnusableItem      ; SILPH_SCOPE
 	dw ItemUsePokeFlute  ; POKE_FLUTE
 	dw UnusableItem      ; LIFT_KEY
-	dw UnusableItem      ; EXP_ALL
+	dw ItemUseExpAll     ; EXP_ALL
 	dw ItemUseOldRod     ; OLD_ROD
 	dw ItemUseGoodRod    ; GOOD_ROD
 	dw ItemUseSuperRod   ; SUPER_ROD
@@ -872,7 +872,7 @@ ItemUseMedicine:
 	jr nc, .healHP ; if it's a Revive or Max Revive
 	cp FULL_HEAL
 	jr z, .cureStatusAilment ; if it's a Full Heal
-	cp EXP_CANDY_XS
+	cp EXP_CANDY_S
 	jp nc, .useVitamin ; if it's an EXP Candy (any size) or a Rare Candy
 	cp FULL_RESTORE
 	jr nc, .healHP ; if it's a Full Restore or one of the potions
@@ -1284,8 +1284,6 @@ ItemUseMedicine:
 	jp z, .useRareCandy
 
     ; --- EXP Candy family ---
-    cp EXP_CANDY_XS
-    jr z, .useExpCandyXS
     cp EXP_CANDY_S
     jr z, .useExpCandyS
     cp EXP_CANDY_M
@@ -1598,6 +1596,35 @@ RepelToggledOnText:
 
 RepelToggledOffText:
 	text "REPEL is off!"
+	done
+
+ItemUseExpAll:
+	ld a, [wIsInBattle]
+	and a
+	jp nz, ItemUseNotTime
+
+	ld a, [wExpAllEnabled]
+	and a
+	jr z, .turnOn
+
+.turnOff
+	xor a
+	ld [wExpAllEnabled], a
+	ld hl, ExpAllOffText
+	jp PrintText
+
+.turnOn
+	ld a, 1
+	ld [wExpAllEnabled], a
+	ld hl, ExpAllOnText
+	jp PrintText
+
+ExpAllOnText:
+	text "EXP.ALL is on!"
+	done
+
+ExpAllOffText:
+	text "EXP.ALL is off!"
 	done
 
 
@@ -3125,6 +3152,43 @@ ApplyExpCandy_Common::
     ld a, [hl]
     cp b
     ret
+
+ItemUseReminder:
+	call SaveScreenTilesToBuffer2
+	xor a
+	ld [wListScrollOffset], a
+	ld [wPartyMenuTypeOrMessageID], a
+	ld [wUpdateSpritesEnabled], a
+	ld [wMenuItemToSwap], a
+	call DisplayPartyMenu
+
+	push af
+	call GBPalWhiteOutWithDelay3
+	call RestoreScreenTilesAndReloadTilePatterns
+	call LoadGBPal
+	pop af
+	ret c
+	call PrepareRelearnableMoveList
+
+	ld hl, MoveReminderDebug2Text
+	call PrintText
+	ret
+
+
+
+MoveReminderWhichMoveText:
+	text_far _MoveReminderWhichMoveText
+	text_end
+
+MoveReminderNoMovesText:
+	text_far _MoveReminderNoMovesText
+	text_end
+
+MoveReminderDebug2Text:
+	text_far _MoveReminderDebug2Text
+	text_end
+
+INCLUDE "text/move_relearner.asm"
 
 
 

@@ -85,7 +85,7 @@ DEF FIRST_PARTY_MENU_TEXT_ID EQU const_value
 	const REVIVE_MSG           ; $F7
 	const RARE_CANDY_MSG       ; $F8
 	; New messages (EXP Candy family)
-	const EXP_CANDY_XS_MSG     ; $F9
+	const MOVE_REMINDER_MSG    ; $F9
 	const EXP_CANDY_S_MSG      ; $FA
 	const EXP_CANDY_M_MSG      ; $FB
 	const EXP_CANDY_L_MSG      ; $FC

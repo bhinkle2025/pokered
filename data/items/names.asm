@@ -34,7 +34,7 @@ ItemNames::
 	li "FIRE STONE"
 	li "THUNDERSTONE"
 	li "WATER STONE"
-	li "EXP CANDY XS"
+	li "MOVE REMINDER"
 	li "EXP CANDY S"
 	li "EXP CANDY M"
 	li "EXP CANDY L"

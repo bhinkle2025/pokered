@@ -849,22 +849,10 @@ FaintEnemyPokemon:
 	call SaveScreenTilesToBuffer1
 	xor a
 	ld [wBattleResult], a
-	ld b, EXP_ALL
-	call IsItemInBag
+	ld a, [wExpAllEnabled]
+	and a
 	push af
-	jr z, .giveExpToMonsThatFought ; if no exp all, then jump
-
-; the player has exp all
-; first, we halve the values that determine exp gain
-; the enemy mon base stats are added to stat exp, so they are halved
-; the base exp (which determines normal exp) is also halved
-	ld hl, wEnemyMonBaseStats
-	ld b, NUM_STATS + 2
-.halveExpDataLoop
-	srl [hl]
-	inc hl
-	dec b
-	jr nz, .halveExpDataLoop
+	jr z, .giveExpToMonsThatFought ; EXP.ALL is turned off
 
 ; give exp (divided evenly) to the mons that actually fought in battle against the enemy mon that has fainted
 ; if exp all is in the bag, this will be only be half of the stat exp and normal exp, due to the above loop
@@ -880,14 +868,22 @@ FaintEnemyPokemon:
 ; half of the total stat exp and normal exp will divided evenly amongst every party member
 	ld a, TRUE
 	ld [wBoostExpByExpAll], a
+	xor a
+	ld [wExpAllMessagePrinted], a
+; Build mask containing every existing party member
 	ld a, [wPartyCount]
 	ld b, 0
+
 .gainExpFlagsLoop
 	scf
 	rl b
 	dec a
 	jr nz, .gainExpFlagsLoop
-	ld a, b
+	; Remove Pokémon that participated against this enemy.
+	; The remaining bits are nonparticipants only.
+	ld a, [wPartyFoughtCurrentEnemyFlags]
+	cpl
+	and b
 	ld [wPartyGainExpFlags], a
 	jpfar GainExperience
 
@@ -2388,21 +2384,11 @@ UseBagItem:
 
     ; ======== EXP gain (mirror faint-EXP logic) ========
 
-    ; Check if the player has Exp. All
-    ld   b, EXP_ALL
-    call IsItemInBag
-    push af
-    jr   z, .GiveToFighters
-
-    ; With Exp. All present, halve enemy base stats + base EXP
-    ; (same math used by the faint/Exp. All routine)
-    ld   hl, wEnemyMonBaseStats
-    ld   b, NUM_STATS + 2        ; base stats (5) + 2 base EXP bytes
-.HalveLoop
-    srl  [hl]
-    inc  hl
-    dec  b
-    jr   nz, .HalveLoop
+	; Check if EXP.ALL is enabled
+	ld   a, [wExpAllEnabled]
+	and  a
+	push af
+	jr   z, .GiveToFighters
 
 .GiveToFighters
     ; First pass: give EXP to participants (full or halved as above)
@@ -2417,16 +2403,20 @@ UseBagItem:
     ld   a, 1
     ld   [wBoostExpByExpAll], a
 
-    ; Build bitmask of “everyone gains” in wPartyGainExpFlags
-    ld   a, [wPartyCount]
-    ld   b, 0
+ ; Build bitmask of all current party members
+	ld   a, [wPartyCount]
+	ld   b, 0
 .SetFlagsLoop
     scf
     rl   b
     dec  a
     jr   nz, .SetFlagsLoop
-    ld   a, b
-    ld   [wPartyGainExpFlags], a
+
+; Remove participants so only nonparticipants get shared EXP
+	ld   a, [wPartyFoughtCurrentEnemyFlags]
+	cpl
+	and  b
+	ld   [wPartyGainExpFlags], a
 
     farcall GainExperience
 

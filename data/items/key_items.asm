@@ -34,7 +34,7 @@ KeyItemFlags:
 	dbit FALSE ; FIRE_STONE
 	dbit FALSE ; THUNDER_STONE
 	dbit FALSE ; WATER_STONE
-	dbit FALSE ; EXP_CANDY_XS
+	dbit TRUE  ; MOVE_REMINDER
 	dbit FALSE ; EXP_CANDY_S
 	dbit FALSE ; EXP_CANDY_M
 	dbit FALSE ; EXP_CANDY_L
@@ -74,7 +74,7 @@ KeyItemFlags:
 	dbit TRUE  ; SILPH_SCOPE
 	dbit TRUE  ; POKE_FLUTE
 	dbit TRUE  ; LIFT_KEY
-	dbit FALSE ; EXP_ALL
+	dbit TRUE  ; EXP_ALL
 	dbit TRUE  ; OLD_ROD
 	dbit TRUE  ; GOOD_ROD
 	dbit TRUE  ; SUPER_ROD

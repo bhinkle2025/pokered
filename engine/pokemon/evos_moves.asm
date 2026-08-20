@@ -516,4 +516,234 @@ WriteMonMoves_ShiftMoveData:
 Evolution_FlagAction:
 	predef_jump FlagActionPredef
 
+; From here, Move Relearner-related code -PvK
+;joenote - custom function by Mateo for move relearner
+PrepareRelearnableMoveList::
+; Builds a list of relearnable moves in wMoveBuffer.
+; Format:
+;   byte 0 = number of moves
+;   following bytes = move IDs
+;   final byte = $ff
+;
+; Input:
+;   [wWhichPokemon] = selected party Pokémon
+
+	; Get selected Pokémon's species.
+	ld a, [wWhichPokemon]
+	ld c, a
+	ld b, 0
+	ld hl, wPartySpecies
+	add hl, bc
+	ld a, [hl]
+
+	; GetMonHeader expects the species here.
+	ld [wCurSpecies], a
+
+	; Get pointer to this species' evolution/move data.
+	dec a
+	ld c, a
+	ld b, 0
+	ld hl, EvosMovesPointerTable
+	add hl, bc
+	add hl, bc
+	ld a, [hli]
+	ld h, [hl]
+	ld l, a
+	push hl
+
+	; Get selected Pokémon's level.
+	ld a, [wWhichPokemon]
+	ld hl, wPartyMon1Level
+	ld bc, wPartyMon2 - wPartyMon1
+	call AddNTimes
+	ld a, [hl]
+	ld b, a ; b = current level
+	push bc
+
+	; Get pointer to selected Pokémon's known moves.
+	ld a, [wWhichPokemon]
+	ld hl, wPartyMon1Moves
+	ld bc, wPartyMon2 - wPartyMon1
+	call AddNTimes
+	ld d, h
+	ld e, l ; de = known moves
+
+	pop bc
+	pop hl ; hl = evolution/move data
+
+	; Skip evolution entries.
+.skipEvos
+	ld a, [hli]
+	and a
+	jr nz, .skipEvos
+
+	; c = number of relearnable moves found.
+	ld c, 0
+
+.scanLevelMoves
+	ld a, [hli] ; required level
+	and a
+	jr z, .levelMovesDone
+
+	; Stop once move level is above Pokémon's current level.
+	cp b
+	jr z, .eligibleLevel
+	jr c, .eligibleLevel
+	jr .levelMovesDone
+
+.eligibleLevel
+	ld a, [hli] ; move ID
+	push bc
+	ld b, a
+
+	; Check whether Pokémon already knows this move.
+	push de
+
+	ld a, [de]
+	cp b
+	jr z, .alreadyKnows
+	inc de
+
+	ld a, [de]
+	cp b
+	jr z, .alreadyKnows
+	inc de
+
+	ld a, [de]
+	cp b
+	jr z, .alreadyKnows
+	inc de
+
+	ld a, [de]
+	cp b
+	jr z, .alreadyKnows
+
+	; Add move to buffer.
+	pop de
+	push hl
+
+	ld a, b
+	ld b, 0
+	ld hl, wMoveBuffer + 1
+	add hl, bc
+	ld [hl], a
+
+	pop hl
+	pop bc
+	inc c
+	jr .scanLevelMoves
+
+.alreadyKnows
+	pop de
+	pop bc
+	jr .scanLevelMoves
+
+.levelMovesDone
+	; Preserve move count while GetMonHeader uses registers.
+	push bc
+	push de
+
+	call GetMonHeader
+
+	pop de
+	pop bc
+
+	; Check the species' four level-0/start moves.
+	ld hl, wMonHMoves
+	ld b, 0
+
+.scanLevelZeroMoves
+	ld a, b
+	cp 4
+	jr nc, .finish
+
+	ld a, [hl]
+	and a
+	jr z, .finish
+
+	; Save move ID.
+	push bc
+	push hl
+	ld b, a
+
+	; Check whether Pokémon already knows it.
+	push de
+
+	ld a, [de]
+	cp b
+	jr z, .alreadyKnowsLevelZero
+	inc de
+
+	ld a, [de]
+	cp b
+	jr z, .alreadyKnowsLevelZero
+	inc de
+
+	ld a, [de]
+	cp b
+	jr z, .alreadyKnowsLevelZero
+	inc de
+
+	ld a, [de]
+	cp b
+	jr z, .alreadyKnowsLevelZero
+
+	pop de
+
+	; Check whether this move is already in wMoveBuffer.
+	ld a, c
+	and a
+	jr z, .addLevelZeroMove
+
+	push bc
+	ld hl, wMoveBuffer + 1
+	ld c, a
+
+.checkBuffer
+	ld a, [hli]
+	cp b
+	jr z, .alreadyInBuffer
+	dec c
+	jr nz, .checkBuffer
+
+	pop bc
+
+.addLevelZeroMove
+	ld a, b
+	ld b, 0
+	ld hl, wMoveBuffer + 1
+	add hl, bc
+	ld [hl], a
+	inc c
+
+	pop hl
+	pop bc
+	inc hl
+	inc b
+	jr .scanLevelZeroMoves
+
+.alreadyInBuffer
+	pop bc
+
+.alreadyKnowsLevelZero
+	pop de
+	pop hl
+	pop bc
+	inc hl
+	inc b
+	jr .scanLevelZeroMoves
+
+.finish
+	; Terminate move list.
+	ld b, 0
+	ld hl, wMoveBuffer + 1
+	add hl, bc
+	ld [hl], $ff
+
+	; Store move count.
+	ld hl, wMoveBuffer
+	ld [hl], c
+
+	ret
+
 INCLUDE "data/pokemon/evos_moves.asm"

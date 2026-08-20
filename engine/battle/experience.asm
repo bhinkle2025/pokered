@@ -2,12 +2,6 @@ GainExperience:
 	ld a, [wLinkState]
 	cp LINK_STATE_BATTLING
 	ret z ; return if link battle
-	ld a, [wBoostExpByExpAll] ;load in a if the EXP All is being used
-	ld hl, WithExpAllText ; this is preparing the text to show
-	and a ;check wBoostExpByExpAll value
-	jr z, .skipExpAll ; if wBoostExpByExpAll is zero, we are not using it, so we don't show anything and keep going on
-	call PrintText ; if the code reaches this point it means we have the Exp.All, so show the message
-.skipExpAll
 	ld hl, wPartyMon1
 	xor a
 	ld [wWhichPokemon], a
@@ -76,36 +70,28 @@ GainExperience:
 	add hl, de
 
 	; --------------------------------
-	; Check if Exp All is active
-	; AND if this Pokemon is NOT the one in battle.
-	; If so, halve the EXP in [hQuotient+2],[hQuotient+3].
+	; EXP.ALL shared pass
+	; wPartyGainExpFlags contains only nonparticipants.
+	; Give them 50% EXP.
 	; --------------------------------
 	ld a, [wBoostExpByExpAll]
 	and a
-	jr z, .skipHalf       ; if Exp All not active, skip
+	jr z, .skipHalf
 
-	ld a, [wWhichPokemon]
-	ld d, a
-	ld a, [wPlayerMonNumber]
-	cp d
-	jr z, .skipHalf       ; if it's the one that fought, skip
-
-	; Halve the 16-bit EXP in [hQuotient+2],[hQuotient+3]
-	ld a, [hQuotient+3]
+	ldh a, [hQuotient + 2] ; high byte
 	ld b, a
-	ld a, [hQuotient+2]
+	ldh a, [hQuotient + 3] ; low byte
 	ld c, a
 
 	srl b
 	rr c
 
 	ld a, b
-	ld [hQuotient+3], a
+	ldh [hQuotient + 2], a
 	ld a, c
-	ld [hQuotient+2], a
+	ldh [hQuotient + 3], a
 
 .skipHalf:
-	; ...continue existing code...
 
 	ld b, [hl] ; party mon OTID
 	inc hl
@@ -139,6 +125,20 @@ GainExperience:
 	ld [wExpAmountGained], a
 	adc b
 	ld [hl], a
+	; Print EXP.ALL message once, using the actual shared EXP amount.
+	ld a, [wBoostExpByExpAll]
+	and a
+	jr z, .skipExpAllMessage
+	ld a, [wExpAllMessagePrinted]
+	and a
+	jr nz, .skipExpAllMessage
+	ld a, TRUE
+	ld [wExpAllMessagePrinted], a
+	push hl
+	ld hl, WithExpAllText
+	call PrintText
+	pop hl
+.skipExpAllMessage
 	jr nc, .noCarry
 	dec hl
 	inc [hl]
@@ -192,13 +192,23 @@ GainExperience:
 	ld a, [wWhichPokemon]
 	ld hl, wPartyMonNicks
 	call GetPartyMonName
-	ld a, [wBoostExpByExpAll] ; get using ExpAll flag
-    and a ; check the flag
-    jr nz, .skipExpText ; if there's EXP. all, skip showing any text
-    ld hl, GainedText ;there's no EXP. all, load the text to show
+	ld a, [wBoostExpByExpAll]
+	and a
+	jr nz, .printExpAllText
+	; Normal participant EXP message
+	ld hl, GainedText
+	call PrintText
+	jr .skipExpText
+.printExpAllText
+	; Only print the shared EXP message once,
+	; when processing the first eligible nonparticipant.
+	ld a, [wWhichPokemon]
+	and a
+	jr nz, .skipExpText
+	ld hl, WithExpAllText
 	call PrintText
 .skipExpText
-	xor a ; PLAYER_PARTY_DATA
+	xor a
 	ld [wMonDataLocation], a
 	call LoadMonData
 	call AnimateEXPBar
@@ -329,19 +339,32 @@ GainExperience:
 	call AddNTimes
 	jp .partyMonLoop
 .done
+	; If EXP.ALL is enabled and this was the normal participant pass,
+	; preserve wPartyFoughtCurrentEnemyFlags for the upcoming shared pass.
+	ld a, [wExpAllEnabled]
+	and a
+	jr z, .resetExpFlags
+
+	ld a, [wBoostExpByExpAll]
+	and a
+	ret z
+
+.resetExpFlags
 	ld hl, wPartyGainExpFlags
 	xor a
 	ld [hl], a ; clear gain exp flags
+
 	ld a, [wPlayerMonNumber]
 	ld c, a
 	ld b, FLAG_SET
 	push bc
-	predef FlagActionPredef ; set the gain exp flag for the mon that is currently out
+	predef FlagActionPredef ; current mon gains EXP against next enemy
+
 	ld hl, wPartyFoughtCurrentEnemyFlags
 	xor a
 	ld [hl], a
 	pop bc
-	predef_jump FlagActionPredef ; set the fought current enemy flag for the mon that is currently out
+	predef_jump FlagActionPredef ; current mon fought next enemy
 
 ; divide enemy base stats, catch rate, and base exp by the number of mons gaining exp
 
