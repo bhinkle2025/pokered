@@ -14,7 +14,7 @@
 	db GROWTH_MEDIUM_SLOW ; growth rate
 
 	; tm/hm learnset
-	tmhm BODY_SLAM,    DOUBLE_EDGE,  BLIZZARD,     SHADOW_CLAW,  \
+	tmhm BODY_SLAM,    DOUBLE_EDGE,  BLIZZARD,     SHADOW_CLAW,  ICE_BEAM,     \
 	     THUNDERBOLT,  THUNDER,      MIMIC,        DOUBLE_TEAM,  DIG,          \
 	     REFLECT,      SKULL_BASH,   REST,         SUBSTITUTE,   \
 		 SLUDGE,       CUT,          STRENGTH

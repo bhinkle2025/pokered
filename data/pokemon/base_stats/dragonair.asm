@@ -14,7 +14,7 @@
 	db GROWTH_SLOW ; growth rate
 
 	; tm/hm learnset
-	tmhm BODY_SLAM,    DOUBLE_EDGE,  OUTRAGE,      \
+	tmhm BODY_SLAM,    DOUBLE_EDGE,  OUTRAGE,      HYPER_BEAM,   \
 	     BUBBLEBEAM,   ICE_BEAM,     BLIZZARD,     FLAMETHROWER, \
 	     DRAGON_RAGE,  THUNDERBOLT,  THUNDER,      MIMIC,        DOUBLE_TEAM,  \
 	     REFLECT,      LIGHT_SCREEN, FIRE_BLAST,   SWIFT,        SKULL_BASH,   \
