@@ -2651,6 +2651,8 @@ MoveSelectionMenu:
 	ret
 
 .regularmenu
+	xor a
+	ld e, a 
 	call AnyMoveToSelect
 	ret z
 	ld hl, wBattleMonMoves
@@ -2880,11 +2882,23 @@ SelectMenuItem_CursorDown:
 
 AnyMoveToSelect:
 ; return z and Struggle as the selected move if all moves have 0 PP and/or are disabled
+	ld a, e
+	and a
+	ld hl, wPlayerSelectedMove
+	jr z, .playerTurn
+	ld hl, wEnemySelectedMove
+.playerTurn
 	ld a, STRUGGLE
-	ld [wPlayerSelectedMove], a
-	ld a, [wPlayerDisabledMove]
+	ld [hl], a
+	ld a, e
 	and a
 	ld hl, wBattleMonPP
+	ld a, [wPlayerDisabledMove]
+	jr z, .playerTurn2
+	ld hl, wEnemyMonPP
+	ld a, [wEnemyDisabledMove]
+.playerTurn2
+	and a
 	jr nz, .handleDisabledMove
 	ld a, [hli]
 	or [hl]
@@ -2911,14 +2925,23 @@ AnyMoveToSelect:
 	or c
 	jr .handleDisabledMovePPLoop
 .allMovesChecked
-	and a ; any PP left?
+	and $3f
 	ret nz ; return if a move has PP left
 .noMovesLeft
+;;;If Enemy, don't display the "No Moves Left Text"
+	ld a, e
+	and a
+	jr z, .playerTurn3
+	xor a
+	and a ;set the z flag again because checking whose turn it was overwrote it
+	ret
+.playerTurn3
 	ld hl, NoMovesLeftText
 	call PrintText
 	ld c, 60
 	call DelayFrames
 	xor a
+	and a ;set the z flag again because checking whose turn it was overwrote it
 	ret
 
 NoMovesLeftText:
@@ -3155,7 +3178,7 @@ SelectEnemyMove:
 	ld b, 0
 	add hl, bc
 	ld a, [hl]
-	jr .done
+	jp .done
 .noLinkBattle
 	ld a, [wEnemyBattleStatus2]
 	and (1 << NEEDS_TO_RECHARGE) | (1 << USING_RAGE) ; need to recharge or using rage
@@ -3177,15 +3200,11 @@ SelectEnemyMove:
 	ld a, $ff
 	jr .done
 .canSelectMove
-	ld hl, wEnemyMonMoves+1 ; 2nd enemy move
-	ld a, [hld]
-	and a
-	jr nz, .atLeastTwoMovesAvailable
-	ld a, [wEnemyDisabledMove]
-	and a
-	ld a, STRUGGLE ; struggle if the only move is disabled
-	jr nz, .done
-.atLeastTwoMovesAvailable
+	ld a, 1
+	ld e, a
+	call AnyMoveToSelect
+	jr z, .done2
+	ld hl, wEnemyMonMoves 
 	ld a, [wIsInBattle]
 	dec a
 	jr z, .chooseRandomMove ; wild encounter
@@ -3210,6 +3229,20 @@ SelectEnemyMove:
 	ld a, b
 	dec a
 	ld [wEnemyMoveListIndex], a
+	push hl
+	push bc
+	ld b, 0
+	ld c, a
+	ld hl, wEnemyMonPP
+	add hl, bc
+	ld a, [hl]
+	pop bc
+	pop hl
+	and a
+	jr nz, .disabledCheck
+	pop hl
+	jr z, .chooseRandomMove
+.disabledCheck
 	ld a, [wEnemyDisabledMove]
 	swap a
 	and $f
@@ -3221,6 +3254,7 @@ SelectEnemyMove:
 	jr z, .chooseRandomMove ; move non-existant, try again
 .done
 	ld [wEnemySelectedMove], a
+.done2 ;if jumping from after AnyMoveToSelect, wEnemySelectedMove has already been set to STRUGGLE
 	ret
 .linkedOpponentUsedStruggle
 	ld a, STRUGGLE
@@ -3906,6 +3940,33 @@ PrintMoveIsDisabledText:
 MoveIsDisabledText:
 	text_far _MoveIsDisabledText
 	text_end
+
+PrintMoveHasNoPPText:
+	ld hl, wPlayerSelectedMove
+	ld de, wPlayerBattleStatus1
+	ldh a, [hWhoseTurn]
+	and a
+	jr z, .playerTurn
+	inc hl
+	ld de, wEnemyBattleStatus1
+.playerTurn
+	ld a, [de]
+	res CHARGING_UP, a ;SolarBeam PP taken on Turn 2 in Gen 1. Spite can kill SolarBeam. if we don't clear the charging flag, it will get stuck
+	ld [de], a
+	ld a, [hl]
+	ld [wNamedObjectIndex], a
+	call GetMoveName
+	ld hl, MoveHasNoPPText
+	jp PrintText
+	
+MoveHasNoPPText:
+	text_far _MoveHasNoPPText
+	text_end
+
+_MoveHasNoPPText::
+    text "<MOVE> has"
+    line "no PP left!"
+    done
 
 HandleSelfConfusionDamage:
 	ld hl, HurtItselfText
@@ -5918,6 +5979,10 @@ EnemyCanExecuteMove:
 	xor a
 	ld [wMonIsDisobedient], a
 	call PrintMonName1Text
+	ld hl, DecrementPP
+	ld de, wEnemySelectedMove ; pointer to the move just used
+	ld b, BANK(DecrementPP)
+	call Bankswitch
 	ld a, [wEnemyMoveEffect]
 	ld hl, ResidualEffects1
 	ld de, $1
@@ -6508,9 +6573,22 @@ LoadEnemyMonData:
 	ld [wLearningMovesFromDayCare], a
 	predef WriteMonMoves ; get moves based on current level
 .loadMovePPs
+	ld a, [wIsInBattle]
+	cp $2 ; is it a trainer battle?
+	jr z, .copyPPFromEnemyPartyData
 	ld hl, wEnemyMonMoves
 	ld de, wEnemyMonPP - 1
 	predef LoadMovePPs
+	jr .loadMovePPs_2
+.copyPPFromEnemyPartyData
+	ld hl, wEnemyMon1PP ;Copy Data source
+	ld a, [wWhichPokemon]
+	ld bc, wEnemyMon2 - wEnemyMon1
+	call AddNTimes ;Copy Data Source now point to the PP of the correct Enemy Party Mon
+	ld de, wEnemyMonPP ;Copy Data Destination
+	ld bc, NUM_MOVES ;Number of Bytes to Copy
+	call CopyData
+.loadMovePPs_2 ;End of the original .loadMovePPs needs to be common to set up for the copyBaseStatsLoop properly
 	ld hl, wMonHBaseStats
 	ld de, wEnemyMonBaseStats
 	ld b, NUM_STATS

@@ -305,7 +305,6 @@ INCLUDE "engine/events/hidden_objects/pokecenter_pc.asm"
 
 SECTION "Battle Engine 11", ROMX
 
-INCLUDE "engine/battle/decrement_pp.asm"
 INCLUDE "gfx/version.asm"
 
 
@@ -341,6 +340,7 @@ SECTION "Itemfinder 2", ROMX
 
 INCLUDE "engine/menus/league_pc.asm"
 INCLUDE "engine/events/hidden_items.asm"
+INCLUDE "engine/battle/decrement_pp.asm"
 
 
 SECTION "bank1E", ROMX
