@@ -358,3 +358,6 @@ INCLUDE "engine/items/tm_prices.asm"
 
 SECTION "Trainer AI", ROMX
 INCLUDE "engine/battle/trainer_ai.asm"
+
+SECTION "bankPoryman", ROMX
+INCLUDE "engine/menus/quantity_menu.asm" ; This can go anywhere
