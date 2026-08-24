@@ -198,3 +198,15 @@ _UsedCutText::
 	text " hacked"
 	line "away with CUT!"
 	prompt
+
+_SortItemsText::
+        text "Sort your items?"
+        done
+
+_SortComplete::
+        text "Items sorted!"
+        done
+
+_NothingToSort::
+        text "Nothing to sort!"
+        done
