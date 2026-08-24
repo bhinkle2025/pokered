@@ -19,6 +19,8 @@ Route16Gate1FDefaultScript:
 	ld hl, .StopsPlayerCoords
 	call ArePlayerCoordsInArray
 	ret nc
+	ld a, D_RIGHT | D_LEFT | D_UP | D_DOWN
+	ld [wJoyIgnore], a
 	ld a, TEXT_ROUTE16GATE1F_GUARD_WAIT_UP
 	ldh [hTextID], a
 	call DisplayTextID
