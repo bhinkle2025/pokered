@@ -77,6 +77,47 @@ CheckPartyForMove::
 	pop de							; retrieves value originally in 'de' to avoid game crash
 	ret								; finally, we jump all the way back to where we originally came from
 
+CheckPartyCanLearnMove:
+	ld e, 0
+
+.loop
+	ld a, e
+	ld [wWhichPokemon], a
+
+	ld hl, wPartySpecies
+	ld c, e
+	ld b, 0
+	add hl, bc
+	ld a, [hl]
+
+	cp $ff
+	jr z, .notFound
+
+	ld [wCurPartySpecies], a
+
+	ld a, d
+	ld [wMoveNum], a
+
+	push de
+	predef CanLearnTM
+	pop de
+
+	ld a, c
+	and a
+	jr nz, .found
+
+	inc e
+	jr .loop
+
+.found
+	ld a, e
+	ld [wWhichPokemon], a
+	and a
+	ret
+
+.notFound
+	scf
+	ret
 
 IsSurfingAllowed::
 ; Returns whether surfing is allowed in BIT_SURF_ALLOWED of wStatusFlags1.

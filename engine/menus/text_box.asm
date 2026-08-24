@@ -382,10 +382,11 @@ INCLUDE "data/yes_no_menu_strings.asm"
 DisplayFieldMoveMonMenu:
 	xor a
 	ld hl, wFieldMoves
-	ld [hli], a ; wFieldMoves
-	ld [hli], a ; wFieldMoves + 1
-	ld [hli], a ; wFieldMoves + 2
-	ld [hli], a ; wFieldMoves + 3
+	ld b, 9
+.clearFieldMoves
+	ld [hli], a
+	dec b
+	jr nz, .clearFieldMoves
 	ld [hli], a ; wNumFieldMoves
 	ld [hl], 12 ; wFieldMovesLeftmostXCoord
 	call GetMonFieldMoves
@@ -507,6 +508,7 @@ PokemonMenuEntries:
 	next "CANCEL@"
 
 GetMonFieldMoves:
+	; First add field moves the Pokemon actually knows.
 	ld a, [wWhichPokemon]
 	ld hl, wPartyMon1Moves
 	ld bc, wPartyMon2 - wPartyMon1
@@ -515,47 +517,163 @@ GetMonFieldMoves:
 	ld e, l
 	ld c, NUM_MOVES + 1
 	ld hl, wFieldMoves
-.loop
+
+.learnedMoveLoop
 	push hl
-.nextMove
+
+.nextLearnedMove
 	dec c
-	jr z, .done
-	ld a, [de] ; move ID
+	jr z, .checkCompatibleHMsPop
+
+	ld a, [de]
 	and a
-	jr z, .done
+	jr z, .checkCompatibleHMsPop
+
 	ld b, a
 	inc de
 	ld hl, FieldMoveDisplayData
+
 .fieldMoveLoop
 	ld a, [hli]
 	cp $ff
-	jr z, .nextMove ; if the move is not a field move
+	jr z, .nextLearnedMove
 	cp b
-	jr z, .foundFieldMove
+	jr z, .foundLearnedFieldMove
 	inc hl
 	inc hl
 	jr .fieldMoveLoop
-.foundFieldMove
-	ld a, b
-	ld [wLastFieldMoveID], a
+
+.foundLearnedFieldMove
 	ld a, [hli] ; field move name index
-	ld b, [hl] ; field move leftmost X coordinate
+	ld b, [hl]  ; leftmost X coordinate
 	pop hl
-	ld [hli], a ; store name index in wFieldMoves
+
+	ld [hli], a
+	call .CountFieldMove
+	jr .learnedMoveLoop
+
+
+.checkCompatibleHMsPop
+	pop hl
+
+.checkCompatibleHMs
+	; Get selected Pokemon's species.
+	ld a, [wWhichPokemon]
+	ld hl, wPartySpecies
+	ld b, 0
+	ld c, a
+	add hl, bc
+	ld a, [hl]
+	ld [wCurPartySpecies], a
+
+	; Check each HM.
+	ld de, .HMFieldMoveData
+
+.hmLoop
+	ld a, [de]
+	cp $ff
+	ret z
+
+	; move ID
+	ld [wMoveNum], a
+	inc de
+
+	; HM item ID
+	ld a, [de]
+	ldh [hDivisor], a
+	inc de
+
+	; menu-name index
+	ld a, [de]
+	ld b, a
+	inc de
+
+	; X coordinate
+	ld a, [de]
+	ldh [hDividend], a
+	inc de
+
+	push bc
+	push de
+
+	predef CanLearnTM
+
+	ld a, c
+	ldh [hMultiplicand], a
+
+	pop de
+	pop bc
+
+	; Pokemon can't learn this HM
+	ldh a, [hMultiplicand]
+	and a
+	jr z, .hmLoop
+
+	; Player must own the HM.
+	; Preserve B because it contains the FieldMoveNames index.
+	ldh a, [hDivisor]
+	push bc
+	push de
+	ld b, a
+	call IsItemInBag
+	pop de
+	pop bc
+	jr z, .hmLoop
+
+	; check for duplicate menu entry
+	push de
+	ld hl, wFieldMoves
+
+.checkDuplicate
+	ld a, [hl]
+	and a
+	jr z, .addHM
+	cp b
+	jr z, .alreadyAdded
+	inc hl
+	jr .checkDuplicate
+
+.addHM
+	ld a, b
+	ld [hli], a
+
 	ld a, [wNumFieldMoves]
 	inc a
 	ld [wNumFieldMoves], a
+
+	ldh a, [hDividend]
+	ld b, a
 	ld a, [wFieldMovesLeftmostXCoord]
 	cp b
-	jr c, .skipUpdatingLeftmostXCoord
+	jr c, .alreadyAdded
 	ld a, b
 	ld [wFieldMovesLeftmostXCoord], a
-.skipUpdatingLeftmostXCoord
-	ld a, [wLastFieldMoveID]
-	ld b, a
-	jr .loop
-.done
-	pop hl
+
+.alreadyAdded
+	pop de
+	jr .hmLoop
+
+
+.CountFieldMove
+	ld a, [wNumFieldMoves]
+	inc a
+	ld [wNumFieldMoves], a
+
+	ld a, [wFieldMovesLeftmostXCoord]
+	cp b
+	ret c
+	ld a, b
+	ld [wFieldMovesLeftmostXCoord], a
 	ret
+
+
+.HMFieldMoveData:
+	; move, HM item, FieldMoveNames index, leftmost X
+	db CUT,      HM_CUT,      1, $0C
+	db FLY,      HM_FLY,      2, $0C
+	db SURF,     HM_SURF,     4, $0C
+	db STRENGTH, HM_STRENGTH, 5, $0A
+	db FLASH,    HM_FLASH,    6, $0C
+	db $ff
 
 INCLUDE "data/moves/field_moves.asm"

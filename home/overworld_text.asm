@@ -24,9 +24,13 @@ BoulderText::
 	bit BIT_RAINBOWBADGE, a			; check for Erika's badge
 	jr z, .done						; if no RainbowBadge, text ends here
 	ld a, STRENGTH
-	ld [wSearchedMove], a			; store MoveID here, else it won't persist through the farcall
-	farcall CheckPartyForMove
+	ld [wSearchedMove], a
+	ld d, STRENGTH
+	call CheckPartyCanLearnMove
 	jr c, .done
+	ld a, [wWhichPokemon]
+	ld hl, wPartyMonNicks
+	call GetPartyMonName
 .useStrengthYesNo
 	call WaitForTextScrollButtonPress
 	ld hl, LikeToUseStrengthText
@@ -58,6 +62,48 @@ BouldersCanBeMovedText:
 	text_far _BouldersCanBeMovedText
 	text_end
 
+CheckPartyCanLearnMove::
+	ld e, 0
+
+.loop
+	ld a, e
+	ld [wWhichPokemon], a
+
+	ld hl, wPartySpecies
+	ld c, e
+	ld b, 0
+	add hl, bc
+	ld a, [hl]
+
+	cp $ff
+	jr z, .notFound
+
+	ld [wCurPartySpecies], a
+
+	ld a, d
+	ld [wMoveNum], a
+
+	push de
+	predef CanLearnTM
+	pop de
+
+	ld a, c
+	and a
+	jr nz, .found
+
+	inc e
+	jr .loop
+
+.found
+	ld a, e
+	ld [wWhichPokemon], a
+	and a
+	ret
+
+.notFound
+	scf
+	ret
+
 CalmWaterText::
 	text_asm
 	farcall IsSurfingAllowed ; checks for Cycling Road and Seafoam Islands B4F
@@ -70,9 +116,11 @@ CalmWaterText::
 	ld a, [wObtainedBadges]
 	bit BIT_SOULBADGE, a	; check for Koga's badge
 	jr z, .done				; if no SoulBadge, text ends here
-	ld a, SURF
-	ld [wSearchedMove], a	; store MoveID here, else it won't persist through the farcall
-	farcall CheckPartyForMove
+	ld b, HM_SURF
+	call IsItemInBag
+	jr z, .done
+	ld d, SURF
+	call CheckPartyCanLearnMove
 	jr c, .done
 .useSurfYesNo
 	call WaitForTextScrollButtonPress
@@ -109,9 +157,13 @@ CutTreeText::
 	bit BIT_CASCADEBADGE, a			; check for Misty's badge
 	jr z, .done						; if no CascadeBadge, text ends here
 	ld a, CUT
-	ld [wSearchedMove], a			; store MoveID here, else it won't persist through the farcall
-	farcall CheckPartyForMove
+	ld [wSearchedMove], a
+	ld d, CUT
+	call CheckPartyCanLearnMove
 	jr c, .done
+	ld a, [wWhichPokemon]
+	ld hl, wPartyMonNicks
+	call GetPartyMonName
 .useCutYesNo
 	call WaitForTextScrollButtonPress
 	ld hl, LikeToUseCutText
