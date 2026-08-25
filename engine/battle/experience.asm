@@ -125,6 +125,12 @@ GainExperience:
 	ld [wExpAmountGained], a
 	adc b
 	ld [hl], a
+	; Handle carry immediately, before anything can change the carry flag.
+	jr nc, .noCarry
+	dec hl
+	inc [hl]
+	inc hl
+.noCarry
 	; Print EXP.ALL message once, using the actual shared EXP amount.
 	ld a, [wBoostExpByExpAll]
 	and a
@@ -139,11 +145,6 @@ GainExperience:
 	call PrintText
 	pop hl
 .skipExpAllMessage
-	jr nc, .noCarry
-	dec hl
-	inc [hl]
-	inc hl
-.noCarry
 ; calculate exp for the mon at max level, and cap the exp at that value
 	inc hl
 	push hl
