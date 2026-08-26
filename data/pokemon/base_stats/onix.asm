@@ -14,7 +14,7 @@
 	db GROWTH_MEDIUM_FAST ; growth rate
 
 	; tm/hm learnset
-	tmhm BODY_SLAM,    GIGA_IMPACT,  DOUBLE_EDGE,         \
+	tmhm BODY_SLAM,    GIGA_IMPACT,  DOUBLE_EDGE,  DRAGON_RAGE,  \
 	     EARTHQUAKE,   DIG,          MIMIC,        DOUBLE_TEAM,  \
 	     SELFDESTRUCT, SKULL_BASH,   REST,         EXPLOSION,    \
 	     ROCK_SLIDE,   SUBSTITUTE,   STRENGTH,     FLASH

@@ -239,7 +239,7 @@ CinnabarGymBlaineText:
 	ld a, $7
 	ld [wGymLeaderNo], a
 	ldh [hJoyHeld], a
-	jr .endBattle
+	jp CinnabarGymStartBattleScript
 .BlaineRematch
 	ld hl, .PreBattleRematchText
 	call PrintText
