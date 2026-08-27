@@ -358,7 +358,8 @@ GrimerEvosMoves:
 	db 12, MINIMIZE
 	db 24, ACID
 	db 30, SCREECH
-	db 35, SLUDGE
+	db 35, TOXIC
+	db 38, SHADOW_PUNCH
 	db 42, ACID_ARMOR
 	db 48, SLUDGE
 	db 0
@@ -371,6 +372,7 @@ GengarEvosMoves:
 	db 21, NIGHT_SHADE
 	db 30, TOXIC
 	db 36, SLUDGE
+	db 39, SHADOW_PUNCH
 	db 45, DREAM_EATER
 	db 0
 
@@ -871,9 +873,10 @@ MankeyEvosMoves:
 	db 16, FURY_SWIPES
 	db 24, SEISMIC_TOSS
 	db 29, THUNDERPUNCH
-	db 32, MEDITATE
-	db 37, THRASH
-	db 40, OUTRAGE
+	db 34, SHADOW_PUNCH
+	db 37, MEDITATE
+	db 40, THRASH
+	db 43, OUTRAGE
 	db 0
 
 SeelEvosMoves:
@@ -1483,10 +1486,11 @@ PrimeapeEvosMoves:
 	db 13, KARATE_CHOP
 	db 16, FURY_SWIPES
 	db 24, SEISMIC_TOSS
-	db 33, THUNDERPUNCH
-	db 40, MEDITATE
-	db 49, THRASH
-	db 56, OUTRAGE
+	db 29, THUNDERPUNCH
+	db 34, SHADOW_PUNCH
+	db 37, MEDITATE
+	db 40, THRASH
+	db 43, OUTRAGE
 	db 0
 
 DugtrioEvosMoves:
@@ -1673,6 +1677,7 @@ MukEvosMoves:
 	db 24, ACID
 	db 30, SCREECH
 	db 35, TOXIC
+	db 38, SHADOW_PUNCH
 	db 42, ACID_ARMOR
 	db 48, SLUDGE
 	db 0
@@ -1779,6 +1784,7 @@ HaunterEvosMoves:
 	db 21, NIGHT_SHADE
 	db 30, TOXIC
 	db 36, SLUDGE
+	db 39, SHADOW_PUNCH
 	db 45, DREAM_EATER
 	db 0
 

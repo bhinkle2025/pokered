@@ -89,7 +89,7 @@ AttackAnimationPointers:
 	dw ThunderAnim
 	dw RockThrowAnim
 	dw EarthquakeAnim
-	dw FissureAnim
+	dw ShadowPunchAnim
 	dw DigAnim
 	dw ToxicAnim
 	dw ConfusionAnim
@@ -262,6 +262,7 @@ CometPunchAnim:
 	battle_anim COMET_PUNCH, SUBANIM_0_STAR_THRICE, 0, 4
 	db -1 ; end
 
+ShadowPunchAnim:
 MachPunchAnim:
 HammerArmAnim:
 MegaPunchAnim:
@@ -741,13 +742,6 @@ RockThrowAnim:
 EarthquakeAnim:
 	battle_anim EARTHQUAKE, SE_SHAKE_SCREEN
 	battle_anim EARTHQUAKE, SE_SHAKE_SCREEN
-	db -1 ; end
-
-FissureAnim:
-	battle_anim FISSURE, SE_DARK_SCREEN_FLASH
-	battle_anim NO_MOVE, SE_SHAKE_SCREEN
-	battle_anim FISSURE, SE_DARK_SCREEN_FLASH
-	battle_anim NO_MOVE, SE_SHAKE_SCREEN
 	db -1 ; end
 
 DigAnim:

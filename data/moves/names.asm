@@ -89,7 +89,7 @@ MoveNames::
 	li "THUNDER"
 	li "ROCK THROW"
 	li "EARTHQUAKE"
-	li "FISSURE"
+	li "SHADOW PUNCH"
 	li "DIG"
 	li "TOXIC"
 	li "CONFUSION"
