@@ -213,11 +213,13 @@ SpecialTrainerMoves:
 	db 3, 1, BITE
 	db 3, 2, GLARE
 	db 3, 4, WRAP
+	db 4, 1, NIGHT_SHADE
 	db 4, 2, SLUDGE
 	db 4, 3, HYPNOSIS
-	db 5, 2, HYPNOSIS
-	db 5, 3, DREAM_EATER
-	db 5, 4, CALM_MIND
+	db 5, 1, HYPNOSIS
+	db 5, 2, DREAM_EATER
+	db 5, 3, CALM_MIND
+	db 5, 4, NIGHT_SHADE
 	db 0
 
 	db LANCE, 1
