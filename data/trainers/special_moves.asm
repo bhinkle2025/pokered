@@ -85,7 +85,9 @@ SpecialTrainerMoves:
 	db KOGA, 1
 	db 1, 1, SELFDESTRUCT
 	db 1, 2, FIRE_BLAST
+	db 2, 1, TOXIC
 	db 2, 2, REST
+	db 2, 3, ACID
 	db 3, 1, FLY
 	db 3, 3, LEECH_LIFE
 	db 3, 2, DOUBLE_TEAM
