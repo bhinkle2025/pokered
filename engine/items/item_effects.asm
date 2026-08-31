@@ -696,6 +696,9 @@ ItemUseSurfboard:
 	ld a, 2
 	ld [wWalkBikeSurfState], a ; change player state to surfing
 	call PlayDefaultMusic ; play surfing music
+	ld a, [wWhichPokemon]
+	ld hl, wPartyMonNicks
+	call GetPartyMonName
 	ld hl, SurfingGotOnText
 	jp PrintText
 .tryToStopSurfing

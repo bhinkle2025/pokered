@@ -4977,7 +4977,7 @@ CriticalHitTest:
 	jr z, .noFocusEnergyUsed
 	inc b                               ; focus energy +1 stage
 .noFocusEnergyUsed
-	ld hl, HighCriticalMoves     ; table of high critical hit moves
+	ld a, b
 	cp 3                                ; stage 3+ 100% chance
 	jr z, .criticalHit
 	cp 2
@@ -4995,7 +4995,10 @@ CriticalHitTest:
 ; in this case only about 2/3 of the 10s are critical hits
 ; doing this we get exactly 1/24 chance for stage 0
 ; which is exactly how it works in gen7+
-	cp 11                               ; check if this is stage 0
+	ld c, a              ; save RNG value
+	ld a, b
+	cp 11                ; was this stage 0?
+	ld a, c              ; restore RNG value                   
 	jr nz, .criticalHit                 ; if not stage 0 skip and apply crit
 	cp 10                               ; check if rng is 10
 	jr nz, .criticalHit                 ; if rng is not 10 we skip all the code below and apply crit
