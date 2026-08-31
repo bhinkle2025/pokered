@@ -23,8 +23,27 @@ BoulderText::
 	ld a, [wObtainedBadges]
 	bit BIT_RAINBOWBADGE, a			; check for Erika's badge
 	jr z, .done						; if no RainbowBadge, text ends here
-	ld a, STRENGTH
-	ld [wSearchedMove], a
+	ld a, [wObtainedBadges]
+	bit BIT_RAINBOWBADGE, a
+	jr z, .done
+
+	ld b, HM_STRENGTH
+	call IsItemInBag
+	jr z, .done
+
+	ld d, STRENGTH
+	call CheckPartyCanLearnMove
+	jr c, .done
+
+	ld a, [wWhichPokemon]
+	ld hl, wPartyMonNicks
+	call GetPartyMonName
+	jr .useStrengthYesNo
+	; Otherwise require HM04.
+	ld b, HM_STRENGTH
+	call IsItemInBag
+	jr z, .done
+	; Find first Pokémon capable of using HM04.
 	ld d, STRENGTH
 	call CheckPartyCanLearnMove
 	jr c, .done
@@ -48,7 +67,7 @@ BoulderText::
 	ld hl, BouldersCanBeMovedText
 	call PrintText
 .done
-	jr TextScriptEnd
+	jp TextScriptEnd
 
 RequiresStrengthText:
 	text_far _RequiresStrengthText
