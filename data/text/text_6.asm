@@ -68,6 +68,26 @@ _SurfingNoPlaceToGetOffText::
 	line "to get off!"
 	prompt
 
+_LikeToUseShearsText::
+	text "Would you like to"
+	line "use the SHEARS?"
+	prompt
+
+_UsedShearsText::
+	text "<PLAYER> used"
+	line "the SHEARS!"
+	prompt
+
+_ShearsUseOnTreeText::
+	text "Use these on a"
+	line "small tree."
+	prompt
+
+_UsedBirdWhistleText::
+	text "<PLAYER> blew the"
+	line "BIRD WHISTLE!"
+	prompt
+
 _VitaminStatRoseText::
 	text_ram wNameBuffer
 	text "'s"

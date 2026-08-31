@@ -51,8 +51,8 @@ ItemUsePtrTable:
 	dw ItemUseEvoStone   ; FIRE_STONE
 	dw ItemUseEvoStone   ; THUNDER_STONE
 	dw ItemUseEvoStone   ; WATER_STONE
-	dw ItemUseReminder   ; MOVE_REMINDER
-	dw ItemUseVitamin    ; EXP_CANDY_S
+	dw ItemUseShears     ; SHEARS
+	dw ItemUseWhistle    ; BIRD_WHISTLE
 	dw ItemUseVitamin    ; EXP_CANDY_M
 	dw ItemUseVitamin    ; EXP_CANDY_L
 	dw ItemUseVitamin    ; EXP_CANDY_XL
@@ -768,6 +768,48 @@ SurfingNoPlaceToGetOffText:
 	text_far _SurfingNoPlaceToGetOffText
 	text_end
 
+ItemUseShears:
+	ld hl, ShearsUseOnTreeText
+	jp PrintText
+
+ShearsUseOnTreeText:
+	text_far _ShearsUseOnTreeText
+	text_end
+
+ItemUseWhistle:
+	ld a, [wIsInBattle]
+	and a
+	jp nz, ItemUseNotTime
+
+	call ItemUseReloadOverworldData
+
+	ld hl, UsedBirdWhistleText
+	call PrintText
+
+	call ChooseFlyDestination
+
+	ld a, [wStatusFlags6]
+	bit BIT_FLY_WARP, a
+	jr z, .cancelled
+
+	; Same graphics restoration normal Fly performs,
+	; but don't call CloseTextDisplay here.
+	call RestoreScreenTilesAndReloadTilePatterns
+
+	ld a, 1
+	ld [wActionResultOrTookBattleTurn], a
+	ret
+
+.cancelled
+	call LoadFontTilePatterns
+	xor a
+	ld [wActionResultOrTookBattleTurn], a
+	ret
+
+UsedBirdWhistleText:
+	text_far _UsedBirdWhistleText
+	text_end
+
 ItemUsePokedex:
 	predef_jump ShowPokedexMenu
 
@@ -875,7 +917,7 @@ ItemUseMedicine:
 	jr nc, .healHP ; if it's a Revive or Max Revive
 	cp FULL_HEAL
 	jr z, .cureStatusAilment ; if it's a Full Heal
-	cp EXP_CANDY_S
+	cp EXP_CANDY_M
 	jp nc, .useVitamin ; if it's an EXP Candy (any size) or a Rare Candy
 	cp FULL_RESTORE
 	jr nc, .healHP ; if it's a Full Restore or one of the potions
@@ -1287,8 +1329,6 @@ ItemUseMedicine:
 	jp z, .useRareCandy
 
     ; --- EXP Candy family ---
-    cp EXP_CANDY_S
-    jr z, .useExpCandyS
     cp EXP_CANDY_M
     jr z, .useExpCandyM
     cp EXP_CANDY_L
@@ -3155,43 +3195,3 @@ ApplyExpCandy_Common::
     ld a, [hl]
     cp b
     ret
-
-ItemUseReminder:
-	call SaveScreenTilesToBuffer2
-	xor a
-	ld [wListScrollOffset], a
-	ld [wPartyMenuTypeOrMessageID], a
-	ld [wUpdateSpritesEnabled], a
-	ld [wMenuItemToSwap], a
-	call DisplayPartyMenu
-
-	push af
-	call GBPalWhiteOutWithDelay3
-	call RestoreScreenTilesAndReloadTilePatterns
-	call LoadGBPal
-	pop af
-	ret c
-	call PrepareRelearnableMoveList
-
-	ld hl, MoveReminderDebug2Text
-	call PrintText
-	ret
-
-
-
-MoveReminderWhichMoveText:
-	text_far _MoveReminderWhichMoveText
-	text_end
-
-MoveReminderNoMovesText:
-	text_far _MoveReminderNoMovesText
-	text_end
-
-MoveReminderDebug2Text:
-	text_far _MoveReminderDebug2Text
-	text_end
-
-INCLUDE "text/move_relearner.asm"
-
-
-

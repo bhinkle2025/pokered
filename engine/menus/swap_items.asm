@@ -308,6 +308,8 @@ ItemSortList::
 	; Used Key Items
 	db BICYCLE
 	db SURFBOARD
+	db SHEARS
+	db BIRD_WHISTLE
 	db ITEMFINDER
 	db EXP_ALL
 	db TOWN_MAP
@@ -362,8 +364,6 @@ ItemSortList::
 	db DIRE_HIT	
 	; Permanent Raises
 	db RARE_CANDY
-	db EXP_CANDY_XL
-	db EXP_CANDY_S
 	db EXP_CANDY_M
 	db EXP_CANDY_L
 	db EXP_CANDY_XL

@@ -172,17 +172,27 @@ CutTreeText::
 	text_asm
 	ld hl, TreeCanBeCutText
 	call PrintText
+
 	ld a, [wObtainedBadges]
-	bit BIT_CASCADEBADGE, a			; check for Misty's badge
-	jr z, .done						; if no CascadeBadge, text ends here
+	bit BIT_CASCADEBADGE, a
+	jr z, .done
+
+	; Check for Shears first
+	ld b, SHEARS
+	call IsItemInBag
+	jr nz, .useShears
+
+	; Otherwise check for a Pokémon with Cut
 	ld a, CUT
 	ld [wSearchedMove], a
 	ld d, CUT
 	call CheckPartyCanLearnMove
 	jr c, .done
+
 	ld a, [wWhichPokemon]
 	ld hl, wPartyMonNicks
 	call GetPartyMonName
+
 .useCutYesNo
 	call WaitForTextScrollButtonPress
 	ld hl, LikeToUseCutText
@@ -191,15 +201,36 @@ CutTreeText::
 	ld a, [wCurrentMenuItem]
 	and a
 	jr nz, .closeTextBox
+
 .MonUsingCut
 	ld hl, UsedCutAltText
 	call PrintText
 	predef UsedCut
-.closeTextBox ; see commented note below
+	jr .closeTextBox
+
+.useShears
+	call WaitForTextScrollButtonPress
+	ld hl, LikeToUseShearsText
+	call PrintText
+	call YesNoChoice
+	ld a, [wCurrentMenuItem]
+	and a
+	jr nz, .closeTextBox
+
+	; Set CUT so UsedCut uses the existing safe overworld path
+	ld a, CUT
+	ld [wSearchedMove], a
+
+	ld hl, UsedShearsText
+	call PrintText
+	predef UsedCut
+
+.closeTextBox
 	xor a
-	ld [wSearchedMove], a ; make sure wSearchedMove != CUT before exiting the routine
+	ld [wSearchedMove], a
 	ld a, 1
 	ld [wDoNotWaitForButtonPressAfterDisplayingText], a
+
 .done
 	jp TextScriptEnd
 
@@ -222,6 +253,13 @@ UsedCutAltText:
 	text_far _UsedCutText
 	text_end
 
+LikeToUseShearsText:
+	text_far _LikeToUseShearsText
+	text_end
+
+UsedShearsText:
+	text_far _UsedShearsText
+	text_end
 
 MartSignText::
 	text_far _MartSignText

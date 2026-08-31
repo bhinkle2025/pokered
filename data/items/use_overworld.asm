@@ -7,4 +7,5 @@ UsableItems_CloseMenu:
 	db GOOD_ROD
 	db SUPER_ROD
 	db SURFBOARD
+	db BIRD_WHISTLE
 	db -1 ; end

@@ -10,6 +10,7 @@ UsedCut:
 	cp $50 ; gym cut tree
 	jr nz, .nothingToCut
 	jr .canCut
+
 .overworld
 	dec a
 	ld a, [wTileInFrontOfPlayer]
@@ -17,6 +18,7 @@ UsedCut:
 	jr z, .canCut
 	cp $52 ; grass
 	jr z, .canCut
+
 .nothingToCut
 	ld hl, .NothingToCutText
 	jp PrintText
@@ -29,12 +31,16 @@ UsedCut:
 	ld [wCutTile], a
 	ld a, 1
 	ld [wActionResultOrTookBattleTurn], a ; used cut
-	ld a, [wSearchedMove] 		; check if we need to use abridged routine for overworld Cut
-	cp CUT						; see CutTreeText in 'home\overworld_text.asm' for full explanation
-	jr z, .usedCutFromOverworld ; skip getting Mon name and screen white out if using overworld Cut
+
+	ld a, [wSearchedMove]
+	cp CUT
+	jr z, .usedCutFromOverworld
+
+	; Normal Pokémon Cut from the party menu
 	ld a, [wWhichPokemon]
 	ld hl, wPartyMonNicks
 	call GetPartyMonName
+
 	ld hl, wStatusFlags5
 	set BIT_NO_TEXT_DELAY, [hl]
 	call GBPalWhiteOutWithDelay3
@@ -49,11 +55,14 @@ UsedCut:
 	call Delay3
 	xor a
 	ldh [hWY], a
+
 	ld hl, UsedCutText
 	call PrintText
+
 	call LoadScreenTilesFromBuffer2
 	ld hl, wStatusFlags5
 	res BIT_NO_TEXT_DELAY, [hl]
+
 .usedCutFromOverworld
 	ld a, $ff
 	ld [wUpdateSpritesEnabled], a
@@ -70,6 +79,7 @@ UsedCut:
 	ldh [hWY], a
 	call UpdateSprites
 	jp RedrawMapView
+
 
 UsedCutText:
 	text_far _UsedCutText

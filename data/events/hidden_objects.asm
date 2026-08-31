@@ -433,7 +433,7 @@ Route25HiddenObjects:
 	db -1 ; end
 
 Route9HiddenObjects:
-	hidden_object 14,  7, ETHER, HiddenItems
+	hidden_object 14,  7, SHEARS, HiddenItems
 	db -1 ; end
 
 SSAnne6HiddenObjects:
@@ -633,7 +633,7 @@ Route17HiddenObjects:
 	hidden_object 15,  14, RARE_CANDY, HiddenItems
 	hidden_object  8,  45, FULL_RESTORE, HiddenItems
 	hidden_object 17,  72, PP_UP, HiddenItems
-	hidden_object  4,  91, MAX_REVIVE, HiddenItems
+	hidden_object  4,  91, BIRD_WHISTLE, HiddenItems
 	hidden_object  8, 121, MAX_ELIXER, HiddenItems
 	db -1 ; end
 

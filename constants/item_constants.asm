@@ -43,8 +43,8 @@ DEF SAFARI_ROCK EQU CASCADEBADGE ; overload
 	const FIRE_STONE    ; $20
 	const THUNDER_STONE ; $21
 	const WATER_STONE   ; $22
-	const MOVE_REMINDER ; $23
-	const EXP_CANDY_S   ; $24
+	const SHEARS        ; $23
+	const BIRD_WHISTLE  ; $24
 	const EXP_CANDY_M   ; $25
 	const EXP_CANDY_L   ; $26
 	const EXP_CANDY_XL  ; $27
