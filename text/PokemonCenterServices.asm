@@ -1,0 +1,50 @@
+_PokemonCenterServicesGreetingText::
+	text "How can I help"
+	line "you today?"
+	done
+
+_MoveDeleterGreetingText::
+	text "I can make a"
+	line "#MON forget"
+	cont "a move."
+	done
+
+_MoveDeleterSaidYesText::
+	text "Which #MON?"
+	done
+
+_MoveDeleterOneMoveText::
+	text "That #MON only"
+	line "knows one move."
+	done
+
+_MoveDeleterWhichMoveText::
+	text "Which move should"
+	line "it forget?"
+	done
+
+_MoveDeleterConfirmText::
+	text "Forget"
+	line "@"
+	text_ram wStringBuffer
+	text "?"
+	done
+
+_MoveDeleterForgotText::
+	text "The move was"
+	line "forgotten!"
+	done
+
+_MoveDeleterByeText::
+	text "Come back anytime."
+	done
+
+_MoveReminderComingSoonText::
+	text "Move remembering"
+	line "isn't ready yet."
+	done
+
+_WonderTradeComingSoonText::
+	text "Wonder Trade isn't"
+	line "ready yet."
+	done

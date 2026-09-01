@@ -134,6 +134,13 @@ DisplayListMenuIDLoop::
 	call GetItemPrice
 	pop hl
 	ld a, [wListMenuID]
+
+	; needed for Move Deleter / Relearner
+	cp MOVESLISTMENU
+	jr z, .skipStoringItemName
+
+	cp ITEMLISTMENU
+	jr nz, .skipGettingQuantity
 	cp ITEMLISTMENU
 	jr nz, .skipGettingQuantity
 	inc hl
@@ -160,6 +167,7 @@ DisplayListMenuIDLoop::
 .storeChosenEntry ; store the menu entry that the player chose and return
 	ld de, wNameBuffer
 	call CopyToStringBuffer
+.skipStoringItemName
 	ld a, CHOSE_MENU_ITEM
 	ld [wMenuExitMethod], a
 	ld a, [wCurrentMenuItem]

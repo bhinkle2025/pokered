@@ -340,6 +340,7 @@ SECTION "Itemfinder 2", ROMX
 INCLUDE "engine/menus/league_pc.asm"
 INCLUDE "engine/events/hidden_items.asm"
 INCLUDE "engine/battle/decrement_pp.asm"
+INCLUDE "engine/link/pokemon_center_services.asm"
 
 
 SECTION "bank1E", ROMX

@@ -82,7 +82,7 @@ ENDM
 	dict  TX_SCRIPT_POKECENTER_PC,           TextScript_PokemonCenterPC
 	dict2 TX_SCRIPT_VENDING_MACHINE,         farcall VendingMachineMenu
 	dict  TX_SCRIPT_PRIZE_VENDOR,            TextScript_GameCornerPrizeMenu
-	dict2 TX_SCRIPT_CABLE_CLUB_RECEPTIONIST, callfar CableClubNPC
+	dict2 TX_SCRIPT_CABLE_CLUB_RECEPTIONIST, callfar PokemonCenterServicesNPC
 
 	call PrintText_NoCreatingTextBox ; display the text
 	ld a, [wDoNotWaitForButtonPressAfterDisplayingText]

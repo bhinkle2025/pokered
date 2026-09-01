@@ -99,4 +99,4 @@ ViridianMartCooltrainerMText:
 	text_end
 
 ViridianMartClerkText::
-	script_mart POKE_BALL, ANTIDOTE, LANTERN, POWER_GLOVES
+	script_mart POKE_BALL, ANTIDOTE, PARLYZ_HEAL, BURN_HEAL
