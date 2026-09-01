@@ -36,8 +36,8 @@ KeyItemFlags:
 	dbit FALSE ; WATER_STONE
 	dbit TRUE  ; SHEARS
 	dbit TRUE  ; BIRD_WHISTLE
-	dbit FALSE ; EXP_CANDY_M
-	dbit FALSE ; EXP_CANDY_L
+	dbit TRUE  ; POWER_GLOVES
+	dbit TRUE  ; LANTERN
 	dbit FALSE ; EXP_CANDY_XL
 	dbit FALSE ; RARE_CANDY
 	dbit TRUE  ; DOME_FOSSIL

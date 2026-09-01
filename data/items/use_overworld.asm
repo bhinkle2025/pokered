@@ -8,4 +8,6 @@ UsableItems_CloseMenu:
 	db SUPER_ROD
 	db SURFBOARD
 	db BIRD_WHISTLE
+	db POWER_GLOVES
+	db LANTERN
 	db -1 ; end

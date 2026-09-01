@@ -88,6 +88,22 @@ _UsedBirdWhistleText::
 	line "BIRD WHISTLE!"
 	prompt
 
+_UsedPowerGlovesText::
+	text "<PLAYER> put on"
+	line "the POWER GLOVES!"
+
+	para "Boulders can now"
+	line "be moved!"
+	prompt
+
+_UsedLanternText::
+	text "<PLAYER> lit"
+	line "the LANTERN!"
+
+	para "The area is"
+	line "now illuminated!"
+	prompt
+
 _VitaminStatRoseText::
 	text_ram wNameBuffer
 	text "'s"

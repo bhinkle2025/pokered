@@ -447,7 +447,7 @@ SSAnne10HiddenObjects:
 	db -1 ; end
 
 Route10HiddenObjects:
-	hidden_object  9, 17, SUPER_POTION, HiddenItems
+	hidden_object  9, 17, LANTERN, HiddenItems
 	hidden_object 16, 53, MAX_ETHER, HiddenItems
 	db -1 ; end
 
@@ -490,7 +490,7 @@ SilphCo5FHiddenObjects:
 	db -1 ; end
 
 SilphCo9FHiddenObjects:
-	hidden_object  2, 15, MAX_POTION, HiddenItems
+	hidden_object  2, 15, POWER_GLOVES, HiddenItems
 	db -1 ; end
 
 CopycatsHouse2FHiddenObjects:

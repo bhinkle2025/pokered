@@ -53,8 +53,8 @@ ItemUsePtrTable:
 	dw ItemUseEvoStone   ; WATER_STONE
 	dw ItemUseShears     ; SHEARS
 	dw ItemUseWhistle    ; BIRD_WHISTLE
-	dw ItemUseVitamin    ; EXP_CANDY_M
-	dw ItemUseVitamin    ; EXP_CANDY_L
+	dw ItemUseGloves     ; POWER_GLOVES
+	dw ItemUseLantern    ; LANTERN
 	dw ItemUseVitamin    ; EXP_CANDY_XL
 	dw ItemUseVitamin    ; RARE_CANDY
 	dw UnusableItem      ; DOME_FOSSIL
@@ -810,6 +810,49 @@ UsedBirdWhistleText:
 	text_far _UsedBirdWhistleText
 	text_end
 
+ItemUseGloves:
+	ld a, [wIsInBattle]
+	and a
+	jp nz, ItemUseNotTime
+
+	call ItemUseReloadOverworldData
+
+	; Activate Strength
+	ld hl, wStatusFlags1
+	set BIT_STRENGTH_ACTIVE, [hl]
+
+	ld hl, UsedPowerGlovesText
+	jp PrintText
+
+UsedPowerGlovesText:
+	text_far _UsedPowerGlovesText
+	text_end
+
+ItemUseLantern:
+	ld a, [wIsInBattle]
+	and a
+	jp nz, ItemUseNotTime
+
+	call ItemUseReloadOverworldData
+
+	; Light the dark map, same as Flash.
+	xor a
+	ld [wMapPalOffset], a
+
+	ld hl, UsedLanternText
+	call PrintText
+
+	call GBPalWhiteOutWithDelay3
+	call RestoreScreenTilesAndReloadTilePatterns
+
+	ld a, 1
+	ld [wActionResultOrTookBattleTurn], a
+	ret
+
+UsedLanternText:
+	text_far _UsedLanternText
+	text_end
+
 ItemUsePokedex:
 	predef_jump ShowPokedexMenu
 
@@ -917,7 +960,7 @@ ItemUseMedicine:
 	jr nc, .healHP ; if it's a Revive or Max Revive
 	cp FULL_HEAL
 	jr z, .cureStatusAilment ; if it's a Full Heal
-	cp EXP_CANDY_M
+	cp EXP_CANDY_XL
 	jp nc, .useVitamin ; if it's an EXP Candy (any size) or a Rare Candy
 	cp FULL_RESTORE
 	jr nc, .healHP ; if it's a Full Restore or one of the potions
@@ -1329,10 +1372,6 @@ ItemUseMedicine:
 	jp z, .useRareCandy
 
     ; --- EXP Candy family ---
-    cp EXP_CANDY_M
-    jr z, .useExpCandyM
-    cp EXP_CANDY_L
-    jr z, .useExpCandyL
     cp EXP_CANDY_XL
     jr z, .useExpCandyXL
     jr .vitaminNoEffect

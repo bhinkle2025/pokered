@@ -86,8 +86,8 @@ DEF FIRST_PARTY_MENU_TEXT_ID EQU const_value
 	const RARE_CANDY_MSG       ; $F8
 	const SHEARS_MSG           ; $F9
 	const BIRD_WHISTLE_MSG     ; $FA
-	const EXP_CANDY_M_MSG      ; $FB
-	const EXP_CANDY_L_MSG      ; $FC
+	const POWER_GLOVES_MSG     ; $FB
+	const LANTERN_MSG          ; $FC
 	const EXP_CANDY_XL_MSG     ; $FD
 
 ; naming screen types

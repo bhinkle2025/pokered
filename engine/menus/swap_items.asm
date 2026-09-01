@@ -310,6 +310,8 @@ ItemSortList::
 	db SURFBOARD
 	db SHEARS
 	db BIRD_WHISTLE
+	db POWER_GLOVES
+	db LANTERN
 	db ITEMFINDER
 	db EXP_ALL
 	db TOWN_MAP
@@ -364,8 +366,6 @@ ItemSortList::
 	db DIRE_HIT	
 	; Permanent Raises
 	db RARE_CANDY
-	db EXP_CANDY_M
-	db EXP_CANDY_L
 	db EXP_CANDY_XL
 	db PP_UP
 	db BOTTLE_CAP
