@@ -536,15 +536,18 @@ PrepareRelearnableMoveList::
 	add hl, bc
 	ld a, [hl]
 
-	; GetMonHeader expects the species here.
+	; Set current species for header/move routines.
 	ld [wCurSpecies], a
+	ld [wCurPartySpecies], a
 
 	; Get pointer to this species' evolution/move data.
 	dec a
-	ld c, a
 	ld b, 0
+	add a
+	rl b
+	ld c, a
+
 	ld hl, EvosMovesPointerTable
-	add hl, bc
 	add hl, bc
 	ld a, [hli]
 	ld h, [hl]
@@ -639,100 +642,7 @@ PrepareRelearnableMoveList::
 	jr .scanLevelMoves
 
 .levelMovesDone
-	; Preserve move count while GetMonHeader uses registers.
-	push bc
-	push de
-
-	call GetMonHeader
-
-	pop de
-	pop bc
-
-	; Check the species' four level-0/start moves.
-	ld hl, wMonHMoves
-	ld b, 0
-
-.scanLevelZeroMoves
-	ld a, b
-	cp 4
-	jr nc, .finish
-
-	ld a, [hl]
-	and a
-	jr z, .finish
-
-	; Save move ID.
-	push bc
-	push hl
-	ld b, a
-
-	; Check whether Pokémon already knows it.
-	push de
-
-	ld a, [de]
-	cp b
-	jr z, .alreadyKnowsLevelZero
-	inc de
-
-	ld a, [de]
-	cp b
-	jr z, .alreadyKnowsLevelZero
-	inc de
-
-	ld a, [de]
-	cp b
-	jr z, .alreadyKnowsLevelZero
-	inc de
-
-	ld a, [de]
-	cp b
-	jr z, .alreadyKnowsLevelZero
-
-	pop de
-
-	; Check whether this move is already in wMoveBuffer.
-	ld a, c
-	and a
-	jr z, .addLevelZeroMove
-
-	push bc
-	ld hl, wMoveBuffer + 1
-	ld c, a
-
-.checkBuffer
-	ld a, [hli]
-	cp b
-	jr z, .alreadyInBuffer
-	dec c
-	jr nz, .checkBuffer
-
-	pop bc
-
-.addLevelZeroMove
-	ld a, b
-	ld b, 0
-	ld hl, wMoveBuffer + 1
-	add hl, bc
-	ld [hl], a
-	inc c
-
-	pop hl
-	pop bc
-	inc hl
-	inc b
-	jr .scanLevelZeroMoves
-
-.alreadyInBuffer
-	pop bc
-
-.alreadyKnowsLevelZero
-	pop de
-	pop hl
-	pop bc
-	inc hl
-	inc b
-	jr .scanLevelZeroMoves
-
+	jr .finish
 .finish
 	; Terminate move list.
 	ld b, 0

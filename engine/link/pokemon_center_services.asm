@@ -292,7 +292,76 @@ PrepareDeletableMoveList:
 	ret
 
 PokemonCenterServices_RememberMove:
-	ld hl, MoveReminderComingSoonText
+	call SaveScreenTilesToBuffer2
+
+	xor a
+	ld [wListScrollOffset], a
+	ld [wPartyMenuTypeOrMessageID], a
+	ld [wUpdateSpritesEnabled], a
+	ld [wMenuItemToSwap], a
+
+	call DisplayPartyMenu
+
+	push af
+	call GBPalWhiteOutWithDelay3
+	call RestoreScreenTilesAndReloadTilePatterns
+	call LoadGBPal
+	pop af
+
+	ret c
+
+	farcall PrepareRelearnableMoveList
+
+	ld a, [wMoveBuffer]
+	and a
+	jr z, .noMoves
+.chooseMove
+	ld hl, MoveReminderWhichMoveText
+	call PrintText
+
+	xor a
+	ld [wCurrentMenuItem], a
+	ld [wLastMenuItem], a
+
+	ld a, MOVESLISTMENU
+	ld [wListMenuID], a
+
+	ld de, wMoveBuffer
+	ld hl, wListPointer
+	ld [hl], e
+	inc hl
+	ld [hl], d
+
+	xor a
+	ld [wPrintItemPrices], a
+
+	call DisplayListMenuID
+	ret c
+
+	; Get selected move from wMoveBuffer.
+	ld a, [wCurrentMenuItem]
+	ld b, a
+	ld a, [wListScrollOffset]
+	add b
+	ld c, a
+	ld b, 0
+
+	ld hl, wMoveBuffer + 1
+	add hl, bc
+	ld a, [hl]
+
+	; Set selected move for LearnMove / GetMoveName.
+	ld [wMoveNum], a
+	ld [wNamedObjectIndex], a
+
+	call GetMoveName
+	call CopyToStringBuffer
+
+	predef LearnMove
+	ret
+
+.noMoves
+	ld hl, MoveReminderNoMovesText
 	call PrintText
 	ret
 
@@ -332,6 +401,10 @@ MoveDeleterByeText:
 	text_far _MoveDeleterByeText
 	text_end
 
-MoveReminderComingSoonText:
-	text_far _MoveReminderComingSoonText
+MoveReminderNoMovesText:
+	text_far _MoveReminderNoMovesText
+	text_end
+
+MoveReminderWhichMoveText:
+	text_far _MoveReminderWhichMoveText
 	text_end

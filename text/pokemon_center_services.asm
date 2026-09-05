@@ -39,9 +39,15 @@ _MoveDeleterByeText::
 	text "Come back anytime."
 	prompt
 
-_MoveReminderComingSoonText::
-	text "Move remembering"
-	line "isn't ready yet."
+_MoveReminderWhichMoveText::
+	text "Which move should"
+	line "it remember?"
+	prompt
+
+_MoveReminderNoMovesText::
+	text "This #MON has"
+	line "no moves to"
+	cont "remember."
 	prompt
 
 _WonderTradeComingSoonText::
