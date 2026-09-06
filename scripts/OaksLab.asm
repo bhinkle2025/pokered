@@ -1,4 +1,5 @@
 OaksLab_Script:
+	call OaksLabCheckHideGreenStarterBall
 	CheckEvent EVENT_PALLET_AFTER_GETTING_POKEBALLS_2
 	call nz, OaksLabLoadTextPointers2Script
 	ld a, 1 << BIT_NO_AUTO_TEXT_BOX
@@ -1230,3 +1231,34 @@ OaksLabScientistText:
 .Text:
 	text_far _OaksLabScientistText
 	text_end
+
+OaksLabCheckHideGreenStarterBall:
+	; only remove the final ball after earning Boulder Badge
+	ld a, [wObtainedBadges]
+	bit BIT_BOULDERBADGE, a
+	ret z
+
+	; determine which starter ball was left behind
+	ld a, [wPlayerStarter]
+	cp STARTER1
+	jr z, .bulbasaurBall
+	cp STARTER2
+	jr z, .charmanderBall
+
+	; Player chose Bulbasaur -> Squirtle remains
+	ld a, HS_STARTER_BALL_2
+	jr .hide
+
+.charmanderBall
+	; Player chose Squirtle -> Charmander remains
+	ld a, HS_STARTER_BALL_1
+	jr .hide
+
+.bulbasaurBall
+	; Player chose Charmander -> Bulbasaur remains
+	ld a, HS_STARTER_BALL_3
+
+.hide
+	ld [wMissableObjectIndex], a
+	predef HideObject
+	ret
