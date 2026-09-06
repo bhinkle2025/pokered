@@ -287,4 +287,63 @@ SpecialTrainerMoves:
 	db 6, 4, SWORDS_DANCE
 	db 0
 
+	db LEAF, 1 ; Blastoise team
+	db 1, 1, PSYCHIC_M
+	db 1, 2, AMNESIA
+	db 1, 3, THUNDER
+	db 3, 1, THUNDERPUNCH
+	db 3, 2, EARTHQUAKE
+	db 3, 3, SEISMIC_TOSS
+	db 3, 4, GIGA_IMPACT
+	db 4, 2, HYPER_BEAM
+	db 4, 4, NIGHT_SHADE
+	db 5, 1, SWORDS_DANCE
+	db 5, 2, POWER_WHIP
+	db 5, 4, ACID
+	db 6, 1, HYDRO_PUMP
+	db 6, 2, GIGA_IMPACT
+	db 6, 3, BLIZZARD
+	db 6, 4, IRON_DEFENSE
+	db 0
+
+	db LEAF, 2; Venusaur team
+	db 1, 1, PSYCHIC_M
+	db 1, 2, AMNESIA
+	db 1, 3, THUNDER
+	db 3, 1, THUNDERPUNCH
+	db 3, 2, EARTHQUAKE
+	db 3, 3, SEISMIC_TOSS
+	db 3, 4, GIGA_IMPACT
+	db 4, 1, HYDRO_PUMP
+	db 4, 2, DRAGON_RAGE
+	db 4, 3, BLIZZARD
+	db 4, 4, AGILITY
+	db 5, 2, HYPER_BEAM
+	db 5, 4, NIGHT_SHADE
+	db 6, 1, SWORDS_DANCE
+	db 6, 2, POWER_WHIP
+	db 6, 3, GIGA_IMPACT
+	db 6, 4, EARTHQUAKE
+	db 0
+
+	db LEAF, 3; Charizard team
+	db 1, 1, PSYCHIC_M
+	db 1, 2, AMNESIA
+	db 1, 3, THUNDER
+	db 3, 1, THUNDERPUNCH
+	db 3, 2, EARTHQUAKE
+	db 3, 3, SEISMIC_TOSS
+	db 3, 4, GIGA_IMPACT
+	db 4, 1, SWORDS_DANCE
+	db 4, 2, POWER_WHIP
+	db 4, 4, ACID
+	db 5, 1, HYDRO_PUMP
+	db 5, 2, DRAGON_RAGE
+	db 5, 3, BLIZZARD
+	db 5, 4, AGILITY
+	db 6, 1, FIRE_BLAST
+	db 6, 2, FLARE_BLITZ
+	db 6, 3, WING_ATTACK
+	db 6, 4, STEEL_WING
+	db 0
 	db -1 ; end
