@@ -19,6 +19,7 @@ CeruleanCity_ScriptPointers:
 	dw_const CeruleanCityRivalDefeatedScript,  SCRIPT_CERULEANCITY_RIVAL_DEFEATED
 	dw_const CeruleanCityRivalCleanupScript,   SCRIPT_CERULEANCITY_RIVAL_CLEANUP
 	dw_const CeruleanCityRocketDefeatedScript, SCRIPT_CERULEANCITY_ROCKET_DEFEATED
+	dw_const CeruleanCityGreenDefeatedScript, SCRIPT_CERULEANCITY_GREEN_DEFEATED
 
 CeruleanCityRocketDefeatedScript:
 	ld a, [wIsInBattle]
@@ -40,6 +41,25 @@ IF DEF(_DEBUG)
 	call DebugPressedOrHeldB
 	ret nz
 ENDC
+	; Green appears after the player becomes Champion.
+	; Once defeated, she remains hidden.
+	CheckEvent EVENT_PLAYER_IS_CHAMPION
+	jr z, .hideGreen
+
+	CheckEvent EVENT_BEAT_GREEN
+	jr nz, .hideGreen
+
+	ld a, HS_CERULEAN_GREEN
+	ld [wMissableObjectIndex], a
+	predef ShowObject
+	jr .greenCheckDone
+
+.hideGreen
+	ld a, HS_CERULEAN_GREEN
+	ld [wMissableObjectIndex], a
+	predef HideObject
+
+.greenCheckDone
 	CheckEvent EVENT_BEAT_CERULEAN_ROCKET_THIEF
 	jr nz, .skipRocketThiefEncounter
 	ld hl, CeruleanCityCoords1
@@ -245,6 +265,7 @@ CeruleanCity_TextPointers:
 	dw_const CeruleanCityCooltrainerF2Text, TEXT_CERULEANCITY_COOLTRAINER_F2
 	dw_const CeruleanCitySuperNerd3Text,    TEXT_CERULEANCITY_SUPER_NERD3
 	dw_const CeruleanCityGuardText,         TEXT_CERULEANCITY_GUARD2
+	dw_const CeruleanCityGreenText,         TEXT_CERULEANCITY_GREEN
 	dw_const CeruleanCitySignText,          TEXT_CERULEANCITY_SIGN
 	dw_const CeruleanCityTrainerTipsText,   TEXT_CERULEANCITY_TRAINER_TIPS
 	dw_const MartSignText,                  TEXT_CERULEANCITY_MART_SIGN
@@ -433,6 +454,106 @@ CeruleanCitySlowbroText:
 
 .IgnoredOrdersText:
 	text_far _CeruleanCitySlowbroIgnoredOrdersText
+	text_end
+
+CeruleanCityGreenDefeatedScript:
+	ld a, [wIsInBattle]
+	cp $ff
+	jr z, .reset
+
+	SetEvent EVENT_BEAT_GREEN
+
+	; display Green's post-battle dialogue
+	ld a, TEXT_CERULEANCITY_GREEN
+	ldh [hTextID], a
+	call DisplayTextID
+
+	; fade out
+	call GBFadeOutToBlack
+
+	; remove Green from the active map
+	ld a, CERULEANCITY_GREEN
+	ldh [hSpriteIndex], a
+	call SetSpriteMovementBytesToFF
+
+	; mark Green hidden
+	ld a, HS_CERULEAN_GREEN
+	ld [wMissableObjectIndex], a
+	predef HideObject
+
+	; fade back in
+	call GBFadeInFromBlack
+
+.reset
+	ld a, SCRIPT_CERULEANCITY_DEFAULT
+	ld [wCeruleanCityCurScript], a
+	ret
+
+CeruleanCityGreenText:
+	text_asm
+	CheckEvent EVENT_BEAT_GREEN
+	jr nz, .alreadyBeat
+
+	ld hl, GreenBattleText
+	call PrintText
+
+	ld hl, wStatusFlags3
+	set BIT_TALKED_TO_TRAINER, [hl]
+	set BIT_PRINT_END_BATTLE_TEXT, [hl]
+
+	ld hl, GreenDefeatedText
+	ld de, GreenDefeatedText
+	call SaveEndBattleTextPointers
+
+	; engage the Green NPC first
+	ld a, CERULEANCITY_GREEN
+	ld [wSpriteIndex], a
+	call EngageMapTrainer
+	call InitBattleEnemyParameters
+
+	; now override with Green/Leaf trainer class
+	ld a, OPP_LEAF
+	ld [wCurOpponent], a
+	ld [wEnemyMonOrTrainerClass], a
+
+	; choose one of her three teams
+	ld a, [wPlayerStarter]
+	cp STARTER1
+	jr nz, .notStarter1
+	ld a, 1
+	jr .teamSelected
+
+.notStarter1
+	cp STARTER2
+	jr nz, .starter3
+	ld a, 2
+	jr .teamSelected
+
+.starter3
+	ld a, 3
+
+.teamSelected
+	ld [wTrainerNo], a
+
+	ld a, SCRIPT_CERULEANCITY_GREEN_DEFEATED
+	ld [wCeruleanCityCurScript], a
+	jp TextScriptEnd
+
+.alreadyBeat
+	ld hl, GreenAfterBattleText
+	call PrintText
+	jp TextScriptEnd
+
+GreenBattleText:
+	text_far _GreenBattleText
+	text_end
+
+GreenDefeatedText:
+	text_far _GreenDefeatedText
+	text_end
+
+GreenAfterBattleText:
+	text_far _GreenAfterBattleText
 	text_end
 
 CeruleanCityCooltrainerF2Text:

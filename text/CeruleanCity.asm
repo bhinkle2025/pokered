@@ -233,3 +233,51 @@ _CeruleanCityGymSign::
 	para "The Tomboyish"
 	line "Mermaid!"
 	done
+
+_GreenBattleText::
+	text "Hey! You're the"
+	line "new CHAMPION,"
+	cont "aren't you?"
+
+	para "I heard there's"
+	line "an incredibly"
+	cont "rare #MON in"
+	cont "that cave."
+
+	para "But first, I"
+	line "want to see how"
+	cont "strong you are!"
+
+	para "Come on!"
+	line "Battle me!"
+	done
+
+_GreenDefeatedText::
+	text "What?!"
+
+	para "You're really"
+	line "that strong?!"
+	prompt
+
+_GreenAfterBattleText::
+	text "Wow..."
+
+	para "No wonder you're"
+	line "the CHAMPION!"
+
+	para "Fine! You can go"
+	line "into the cave"
+	cont "first."
+
+	para "But I'm not"
+	line "giving up!"
+
+	para "Someday I'll"
+	line "catch the"
+	cont "strongest #MON!"
+
+	para "Maybe I'll even"
+	line "catch YOU, too!"
+
+	para "Hee hee!"
+	done
