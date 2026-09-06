@@ -100,7 +100,6 @@ ROMX $12
 	"Maps 8"
 ROMX $13
 	"Pics 6"
-	"Maps 9"
 	"Predefs"
 ROMX $14
 	"Maps 10"
@@ -136,6 +135,9 @@ ROMX $1B
 	"Tilesets 3"
 ROMX $1C
 	"bank1C"
+	"Green Sprite"
+	"Maps 9"
+	"Colosseum Map"
 ROMX $1D
 	"Maps 19"
 	"Itemfinder 1"
@@ -203,3 +205,5 @@ SRAM $3
 HRAM
 	"OAM DMA"
 	"HRAM"
+ROMX $1c
+

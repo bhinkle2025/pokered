@@ -577,6 +577,9 @@ INCLUDE "scripts/TradeCenter.asm"
 INCLUDE "data/maps/objects/TradeCenter.asm"
 TradeCenter_Blocks: INCBIN "maps/TradeCenter.blk"
 
+
+SECTION "Colosseum Map", ROMX
+
 INCLUDE "data/maps/headers/Colosseum.asm"
 INCLUDE "scripts/Colosseum.asm"
 INCLUDE "data/maps/objects/Colosseum.asm"
