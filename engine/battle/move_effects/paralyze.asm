@@ -37,6 +37,19 @@ ParalyzeEffect_:
 	cp GRASS
 	jr z, .doesntAffect
 .checkTypeImmunity
+	; Check target's first type
+	ld b, h
+	ld c, l
+	inc bc
+	ld a, [bc]
+	cp ELECTRIC
+	jr z, .doesntAffect
+	; Check target's second type
+	inc bc
+	ld a, [bc]
+	cp ELECTRIC
+	jr z, .doesntAffect
+	; Ground immunity only applies to Electric-type paralysis moves
 	ld a, [de]
 	cp ELECTRIC
 	jr nz, .hitTest
@@ -46,13 +59,9 @@ ParalyzeEffect_:
 	ld a, [bc]
 	cp GROUND
 	jr z, .doesntAffect
-	cp ELECTRIC
-	jr z, .doesntAffect
 	inc bc
 	ld a, [bc]
 	cp GROUND
-	jr z, .doesntAffect
-	cp ELECTRIC
 	jr z, .doesntAffect
 .hitTest
 	push hl

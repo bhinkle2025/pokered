@@ -1,8 +1,8 @@
 ViridianForestWildMons:
 	def_grass_wildmons 8 ; encounter rate
 IF DEF(_RED)
-	db  4, WEEDLE
-	db  5, KAKUNA
+	db  4, PIKACHU
+	db  5, PIKACHU
 	db  3, CATERPIE
 	db  5, PIDGEY
 	db  4, METAPOD
