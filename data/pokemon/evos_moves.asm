@@ -612,9 +612,9 @@ FearowEvosMoves:
 	db 9, LEER
 	db 15, FURY_ATTACK
 	db 18, WING_ATTACK
-	db 25, MIRROR_MOVE
-	db 28, AGILITY
-	db 34, DRILL_PECK
+	db 22, MIRROR_MOVE
+	db 25, AGILITY
+	db 29, DRILL_PECK
 	db 0
 
 PidgeyEvosMoves:
@@ -667,9 +667,9 @@ GravelerEvosMoves:
 	db 11, DEFENSE_CURL
 	db 16, ROCK_THROW
 	db 21, SELFDESTRUCT
-	db 29, DIG
-	db 36, EARTHQUAKE
-	db 43, EXPLOSION
+	db 26, DIG
+	db 31, EARTHQUAKE
+	db 36, EXPLOSION
 	db 0
 
 ChanseyEvosMoves:
@@ -694,8 +694,8 @@ MachokeEvosMoves:
 	db 16, LOW_KICK
 	db 21, SEISMIC_TOSS
 	db 26, FIRE_PUNCH
-	db 37, MEDITATE
-	db 48, SUBMISSION
+	db 31, MEDITATE
+	db 36, SUBMISSION
 	db 0
 
 MrMimeEvosMoves:
@@ -755,7 +755,7 @@ ParasectEvosMoves:
 	db 15, FURY_SWIPES
 	db 19, SLASH
 	db 23, LEECH_LIFE
-	db 33, SPORE
+	db 27, SPORE
 	db 0
 
 PsyduckEvosMoves:
@@ -780,6 +780,7 @@ DrowzeeEvosMoves:
 	db 22, PSYBEAM
 	db 27, HEADBUTT
 	db 31, PSYCHIC_M
+	db 37, NIGHT_SHADE
 	db 40, DREAM_EATER
 	db 0
 
@@ -790,9 +791,9 @@ GolemEvosMoves:
 	db 11, DEFENSE_CURL
 	db 16, ROCK_THROW
 	db 21, SELFDESTRUCT
-	db 29, DIG
-	db 36, EARTHQUAKE
-	db 43, EXPLOSION
+	db 26, DIG
+	db 31, EARTHQUAKE
+	db 36, EXPLOSION
 	db 0
 
 MissingNo32EvosMoves:
@@ -841,8 +842,8 @@ MagnetonEvosMoves:
 	db 20, LIGHT_SCREEN
 	db 26, THUNDERBOLT
 	db 36, SCREECH
-	db 46, TRI_ATTACK
-	db 56, THUNDER
+	db 38, TRI_ATTACK
+	db 44, THUNDER
 	db 0
 
 KoffingEvosMoves:
@@ -1176,9 +1177,9 @@ DragonairEvosMoves:
 ; Learnset
 	db 10, THUNDER_WAVE
 	db 20, AGILITY
-	db 35, OUTRAGE
-	db 45, DRAGON_RAGE
-	db 55, HYPER_BEAM
+	db 30, OUTRAGE
+	db 40, DRAGON_RAGE
+	db 50, HYPER_BEAM
 	db 0
 
 KabutoEvosMoves:
@@ -1221,8 +1222,8 @@ SeadraEvosMoves:
 	db 18, BUBBLEBEAM
 	db 27, WATERFALL
 	db 36, AGILITY
-	db 42, DRAGON_RAGE
-	db 51, HYDRO_PUMP
+	db 36, DRAGON_RAGE
+	db 42, HYDRO_PUMP
 	db 0
 
 MissingNo5EEvosMoves:
@@ -1256,8 +1257,8 @@ SandslashEvosMoves:
 	db 16, FURY_SWIPES
 	db 20, DIG
 	db 26, SLASH
-	db 38, SWORDS_DANCE
-	db 46, EARTHQUAKE
+	db 28, SWORDS_DANCE
+	db 36, EARTHQUAKE
 	db 0
 
 OmanyteEvosMoves:
@@ -1380,6 +1381,7 @@ ZubatEvosMoves:
 	db 21, WING_ATTACK
 	db 25, LEECH_LIFE
 	db 28, ACID
+	db 31, AGILITY
 	db 33, HAZE
 	db 37, TOXIC
 	db 0
@@ -1421,7 +1423,7 @@ PoliwhirlEvosMoves:
 	db 26, LOW_KICK
 	db 31, BODY_SLAM
 	db 36, HYDRO_PUMP
-	db 41, AMNESIA
+	db 38, AMNESIA
 	db 0
 
 PoliwrathEvosMoves:
@@ -1473,10 +1475,10 @@ DodrioEvosMoves:
 	db 16, FURY_ATTACK
 	db 22, AGILITY
 	db 27, DRILL_PECK
-	db 37, SWORDS_DANCE
-	db 40, JUMP_KICK
-	db 45, TRI_ATTACK
-	db 50, THRASH
+	db 32, SWORDS_DANCE
+	db 38, JUMP_KICK
+	db 40, TRI_ATTACK
+	db 44, THRASH
 	db 0
 
 PrimeapeEvosMoves:
@@ -1501,7 +1503,7 @@ DugtrioEvosMoves:
 	db 15, FURY_SWIPES
 	db 18, DIG
 	db 21, SLASH
-	db 35, EARTHQUAKE
+	db 29, EARTHQUAKE
 	db 0
 
 VenomothEvosMoves:
@@ -1512,9 +1514,9 @@ VenomothEvosMoves:
 	db 20, PSYBEAM
 	db 24, SLEEP_POWDER
 	db 27, LEECH_LIFE
-	db 32, TOXIC
-	db 37, PSYCHIC_M
-	db 44, BUG_BUZZ
+	db 30, TOXIC
+	db 32, PSYCHIC_M
+	db 35, BUG_BUZZ
 	db 0
 
 DewgongEvosMoves:
@@ -1524,8 +1526,8 @@ DewgongEvosMoves:
 	db 20, REST
 	db 26, AURORA_BEAM
 	db 32, WATERFALL
-	db 42, DOUBLE_EDGE
-	db 52, ICE_BEAM
+	db 38, DOUBLE_EDGE
+	db 44, ICE_BEAM
 	db 0
 
 MissingNo79EvosMoves:
@@ -1577,8 +1579,8 @@ MachampEvosMoves:
 	db 16, LOW_KICK
 	db 21, SEISMIC_TOSS
 	db 26, FIRE_PUNCH
-	db 37, MEDITATE
-	db 48, SUBMISSION
+	db 31, MEDITATE
+	db 36, SUBMISSION
 	db 0
 
 MissingNo7FEvosMoves:
@@ -1595,7 +1597,7 @@ GolduckEvosMoves:
 	db 9, FURY_SWIPES
 	db 10, HYPNOSIS
 	db 18, PSYBEAM
-	db 41, AMNESIA
+	db 34, AMNESIA
 	db 0
 
 HypnoEvosMoves:
@@ -1605,9 +1607,9 @@ HypnoEvosMoves:
 	db 13, POISON_GAS
 	db 22, PSYBEAM
 	db 27, HEADBUTT
-	db 36, PSYCHIC_M
-	db 46, NIGHT_SHADE
-	db 55, DREAM_EATER
+	db 31, PSYCHIC_M
+	db 37, NIGHT_SHADE
+	db 40, DREAM_EATER
 	db 0
 
 GolbatEvosMoves:
@@ -1619,9 +1621,9 @@ GolbatEvosMoves:
 	db 21, WING_ATTACK
 	db 25, LEECH_LIFE
 	db 28, ACID
-	db 32, AGILITY
-	db 40, HAZE
-	db 43, TOXIC
+	db 31, AGILITY
+	db 33, HAZE
+	db 37, TOXIC
 	db 0
 
 MewtwoEvosMoves:
@@ -1697,8 +1699,8 @@ KinglerEvosMoves:
 	db 18, BUBBLEBEAM
 	db 23, STOMP
 	db 28, HAMMER_ARM
-	db 36, SWORDS_DANCE
-	db 41, CRABHAMMER
+	db 31, SWORDS_DANCE
+	db 36, CRABHAMMER
 	
 	db 0
 
@@ -1721,9 +1723,9 @@ ElectrodeEvosMoves:
 ; Learnset
 	db 19, SELFDESTRUCT
 	db 29, LIGHT_SCREEN
-	db 36, THUNDERBOLT
-	db 40, SWIFT
-	db 50, EXPLOSION
+	db 31, THUNDERBOLT
+	db 36, SWIFT
+	db 43, EXPLOSION
 	db 0
 
 ClefableEvosMoves:
@@ -1753,8 +1755,8 @@ PersianEvosMoves:
 	db 19, FURY_SWIPES
 	db 24, SCREECH
 	db 27, SLASH
-	db 37, AGILITY
-	db 47, PLAY_ROUGH
+	db 31, AGILITY
+	db 35, PLAY_ROUGH
 	db 0
 
 MarowakEvosMoves:
@@ -1764,8 +1766,8 @@ MarowakEvosMoves:
 	db 11, HEADBUTT
 	db 18, RAGE
 	db 26, BONEMERANG
-	db 36, THRASH
-	db 48, DOUBLE_EDGE
+	db 30, THRASH
+	db 36, DOUBLE_EDGE
 	db 0
 
 MissingNo92EvosMoves:
@@ -1879,8 +1881,8 @@ TentacruelEvosMoves:
 	db 27, ACID_ARMOR
 	db 31, ACID
 	db 36, TOXIC
-	db 43, SLUDGE
-	db 50, HYDRO_PUMP
+	db 40, SLUDGE
+	db 45, HYDRO_PUMP
 	db 0
 
 MissingNo9CEvosMoves:
@@ -1963,9 +1965,8 @@ RapidashEvosMoves:
 	db 26, FIRE_SPIN
 	db 32, AGILITY
 	db 38, FIRE_BLAST
-	db 45, DOUBLE_EDGE
-	db 49, FLARE_BLITZ
-	db 0
+	db 43, DOUBLE_EDGE
+	db 48, FLARE_BLITZ
 	db 0
 
 RattataEvosMoves:
@@ -1989,8 +1990,8 @@ RaticateEvosMoves:
 	db 12, BITE
 	db 14, SUPER_FANG
 	db 26, HYPER_FANG
-	db 34, EXTREMESPEED
-	db 42, SWORDS_DANCE
+	db 24, EXTREMESPEED
+	db 27, SWORDS_DANCE
 	db 0
 
 NidorinoEvosMoves:
@@ -2000,11 +2001,11 @@ NidorinoEvosMoves:
 ; Learnset
 	db 9, DOUBLE_KICK
 	db 12, HORN_ATTACK
-	db 20, TOXIC
-	db 23, FURY_ATTACK
-	db 31, ACID
-	db 36, DIG
-	db 39, ROCK_SLIDE
+	db 18, TOXIC
+	db 21, FURY_ATTACK
+	db 24, ACID
+	db 27, DIG
+	db 31, ROCK_SLIDE
 	db 0
 
 NidorinaEvosMoves:
@@ -2015,10 +2016,10 @@ NidorinaEvosMoves:
 	db 12, DOUBLE_KICK
 	db 15, FURY_SWIPES
 	db 18, TOXIC
-	db 23, DIG
-	db 31, ACID
-	db 36, BITE
-	db 39, SUPER_FANG
+	db 21, DIG
+	db 24, ACID
+	db 27, BITE
+	db 31, SUPER_FANG
 	
 	db 0
 
@@ -2096,7 +2097,7 @@ CharmanderEvosMoves:
 ; Learnset
 	db 7, EMBER
 	db 10, SMOKESCREEN
-	db 14, DRAGON_RAGE
+	db 12, DRAGON_RAGE
 	db 17, FIRE_FANG
 	db 20, SLASH
 	db 24, FLAMETHROWER
@@ -2128,12 +2129,12 @@ CharmeleonEvosMoves:
 	db 7, EMBER
 	db 8, SMOKESCREEN
 	db 12, DRAGON_RAGE
-	db 19, FIRE_FANG
-	db 24, SLASH
-	db 30, FLAMETHROWER
-	db 34, DRAGON_CLAW
-	db 38, FIRE_SPIN
-	db 42, FLARE_BLITZ
+	db 17, FIRE_FANG
+	db 20, SLASH
+	db 24, FLAMETHROWER
+	db 28, DRAGON_CLAW
+	db 32, FIRE_SPIN
+	db 36, FLARE_BLITZ
 	db 0
 
 WartortleEvosMoves:
@@ -2158,13 +2159,13 @@ CharizardEvosMoves:
 	db 7, EMBER
 	db 8, SMOKESCREEN
 	db 12, DRAGON_RAGE
-	db 19, FIRE_FANG
-	db 24, SLASH
-	db 30, FLAMETHROWER
-	db 34, DRAGON_CLAW
+	db 17, FIRE_FANG
+	db 20, SLASH
+	db 24, FLAMETHROWER
+	db 28, DRAGON_CLAW
+	db 32, FIRE_SPIN
+	db 36, FLARE_BLITZ
 	db 36, WING_ATTACK
-	db 40, FIRE_SPIN
-	db 44, FLARE_BLITZ
 	db 0
 
 MissingNoB5EvosMoves:
@@ -2217,10 +2218,10 @@ GloomEvosMoves:
 	db 14, SLEEP_POWDER
 	db 18, RAZOR_LEAF
 	db 21, ACID
-	db 28, TOXIC
-	db 32, MOONBLAST
-	db 38, PETAL_DANCE
-	db 49, SOLARBEAM
+	db 26, TOXIC
+	db 30, MOONBLAST
+	db 33, PETAL_DANCE
+	db 42, SOLARBEAM
 	db 0
 
 VileplumeEvosMoves:
@@ -2258,10 +2259,10 @@ WeepinbellEvosMoves:
 	db 14, STUN_SPORE
 	db 18, RAZOR_LEAF
 	db 21, ACID
-	db 28, ACID
-	db 32, SWORDS_DANCE
-	db 38, LEECH_LIFE
-	db 49, POWER_WHIP
+	db 26, TOXIC
+	db 30, SWORDS_DANCE
+	db 33, LEECH_LIFE
+	db 42, POWER_WHIP
 	db 0
 
 VictreebelEvosMoves:

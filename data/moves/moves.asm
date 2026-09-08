@@ -59,7 +59,7 @@ Moves:
 	move ROAR,         SWITCH_AND_TELEPORT_EFFECT,   0, NORMAL,       100, 20
 	move SING,         SLEEP_EFFECT,                 0, NORMAL,        55, 15
 	move SUPERSONIC,   CONFUSION_EFFECT,             0, NORMAL,        55, 20
-	move SONICBOOM,    SPECIAL_DAMAGE_EFFECT,        1, NORMAL,        90, 20
+	move SONICBOOM,    NO_ADDITIONAL_EFFECT,        90, NORMAL,       100, 20
 	move FOCUS_BLAST,  SPECIAL_DOWN_SIDE_EFFECT,   120, FIGHTING,      70,  5
 	move ACID,         DEFENSE_DOWN_SIDE_EFFECT,    75, POISON,       100, 30
 	move EMBER,        BURN_SIDE_EFFECT1,           40, FIRE,         100, 25
@@ -76,7 +76,7 @@ Moves:
 	move HYPER_BEAM,   HYPER_BEAM_EFFECT,          150, NORMAL,        90,  5
 	move PECK,         NO_ADDITIONAL_EFFECT,        35, FLYING,       100, 35
 	move DRILL_PECK,   NO_ADDITIONAL_EFFECT,        80, FLYING,       100, 20
-	move SUBMISSION,   HYPER_BEAM_EFFECT,          120, FIGHTING,      100,  5
+	move SUBMISSION,   RECOIL_EFFECT,              120, FIGHTING,     100, 15
 	move LOW_KICK,     FLINCH_SIDE_EFFECT2,         50, FIGHTING,      90, 20
 	move COUNTER,      NO_ADDITIONAL_EFFECT,         1, FIGHTING,     100, 20
 	move SEISMIC_TOSS, NO_ADDITIONAL_EFFECT,        75, FIGHTING,     100, 15
